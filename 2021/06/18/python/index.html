@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-favdir.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-favdir.png">
+  <link rel="mask-icon" href="/images/favidir.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"rainumdo.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="27onnx onnxruntimeinput -&gt; numpy 12345678910111213141516171819202122import torchimport onnxruntime# exportnet &#x3D; C3D(num_classes&#x3D;2)x &#x3D; torch.randn(size&#x3D;(1,3,16,112,112)) y &#x3D; net(x)torch.onnx.export(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python">
+<meta property="og:url" content="https://rainumdo.github.io/2021/06/18/python/index.html">
+<meta property="og:site_name" content="Rainumdo&#39;s blog">
+<meta property="og:description" content="27onnx onnxruntimeinput -&gt; numpy 12345678910111213141516171819202122import torchimport onnxruntime# exportnet &#x3D; C3D(num_classes&#x3D;2)x &#x3D; torch.randn(size&#x3D;(1,3,16,112,112)) y &#x3D; net(x)torch.onnx.export(">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-06-18T02:50:37.000Z">
+<meta property="article:modified_time" content="2022-05-22T06:13:35.414Z">
+<meta property="article:author" content="Rainumdo">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://rainumdo.github.io/2021/06/18/python/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>python | Rainumdo's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Rainumdo's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2021/06/18/python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/25033462?s=400&u=bc84f2c7a2d509356d6d72b7aecd42fa914ce616&v=4">
+      <meta itemprop="name" content="Rainumdo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rainumdo's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          python
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-18 10:50:37" itemprop="dateCreated datePublished" datetime="2021-06-18T10:50:37+08:00">2021-06-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-22 14:13:35" itemprop="dateModified" datetime="2022-05-22T14:13:35+08:00">2022-05-22</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="27"><a href="#27" class="headerlink" title="27"></a>27</h1><p>onnx onnxruntime<br>input -&gt; numpy</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import torch</span><br><span class="line">import onnxruntime</span><br><span class="line"></span><br><span class="line"># export</span><br><span class="line">net = C3D(num_classes=2)</span><br><span class="line">x = torch.randn(size=(1,3,16,112,112)) </span><br><span class="line">y = net(x)</span><br><span class="line">torch.onnx.export(</span><br><span class="line">	model=net,</span><br><span class="line">	args=x,</span><br><span class="line">	f=&quot;c3d.onnx&quot;,</span><br><span class="line">	verbose=True</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># inference</span><br><span class="line">session = onnxruntime.InferenceSession(&quot;c3d.onnx&quot;)</span><br><span class="line">input = session.get_inputs()[0]</span><br><span class="line">input_name = input.name </span><br><span class="line">input_shape = input.shape</span><br><span class="line">input_type = input.type</span><br><span class="line">output = session.run(None,&#123;input_name:x.numpy()&#125;)</span><br><span class="line"># None -&gt; [output names]</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<h1 id="26"><a href="#26" class="headerlink" title="26"></a>26</h1><p>pandas dataframe get row by index_col</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.loc[&#x27;index_col&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h1 id="25"><a href="#25" class="headerlink" title="25"></a>25</h1><p>pandas filter </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">data = [</span><br><span class="line">    [1,2,3],</span><br><span class="line">    [4,5,6],</span><br><span class="line">    [7,8,9]</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">df = pd.DataFrame(</span><br><span class="line">    data,</span><br><span class="line">    index=[&quot;row1&quot;,&quot;row2&quot;,&quot;row3&quot;],</span><br><span class="line">    columns=[&quot;col1&quot;,&quot;col2&quot;,&quot;col3&quot;]</span><br><span class="line">)</span><br><span class="line">print(df)</span><br><span class="line"></span><br><span class="line">condition = df.loc[:,&quot;col1&quot;] &gt; 1</span><br><span class="line">result = df.loc[condition]</span><br><span class="line">print(result)</span><br><span class="line"></span><br><span class="line">condition = df.loc[&quot;row1&quot;] &gt; 1</span><br><span class="line">result = df.loc[:,condition]</span><br><span class="line">print(result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="24"><a href="#24" class="headerlink" title="24"></a>24</h1><p>find max cell in pandas</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df.stack().max()</span><br><span class="line">df.stack().idxmax()</span><br></pre></td></tr></table></figure>
+
+<h1 id="23"><a href="#23" class="headerlink" title="23"></a>23</h1><p>lineplot, barplot and heatmap</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import searborn as sns</span><br><span class="line">sns.lineplot(data=,label=)</span><br><span class="line">sns.barplot(x=,y=)</span><br><span class="line">sns.heatmap(data=,annot=Ture)</span><br><span class="line"># annotate the value on chart</span><br></pre></td></tr></table></figure>
+
+<h1 id="22"><a href="#22" class="headerlink" title="22"></a>22</h1><p>series.argmin()<br>arguments minimize the f(x)<br>int postition of the smallest value in the series.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">row = df.loc[&quot;index_name&quot;]</span><br><span class="line">min = row.min()</span><br><span class="line">arg= row.argmin()</span><br><span class="line">index = row.idxmin()</span><br><span class="line">#index = row.index[arg]</span><br></pre></td></tr></table></figure>
+
+<h1 id="21"><a href="#21" class="headerlink" title="21"></a>21</h1><p>os</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">filepath =  os.path.join(root,folder,filename)</span><br><span class="line">os.path.exists()</span><br><span class="line">os.mkdir()</span><br></pre></td></tr></table></figure>
+
+<h1 id="20"><a href="#20" class="headerlink" title="20"></a>20</h1><p>cv2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import cv2</span><br><span class="line">capture = cv2.VideoCapture(&quot;/file/path&quot;)</span><br><span class="line">fps = capture.get(cv2.CAP_PROP_FRAME_COUNT)</span><br><span class="line">height = capture.get(cv2.CAP_PROP_FRAME_HEIGHT)</span><br><span class="line">width = capture.get(cv2.CAP_PROP_FRAME_WIDTH)</span><br><span class="line">capture.isOpened()</span><br><span class="line">ret, frame = capture.read()</span><br><span class="line"></span><br><span class="line">cv2.resize()</span><br><span class="line">cv2.putText()</span><br><span class="line">cv2.imread()</span><br><span class="line">cv2.imwrite()</span><br></pre></td></tr></table></figure>
+
+<h1 id="19"><a href="#19" class="headerlink" title="19"></a>19</h1><p>logging</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import logging</span><br><span class="line">logging.basicConfig(level=logging.DEBUG)</span><br><span class="line"># LOG_FORMAT = &quot;%(asctime)s - %(levelname)s - %(message)s&quot;</span><br><span class="line"># logging.basicConfig(filename=&#x27;my.log&#x27;, level=logging.DEBUG, format=LOG_FORMAT)</span><br><span class="line"></span><br><span class="line">logging.debug(&quot;This is a debug log.&quot;)</span><br><span class="line">logging.info(&quot;This is a info log.&quot;)</span><br><span class="line">logging.warning(&quot;This is a warning log.&quot;)</span><br><span class="line">logging.error(&quot;This is a error log.&quot;)</span><br><span class="line">logging.critical(&quot;This is a critical log.&quot;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="18"><a href="#18" class="headerlink" title="18"></a>18</h1><p>torch.where</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = torch.rand(3,2)</span><br><span class="line">x = torch.rand(3)</span><br><span class="line">y = torch.rand(3)</span><br><span class="line">values= torch.where(a[:,0]&gt;a[:,1],x,y)</span><br><span class="line">print(a)</span><br><span class="line">print(x)</span><br><span class="line">print(y)</span><br><span class="line">print(values)</span><br></pre></td></tr></table></figure>
+
+<h1 id="17"><a href="#17" class="headerlink" title="17"></a>17</h1><p>scipy.stats.rankdata</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">from scipy.stats import rankdata</span><br><span class="line">&gt;&gt;&gt;rankdata([0, 2, 3, 2])</span><br><span class="line">array([ 1. ,  2.5,  4. ,  2.5])</span><br><span class="line">&gt;&gt;&gt;rankdata([0, 2, 3, 2], method=&#x27;min&#x27;)</span><br><span class="line">array([ 1,  2,  4,  2])</span><br><span class="line">&gt;&gt;&gt;rankdata([0, 2, 3, 2], method=&#x27;max&#x27;)</span><br><span class="line">array([ 1,  3,  4,  3])</span><br><span class="line">&gt;&gt;&gt;rankdata([0, 2, 3, 2], method=&#x27;dense&#x27;)</span><br><span class="line">array([ 1,  2,  3,  2])</span><br><span class="line">&gt;&gt;&gt;rankdata([0, 2, 3, 2], method=&#x27;ordinal&#x27;)</span><br><span class="line">array([ 1,  2,  4,  3])</span><br><span class="line">&gt;&gt;&gt;rankdata([[0, 2], [3, 2]]).reshape(2,2)</span><br><span class="line">array([[1. , 2.5],</span><br><span class="line">      [4. , 2.5]])</span><br><span class="line">&gt;&gt;&gt;rankdata([[0, 2, 2], [3, 2, 5]], axis=1)</span><br><span class="line">array([[1. , 2.5, 2.5],</span><br><span class="line">       [2. , 1. , 3. ]])</span><br></pre></td></tr></table></figure>
+<!--more-->
+
+<h1 id="16"><a href="#16" class="headerlink" title="16"></a>16</h1><p>use nltk to search meaning</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import argparse</span><br><span class="line">from nltk.corpus import wordnet as wn</span><br><span class="line"></span><br><span class="line">def find(word):</span><br><span class="line">    for i,n in enumerate(wn.synsets(word)):</span><br><span class="line">        print(i,&quot;:&quot;,n.definition())</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    parser = argparse.ArgumentParser()</span><br><span class="line">    parser.add_argument(&quot;-w&quot;,&quot;--word&quot;)</span><br><span class="line"></span><br><span class="line">    args = parser.parse_args()</span><br><span class="line">    find(args.word)</span><br></pre></td></tr></table></figure>
+
+<h1 id="15"><a href="#15" class="headerlink" title="15"></a>15</h1><p>Standard numpy-like indexing and slicing:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tensor = torch.ones(4, 4)</span><br><span class="line">print(&#x27;First row: &#x27;, tensor[0])</span><br><span class="line">print(&#x27;First column: &#x27;, tensor[:, 0])</span><br><span class="line">print(&#x27;Last column:&#x27;, tensor[..., -1])</span><br><span class="line">tensor[:,1] = 0</span><br><span class="line">print(tensor)</span><br></pre></td></tr></table></figure>
+<p>output</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">First row:  tensor([1., 1., 1., 1.])</span><br><span class="line">First column:  tensor([1., 1., 1., 1.])</span><br><span class="line">Last column: tensor([1., 1., 1., 1.])</span><br><span class="line">tensor([[1., 0., 1., 1.],</span><br><span class="line">        [1., 0., 1., 1.],</span><br><span class="line">        [1., 0., 1., 1.],</span><br><span class="line">        [1., 0., 1., 1.]])</span><br></pre></td></tr></table></figure>
+<!--more-->
+
+<h1 id="14"><a href="#14" class="headerlink" title="14"></a>14</h1><p>ImportError: cannot import name ‘_registerMatType’ from ‘cv2.cv2’ (&#x2F;usr&#x2F;local&#x2F;lib&#x2F;python3.8&#x2F;dist-packages&#x2F;cv2&#x2F;cv2.cpython-38-x86_64-linux-gnu.so)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip uninstall opencv_python_headless</span><br><span class="line">pip install opencv-python-headless==4.5.4.60</span><br></pre></td></tr></table></figure>
+
+<h1 id="13"><a href="#13" class="headerlink" title="13"></a>13</h1><p>tensorflow log level</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">impot os</span><br><span class="line">os.environ[&quot;TF_CPP_MIN_LOG_LEVEL&quot;] = &quot;2&quot;</span><br><span class="line"></span><br><span class="line"># TF_CPP_MIN_LOG_LEVEL = 1  defalut</span><br><span class="line"># TF_CPP_MIN_LOG_LEVEL = 2  errors and warnings</span><br><span class="line"># TF_CPP_MIN_LOG_LEVEL = 3  errors</span><br></pre></td></tr></table></figure>
+
+<h1 id="12"><a href="#12" class="headerlink" title="12"></a>12</h1><p>use tqdm with <code>postion</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from tqdm import tqdm</span><br><span class="line">import time</span><br><span class="line">for i in tqdm(range(100), position=1):</span><br><span class="line">    for j in tqdm(range(100), position=0):</span><br><span class="line">        time.sleep(0.1)</span><br><span class="line">    time.sleep(1)</span><br></pre></td></tr></table></figure>
+
+<h1 id="11"><a href="#11" class="headerlink" title="11"></a>11</h1><p>[W IndexingUtils.h:30] Warning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead. (function expandTensors)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A = torch.cuda.ByteTensor()</span><br><span class="line">A = A.bool()</span><br></pre></td></tr></table></figure>
+
+<h1 id="10"><a href="#10" class="headerlink" title="10"></a>10</h1><p>draw matrix as math</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import sympy</span><br><span class="line">sympy.init_printing()</span><br><span class="line">sympy.Matrix([[1,2],[3,4]])</span><br></pre></td></tr></table></figure>
+
+<h1 id="9"><a href="#9" class="headerlink" title="9"></a>9</h1><p>filter the warnings of tensorflow</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import warnings</span><br><span class="line">warnings.filterwarnings(&#x27;ignore&#x27;)</span><br></pre></td></tr></table></figure>
+<!--more-->
+
+<h1 id="8"><a href="#8" class="headerlink" title="8"></a>8</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">filename = os.path.basename(&#x27;/the/path/filename.txt&#x27;)</span><br><span class="line"># &#x27;filename.txt&#x27;</span><br></pre></td></tr></table></figure>
+
+<h1 id="7"><a href="#7" class="headerlink" title="7"></a>7</h1><p>*args and **kwargs(kw means keyword)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">def args_fn(*args):</span><br><span class="line">    for i in args:</span><br><span class="line">        print(i)</span><br><span class="line"></span><br><span class="line">args_fn(1,2,3) </span><br><span class="line"># 1</span><br><span class="line"># 2</span><br><span class="line"># 3</span><br><span class="line"></span><br><span class="line">def kwargs_fn(**kwargs):</span><br><span class="line">    for i in kwargs:</span><br><span class="line">        print(i, kwargs[i])</span><br><span class="line"></span><br><span class="line">kwargs_fn(a=1,b=2,c=3)</span><br><span class="line"># a 1</span><br><span class="line"># b 2</span><br><span class="line"># c 3</span><br></pre></td></tr></table></figure>
+<!--more-->
+
+<h1 id="6"><a href="#6" class="headerlink" title="6"></a>6</h1><p>get sorted key of dict</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sorted(dict, key=dict.get)</span><br></pre></td></tr></table></figure>
+
+<h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><p>zip with more args and args unpack</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = [1, 2, 3]</span><br><span class="line">y = [4, 5, 6]</span><br><span class="line">zipped = zip(x, y)</span><br><span class="line">print(list(zipped))</span><br><span class="line">zipped = zip(*[x,y])</span><br><span class="line">print(list(zipped))</span><br><span class="line">print(list(zip([1,4],[2,5],[3,6])))</span><br><span class="line">print(list(zip(*[[1,4],[2,5],[3,6]])))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[(1, 4), (2, 5), (3, 6)]</span><br><span class="line">[(1, 4), (2, 5), (3, 6)]</span><br><span class="line">[(1, 2, 3), (4, 5, 6)]</span><br><span class="line">[(1, 2, 3), (4, 5, 6)]</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><p>zip() in conjunction with the * operator can be used to unzip a list</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; x = [1, 2, 3]</span><br><span class="line">&gt;&gt;&gt; y = [4, 5, 6]</span><br><span class="line">&gt;&gt;&gt; zipped = zip(x, y)</span><br><span class="line">&gt;&gt;&gt; list(zipped)</span><br><span class="line">[(1, 4), (2, 5), (3, 6)]</span><br><span class="line">&gt;&gt;&gt; x2, y2 = zip(*zip(x, y))</span><br><span class="line">&gt;&gt;&gt; x == list(x2) and y == list(y2)</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+
+<h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>dynamatic ploting in jupyter</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from matplotlib import pyplot as plt</span><br><span class="line">%matplotlib inline</span><br><span class="line">from IPython import display</span><br><span class="line"></span><br><span class="line">plt.show()</span><br><span class="line">display.clear_output(wait=True)</span><br></pre></td></tr></table></figure>
+<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>To find out about some variable v, type help(v) in the Python interactive interpreter to read the help entry for this kind of object.</p>
+<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">kv = &#123;</span><br><span class="line">    &#x27;A&#x27;:1,</span><br><span class="line">    &#x27;C&#x27;:3,</span><br><span class="line">    &#x27;B&#x27;:2,</span><br><span class="line">    &#x27;D&#x27;:4</span><br><span class="line">&#125;</span><br><span class="line">out = sorted(kv.items(),key=lambda item:item[1], reverse=True)</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/05/28/prml/" rel="prev" title="prml">
+      <i class="fa fa-chevron-left"></i> prml
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/08/14/jupyter/" rel="next" title="jupyter">
+      jupyter <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#27"><span class="nav-number">1.</span> <span class="nav-text">27</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#26"><span class="nav-number">2.</span> <span class="nav-text">26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#25"><span class="nav-number">3.</span> <span class="nav-text">25</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#24"><span class="nav-number">4.</span> <span class="nav-text">24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#23"><span class="nav-number">5.</span> <span class="nav-text">23</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#22"><span class="nav-number">6.</span> <span class="nav-text">22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#21"><span class="nav-number">7.</span> <span class="nav-text">21</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20"><span class="nav-number">8.</span> <span class="nav-text">20</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#19"><span class="nav-number">9.</span> <span class="nav-text">19</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#18"><span class="nav-number">10.</span> <span class="nav-text">18</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#17"><span class="nav-number">11.</span> <span class="nav-text">17</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#16"><span class="nav-number">12.</span> <span class="nav-text">16</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#15"><span class="nav-number">13.</span> <span class="nav-text">15</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#14"><span class="nav-number">14.</span> <span class="nav-text">14</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#13"><span class="nav-number">15.</span> <span class="nav-text">13</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#12"><span class="nav-number">16.</span> <span class="nav-text">12</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#11"><span class="nav-number">17.</span> <span class="nav-text">11</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10"><span class="nav-number">18.</span> <span class="nav-text">10</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9"><span class="nav-number">19.</span> <span class="nav-text">9</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8"><span class="nav-number">20.</span> <span class="nav-text">8</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7"><span class="nav-number">21.</span> <span class="nav-text">7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6"><span class="nav-number">22.</span> <span class="nav-text">6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5"><span class="nav-number">23.</span> <span class="nav-text">5</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4"><span class="nav-number">24.</span> <span class="nav-text">4</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3"><span class="nav-number">25.</span> <span class="nav-text">3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2"><span class="nav-number">26.</span> <span class="nav-text">2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1"><span class="nav-number">27.</span> <span class="nav-text">1</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Rainumdo"
+      src="https://avatars.githubusercontent.com/u/25033462?s=400&u=bc84f2c7a2d509356d6d72b7aecd42fa914ce616&v=4">
+  <p class="site-author-name" itemprop="name">Rainumdo</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Rainumdo</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

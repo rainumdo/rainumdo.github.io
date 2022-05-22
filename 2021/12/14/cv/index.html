@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-favdir.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-favdir.png">
+  <link rel="mask-icon" href="/images/favidir.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"rainumdo.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="169sqrt in loss function should add  169Scaling changes the range of data, while normalization changes the shape of data.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cv">
+<meta property="og:url" content="https://rainumdo.github.io/2021/12/14/cv/index.html">
+<meta property="og:site_name" content="Rainumdo&#39;s blog">
+<meta property="og:description" content="169sqrt in loss function should add  169Scaling changes the range of data, while normalization changes the shape of data.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-12-14T07:14:19.000Z">
+<meta property="article:modified_time" content="2022-05-22T06:13:35.398Z">
+<meta property="article:author" content="Rainumdo">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://rainumdo.github.io/2021/12/14/cv/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>cv | Rainumdo's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Rainumdo's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2021/12/14/cv/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/25033462?s=400&u=bc84f2c7a2d509356d6d72b7aecd42fa914ce616&v=4">
+      <meta itemprop="name" content="Rainumdo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rainumdo's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          cv
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-12-14 15:14:19" itemprop="dateCreated datePublished" datetime="2021-12-14T15:14:19+08:00">2021-12-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-22 14:13:35" itemprop="dateModified" datetime="2022-05-22T14:13:35+08:00">2022-05-22</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="169"><a href="#169" class="headerlink" title="169"></a>169</h1><p>sqrt in loss function should add </p>
+<h1 id="169-1"><a href="#169-1" class="headerlink" title="169"></a>169</h1><p>Scaling changes the range of data, while normalization changes the shape of data.</p>
+<span id="more"></span>
+
+<h1 id="167"><a href="#167" class="headerlink" title="167"></a>167</h1><p>The indicator function of an event is a random varibale that takes value 1 when the event happens and value 0 when the event does not happen. Indicator functions are often used in probability theory to simplify notation and to prove theorems.</p>
+<h1 id="166"><a href="#166" class="headerlink" title="166"></a>166</h1><p>You can make up for an inadequancy in your data by adding in “fake” data to cover it over.</p>
+<h1 id="165"><a href="#165" class="headerlink" title="165"></a>165</h1><p>It certain circustances a smaller custom convnet might still be preferable – such as smaller or unusual dataset or when computing resources are very limited.</p>
+<h1 id="164"><a href="#164" class="headerlink" title="164"></a>164</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">detrend = tf.constant([-1, 1], dtype=tf.float32)</span><br><span class="line">average = tf.constant([0.2, 0.2, 0.2, 0.2, 0.2], dtype=tf.float32)</span><br><span class="line">spencer = tf.constant([-3, -6, -5, 3, 21, 46, 67, 74, 67, 46, 32, 3, -5, -6, -3], dtype=tf.float32) / 320</span><br></pre></td></tr></table></figure>
+<p>In fact, the <code>detrend</code> kernel filters for <em>changes</em> in the series, while <code>average</code> and <code>spencer</code> are both “smoothers” that filter for low-frequency components in the series.</p>
+<h1 id="163"><a href="#163" class="headerlink" title="163"></a>163</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Conv3D(</span><br><span class="line">    channel_in,</span><br><span class="line">    channel_out,</span><br><span class="line">    kernel_size=(depth,height,width),</span><br><span class="line">    stride=(depth,height,width)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="162"><a href="#162" class="headerlink" title="162"></a>162</h1><ul>
+<li>backbone:<br>  the main network </li>
+<li>head:<br>  use the feature generated by network to make a prediction</li>
+<li>neck:<br>  between backbone and head</li>
+<li>bottleneck<br>  reduce the dimension of the input</li>
+<li>GAP:<br>  global average pool</li>
+<li>pretext task:<br>  refers to pretraining</li>
+<li>downstream task:<br>  refers to fine-tuning	</li>
+<li>warm up:<br>  init the weight of network with a little learning rate in some epoch</li>
+<li>end to end:<br>  input the orginal image and output the expected image, the network do all for you<!--more--></li>
+</ul>
+<h1 id="161"><a href="#161" class="headerlink" title="161"></a>161</h1><p>YoloV1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">class CNNBlock(nn.Module):</span><br><span class="line">    def __init__(self, in_channels, out_channels, kernel_size=3, stride=1, padding=1):</span><br><span class="line">        super(CNNBlock, self).__init__()</span><br><span class="line">        self.conv2d = nn.Conv2d(</span><br><span class="line">            in_channels=in_channels,</span><br><span class="line">            out_channels=out_channels,</span><br><span class="line">            kernel_size=kernel_size,</span><br><span class="line">            stride=stride,</span><br><span class="line">            padding=padding,</span><br><span class="line">            bias=False</span><br><span class="line">        )</span><br><span class="line">        self.batchnorm = nn.BatchNorm2d(out_channels)</span><br><span class="line">        self.leaky_relu = nn.LeakyReLU(0.1)</span><br><span class="line">        </span><br><span class="line">    def forward(self, x):</span><br><span class="line">        out = self.conv2d(x)</span><br><span class="line">        out = self.batchnorm(out)</span><br><span class="line">        out = self.leaky_relu(out)</span><br><span class="line">        return out   </span><br><span class="line"></span><br><span class="line">class YoloV1(nn.Module):</span><br><span class="line">    def __init__(self, grid_size, n_box, n_class, input_channels=3):</span><br><span class="line">        super(YoloV1, self).__init__()</span><br><span class="line">        # S = grid_size</span><br><span class="line">        # n_box = Bounding boxes</span><br><span class="line">        # n_class = how many classes for classification</span><br><span class="line">        self.darknet = nn.Sequential(</span><br><span class="line">            # 448x448</span><br><span class="line">            CNNBlock(in_channels=input_channels,out_channels=64,kernel_size=7,stride=2,padding=3),</span><br><span class="line">            nn.MaxPool2d(kernel_size=2,stride=2),</span><br><span class="line">            # 112x112</span><br><span class="line">            CNNBlock(in_channels=64,out_channels=192,kernel_size=3,stride=1,padding=1),</span><br><span class="line">            nn.MaxPool2d(kernel_size=2,stride=2),</span><br><span class="line">            # 56x56</span><br><span class="line">            CNNBlock(in_channels=192,out_channels=128,kernel_size=1,stride=1,padding=0),</span><br><span class="line">            CNNBlock(in_channels=128,out_channels=256,kernel_size=3,stride=1,padding=1), # (56-3+2)/1 +1</span><br><span class="line">            CNNBlock(in_channels=256,out_channels=256,kernel_size=1,stride=1,padding=0),</span><br><span class="line">            CNNBlock(in_channels=256,out_channels=512,kernel_size=3,stride=1,padding=1),</span><br><span class="line">            nn.MaxPool2d(kernel_size=2,stride=2),</span><br><span class="line">            # 28x28</span><br><span class="line">            CNNBlock(in_channels=512,out_channels=256,kernel_size=1,stride=1,padding=0), # x1</span><br><span class="line">            CNNBlock(in_channels=256,out_channels=512,kernel_size=3,stride=1,padding=1),</span><br><span class="line">            CNNBlock(in_channels=512,out_channels=256,kernel_size=1,stride=1,padding=0), # x2</span><br><span class="line">            CNNBlock(in_channels=256,out_channels=512,kernel_size=3,stride=1,padding=1),</span><br><span class="line">            CNNBlock(in_channels=512,out_channels=256,kernel_size=1,stride=1,padding=0), # x3</span><br><span class="line">            CNNBlock(in_channels=256,out_channels=512,kernel_size=3,stride=1,padding=1),</span><br><span class="line">            CNNBlock(in_channels=512,out_channels=256,kernel_size=1,stride=1,padding=0), # x4</span><br><span class="line">            CNNBlock(in_channels=256,out_channels=512,kernel_size=3,stride=1,padding=1),</span><br><span class="line">            CNNBlock(in_channels=512,out_channels=1024,kernel_size=3,stride=1,padding=1),</span><br><span class="line">            nn.MaxPool2d(kernel_size=2,stride=2),</span><br><span class="line">            # 14x14</span><br><span class="line">            CNNBlock(in_channels=1024,out_channels=512,kernel_size=1,stride=1,padding=0), # x1</span><br><span class="line">            CNNBlock(in_channels=512,out_channels=1024,kernel_size=3,stride=1,padding=1),</span><br><span class="line">            CNNBlock(in_channels=1024,out_channels=512,kernel_size=1,stride=1,padding=0), # x2</span><br><span class="line">            CNNBlock(in_channels=512,out_channels=1024,kernel_size=3,stride=1,padding=1),</span><br><span class="line">            CNNBlock(in_channels=1024,out_channels=1024,kernel_size=3,stride=1,padding=1),</span><br><span class="line">            CNNBlock(in_channels=1024,out_channels=1024,kernel_size=3,stride=2,padding=1), # error</span><br><span class="line">            # 7x7</span><br><span class="line">            CNNBlock(in_channels=1024,out_channels=1024,kernel_size=3,stride=1,padding=1),</span><br><span class="line">            CNNBlock(in_channels=1024,out_channels=1024,kernel_size=3,stride=1,padding=1),</span><br><span class="line">            # 7x7</span><br><span class="line">        )</span><br><span class="line">        self.fc = nn.Sequential(</span><br><span class="line">            nn.Flatten(),</span><br><span class="line">            nn.Linear(1024*grid_size*grid_size,4096),</span><br><span class="line">            nn.Dropout(0.4),</span><br><span class="line">            nn.LeakyReLU(0.1),</span><br><span class="line">            nn.Linear(4096,grid_size*grid_size*(n_class+n_box*5))</span><br><span class="line">			# n_box (x,y,h,w,confidence)</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">    def forward(self,x):</span><br><span class="line">        out = self.darknet(x)</span><br><span class="line">        out = self.fc(out)</span><br><span class="line">        return out</span><br></pre></td></tr></table></figure>
+<!--more-->
+
+<h1 id="15"><a href="#15" class="headerlink" title="15"></a>15</h1><p>nms</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. sort scores of each classes.</span><br><span class="line">2. select the max scores of classes to calculate the IoU.</span><br><span class="line">3. keep the IoU &lt; threshold</span><br></pre></td></tr></table></figure>
+<!--more-->
+
+<h1 id="14"><a href="#14" class="headerlink" title="14"></a>14</h1><p>VGG-16</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line"></span><br><span class="line">def vgg_block(num_conv,num_filters):</span><br><span class="line">    blk = tf.keras.models.Sequential()</span><br><span class="line">    for _ in range(num_conv):</span><br><span class="line">        blk.add(tf.keras.layers.Conv2D(</span><br><span class="line">            num_filters,</span><br><span class="line">            kernel_size=3,</span><br><span class="line">            padding=&#x27;same&#x27;,</span><br><span class="line">            activation=&#x27;relu&#x27;</span><br><span class="line">        ))</span><br><span class="line">    blk.add(tf.keras.layers.MaxPool2D(</span><br><span class="line">        pool_size=2,</span><br><span class="line">        strides=2</span><br><span class="line">    ))</span><br><span class="line">    return blk</span><br><span class="line"></span><br><span class="line">def vgg(conv_arch):</span><br><span class="line">    net = tf.keras.models.Sequential(name=&#x27;vgg&#x27;)</span><br><span class="line">    # conv part</span><br><span class="line">    for (num_conv,num_filters) in conv_arch:</span><br><span class="line">        net.add(vgg_block(num_conv,num_filters))</span><br><span class="line">    # fc part</span><br><span class="line">    net.add(tf.keras.models.Sequential([</span><br><span class="line">        tf.keras.layers.Flatten(),</span><br><span class="line">        tf.keras.layers.Dense(4096,activation=&#x27;relu&#x27;),</span><br><span class="line">        tf.keras.layers.Dropout(0.5),</span><br><span class="line">        tf.keras.layers.Dense(4096,activation=&#x27;relu&#x27;),</span><br><span class="line">        tf.keras.layers.Dropout(0.5),</span><br><span class="line">        tf.keras.layers.Dense(10,activation=&#x27;softmax&#x27;)</span><br><span class="line">    ]))</span><br><span class="line">    return net</span><br><span class="line"></span><br><span class="line">conv_arch = ((2,64),(2,128),(3,256),(3,512),(3,512))</span><br><span class="line">net = vgg(conv_arch)</span><br><span class="line">X = tf.random.uniform((1,224,224,1))</span><br><span class="line">y = net(X)</span><br><span class="line">net.summary()</span><br></pre></td></tr></table></figure>
+<p>output</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Model: &quot;vgg&quot;</span><br><span class="line">_________________________________________________________________</span><br><span class="line">Layer (type)                 Output Shape              Param #   </span><br><span class="line">=================================================================</span><br><span class="line">sequential (Sequential)      (1, 112, 112, 64)         37568     </span><br><span class="line">_________________________________________________________________</span><br><span class="line">sequential_1 (Sequential)    (1, 56, 56, 128)          221440    </span><br><span class="line">_________________________________________________________________</span><br><span class="line">sequential_2 (Sequential)    (1, 28, 28, 256)          1475328   </span><br><span class="line">_________________________________________________________________</span><br><span class="line">sequential_3 (Sequential)    (1, 14, 14, 512)          5899776   </span><br><span class="line">_________________________________________________________________</span><br><span class="line">sequential_4 (Sequential)    (1, 7, 7, 512)            7079424   </span><br><span class="line">_________________________________________________________________</span><br><span class="line">sequential_5 (Sequential)    (1, 10)                   119586826 </span><br><span class="line">=================================================================</span><br><span class="line">Total params: 134,300,362</span><br><span class="line">Trainable params: 134,300,362</span><br><span class="line">Non-trainable params: 0</span><br><span class="line">_________________________________________________________________</span><br></pre></td></tr></table></figure>
+<!--more-->
+
+<h1 id="13"><a href="#13" class="headerlink" title="13"></a>13</h1><p>AlexNet-8</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line"></span><br><span class="line">net = tf.keras.Sequential([</span><br><span class="line">    # Conv1</span><br><span class="line">    tf.keras.layers.Conv2D(filters=96,kernel_size=11,strides=4,activation=&#x27;relu&#x27;,input_shape=(227,227,1)),</span><br><span class="line">    tf.keras.layers.MaxPool2D(pool_size=3,strides=2),</span><br><span class="line">    # Conv2</span><br><span class="line">    tf.keras.layers.Conv2D(filters=256,kernel_size=5,padding=&#x27;same&#x27;,activation=&#x27;relu&#x27;),</span><br><span class="line">    tf.keras.layers.MaxPool2D(pool_size=3,strides=2),</span><br><span class="line">    # Conv3</span><br><span class="line">    tf.keras.layers.Conv2D(filters=384,kernel_size=3,padding=&#x27;same&#x27;,activation=&#x27;relu&#x27;),</span><br><span class="line">    # Conv4</span><br><span class="line">    tf.keras.layers.Conv2D(filters=384,kernel_size=3,padding=&#x27;same&#x27;,activation=&#x27;relu&#x27;),</span><br><span class="line">    # Conv5 </span><br><span class="line">    tf.keras.layers.Conv2D(filters=256,kernel_size=3,padding=&#x27;same&#x27;,activation=&#x27;relu&#x27;),</span><br><span class="line">    tf.keras.layers.MaxPool2D(pool_size=3,strides=2),</span><br><span class="line">    tf.keras.layers.Flatten(),</span><br><span class="line">    # FC1</span><br><span class="line">    tf.keras.layers.Dense(4096,activation=&#x27;relu&#x27;),</span><br><span class="line">    tf.keras.layers.Dropout(0.5),</span><br><span class="line">    # FC2</span><br><span class="line">    tf.keras.layers.Dense(4096,activation=&#x27;relu&#x27;),</span><br><span class="line">    tf.keras.layers.Dropout(0.5),</span><br><span class="line">    # FC3</span><br><span class="line">    tf.keras.layers.Dense(10,activation=&#x27;softmax&#x27;)</span><br><span class="line">],name=&#x27;AlexNet-8&#x27;)</span><br><span class="line"></span><br><span class="line">net.summary()</span><br></pre></td></tr></table></figure>
+<p>output</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">Model: &quot;AlexNet-8&quot;</span><br><span class="line">_________________________________________________________________</span><br><span class="line">Layer (type)                 Output Shape              Param #   </span><br><span class="line">=================================================================</span><br><span class="line">conv2d_30 (Conv2D)           (None, 55, 55, 96)        11712     </span><br><span class="line">_________________________________________________________________</span><br><span class="line">max_pooling2d_18 (MaxPooling (None, 18, 18, 96)        0         </span><br><span class="line">_________________________________________________________________</span><br><span class="line">conv2d_31 (Conv2D)           (None, 18, 18, 256)       614656    </span><br><span class="line">_________________________________________________________________</span><br><span class="line">max_pooling2d_19 (MaxPooling (None, 8, 8, 256)         0         </span><br><span class="line">_________________________________________________________________</span><br><span class="line">conv2d_32 (Conv2D)           (None, 8, 8, 384)         885120    </span><br><span class="line">_________________________________________________________________</span><br><span class="line">conv2d_33 (Conv2D)           (None, 8, 8, 384)         1327488   </span><br><span class="line">_________________________________________________________________</span><br><span class="line">conv2d_34 (Conv2D)           (None, 8, 8, 256)         884992    </span><br><span class="line">_________________________________________________________________</span><br><span class="line">max_pooling2d_20 (MaxPooling (None, 2, 2, 256)         0         </span><br><span class="line">_________________________________________________________________</span><br><span class="line">flatten_6 (Flatten)          (None, 1024)              0         </span><br><span class="line">_________________________________________________________________</span><br><span class="line">dense_18 (Dense)             (None, 4096)              4198400   </span><br><span class="line">_________________________________________________________________</span><br><span class="line">dropout_12 (Dropout)         (None, 4096)              0         </span><br><span class="line">_________________________________________________________________</span><br><span class="line">dense_19 (Dense)             (None, 4096)              16781312  </span><br><span class="line">_________________________________________________________________</span><br><span class="line">dropout_13 (Dropout)         (None, 4096)              0         </span><br><span class="line">_________________________________________________________________</span><br><span class="line">dense_20 (Dense)             (None, 10)                40970     </span><br><span class="line">=================================================================</span><br><span class="line">Total params: 24,744,650</span><br><span class="line">Trainable params: 24,744,650</span><br><span class="line">Non-trainable params: 0</span><br><span class="line">_________________________________________________________________</span><br></pre></td></tr></table></figure>
+
+<h1 id="12"><a href="#12" class="headerlink" title="12"></a>12</h1><p>LeNet-5</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line"></span><br><span class="line">net = tf.keras.models.Sequential([</span><br><span class="line">    # </span><br><span class="line">    tf.keras.layers.Conv2D(filters=6,kernel_size=5,activation=&#x27;sigmoid&#x27;,input_shape=(28,28,1)),</span><br><span class="line">    tf.keras.layers.MaxPool2D(pool_size=2,strides=2),</span><br><span class="line">    #</span><br><span class="line">    tf.keras.layers.Conv2D(filters=16,kernel_size=5,activation=&#x27;sigmoid&#x27;),</span><br><span class="line">    tf.keras.layers.MaxPool2D(pool_size=2,strides=2),</span><br><span class="line">    #</span><br><span class="line">    tf.keras.layers.Flatten(),</span><br><span class="line">    tf.keras.layers.Dense(120,activation=&#x27;sigmoid&#x27;),</span><br><span class="line">    tf.keras.layers.Dense(84,activation=&#x27;sigmoid&#x27;),</span><br><span class="line">    tf.keras.layers.Dense(10,activation=&#x27;softmax&#x27;)</span><br><span class="line">],name=&#x27;LeNet-5&#x27;)</span><br><span class="line">net.summary()</span><br></pre></td></tr></table></figure>
+<p>output</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Model: &quot;LeNet-5&quot;</span><br><span class="line">_________________________________________________________________</span><br><span class="line">Layer (type)                 Output Shape              Param #   </span><br><span class="line">=================================================================</span><br><span class="line">conv2d_4 (Conv2D)            (None, 24, 24, 6)         156       </span><br><span class="line">_________________________________________________________________</span><br><span class="line">max_pooling2d_4 (MaxPooling2 (None, 12, 12, 6)         0         </span><br><span class="line">_________________________________________________________________</span><br><span class="line">conv2d_5 (Conv2D)            (None, 8, 8, 16)          2416      </span><br><span class="line">_________________________________________________________________</span><br><span class="line">max_pooling2d_5 (MaxPooling2 (None, 4, 4, 16)          0         </span><br><span class="line">_________________________________________________________________</span><br><span class="line">flatten_2 (Flatten)          (None, 256)               0         </span><br><span class="line">_________________________________________________________________</span><br><span class="line">dense_6 (Dense)              (None, 120)               30840     </span><br><span class="line">_________________________________________________________________</span><br><span class="line">dense_7 (Dense)              (None, 84)                10164     </span><br><span class="line">_________________________________________________________________</span><br><span class="line">dense_8 (Dense)              (None, 10)                850       </span><br><span class="line">=================================================================</span><br><span class="line">Total params: 44,426</span><br><span class="line">Trainable params: 44,426</span><br><span class="line">Non-trainable params: 0</span><br><span class="line">_________________________________________________________________</span><br></pre></td></tr></table></figure>
+<!--more-->
+
+<h1 id="11"><a href="#11" class="headerlink" title="11"></a>11</h1><p><a target="_blank" rel="noopener" href="https://cs231n.github.io/convolutional-networks/">CS231n Convolutional Neural Networks for Visual Recognition</a></p>
+<h1 id="10"><a href="#10" class="headerlink" title="10"></a>10</h1><p>Some concludsion of convolution network<br>1.$channel_{in} &#x3D; number of filters$<br>2.$channel_{out} &#x3D; layer of a filter$</p>
+<!--more-->
+
+<h1 id="9"><a href="#9" class="headerlink" title="9"></a>9</h1><p>Pooling is one of the essential features of convolutional networks and helps provide them with some of their characteristic advantages: efficiency with visual data, reduced parameter size compared to dense networks, translation invariance.</p>
+<h1 id="8"><a href="#8" class="headerlink" title="8"></a>8</h1><p>When <code>MaxPool2D</code> removes some of these pixels, it removes some of the positional information in the feature map. This give a convnet a property call translation invariance. This means that a convnet with maximum pooling will tend not to distinguish features by their location in the image.</p>
+<h1 id="7"><a href="#7" class="headerlink" title="7"></a>7</h1><p>The output size of keras.Conv2D:<br>(N-F)&#x2F;stride + 1</p>
+<h1 id="6"><a href="#6" class="headerlink" title="6"></a>6</h1><p>The featur extraction performed by the consists of three basic operations:</p>
+<ol>
+<li>Filter an image for a particular feature(convolution)</li>
+<li>Detect that feature within the filtered image (ReLU)</li>
+<li>Condense the image to enhance the features (maximum pooling)<!--more--></li>
+</ol>
+<h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><p>yolo-v1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. resize image.</span><br><span class="line">2. run convolution network</span><br><span class="line">3. non maximum supperssion</span><br></pre></td></tr></table></figure>
+
+<h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><p>That the training loss and validation loss stay fairly close is evidence that the model isn’t just memorizing the training data.</p>
+<h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>Reusing a pretrained model is a technique known as transfer learning. It is so effective, that almost every image classifier there days will make use of it.</p>
+<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>A convnet used for image classification consisits of two parts: a convolutional base and a dense head.</p>
+<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>Convlouton is the mathematical operation that gives the layers of a convnet their unique structure.</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/14/You-Only-Look-Once-Unified-Real-Time-Object-Detection/" rel="prev" title="You Only Look Once: Unified, Real-Time Object Detection">
+      <i class="fa fa-chevron-left"></i> You Only Look Once: Unified, Real-Time Object Detection
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/01/20/Learning-Spatiotemporal-Features-with-3D-Convolutional-Networks/" rel="next" title="Learning Spatiotemporal Features with 3D Convolutional Networks">
+      Learning Spatiotemporal Features with 3D Convolutional Networks <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#169"><span class="nav-number">1.</span> <span class="nav-text">169</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#169-1"><span class="nav-number">2.</span> <span class="nav-text">169</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#167"><span class="nav-number">3.</span> <span class="nav-text">167</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#166"><span class="nav-number">4.</span> <span class="nav-text">166</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#165"><span class="nav-number">5.</span> <span class="nav-text">165</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#164"><span class="nav-number">6.</span> <span class="nav-text">164</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#163"><span class="nav-number">7.</span> <span class="nav-text">163</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#162"><span class="nav-number">8.</span> <span class="nav-text">162</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#161"><span class="nav-number">9.</span> <span class="nav-text">161</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#15"><span class="nav-number">10.</span> <span class="nav-text">15</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#14"><span class="nav-number">11.</span> <span class="nav-text">14</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#13"><span class="nav-number">12.</span> <span class="nav-text">13</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#12"><span class="nav-number">13.</span> <span class="nav-text">12</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#11"><span class="nav-number">14.</span> <span class="nav-text">11</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10"><span class="nav-number">15.</span> <span class="nav-text">10</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9"><span class="nav-number">16.</span> <span class="nav-text">9</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8"><span class="nav-number">17.</span> <span class="nav-text">8</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7"><span class="nav-number">18.</span> <span class="nav-text">7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6"><span class="nav-number">19.</span> <span class="nav-text">6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5"><span class="nav-number">20.</span> <span class="nav-text">5</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4"><span class="nav-number">21.</span> <span class="nav-text">4</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3"><span class="nav-number">22.</span> <span class="nav-text">3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2"><span class="nav-number">23.</span> <span class="nav-text">2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1"><span class="nav-number">24.</span> <span class="nav-text">1</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Rainumdo"
+      src="https://avatars.githubusercontent.com/u/25033462?s=400&u=bc84f2c7a2d509356d6d72b7aecd42fa914ce616&v=4">
+  <p class="site-author-name" itemprop="name">Rainumdo</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Rainumdo</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
