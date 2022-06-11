@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"rainumdo.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"rainumdo.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Temporal Segment Networks: Towards Good Practices for Deep Action Recognition AbstractThis paper aims to discover the principles to design effective ConvNet architectures for action recognition in vid">
@@ -28,7 +28,7 @@
 <meta property="og:description" content="Temporal Segment Networks: Towards Good Practices for Deep Action Recognition AbstractThis paper aims to discover the principles to design effective ConvNet architectures for action recognition in vid">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-05-20T01:33:05.000Z">
-<meta property="article:modified_time" content="2022-05-24T05:48:11.779Z">
+<meta property="article:modified_time" content="2022-06-05T14:36:34.134Z">
 <meta property="article:author" content="Rainumdo">
 <meta property="article:tag" content="paper">
 <meta name="twitter:card" content="summary">
@@ -331,7 +331,7 @@ mjx-container[display="true"] + br {
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-24 13:48:11" itemprop="dateModified" datetime="2022-05-24T13:48:11+08:00">2022-05-24</time>
+                <time title="Modified: 2022-06-05 22:36:34" itemprop="dateModified" datetime="2022-06-05T22:36:34+08:00">2022-06-05</time>
               </span>
 
           
@@ -402,10 +402,13 @@ mjx-container[display="true"] + br {
 <p>Inspired by the work of improved dense trajectories [2], we propose to take warped optical flow fields as additional input modality.</p>
 <p><strong>Network Training.</strong></p>
 <p>As the datasets for action recognition are relatively small, training deep ConvNets is challenged by the risk of over-fitting.<br>To mitigate this problem, we design several strategies for training the ConvNets in temporal segment networks as follows.</p>
-<p><strong>Cross Modality Pre-training.</strong></p>
+<p><em>Cross Modality Pre-training.</em></p>
 <p>Pre-training has turned out to be an effective way to initalize deep ConvNets when the target dataset does not have enough training samples[1].</p>
 <p>We come up with a cross modality pre-training technique in which we utilize RGB models to initalize the temporal networks.<br>First, we discretize optical flow fields into the interval form 0 to 255 by a linear transformation.<br>This step makes the range of optical flow field to be the same with RGB image.<br>Then, we modifiy the weights of first convolution layer of RGB models to handle the input of optical flow fields.<br>Specifically, we average the weights across the RGB channels and replicate this average by the channel number of temporal network input.<br>This initalization method works pretty well for temporal networks and reduce the effect of over-fitting in experiments.</p>
-<p><strong>Regularization Techniques.</strong></p>
+<blockquote>
+<p>modify the input channels of the default resnet and average the weight to the new conv2d kernel.</p>
+</blockquote>
+<p><em>Regularization Techniques.</em></p>
 <p>Batch Normalization [23] is an important component to deal with the problem of covariate shift.</p>
 <p>In the learning process, batch normalization will estimate the activation mean and variance with each batch and use them to transform these activation values into a standard Gaussian distribution.<br>This operation speed up the convergence of training but also leads to over-fitting in the transferring process, due to the biased estimation of acticivation distributions from limited number of training samples.<br>Therefore, after initalization with pre-trained model, we choose to freeze the mean and variance parameters of all Batch Normalization layers except the first one.</p>
 <p>We call this strategy partial BN.<br>Meanwhile, we add a extra dropout layer after the global pooling layer in BN-Inception architecture to further reduce the effect of over-fitting.</p>
@@ -422,7 +425,17 @@ mjx-container[display="true"] + br {
 <h2 id="4-2-Exploration-Study"><a href="#4-2-Exploration-Study" class="headerlink" title="4.2 Exploration Study"></a>4.2 Exploration Study</h2><p>Table 1. Exploration of different training strategies for two-stream ConvNets on the UCF101 dataset (split 1).</p>
 <p>Table 2. Exploration of different input modalities for two-stream ConvNets on the UCF101 dataset (split 1.)</p>
 <p>We conjecture that the optical flow is better at capturing motion information and sometimes RGB difference may be unstable for describing motions.<br>On the other hand, RGB difference may serve as a low-quality, high-speed alternative motion representations.</p>
-<h2 id="4-3-Evaluation-of-Temporal-Segment-Networks"><a href="#4-3-Evaluation-of-Temporal-Segment-Networks" class="headerlink" title="4.3 Evaluation of Temporal Segment Networks"></a>4.3 Evaluation of Temporal Segment Networks</h2>
+<h2 id="4-3-Evaluation-of-Temporal-Segment-Networks"><a href="#4-3-Evaluation-of-Temporal-Segment-Networks" class="headerlink" title="4.3 Evaluation of Temporal Segment Networks"></a>4.3 Evaluation of Temporal Segment Networks</h2><p>Table 3. Exploration of different segmental consensus functions for temporal segment networks on the UCF101 dataset (split 1)</p>
+<p>Table 4. Exploration of different very deep ConvNet architecture on the UCF101 dataset (split 1). “BN-Inception+TSN” refers to the setting where the temporal segment networkframework is applied on the top of the best performing BN-Inception [23] architecture.</p>
+<p>Table 5. Component analysis of the proposed method on the UCF101 dataset (split 1).</p>
+<h2 id="4-4-Comparison-with-the-State-of-the-Art"><a href="#4-4-Comparison-with-the-State-of-the-Art" class="headerlink" title="4.4 Comparison with the State of the Art"></a>4.4 Comparison with the State of the Art</h2><p>iDTs[2]<br>MoFAP representations[39]<br>C3D[13]<br>TDD(trajectory-pooled deep-convolutional descriptors)[5]<br>FSTCN(factorized spatio-temporal convolutional networks)[28]<br>LTC(long term convolution networks)[19]<br>KVMF(key volume mining framework)[41]</p>
+<p>Table 6. Comparison of our method based on temporal segment network(TSN) with other state-of-the-art methods.</p>
+<h2 id="4-5-Model-Visualization"><a href="#4-5-Model-Visualization" class="headerlink" title="4.5 Model Visualization"></a>4.5 Model Visualization</h2><p>In this sense, we adopt the DeepDraw[42] toolbox.</p>
+<p>It is also easy to notice that the models, trained with only short-term information such as single frames, tend to mistake the scenery patterns and objects in the video as significant evidences for action recognition.</p>
+<p>For example, inthe class “Diving”, the single-frame spatial stream ConvNet mainly looks for water and diving platforms, other than the perperforming diving.<br>Its temporal stream counterpart, working on optical flow, tends to focus on the motion caused by waves of surface water.</p>
+<p>We refer the reader to supplementary materials for visualzation of more action classes and more details on the visualization process.</p>
+<h1 id="5-Conclusions"><a href="#5-Conclusions" class="headerlink" title="5 Conclusions"></a>5 Conclusions</h1><p>This is largely scribed to the segmental architecture with sparse sampling, as well as series of good practices that we explored in this work.</p>
+
     </div>
 
     
@@ -443,7 +456,10 @@ mjx-container[display="true"] + br {
     <a href="/2022/05/09/Quo-Vadis-Action-Recognition-A-New-Model-and-the-Kinetics-Dataset/" rel="prev" title="Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset">
       <i class="fa fa-chevron-left"></i> Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/24/Swin-Transformer-Hierarchical-Vision-Transformer-using-Shifted-Windows/" rel="next" title="Swin Transformer: Hierarchical Vision Transformer using Shifted Windows">
+      Swin Transformer: Hierarchical Vision Transformer using Shifted Windows <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -502,7 +518,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction"><span class="nav-number">2.</span> <span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Related-Works"><span class="nav-number">3.</span> <span class="nav-text">2. Related Works</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Action-Recognition-with-Temporal-Segment-Networks"><span class="nav-number">4.</span> <span class="nav-text">3. Action Recognition with Temporal Segment Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Temporal-Segment-Networks"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 Temporal Segment Networks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Learning-Temporal-Segment-Networks"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 Learning Temporal Segment Networks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-Testing-Temporal-Segment-Networks"><span class="nav-number">4.3.</span> <span class="nav-text">3.3 Testing Temporal Segment Networks</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Experiments"><span class="nav-number">5.</span> <span class="nav-text">4 Experiments</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Datasets-and-Implementation-Details"><span class="nav-number">5.1.</span> <span class="nav-text">4.1 Datasets and Implementation Details</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Exploration-Study"><span class="nav-number">5.2.</span> <span class="nav-text">4.2 Exploration Study</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-Evaluation-of-Temporal-Segment-Networks"><span class="nav-number">5.3.</span> <span class="nav-text">4.3 Evaluation of Temporal Segment Networks</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction"><span class="nav-number">2.</span> <span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Related-Works"><span class="nav-number">3.</span> <span class="nav-text">2. Related Works</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Action-Recognition-with-Temporal-Segment-Networks"><span class="nav-number">4.</span> <span class="nav-text">3. Action Recognition with Temporal Segment Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Temporal-Segment-Networks"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 Temporal Segment Networks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Learning-Temporal-Segment-Networks"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 Learning Temporal Segment Networks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-Testing-Temporal-Segment-Networks"><span class="nav-number">4.3.</span> <span class="nav-text">3.3 Testing Temporal Segment Networks</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Experiments"><span class="nav-number">5.</span> <span class="nav-text">4 Experiments</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Datasets-and-Implementation-Details"><span class="nav-number">5.1.</span> <span class="nav-text">4.1 Datasets and Implementation Details</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Exploration-Study"><span class="nav-number">5.2.</span> <span class="nav-text">4.2 Exploration Study</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-Evaluation-of-Temporal-Segment-Networks"><span class="nav-number">5.3.</span> <span class="nav-text">4.3 Evaluation of Temporal Segment Networks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-Comparison-with-the-State-of-the-Art"><span class="nav-number">5.4.</span> <span class="nav-text">4.4 Comparison with the State of the Art</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-Model-Visualization"><span class="nav-number">5.5.</span> <span class="nav-text">4.5 Model Visualization</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Conclusions"><span class="nav-number">6.</span> <span class="nav-text">5 Conclusions</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -518,7 +534,7 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
