@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"rainumdo.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Rethinking ImageNet Pre-training AbstractWe report competitive results on object detection and instance segmentation on the COCO dataset using standard models trained from random initaliation. The res">
+  <meta name="description" content="Tiny Video Networks AbstractWe propose efficient models for video - Tiny Video Networks - which are video architecture, automatically designed to comply with fast runtimes and, at the same time, effec">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Rethinking ImageNet Pre-training">
-<meta property="og:url" content="https://rainumdo.github.io/2022/03/29/Rethinking-ImageNet-Pre-training/index.html">
+<meta property="og:title" content="Tiny Video Networks">
+<meta property="og:url" content="https://rainumdo.github.io/2022/06/13/Tiny-Video-Networks/index.html">
 <meta property="og:site_name" content="Rainumdo&#39;s blog">
-<meta property="og:description" content="Rethinking ImageNet Pre-training AbstractWe report competitive results on object detection and instance segmentation on the COCO dataset using standard models trained from random initaliation. The res">
+<meta property="og:description" content="Tiny Video Networks AbstractWe propose efficient models for video - Tiny Video Networks - which are video architecture, automatically designed to comply with fast runtimes and, at the same time, effec">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-29T14:47:00.000Z">
-<meta property="article:modified_time" content="2022-05-22T06:13:35.398Z">
+<meta property="article:published_time" content="2022-06-13T12:38:23.000Z">
+<meta property="article:modified_time" content="2022-06-17T10:49:55.530Z">
 <meta property="article:author" content="Rainumdo">
 <meta property="article:tag" content="paper">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://rainumdo.github.io/2022/03/29/Rethinking-ImageNet-Pre-training/">
+<link rel="canonical" href="https://rainumdo.github.io/2022/06/13/Tiny-Video-Networks/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>Rethinking ImageNet Pre-training | Rainumdo's blog</title>
+  <title>Tiny Video Networks | Rainumdo's blog</title>
   
 
 
@@ -301,7 +301,7 @@ mjx-container[display="true"] + br {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2022/03/29/Rethinking-ImageNet-Pre-training/">
+    <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2022/06/13/Tiny-Video-Networks/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars.githubusercontent.com/u/25033462?s=400&u=bc84f2c7a2d509356d6d72b7aecd42fa914ce616&v=4">
@@ -314,7 +314,7 @@ mjx-container[display="true"] + br {
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Rethinking ImageNet Pre-training
+          Tiny Video Networks
         </h1>
 
         <div class="post-meta">
@@ -324,14 +324,14 @@ mjx-container[display="true"] + br {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-03-29 22:47:00" itemprop="dateCreated datePublished" datetime="2022-03-29T22:47:00+08:00">2022-03-29</time>
+              <time title="Created: 2022-06-13 20:38:23" itemprop="dateCreated datePublished" datetime="2022-06-13T20:38:23+08:00">2022-06-13</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-22 14:13:35" itemprop="dateModified" datetime="2022-05-22T14:13:35+08:00">2022-05-22</time>
+                <time title="Modified: 2022-06-17 18:49:55" itemprop="dateModified" datetime="2022-06-17T18:49:55+08:00">2022-06-17</time>
               </span>
 
           
@@ -352,56 +352,32 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1811.08883">Rethinking ImageNet Pre-training</a></p>
-<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>We report competitive results on object detection and instance segmentation on the COCO dataset using standard models trained from random initaliation. The result are no worse than their ImageNet pre-training counterparts even when using the hyper-parameters of the baseline system(Mask R-CNN) that were optimized for fune-tuin pretrained models, with the sold exception of increasing the number of training iterations so the randomly initalized models may converge.<br><strong>Training from random initalization is superisingly robust;</strong><br>Our results hold even when:</p>
+        <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1910.06961">Tiny Video Networks</a></p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>We propose efficient models for video - Tiny Video Networks - which are video architecture, automatically designed to comply with fast runtimes and, at the same time, effective at video recognition tasks.</p>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p>At the same time video understanding is a challenging task as it needs to incorporate spatio-temporal information across multiple frames.</p>
+<p>To address these challenges, we propose to automatically design video networks that provide strong recognition performance at a fraction of the computational cost with faster-than-real-time speeds.</p>
+<p>We call them Tiny Video Networks(TVN), as they require extremely small runtimes, which is unprecedented for video models.</p>
+<p>TVNs operate in the high accuracy and low runtime area of the accuracy runtime curve where no other models exist (Figure 1), and outperform state-of-the-art video models, despite being order, or orders, of magntude faster.</p>
+<p>Neural architecture search approaches[61,27,22] have been successful, but are time-intensive even for images.</p>
+<p>In this work we address both problems, showing that it is possible to design successful video architectures via architecture search differently, both structurally and at the component level from low-level primitives, and that, at the same time, they can be very accurate and run at faster than real-time speeds.</p>
+<p>We discover novel and interesting video architectures, which at the same time are easy to understand (Figure 2).<br>Furthermore, we propose a search space which enables the combination of efficient layers, which effectively interleave components working in the time and spatial domains.</p>
+<p>Our Mobile TVNs significantly outperform the popular MobileNet models[37] applied to videos, both in accuracy and runtime applied to videos, both in accuracy and runtime.</p>
+<p>datasets:<br>Moments-in-Time[26]<br>HMDB[18]<br>Charades[39]<br>MLB[30]</p>
+<h1 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2. Related Work"></a>2. Related Work</h1><p>Many innovative video understanding methods are proposed, some of which also focusing on efficiency [1,2,3,4,5,6,7,9,12,15,16,17,19,20,23,32,40,41,42,45,46,52,53,54,57,60].</p>
+<p>Representation flow[31], MFNet[4] reduce the computaion of optical flow, while CoViAR[51] focus on using compressed video (e.g., MPEGs) to perform recognition.</p>
+<p>We here focus on obtaining efficient and compact CNN architecture, which itself can run on top of compressd videos.<br>Furthermore, online video understanding works have generated fast processing by reusing computations across frames[60,20].</p>
+<h1 id="3-Tiny-Video-Networks"><a href="#3-Tiny-Video-Networks" class="headerlink" title="3. Tiny Video Networks"></a>3. Tiny Video Networks</h1><p>We use evolution as the main optimization algorithm [10,33] which enables the comstruction of new network structures, can run in parallel, and allows for imposing non-differentiable constraints, such as time and memory limits.</p>
+<p>Since the networks need to solve challenging video understanding tasks and at the same time be efficient, the main idea is to create architectures out of basic network building blocks, but allow the selection of effective combinations of layers, working either in the spatial or time domains, which are successful at the video understanding task.</p>
+<p>In order to apply evolutionary search for videos, several careful considerations need to be made.</p>
 <ol>
-<li>using only 10% of the training data</li>
-<li>for deeper and wider models</li>
-<li>for multiple tasks and metrics<br>Experiments shows that ImageNet pre-training speeds up convergence early in training, but does not necessarily provide regularization or improve final target task accuracy.</li>
+<li>We specifically focus on a set of primitive neural layers, for example, we do not include video-specific elements - such as 3D convolutions, since they are expensice. Instead, elements such as pooling and convolutions are used. The architecture search is tasked with discovering successful sequences of them, which satisfy predefined constrants, e.g. runtime.</li>
+<li>The network layers can choose to work in either the spatial or the time dimensions.</li>
+<li>The architecture search can decide which input resolution is most advantageous, combined with how many frames per video snippet are needed and at what sampling rate.</li>
+<li>We further take advantage of the constraints to eliminate quickly models without evaluating their fitness, if they do satisfy the constraints.</li>
+<li>We consider highly efficient network elements: 2D spatial or 1D temporal convolutional layer, 1D pooling, non-local blocks[48], context-gating layers[25], and squeeze-and-excitation layers[14].</li>
+<li>In order to limit the search space we organize the architectures in blocks, which can be repeated. Each block can contain one of the available layers. This provides a ceratin structure to the network, rather than exploring an unconstrained sequences of random numbers of layers.</li>
 </ol>
-<p>These observations challenge the conventional wisdom of ImageNet pre-training for dependent tasks and we expect these discoveries will encourage people to rethink the current de fcto paradigm of “pre-training and fine-tuning” in computer vision.</p>
-<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p>In recent years, a well-established paradigm has been to pre-train models using large-scale data and then fine-tune the models on target tasks that often have less training data.</p>
-<p>Pre-training has enabled state-of-the-art  results on many tasks, including object detection, image segmentation, and action recognitaion.</p>
-<p>This papaer questions the paradigm of pre-training even further by exploring the opposite regime: we report that competitive object detection and instance segmentation accuracy is achievable when training on COCO from random initalization (from scratch), without any pre-training. More surprisingly, we can achieve these results by using basline systems and their hyper-parameters that there is no fundamental obstacle preventing us from training from scratch, if: </p>
-<ol>
-<li>we use normalization technique appropriately for optimization</li>
-<li>we train the models sufficiently long to compensate for the lack of pre-trianing.</li>
-</ol>
-<p>Based on these experiments and others, we observe the following:</p>
-<ol>
-<li>ImageNet pre-training speeds up convergence, especially early on in training, but trainin from random initalizaiton can catch up after training for a duration.</li>
-<li>ImageNet pre-training does not automatically give better regularization.</li>
-<li>ImageNet pre-training shows on benefit when the target tasks/metrics are more sensitive to spatially well localized predictions. Intuitively, the task gap between the classification-based, ImageNet like pre-training and localization-sensitive target tasks may limit the benefits of pre-training.</li>
-</ol>
-<h1 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2. Related Work"></a>2. Related Work</h1><p>Following these results, most algorithm employ the ‘pre-training and fine-tuning’ paradigm.</p>
-<p>The magrinal benefit from the kind of large-scale pre-training data used to date diminishes rapidly.</p>
-<p>Given the success of pre-training in the R-CNN paper, later analysis found that pre-training from scratch is non-trivial became conventional wisdom.</p>
-<p>there is little evidence that there specialized architectures are required for models to be trained from scratch.</p>
-<h1 id="3-Methodology"><a href="#3-Methodology" class="headerlink" title="3. Methodology"></a>3. Methodology</h1><p>We decribe the only two modifications that we find to be necessary, related to model normalization and training length, discussed next.</p>
-<h2 id="3-1-Normalization"><a href="#3-1-Normalization" class="headerlink" title="3.1 Normalization"></a>3.1 Normalization</h2><p>Successful forms of normalization include normalized parameter initalization and activation normalization layers.</p>
-<p>Batch Normalization, the popular normalization method used from train modern networks, partically makes traning detectors from scratch difficult.</p>
-<p>Object detectors are typically trained with high resolution inputs, unlike image classifiers. This reduces batch sizes as constrained by memory, and small batch sizes severely degrade the accuracy of BN. This issue can be circumvented if pre-training is used, bacause fine-tuning can adopt the pre-training batch statistics as fixed parameters; however, freezing BN is invalid when training from scratch.</p>
-<p>We also report that using appropriately normalization initalization, we can train object detectors with VGG nets from random initalizaiton with out BN or GN.</p>
-<h2 id="3-2-Convergence"><a href="#3-2-Convergence" class="headerlink" title="3.2 Convergence"></a>3.2 Convergence</h2><p>With this motivation, we argue that models trained from scratch mast be trained for longer than typical fine-tuning schedules.</p>
-<p>Our experiments show that under the schedules in Figure 2, the from-scratch detectors can catch up with their fine-tuning conterparts.<br>This suggests that a sufficiently large number of total samples (arguably in terms of pixels) are required for the models trained from random initalization to convergence well.</p>
-<h1 id="4-Experimental-Settings"><a href="#4-Experimental-Settings" class="headerlink" title="4. Experimental Settings"></a>4. Experimental Settings</h1><p>Architecture.<br>Mask R-CNN with ResNet, or ResNeXt plus Feature Pyramid Network backbones.</p>
-<p>Learning rate scheduling.<br>90k iterations = 1x schedule</p>
-<p>Hyper-parameters.<br>learning rate = 0.02<br>weight decay = 0.0001<br>momentum = 0.9</p>
-<h1 id="5-Results-and-Analysis"><a href="#5-Results-and-Analysis" class="headerlink" title="5. Results and Analysis"></a>5. Results and Analysis</h1><h2 id="5-1-Training-from-scratch-to-match-accuracy"><a href="#5-1-Training-from-scratch-to-match-accuracy" class="headerlink" title="5.1 Training from scratch to match accuracy"></a>5.1 Training from scratch to match accuracy</h2><h2 id="5-2-Training-from-scratch-with-less-data"><a href="#5-2-Training-from-scratch-with-less-data" class="headerlink" title="5.2 Training from scratch with less data"></a>5.2 Training from scratch with less data</h2><h1 id="6-Disucssions"><a href="#6-Disucssions" class="headerlink" title="6. Disucssions"></a>6. Disucssions</h1><p>We summarize the main observations from our experiments as follows:</p>
-<ul>
-<li>Training from scratch on target tasks is possible with architecture change.</li>
-<li>Training from scratch on scratch requires more iterations to sufficiently converge.</li>
-<li>Training from scratch can be no worse than its ImageNet per-training counterparts under many circumstances down to as few as 10k COCO images.</li>
-<li>ImageNet pre-training speeds up convergence on the target task.</li>
-<li>ImageNet pre-training does not necessarily help reduce overfitting unless we enter a very small data regime.</li>
-<li>ImageNet pre-training helps less if the target task is more sensitive to localization than classification.</li>
-</ul>
-<p>Based on these observations, we provide our answers to a few important questions that may encourage people to rethink ImageNet pre-training:</p>
-<p><strong>Is ImageNet pre-training necessary?</strong> No -if we have enought target data.</p>
-<p><strong>Is ImageNet helpful?</strong> Yes. ImageNet pre-training has been a critical auxiliary task for computer vision community to progress.</p>
-<p><strong>Do we need big data?</strong> Yes. But a generic large scale, classification-level pre-training set is not ideal if we take into account the extra effort of collecting and cleaning data – the cost of collecting ImageNet has been largely ignored, but the ‘pre-training’ step in the ‘pre-training + fine-tuning’ paradigm is in fact not free when we scale out this paradigm.</p>
-<p><strong>Shall we pursuit universal representations?</strong> Yes. We believe learning universal representations is a laudable goal.</p>
-
+<h2 id="3-1-Tiny-Video-Architecture-Search"><a href="#3-1-Tiny-Video-Architecture-Search" class="headerlink" title="3.1 Tiny Video Architecture Search"></a>3.1 Tiny Video Architecture Search</h2>
     </div>
 
     
@@ -419,12 +395,12 @@ mjx-container[display="true"] + br {
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/03/29/Measuring-Saturation-in-Neural-Networks/" rel="prev" title="Measuring Saturation in Neural Networks">
-      <i class="fa fa-chevron-left"></i> Measuring Saturation in Neural Networks
+    <a href="/2022/05/24/Swin-Transformer-Hierarchical-Vision-Transformer-using-Shifted-Windows/" rel="prev" title="Swin Transformer: Hierarchical Vision Transformer using Shifted Windows">
+      <i class="fa fa-chevron-left"></i> Swin Transformer: Hierarchical Vision Transformer using Shifted Windows
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/04/13/Convolutional-Two-Stream-Network-Fusion-for-Video-Action-Recognition/" rel="next" title="Convolutional Two-Stream Network Fusion for Video Action Recognition">
-      Convolutional Two-Stream Network Fusion for Video Action Recognition <i class="fa fa-chevron-right"></i>
+    <a href="/2022/06/19/FractalNet-Ultra-Deep-Neural-Networks-without-Residuals/" rel="next" title="FractalNet: Ultra-Deep Neural Networks without Residuals">
+      FractalNet: Ultra-Deep Neural Networks without Residuals <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -484,7 +460,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction"><span class="nav-number">2.</span> <span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Related-Work"><span class="nav-number">3.</span> <span class="nav-text">2. Related Work</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Methodology"><span class="nav-number">4.</span> <span class="nav-text">3. Methodology</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Normalization"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 Normalization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Convergence"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 Convergence</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Experimental-Settings"><span class="nav-number">5.</span> <span class="nav-text">4. Experimental Settings</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Results-and-Analysis"><span class="nav-number">6.</span> <span class="nav-text">5. Results and Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-Training-from-scratch-to-match-accuracy"><span class="nav-number">6.1.</span> <span class="nav-text">5.1 Training from scratch to match accuracy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-Training-from-scratch-with-less-data"><span class="nav-number">6.2.</span> <span class="nav-text">5.2 Training from scratch with less data</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-Disucssions"><span class="nav-number">7.</span> <span class="nav-text">6. Disucssions</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction"><span class="nav-number">2.</span> <span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Related-Work"><span class="nav-number">3.</span> <span class="nav-text">2. Related Work</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Tiny-Video-Networks"><span class="nav-number">4.</span> <span class="nav-text">3. Tiny Video Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Tiny-Video-Architecture-Search"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 Tiny Video Architecture Search</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

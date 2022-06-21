@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"rainumdo.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Rethinking ImageNet Pre-training AbstractWe report competitive results on object detection and instance segmentation on the COCO dataset using standard models trained from random initaliation. The res">
+  <meta name="description" content="BSN: Boundary Sensitive Network for Temporal Action Proposal Generation AbstractTemporal action proposal generation is an important yet challenging problem, since temporal proposals with rich action c">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Rethinking ImageNet Pre-training">
-<meta property="og:url" content="https://rainumdo.github.io/2022/03/29/Rethinking-ImageNet-Pre-training/index.html">
+<meta property="og:title" content="BSN: Boundary Sensitive Network for Temporal Action Proposal Generation">
+<meta property="og:url" content="https://rainumdo.github.io/2022/06/20/BSN-Boundary-Sensitive-Network-for-Temporal-Action-Proposal-Generation/index.html">
 <meta property="og:site_name" content="Rainumdo&#39;s blog">
-<meta property="og:description" content="Rethinking ImageNet Pre-training AbstractWe report competitive results on object detection and instance segmentation on the COCO dataset using standard models trained from random initaliation. The res">
+<meta property="og:description" content="BSN: Boundary Sensitive Network for Temporal Action Proposal Generation AbstractTemporal action proposal generation is an important yet challenging problem, since temporal proposals with rich action c">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-29T14:47:00.000Z">
-<meta property="article:modified_time" content="2022-05-22T06:13:35.398Z">
+<meta property="article:published_time" content="2022-06-19T17:06:27.000Z">
+<meta property="article:modified_time" content="2022-06-21T15:05:35.530Z">
 <meta property="article:author" content="Rainumdo">
 <meta property="article:tag" content="paper">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://rainumdo.github.io/2022/03/29/Rethinking-ImageNet-Pre-training/">
+<link rel="canonical" href="https://rainumdo.github.io/2022/06/20/BSN-Boundary-Sensitive-Network-for-Temporal-Action-Proposal-Generation/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>Rethinking ImageNet Pre-training | Rainumdo's blog</title>
+  <title>BSN: Boundary Sensitive Network for Temporal Action Proposal Generation | Rainumdo's blog</title>
   
 
 
@@ -301,7 +301,7 @@ mjx-container[display="true"] + br {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2022/03/29/Rethinking-ImageNet-Pre-training/">
+    <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2022/06/20/BSN-Boundary-Sensitive-Network-for-Temporal-Action-Proposal-Generation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars.githubusercontent.com/u/25033462?s=400&u=bc84f2c7a2d509356d6d72b7aecd42fa914ce616&v=4">
@@ -314,7 +314,7 @@ mjx-container[display="true"] + br {
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Rethinking ImageNet Pre-training
+          BSN: Boundary Sensitive Network for Temporal Action Proposal Generation
         </h1>
 
         <div class="post-meta">
@@ -324,14 +324,14 @@ mjx-container[display="true"] + br {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-03-29 22:47:00" itemprop="dateCreated datePublished" datetime="2022-03-29T22:47:00+08:00">2022-03-29</time>
+              <time title="Created: 2022-06-20 01:06:27" itemprop="dateCreated datePublished" datetime="2022-06-20T01:06:27+08:00">2022-06-20</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-22 14:13:35" itemprop="dateModified" datetime="2022-05-22T14:13:35+08:00">2022-05-22</time>
+                <time title="Modified: 2022-06-21 23:05:35" itemprop="dateModified" datetime="2022-06-21T23:05:35+08:00">2022-06-21</time>
               </span>
 
           
@@ -352,56 +352,45 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1811.08883">Rethinking ImageNet Pre-training</a></p>
-<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>We report competitive results on object detection and instance segmentation on the COCO dataset using standard models trained from random initaliation. The result are no worse than their ImageNet pre-training counterparts even when using the hyper-parameters of the baseline system(Mask R-CNN) that were optimized for fune-tuin pretrained models, with the sold exception of increasing the number of training iterations so the randomly initalized models may converge.<br><strong>Training from random initalization is superisingly robust;</strong><br>Our results hold even when:</p>
+        <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1806.02964v3">BSN: Boundary Sensitive Network for Temporal Action Proposal Generation</a></p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>Temporal action proposal generation is an important yet challenging problem, since temporal proposals with rich action content are indispensable for analysising real-world videos with long duration and high proportion irrelevant content.<br>This problem requires methods not only generating proposals with precise temporal boundaries, but also retrieving proposals to cover truth action instances with high recall and high overlap using relatively fewer proposals.<br>To address these difficulties, we introduce an effective proposal generation method, named Boundary-Sensitive Network (BSN), which adopts <strong>“local to global”</strong> fashion.<br><strong>Locally</strong>, BSN first locates temporal boundaries with high probabilities, then directly combines these boundaries as proposals.<br><strong>Globally</strong>, with Boundary-Sensitive Proposal feature, BSN retrieves proposals by evaluating the confidence of whether a proposal contains an action within its regions.</p>
+<p>ActivityNet-1.3<br>THUMOS14</p>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p>However, videos in real scenarios are usually long, untrimmed and contain multiple action instances along with irrelavant contents.</p>
+<p>Similar with object detection in spatial domain, temporal action detection task can be divided into two stages: proposal and classification.<br>Proposal generation stage aims to generate temporal video regions which may contain action instances, and classification stage aims to classifiy classes of candidate proposals.</p>
+<p>Although classification methods have reached convincing performance, the detection precision is sitll low in many benchmarks.<br>Thus recently temporal action proposal generation has received much attention [3,4,5,6], aiming to improve the detection performance by improving the quality of proposals.</p>
+<p>High quality proposals should come up with two key properites:</p>
 <ol>
-<li>using only 10% of the training data</li>
-<li>for deeper and wider models</li>
-<li>for multiple tasks and metrics<br>Experiments shows that ImageNet pre-training speeds up convergence early in training, but does not necessarily provide regularization or improve final target task accuracy.</li>
+<li>proposals can cover truth action regions with both high recall and high temporal overlap.</li>
+<li>proposals are retrieved so that high recall and high overlap can be achieved using fewer proposals to reduce the computation cost of succeeding steps.</li>
 </ol>
-<p>These observations challenge the conventional wisdom of ImageNet pre-training for dependent tasks and we expect these discoveries will encourage people to rethink the current de fcto paradigm of “pre-training and fine-tuning” in computer vision.</p>
-<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p>In recent years, a well-established paradigm has been to pre-train models using large-scale data and then fine-tune the models on target tasks that often have less training data.</p>
-<p>Pre-training has enabled state-of-the-art  results on many tasks, including object detection, image segmentation, and action recognitaion.</p>
-<p>This papaer questions the paradigm of pre-training even further by exploring the opposite regime: we report that competitive object detection and instance segmentation accuracy is achievable when training on COCO from random initalization (from scratch), without any pre-training. More surprisingly, we can achieve these results by using basline systems and their hyper-parameters that there is no fundamental obstacle preventing us from training from scratch, if: </p>
+<p>Most recently prosposal generation methods [3,4,5,7] generate proposals retrieving, while there is also method [6] making external boundaries regression.</p>
+<p>To address these issues and generate high quality proposals, we propose the Boundary-Sensitive Network (BSN), which adopts “local to global” fashion to locally combine high probability boundaries as proposals and globally retrieve candidate proposals using proposal-level feature as shown in Fig 1.</p>
+<p>In detail, BSN generates proposals in three steps.</p>
 <ol>
-<li>we use normalization technique appropriately for optimization</li>
-<li>we train the models sufficiently long to compensate for the lack of pre-trianing.</li>
+<li>BSN evaluates the probabilities of each temporal location in video whether it is inside or outside, at or not at the boundaries of ground truth action instances, to generate starting, ending and actionness probabilites sequences as local information.</li>
+<li>BSN generates proposals via directly combining temporal locations with high starting and ending probabilites separately.<br>Using this bottom-up fashion, BSN can generate proposals with flexible durations and precise boundaries.</li>
+<li>Finally, using features composed by actionness scores within and around proposal, BSN retrieves proposals by evaluating the confidence of whether a proposal contains an action.<br>There proposal-level features offer global information for better evaluation.</li>
 </ol>
-<p>Based on these experiments and others, we observe the following:</p>
+<p>In summary, the main contributions of our work are three-folds:</p>
 <ol>
-<li>ImageNet pre-training speeds up convergence, especially early on in training, but trainin from random initalizaiton can catch up after training for a duration.</li>
-<li>ImageNet pre-training does not automatically give better regularization.</li>
-<li>ImageNet pre-training shows on benefit when the target tasks/metrics are more sensitive to spatially well localized predictions. Intuitively, the task gap between the classification-based, ImageNet like pre-training and localization-sensitive target tasks may limit the benefits of pre-training.</li>
+<li>We introduce a new architecture (BSN) base on “local to global” fashion to generate high quality temporal action proposals, which locally locates high boundary probability locations to achieve precise proposal boundaries and globally evaluates proposal-level feature to achieve reliable proposal confidence scores for retrieving.</li>
+<li>Extensive experiments demonstrate that our method achieves significantly better proposal quality than other state-of-the-art proposal generation methods, and can generate proposals in unseen action classes with comparative quality.</li>
+<li>Integrating our method with existing action classifier into detection framework leads to significantly improved performance on temporal action detection task.</li>
 </ol>
-<h1 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2. Related Work"></a>2. Related Work</h1><p>Following these results, most algorithm employ the ‘pre-training and fine-tuning’ paradigm.</p>
-<p>The magrinal benefit from the kind of large-scale pre-training data used to date diminishes rapidly.</p>
-<p>Given the success of pre-training in the R-CNN paper, later analysis found that pre-training from scratch is non-trivial became conventional wisdom.</p>
-<p>there is little evidence that there specialized architectures are required for models to be trained from scratch.</p>
-<h1 id="3-Methodology"><a href="#3-Methodology" class="headerlink" title="3. Methodology"></a>3. Methodology</h1><p>We decribe the only two modifications that we find to be necessary, related to model normalization and training length, discussed next.</p>
-<h2 id="3-1-Normalization"><a href="#3-1-Normalization" class="headerlink" title="3.1 Normalization"></a>3.1 Normalization</h2><p>Successful forms of normalization include normalized parameter initalization and activation normalization layers.</p>
-<p>Batch Normalization, the popular normalization method used from train modern networks, partically makes traning detectors from scratch difficult.</p>
-<p>Object detectors are typically trained with high resolution inputs, unlike image classifiers. This reduces batch sizes as constrained by memory, and small batch sizes severely degrade the accuracy of BN. This issue can be circumvented if pre-training is used, bacause fine-tuning can adopt the pre-training batch statistics as fixed parameters; however, freezing BN is invalid when training from scratch.</p>
-<p>We also report that using appropriately normalization initalization, we can train object detectors with VGG nets from random initalizaiton with out BN or GN.</p>
-<h2 id="3-2-Convergence"><a href="#3-2-Convergence" class="headerlink" title="3.2 Convergence"></a>3.2 Convergence</h2><p>With this motivation, we argue that models trained from scratch mast be trained for longer than typical fine-tuning schedules.</p>
-<p>Our experiments show that under the schedules in Figure 2, the from-scratch detectors can catch up with their fine-tuning conterparts.<br>This suggests that a sufficiently large number of total samples (arguably in terms of pixels) are required for the models trained from random initalization to convergence well.</p>
-<h1 id="4-Experimental-Settings"><a href="#4-Experimental-Settings" class="headerlink" title="4. Experimental Settings"></a>4. Experimental Settings</h1><p>Architecture.<br>Mask R-CNN with ResNet, or ResNeXt plus Feature Pyramid Network backbones.</p>
-<p>Learning rate scheduling.<br>90k iterations = 1x schedule</p>
-<p>Hyper-parameters.<br>learning rate = 0.02<br>weight decay = 0.0001<br>momentum = 0.9</p>
-<h1 id="5-Results-and-Analysis"><a href="#5-Results-and-Analysis" class="headerlink" title="5. Results and Analysis"></a>5. Results and Analysis</h1><h2 id="5-1-Training-from-scratch-to-match-accuracy"><a href="#5-1-Training-from-scratch-to-match-accuracy" class="headerlink" title="5.1 Training from scratch to match accuracy"></a>5.1 Training from scratch to match accuracy</h2><h2 id="5-2-Training-from-scratch-with-less-data"><a href="#5-2-Training-from-scratch-with-less-data" class="headerlink" title="5.2 Training from scratch with less data"></a>5.2 Training from scratch with less data</h2><h1 id="6-Disucssions"><a href="#6-Disucssions" class="headerlink" title="6. Disucssions"></a>6. Disucssions</h1><p>We summarize the main observations from our experiments as follows:</p>
-<ul>
-<li>Training from scratch on target tasks is possible with architecture change.</li>
-<li>Training from scratch on scratch requires more iterations to sufficiently converge.</li>
-<li>Training from scratch can be no worse than its ImageNet per-training counterparts under many circumstances down to as few as 10k COCO images.</li>
-<li>ImageNet pre-training speeds up convergence on the target task.</li>
-<li>ImageNet pre-training does not necessarily help reduce overfitting unless we enter a very small data regime.</li>
-<li>ImageNet pre-training helps less if the target task is more sensitive to localization than classification.</li>
-</ul>
-<p>Based on these observations, we provide our answers to a few important questions that may encourage people to rethink ImageNet pre-training:</p>
-<p><strong>Is ImageNet pre-training necessary?</strong> No -if we have enought target data.</p>
-<p><strong>Is ImageNet helpful?</strong> Yes. ImageNet pre-training has been a critical auxiliary task for computer vision community to progress.</p>
-<p><strong>Do we need big data?</strong> Yes. But a generic large scale, classification-level pre-training set is not ideal if we take into account the extra effort of collecting and cleaning data – the cost of collecting ImageNet has been largely ignored, but the ‘pre-training’ step in the ‘pre-training + fine-tuning’ paradigm is in fact not free when we scale out this paradigm.</p>
-<p><strong>Shall we pursuit universal representations?</strong> Yes. We believe learning universal representations is a laudable goal.</p>
-
+<h1 id="2-Related-work"><a href="#2-Related-work" class="headerlink" title="2. Related work"></a>2. Related work</h1><p><strong>Action recognition.</strong></p>
+<p>iDT HOF HOG MBH</p>
+<p>Typically, two-stream network learns appearance and motion features based on RGB frame and optical flow field separately.<br>C3D network adopts 3D convolutional layers to directly capture both appearance and motion features from raw frames volume.</p>
+<p><strong>Object detection and proposals.</strong></p>
+<p>R-CNN[14] and its variations[15,16] construct an important branch of object detection methods, which adopt “detection by classifying proposals” framework.</p>
+<p>proposals generation: sliding windows, HOG, Canny edge</p>
+<p>Boundary probabilites are also adopted in LocNet[22] for revising the horizontal and vertical boundaries of existing proposals.<br>Our method differs in </p>
+<ol>
+<li>BSN aims to generate while LocNet aims to revise proposal.</li>
+<li>boundary probabilites are calculated repeatedly for all boxes in LocNet but only once for a video in BSN.</li>
+</ol>
+<p><strong>Temporal action detection and proposals</strong></p>
+<p>In our work, BSN can generate proposals with flexible boundaries meanwhile reliable confidence scores for retrieving.</p>
+<h1 id="3-Our-Approach"><a href="#3-Our-Approach" class="headerlink" title="3. Our Approach"></a>3. Our Approach</h1><h2 id="3-1-Problem-Definition"><a href="#3-1-Problem-Definition" class="headerlink" title="3.1 Problem Definition"></a>3.1 Problem Definition</h2>
     </div>
 
     
@@ -419,13 +408,10 @@ mjx-container[display="true"] + br {
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/03/29/Measuring-Saturation-in-Neural-Networks/" rel="prev" title="Measuring Saturation in Neural Networks">
-      <i class="fa fa-chevron-left"></i> Measuring Saturation in Neural Networks
+    <a href="/2022/06/19/FractalNet-Ultra-Deep-Neural-Networks-without-Residuals/" rel="prev" title="FractalNet: Ultra-Deep Neural Networks without Residuals">
+      <i class="fa fa-chevron-left"></i> FractalNet: Ultra-Deep Neural Networks without Residuals
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/04/13/Convolutional-Two-Stream-Network-Fusion-for-Video-Action-Recognition/" rel="next" title="Convolutional Two-Stream Network Fusion for Video Action Recognition">
-      Convolutional Two-Stream Network Fusion for Video Action Recognition <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -484,7 +470,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction"><span class="nav-number">2.</span> <span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Related-Work"><span class="nav-number">3.</span> <span class="nav-text">2. Related Work</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Methodology"><span class="nav-number">4.</span> <span class="nav-text">3. Methodology</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Normalization"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 Normalization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Convergence"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 Convergence</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Experimental-Settings"><span class="nav-number">5.</span> <span class="nav-text">4. Experimental Settings</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Results-and-Analysis"><span class="nav-number">6.</span> <span class="nav-text">5. Results and Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-Training-from-scratch-to-match-accuracy"><span class="nav-number">6.1.</span> <span class="nav-text">5.1 Training from scratch to match accuracy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-Training-from-scratch-with-less-data"><span class="nav-number">6.2.</span> <span class="nav-text">5.2 Training from scratch with less data</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-Disucssions"><span class="nav-number">7.</span> <span class="nav-text">6. Disucssions</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction"><span class="nav-number">2.</span> <span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Related-work"><span class="nav-number">3.</span> <span class="nav-text">2. Related work</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Our-Approach"><span class="nav-number">4.</span> <span class="nav-text">3. Our Approach</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Problem-Definition"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 Problem Definition</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
