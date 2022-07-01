@@ -667,75 +667,6 @@ mjx-container[display="true"] + br {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2021/09/26/windows/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/25033462?s=400&u=bc84f2c7a2d509356d6d72b7aecd42fa914ce616&v=4">
-      <meta itemprop="name" content="Rainumdo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rainumdo's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/26/windows/" class="post-title-link" itemprop="url">windows</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-09-26 09:33:58" itemprop="dateCreated datePublished" datetime="2021-09-26T09:33:58+08:00">2021-09-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-22 14:13:35" itemprop="dateModified" datetime="2022-05-22T14:13:35+08:00">2022-05-22</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>assign ip address</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifconfig \release</span><br><span class="line">ifconfig \renew</span><br></pre></td></tr></table></figure>
-
-<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>repair system file</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DISM /Online /Clean-image /RestoreHealth</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2021/11/27/research/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -813,6 +744,75 @@ mjx-container[display="true"] + br {
 <h2 id="5-Probing-Attention-Head-Combinations"><a href="#5-Probing-Attention-Head-Combinations" class="headerlink" title="5 Probing Attention Head Combinations"></a>5 Probing Attention Head Combinations</h2><p>Attention-Only Probe. Our first probe learns a simple linear combination of attention weights.<br>$$ p(i|j) \propto exp (\sum_{k&#x3D;1}^{n}w_{k}\alpha_{ij}^{k}+u_{k}\alpha_{ji}^{k}) $$<br>where $p(i|j)$ is the probability of word i being word j’s syntactic head, $\alpha_{ij}^{k}$ is the attention weight from word i to word j producted by head k, and n is the number of attention heads. We include both directions of attention: candidate head to dependent as well as dependent to candidate head. The weight vectors w and u are trained using standard supervised learning on the train set.</p>
 <p>Attention-and-Words Probe.</p>
 <h2 id="6-Cluster-Attention-Heads"><a href="#6-Cluster-Attention-Heads" class="headerlink" title="6 Cluster Attention Heads"></a>6 Cluster Attention Heads</h2><h2 id="7-Related-Work"><a href="#7-Related-Work" class="headerlink" title="7 Related Work"></a>7 Related Work</h2><h2 id="8-Conclusion"><a href="#8-Conclusion" class="headerlink" title="8 Conclusion"></a>8 Conclusion</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2021/09/26/windows/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/25033462?s=400&u=bc84f2c7a2d509356d6d72b7aecd42fa914ce616&v=4">
+      <meta itemprop="name" content="Rainumdo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rainumdo's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/26/windows/" class="post-title-link" itemprop="url">windows</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-09-26 09:33:58" itemprop="dateCreated datePublished" datetime="2021-09-26T09:33:58+08:00">2021-09-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-22 14:13:35" itemprop="dateModified" datetime="2022-05-22T14:13:35+08:00">2022-05-22</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>assign ip address</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifconfig \release</span><br><span class="line">ifconfig \renew</span><br></pre></td></tr></table></figure>
+
+<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>repair system file</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DISM /Online /Clean-image /RestoreHealth</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -944,119 +944,6 @@ mjx-container[display="true"] + br {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2022/03/29/Rethinking-ImageNet-Pre-training/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/25033462?s=400&u=bc84f2c7a2d509356d6d72b7aecd42fa914ce616&v=4">
-      <meta itemprop="name" content="Rainumdo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rainumdo's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/29/Rethinking-ImageNet-Pre-training/" class="post-title-link" itemprop="url">Rethinking ImageNet Pre-training</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-03-29 22:47:00" itemprop="dateCreated datePublished" datetime="2022-03-29T22:47:00+08:00">2022-03-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-22 14:13:35" itemprop="dateModified" datetime="2022-05-22T14:13:35+08:00">2022-05-22</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1811.08883">Rethinking ImageNet Pre-training</a></p>
-<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>We report competitive results on object detection and instance segmentation on the COCO dataset using standard models trained from random initaliation. The result are no worse than their ImageNet pre-training counterparts even when using the hyper-parameters of the baseline system(Mask R-CNN) that were optimized for fune-tuin pretrained models, with the sold exception of increasing the number of training iterations so the randomly initalized models may converge.<br><strong>Training from random initalization is superisingly robust;</strong><br>Our results hold even when:</p>
-<ol>
-<li>using only 10% of the training data</li>
-<li>for deeper and wider models</li>
-<li>for multiple tasks and metrics<br>Experiments shows that ImageNet pre-training speeds up convergence early in training, but does not necessarily provide regularization or improve final target task accuracy.</li>
-</ol>
-<p>These observations challenge the conventional wisdom of ImageNet pre-training for dependent tasks and we expect these discoveries will encourage people to rethink the current de fcto paradigm of “pre-training and fine-tuning” in computer vision.</p>
-<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p>In recent years, a well-established paradigm has been to pre-train models using large-scale data and then fine-tune the models on target tasks that often have less training data.</p>
-<p>Pre-training has enabled state-of-the-art  results on many tasks, including object detection, image segmentation, and action recognitaion.</p>
-<p>This papaer questions the paradigm of pre-training even further by exploring the opposite regime: we report that competitive object detection and instance segmentation accuracy is achievable when training on COCO from random initalization (from scratch), without any pre-training. More surprisingly, we can achieve these results by using basline systems and their hyper-parameters that there is no fundamental obstacle preventing us from training from scratch, if: </p>
-<ol>
-<li>we use normalization technique appropriately for optimization</li>
-<li>we train the models sufficiently long to compensate for the lack of pre-trianing.</li>
-</ol>
-<p>Based on these experiments and others, we observe the following:</p>
-<ol>
-<li>ImageNet pre-training speeds up convergence, especially early on in training, but trainin from random initalizaiton can catch up after training for a duration.</li>
-<li>ImageNet pre-training does not automatically give better regularization.</li>
-<li>ImageNet pre-training shows on benefit when the target tasks/metrics are more sensitive to spatially well localized predictions. Intuitively, the task gap between the classification-based, ImageNet like pre-training and localization-sensitive target tasks may limit the benefits of pre-training.</li>
-</ol>
-<h1 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2. Related Work"></a>2. Related Work</h1><p>Following these results, most algorithm employ the ‘pre-training and fine-tuning’ paradigm.</p>
-<p>The magrinal benefit from the kind of large-scale pre-training data used to date diminishes rapidly.</p>
-<p>Given the success of pre-training in the R-CNN paper, later analysis found that pre-training from scratch is non-trivial became conventional wisdom.</p>
-<p>there is little evidence that there specialized architectures are required for models to be trained from scratch.</p>
-<h1 id="3-Methodology"><a href="#3-Methodology" class="headerlink" title="3. Methodology"></a>3. Methodology</h1><p>We decribe the only two modifications that we find to be necessary, related to model normalization and training length, discussed next.</p>
-<h2 id="3-1-Normalization"><a href="#3-1-Normalization" class="headerlink" title="3.1 Normalization"></a>3.1 Normalization</h2><p>Successful forms of normalization include normalized parameter initalization and activation normalization layers.</p>
-<p>Batch Normalization, the popular normalization method used from train modern networks, partically makes traning detectors from scratch difficult.</p>
-<p>Object detectors are typically trained with high resolution inputs, unlike image classifiers. This reduces batch sizes as constrained by memory, and small batch sizes severely degrade the accuracy of BN. This issue can be circumvented if pre-training is used, bacause fine-tuning can adopt the pre-training batch statistics as fixed parameters; however, freezing BN is invalid when training from scratch.</p>
-<p>We also report that using appropriately normalization initalization, we can train object detectors with VGG nets from random initalizaiton with out BN or GN.</p>
-<h2 id="3-2-Convergence"><a href="#3-2-Convergence" class="headerlink" title="3.2 Convergence"></a>3.2 Convergence</h2><p>With this motivation, we argue that models trained from scratch mast be trained for longer than typical fine-tuning schedules.</p>
-<p>Our experiments show that under the schedules in Figure 2, the from-scratch detectors can catch up with their fine-tuning conterparts.<br>This suggests that a sufficiently large number of total samples (arguably in terms of pixels) are required for the models trained from random initalization to convergence well.</p>
-<h1 id="4-Experimental-Settings"><a href="#4-Experimental-Settings" class="headerlink" title="4. Experimental Settings"></a>4. Experimental Settings</h1><p>Architecture.<br>Mask R-CNN with ResNet, or ResNeXt plus Feature Pyramid Network backbones.</p>
-<p>Learning rate scheduling.<br>90k iterations = 1x schedule</p>
-<p>Hyper-parameters.<br>learning rate = 0.02<br>weight decay = 0.0001<br>momentum = 0.9</p>
-<h1 id="5-Results-and-Analysis"><a href="#5-Results-and-Analysis" class="headerlink" title="5. Results and Analysis"></a>5. Results and Analysis</h1><h2 id="5-1-Training-from-scratch-to-match-accuracy"><a href="#5-1-Training-from-scratch-to-match-accuracy" class="headerlink" title="5.1 Training from scratch to match accuracy"></a>5.1 Training from scratch to match accuracy</h2><h2 id="5-2-Training-from-scratch-with-less-data"><a href="#5-2-Training-from-scratch-with-less-data" class="headerlink" title="5.2 Training from scratch with less data"></a>5.2 Training from scratch with less data</h2><h1 id="6-Disucssions"><a href="#6-Disucssions" class="headerlink" title="6. Disucssions"></a>6. Disucssions</h1><p>We summarize the main observations from our experiments as follows:</p>
-<ul>
-<li>Training from scratch on target tasks is possible with architecture change.</li>
-<li>Training from scratch on scratch requires more iterations to sufficiently converge.</li>
-<li>Training from scratch can be no worse than its ImageNet per-training counterparts under many circumstances down to as few as 10k COCO images.</li>
-<li>ImageNet pre-training speeds up convergence on the target task.</li>
-<li>ImageNet pre-training does not necessarily help reduce overfitting unless we enter a very small data regime.</li>
-<li>ImageNet pre-training helps less if the target task is more sensitive to localization than classification.</li>
-</ul>
-<p>Based on these observations, we provide our answers to a few important questions that may encourage people to rethink ImageNet pre-training:</p>
-<p><strong>Is ImageNet pre-training necessary?</strong> No -if we have enought target data.</p>
-<p><strong>Is ImageNet helpful?</strong> Yes. ImageNet pre-training has been a critical auxiliary task for computer vision community to progress.</p>
-<p><strong>Do we need big data?</strong> Yes. But a generic large scale, classification-level pre-training set is not ideal if we take into account the extra effort of collecting and cleaning data – the cost of collecting ImageNet has been largely ignored, but the ‘pre-training’ step in the ‘pre-training + fine-tuning’ paradigm is in fact not free when we scale out this paradigm.</p>
-<p><strong>Shall we pursuit universal representations?</strong> Yes. We believe learning universal representations is a laudable goal.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2022/03/22/SlowFast-Networks-for-Video-Recognition/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1164,6 +1051,119 @@ mjx-container[display="true"] + br {
 <p><a target="_blank" rel="noopener" href="http://activity-net.org/challenges/2021/challenge.html">AVA</a></p>
 <p>Finally, we create an ensemble of 7 models and submit it to the offical test server for the ActivityNet challenge 2019. As shown in Table 8 this entry achieved 34.3 mAP accuracy on the test set, ranking first in the AVA action detection challenge 2019.</p>
 <h1 id="6-Conclusion"><a href="#6-Conclusion" class="headerlink" title="6. Conclusion"></a>6. Conclusion</h1><p>The time axis is a special dimension. This paper has investigated an architecture design that contrasts the speed along this axis. It achieves state-of-the-art accuracy for video action classification and detection. We hope that this SlowFast concept will foster further research in video recognition.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2022/03/29/Rethinking-ImageNet-Pre-training/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/25033462?s=400&u=bc84f2c7a2d509356d6d72b7aecd42fa914ce616&v=4">
+      <meta itemprop="name" content="Rainumdo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rainumdo's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/29/Rethinking-ImageNet-Pre-training/" class="post-title-link" itemprop="url">Rethinking ImageNet Pre-training</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-03-29 22:47:00" itemprop="dateCreated datePublished" datetime="2022-03-29T22:47:00+08:00">2022-03-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-22 14:13:35" itemprop="dateModified" datetime="2022-05-22T14:13:35+08:00">2022-05-22</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1811.08883">Rethinking ImageNet Pre-training</a></p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>We report competitive results on object detection and instance segmentation on the COCO dataset using standard models trained from random initaliation. The result are no worse than their ImageNet pre-training counterparts even when using the hyper-parameters of the baseline system(Mask R-CNN) that were optimized for fune-tuin pretrained models, with the sold exception of increasing the number of training iterations so the randomly initalized models may converge.<br><strong>Training from random initalization is superisingly robust;</strong><br>Our results hold even when:</p>
+<ol>
+<li>using only 10% of the training data</li>
+<li>for deeper and wider models</li>
+<li>for multiple tasks and metrics<br>Experiments shows that ImageNet pre-training speeds up convergence early in training, but does not necessarily provide regularization or improve final target task accuracy.</li>
+</ol>
+<p>These observations challenge the conventional wisdom of ImageNet pre-training for dependent tasks and we expect these discoveries will encourage people to rethink the current de fcto paradigm of “pre-training and fine-tuning” in computer vision.</p>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p>In recent years, a well-established paradigm has been to pre-train models using large-scale data and then fine-tune the models on target tasks that often have less training data.</p>
+<p>Pre-training has enabled state-of-the-art  results on many tasks, including object detection, image segmentation, and action recognitaion.</p>
+<p>This papaer questions the paradigm of pre-training even further by exploring the opposite regime: we report that competitive object detection and instance segmentation accuracy is achievable when training on COCO from random initalization (from scratch), without any pre-training. More surprisingly, we can achieve these results by using basline systems and their hyper-parameters that there is no fundamental obstacle preventing us from training from scratch, if: </p>
+<ol>
+<li>we use normalization technique appropriately for optimization</li>
+<li>we train the models sufficiently long to compensate for the lack of pre-trianing.</li>
+</ol>
+<p>Based on these experiments and others, we observe the following:</p>
+<ol>
+<li>ImageNet pre-training speeds up convergence, especially early on in training, but trainin from random initalizaiton can catch up after training for a duration.</li>
+<li>ImageNet pre-training does not automatically give better regularization.</li>
+<li>ImageNet pre-training shows on benefit when the target tasks/metrics are more sensitive to spatially well localized predictions. Intuitively, the task gap between the classification-based, ImageNet like pre-training and localization-sensitive target tasks may limit the benefits of pre-training.</li>
+</ol>
+<h1 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2. Related Work"></a>2. Related Work</h1><p>Following these results, most algorithm employ the ‘pre-training and fine-tuning’ paradigm.</p>
+<p>The magrinal benefit from the kind of large-scale pre-training data used to date diminishes rapidly.</p>
+<p>Given the success of pre-training in the R-CNN paper, later analysis found that pre-training from scratch is non-trivial became conventional wisdom.</p>
+<p>there is little evidence that there specialized architectures are required for models to be trained from scratch.</p>
+<h1 id="3-Methodology"><a href="#3-Methodology" class="headerlink" title="3. Methodology"></a>3. Methodology</h1><p>We decribe the only two modifications that we find to be necessary, related to model normalization and training length, discussed next.</p>
+<h2 id="3-1-Normalization"><a href="#3-1-Normalization" class="headerlink" title="3.1 Normalization"></a>3.1 Normalization</h2><p>Successful forms of normalization include normalized parameter initalization and activation normalization layers.</p>
+<p>Batch Normalization, the popular normalization method used from train modern networks, partically makes traning detectors from scratch difficult.</p>
+<p>Object detectors are typically trained with high resolution inputs, unlike image classifiers. This reduces batch sizes as constrained by memory, and small batch sizes severely degrade the accuracy of BN. This issue can be circumvented if pre-training is used, bacause fine-tuning can adopt the pre-training batch statistics as fixed parameters; however, freezing BN is invalid when training from scratch.</p>
+<p>We also report that using appropriately normalization initalization, we can train object detectors with VGG nets from random initalizaiton with out BN or GN.</p>
+<h2 id="3-2-Convergence"><a href="#3-2-Convergence" class="headerlink" title="3.2 Convergence"></a>3.2 Convergence</h2><p>With this motivation, we argue that models trained from scratch mast be trained for longer than typical fine-tuning schedules.</p>
+<p>Our experiments show that under the schedules in Figure 2, the from-scratch detectors can catch up with their fine-tuning conterparts.<br>This suggests that a sufficiently large number of total samples (arguably in terms of pixels) are required for the models trained from random initalization to convergence well.</p>
+<h1 id="4-Experimental-Settings"><a href="#4-Experimental-Settings" class="headerlink" title="4. Experimental Settings"></a>4. Experimental Settings</h1><p>Architecture.<br>Mask R-CNN with ResNet, or ResNeXt plus Feature Pyramid Network backbones.</p>
+<p>Learning rate scheduling.<br>90k iterations = 1x schedule</p>
+<p>Hyper-parameters.<br>learning rate = 0.02<br>weight decay = 0.0001<br>momentum = 0.9</p>
+<h1 id="5-Results-and-Analysis"><a href="#5-Results-and-Analysis" class="headerlink" title="5. Results and Analysis"></a>5. Results and Analysis</h1><h2 id="5-1-Training-from-scratch-to-match-accuracy"><a href="#5-1-Training-from-scratch-to-match-accuracy" class="headerlink" title="5.1 Training from scratch to match accuracy"></a>5.1 Training from scratch to match accuracy</h2><h2 id="5-2-Training-from-scratch-with-less-data"><a href="#5-2-Training-from-scratch-with-less-data" class="headerlink" title="5.2 Training from scratch with less data"></a>5.2 Training from scratch with less data</h2><h1 id="6-Disucssions"><a href="#6-Disucssions" class="headerlink" title="6. Disucssions"></a>6. Disucssions</h1><p>We summarize the main observations from our experiments as follows:</p>
+<ul>
+<li>Training from scratch on target tasks is possible with architecture change.</li>
+<li>Training from scratch on scratch requires more iterations to sufficiently converge.</li>
+<li>Training from scratch can be no worse than its ImageNet per-training counterparts under many circumstances down to as few as 10k COCO images.</li>
+<li>ImageNet pre-training speeds up convergence on the target task.</li>
+<li>ImageNet pre-training does not necessarily help reduce overfitting unless we enter a very small data regime.</li>
+<li>ImageNet pre-training helps less if the target task is more sensitive to localization than classification.</li>
+</ul>
+<p>Based on these observations, we provide our answers to a few important questions that may encourage people to rethink ImageNet pre-training:</p>
+<p><strong>Is ImageNet pre-training necessary?</strong> No -if we have enought target data.</p>
+<p><strong>Is ImageNet helpful?</strong> Yes. ImageNet pre-training has been a critical auxiliary task for computer vision community to progress.</p>
+<p><strong>Do we need big data?</strong> Yes. But a generic large scale, classification-level pre-training set is not ideal if we take into account the extra effort of collecting and cleaning data – the cost of collecting ImageNet has been largely ignored, but the ‘pre-training’ step in the ‘pre-training + fine-tuning’ paradigm is in fact not free when we scale out this paradigm.</p>
+<p><strong>Shall we pursuit universal representations?</strong> Yes. We believe learning universal representations is a laudable goal.</p>
 
       
     </div>
