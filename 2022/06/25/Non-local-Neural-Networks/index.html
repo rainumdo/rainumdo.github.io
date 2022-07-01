@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"rainumdo.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Two-Stream Convolutional Networks for Action Recognition in Videos 2 Two-stream architectureEach stream is implemented using a deep ConvNet, softmax scores of which are combined by later fusion.We con">
+  <meta name="description" content="Non-local Neural Networks AbstractIn this paper, we present non-local operations as a generic family of building blocks for capturing long-range dependencies.Inspired by the classical non-local means">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Two-Stream Convolutional Networks for Action Recognition in Videos">
-<meta property="og:url" content="https://rainumdo.github.io/2022/05/06/Two-Stream-Convolutional-Networks-for-Action-Recognition-in-Videos/index.html">
+<meta property="og:title" content="Non-local Neural Networks">
+<meta property="og:url" content="https://rainumdo.github.io/2022/06/25/Non-local-Neural-Networks/index.html">
 <meta property="og:site_name" content="Rainumdo&#39;s blog">
-<meta property="og:description" content="Two-Stream Convolutional Networks for Action Recognition in Videos 2 Two-stream architectureEach stream is implemented using a deep ConvNet, softmax scores of which are combined by later fusion.We con">
+<meta property="og:description" content="Non-local Neural Networks AbstractIn this paper, we present non-local operations as a generic family of building blocks for capturing long-range dependencies.Inspired by the classical non-local means">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-05-06T13:18:40.000Z">
-<meta property="article:modified_time" content="2022-06-14T11:03:51.676Z">
+<meta property="article:published_time" content="2022-06-25T02:45:12.000Z">
+<meta property="article:modified_time" content="2022-07-01T00:44:47.672Z">
 <meta property="article:author" content="Rainumdo">
 <meta property="article:tag" content="paper">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://rainumdo.github.io/2022/05/06/Two-Stream-Convolutional-Networks-for-Action-Recognition-in-Videos/">
+<link rel="canonical" href="https://rainumdo.github.io/2022/06/25/Non-local-Neural-Networks/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>Two-Stream Convolutional Networks for Action Recognition in Videos | Rainumdo's blog</title>
+  <title>Non-local Neural Networks | Rainumdo's blog</title>
   
 
 
@@ -301,7 +301,7 @@ mjx-container[display="true"] + br {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2022/05/06/Two-Stream-Convolutional-Networks-for-Action-Recognition-in-Videos/">
+    <link itemprop="mainEntityOfPage" href="https://rainumdo.github.io/2022/06/25/Non-local-Neural-Networks/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars.githubusercontent.com/u/25033462?s=400&u=bc84f2c7a2d509356d6d72b7aecd42fa914ce616&v=4">
@@ -314,7 +314,7 @@ mjx-container[display="true"] + br {
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Two-Stream Convolutional Networks for Action Recognition in Videos
+          Non-local Neural Networks
         </h1>
 
         <div class="post-meta">
@@ -324,14 +324,14 @@ mjx-container[display="true"] + br {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-05-06 21:18:40" itemprop="dateCreated datePublished" datetime="2022-05-06T21:18:40+08:00">2022-05-06</time>
+              <time title="Created: 2022-06-25 10:45:12" itemprop="dateCreated datePublished" datetime="2022-06-25T10:45:12+08:00">2022-06-25</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-14 19:03:51" itemprop="dateModified" datetime="2022-06-14T19:03:51+08:00">2022-06-14</time>
+                <time title="Modified: 2022-07-01 08:44:47" itemprop="dateModified" datetime="2022-07-01T08:44:47+08:00">2022-07-01</time>
               </span>
 
           
@@ -352,9 +352,21 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1406.2199">Two-Stream Convolutional Networks for Action Recognition in Videos</a></p>
-<h1 id="2-Two-stream-architecture"><a href="#2-Two-stream-architecture" class="headerlink" title="2 Two-stream architecture"></a>2 Two-stream architecture</h1><p>Each stream is implemented using a deep ConvNet, softmax scores of which are combined by later fusion.<br>We consider two fusion methods averaging and training a multi-class SVM on stacked L2-normalised softmax scores as features.</p>
-
+        <p><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_cvpr_2018/html/Wang_Non-Local_Neural_Networks_CVPR_2018_paper.html">Non-local Neural Networks</a></p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>In this paper, we present non-local operations as a generic family of building blocks for capturing long-range dependencies.<br>Inspired by the classical non-local means method [4] in computer vision, our non-local operation computes the reponse at a postion as a weighted sum of the features at all positions.</p>
+<p>This building block can be plugged into many computer vision architectures.</p>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p>Repeating local operation has several limitations.<br>First, it is computationally inefficient.<br>Second, it causes optimization difficulties that need to be carefully addressed [23, 21].<br>Finally, these challenges make multihop dependency modeling, e.g., when messages need to be delivered back and forth between distant positions, difficult.</p>
+<p>Our proposed non-local operation is generation of the classical non-local mean operation [4] in computer vision.</p>
+<p>Intuitively, a non-local operation computes the response at position as weighted sum of the feature at all positions in the input feature maps (Figure 1).</p>
+<p>Figure 1. A position <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.357ex" xmlns="http://www.w3.org/2000/svg" width="2.034ex" height="1.357ex" role="img" focusable="false" viewBox="0 -442 899 599.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="TeXAtom" transform="translate(605,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></g></svg></mjx-container>’s response is computed by the weighted average of the features of all positions <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.666ex" xmlns="http://www.w3.org/2000/svg" width="2.141ex" height="1.666ex" role="img" focusable="false" viewBox="0 -442 946.3 736.2"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="TeXAtom" transform="translate(605,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D457" d="M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z"></path></g></g></g></g></g></svg></mjx-container>. </p>
+<p>There are several advantages of using non-local operation:</p>
+<ol>
+<li>In constrast to the progressive behavior of recurrent and convolutional operations, non-local operation capture long-range dependencies directly by computing interactions between any two positions, regardless of their positional distence;</li>
+<li>As we show in experiments, non-local operations maintain the variable input size and can be easily combined with other operation.</li>
+</ol>
+<p>To demonstrate the generality of non-local operations, we further present object detection/segmentation and pose estimation experiments on the COCO dataset[33].</p>
+<p>Together with the evidence on videos, these images experiments show that non-local operations are generally useful and can become a basic building block in designing deep neural networks.</p>
+<h1 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2. Related Work"></a>2. Related Work</h1>
     </div>
 
     
@@ -372,13 +384,10 @@ mjx-container[display="true"] + br {
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/05/Densely-Connected-Convolutional-Networks/" rel="prev" title="Densely Connected Convolutional Networks">
-      <i class="fa fa-chevron-left"></i> Densely Connected Convolutional Networks
+    <a href="/2022/06/20/BSN-Boundary-Sensitive-Network-for-Temporal-Action-Proposal-Generation/" rel="prev" title="BSN: Boundary Sensitive Network for Temporal Action Proposal Generation">
+      <i class="fa fa-chevron-left"></i> BSN: Boundary Sensitive Network for Temporal Action Proposal Generation
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/05/09/Quo-Vadis-Action-Recognition-A-New-Model-and-the-Kinetics-Dataset/" rel="next" title="Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset">
-      Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -437,7 +446,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Two-stream-architecture"><span class="nav-number">1.</span> <span class="nav-text">2 Two-stream architecture</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction"><span class="nav-number">2.</span> <span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Related-Work"><span class="nav-number">3.</span> <span class="nav-text">2. Related Work</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
