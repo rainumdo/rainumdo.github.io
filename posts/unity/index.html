@@ -40,10 +40,10 @@
 <meta property="og:title" content="unity" />
 <meta name="author" content="rainumdo" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="28 Canvas ProgressBar FillAmount Event -&gt; Script" />
-<meta property="og:description" content="28 Canvas ProgressBar FillAmount Event -&gt; Script" />
-<link rel="canonical" href="http://localhost:4000/posts/unity/" />
-<meta property="og:url" content="http://localhost:4000/posts/unity/" />
+<meta name="description" content="44 IBeginDragHandler, IDragHandler, IEndDragHandler Layout Element IDropHandler IPointEnterHandler, IPointExitHandler Canvas Group" />
+<meta property="og:description" content="44 IBeginDragHandler, IDragHandler, IEndDragHandler Layout Element IDropHandler IPointEnterHandler, IPointExitHandler Canvas Group" />
+<link rel="canonical" href="/posts/unity/" />
+<meta property="og:url" content="/posts/unity/" />
 <meta property="og:site_name" content="Rainumdo’s blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-11-24T17:42:00+08:00" />
@@ -52,7 +52,7 @@
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="twitter:creator" content="@rainumdo" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"rainumdo"},"dateModified":"2024-01-23T23:44:20+08:00","datePublished":"2023-11-24T17:42:00+08:00","description":"28 Canvas ProgressBar FillAmount Event -&gt; Script","headline":"unity","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/unity/"},"url":"http://localhost:4000/posts/unity/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"rainumdo"},"dateModified":"2024-02-19T16:36:36+08:00","datePublished":"2023-11-24T17:42:00+08:00","description":"44 IBeginDragHandler, IDragHandler, IEndDragHandler Layout Element IDropHandler IPointEnterHandler, IPointExitHandler Canvas Group","headline":"unity","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/unity/"},"url":"/posts/unity/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -632,13 +632,13 @@
 
 <em
   class=""
-  data-ts="1706024660"
+  data-ts="1708331796"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jan 23, 2024
+  Feb 19, 2024
 </em>
 
     </span>
@@ -685,9 +685,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1408 words"
+  title="2090 words"
 >
-  <em>7 min</em> read</span>
+  <em>11 min</em> read</span>
 
     </div>
 
@@ -696,7 +696,400 @@
 </div> <!-- .post-meta -->
 
 <div class="post-content">
-  <h1 id="28">28</h1>
+  <h1 id="44">44</h1>
+<p>IBeginDragHandler, IDragHandler, IEndDragHandler
+Layout Element
+IDropHandler
+IPointEnterHandler, IPointExitHandler
+Canvas Group</p>
+
+<h1 id="43">43</h1>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre>public void Show(Action onCloseButton)
+{
+	this.onCloseButton = onCloseButton;
+
+	gameObject.SetActive(true);
+
+	soundEffectButton.Select();
+}
+
+optionsButton.onClick.AddListener(() =&gt;
+{
+	Hide();
+	OptionsUI.Instance.Show(Show);
+});
+</pre></td></tr></tbody></table></code></div></div>
+
+<h1 id="42">42</h1>
+<div class="language-csharp highlighter-rouge"><div class="code-header">
+        <span data-label-text="C#"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+</pre></td><td class="rouge-code"><pre><span class="n">playerInputActions</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="n">Interact</span><span class="p">.</span><span class="n">bindings</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="nf">ToString</span><span class="p">();</span>
+
+<span class="k">public</span> <span class="k">void</span> <span class="nf">Rebinding</span><span class="p">(</span><span class="n">Binding</span> <span class="n">binding</span><span class="p">,</span> <span class="n">Action</span> <span class="n">onActionRebound</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">playerInputActions</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="nf">Disable</span><span class="p">();</span>
+
+	<span class="n">InputAction</span> <span class="n">inputAction</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">bindingIndex</span><span class="p">;</span>
+
+	<span class="k">switch</span> <span class="p">(</span><span class="n">binding</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">default</span><span class="p">:</span>
+		<span class="k">case</span> <span class="n">Binding</span><span class="p">.</span><span class="n">Move_Up</span><span class="p">:</span>
+			<span class="n">inputAction</span> <span class="p">=</span> <span class="n">playerInputActions</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="n">Move</span><span class="p">;</span>
+			<span class="n">bindingIndex</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="n">Binding</span><span class="p">.</span><span class="n">Move_Down</span><span class="p">:</span>
+			<span class="n">inputAction</span> <span class="p">=</span> <span class="n">playerInputActions</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="n">Move</span><span class="p">;</span>
+			<span class="n">bindingIndex</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="n">Binding</span><span class="p">.</span><span class="n">Move_Left</span><span class="p">:</span>
+			<span class="n">inputAction</span> <span class="p">=</span> <span class="n">playerInputActions</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="n">Move</span><span class="p">;</span>
+			<span class="n">bindingIndex</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="n">Binding</span><span class="p">.</span><span class="n">Move_Right</span><span class="p">:</span>
+			<span class="n">inputAction</span> <span class="p">=</span> <span class="n">playerInputActions</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="n">Move</span><span class="p">;</span>
+			<span class="n">bindingIndex</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="n">Binding</span><span class="p">.</span><span class="n">Interact</span><span class="p">:</span>
+			<span class="n">inputAction</span> <span class="p">=</span> <span class="n">playerInputActions</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="n">Interact</span><span class="p">;</span>
+			<span class="n">bindingIndex</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="n">Binding</span><span class="p">.</span><span class="n">InteractAlt</span><span class="p">:</span>
+			<span class="n">inputAction</span> <span class="p">=</span> <span class="n">playerInputActions</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="n">InteractAlternate</span><span class="p">;</span>
+			<span class="n">bindingIndex</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="n">Binding</span><span class="p">.</span><span class="n">Pause</span><span class="p">:</span>
+			<span class="n">inputAction</span> <span class="p">=</span> <span class="n">playerInputActions</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="n">Pause</span><span class="p">;</span>
+			<span class="n">bindingIndex</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="n">inputAction</span><span class="p">.</span><span class="nf">PerformInteractiveRebinding</span><span class="p">(</span><span class="n">bindingIndex</span><span class="p">)</span>
+		<span class="p">.</span><span class="nf">WithControlsExcluding</span><span class="p">(</span><span class="s">"Mouse"</span><span class="p">)</span>
+		<span class="p">.</span><span class="nf">OnComplete</span><span class="p">(</span><span class="n">callback</span> <span class="p">=&gt;</span>
+		<span class="p">{</span>
+			<span class="n">callback</span><span class="p">.</span><span class="nf">Dispose</span><span class="p">();</span>
+			<span class="n">playerInputActions</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="nf">Enable</span><span class="p">();</span>
+			<span class="nf">onActionRebound</span><span class="p">();</span>
+
+			<span class="n">PlayerPrefs</span><span class="p">.</span><span class="nf">SetString</span><span class="p">(</span><span class="n">PLAYER_PREFS_BINDINDS</span><span class="p">,</span> <span class="n">playerInputActions</span><span class="p">.</span><span class="nf">SaveBindingOverridesAsJson</span><span class="p">());</span>
+			<span class="n">PlayerPrefs</span><span class="p">.</span><span class="nf">Save</span><span class="p">();</span>
+		<span class="p">})</span>
+	<span class="p">.</span><span class="nf">Start</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h1 id="41">41</h1>
+<div class="language-csharp highlighter-rouge"><div class="code-header">
+        <span data-label-text="C#"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">PlayerPrefs</span><span class="p">.</span><span class="nf">SetFloat</span><span class="p">(</span><span class="n">PLAYER_PREFS_MUSIC_VOLUME</span><span class="p">,</span> <span class="n">volume</span><span class="p">);</span>
+<span class="n">PlayerPrefs</span><span class="p">.</span><span class="nf">Save</span><span class="p">();</span>
+<span class="n">PlayerPrefs</span><span class="p">.</span><span class="nf">DeleteAll</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h1 id="40">40</h1>
+<ul>
+  <li>Action是无返回值的泛型委托。</li>
+  <li>Action 表示无参，无返回值的委托</li>
+  <li>Action&lt;int,string,bool&gt; 表示有传入参数int,string,bool无返回值的委托</li>
+  <li>Action&lt;int,int,int,int&gt; 表示有传入4个int型参数，无返回值的委托</li>
+  <li>Action至少0个参数，至多16个参数，无返回值。</li>
+</ul>
+
+<h1 id="39">39</h1>
+<p><a href="https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html">UnityEvent</a></p>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre>using UnityEngine;
+using UnityEngine.Events;
+using System.Collections;
+
+public class ExampleClass : MonoBehaviour
+{
+    UnityEvent m_MyEvent;
+
+    void Start()
+    {
+        if (m_MyEvent == null)
+            m_MyEvent = new UnityEvent();
+
+        m_MyEvent.AddListener(Ping);
+    }
+
+    void Update()
+    {
+        if (Input.anyKeyDown &amp;&amp; m_MyEvent != null)
+        {
+            m_MyEvent.Invoke();
+        }
+    }
+
+    void Ping()
+    {
+        Debug.Log("Ping");
+    }
+}
+</pre></td></tr></tbody></table></code></div></div>
+
+<h1 id="38">38</h1>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>Time.scaleTime = 0f;
+OnAnyCut.GetInvocationList().Length
+</pre></td></tr></tbody></table></code></div></div>
+
+<h1 id="37">37</h1>
+<p>File -&gt; Building Settings<br />
+static Loader and LoaderCallback</p>
+<div class="language-csharp highlighter-rouge"><div class="code-header">
+        <span data-label-text="C#"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre><span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">Loader</span>
+<span class="p">{</span>
+
+	<span class="k">public</span> <span class="k">enum</span> <span class="n">Scene</span>
+	<span class="p">{</span>
+		<span class="n">MainMenuScene</span><span class="p">,</span>
+		<span class="n">GameScene</span><span class="p">,</span>
+		<span class="n">LoadingScene</span>
+	<span class="p">}</span>
+
+	<span class="k">private</span> <span class="k">static</span> <span class="n">Scene</span> <span class="n">targetScene</span><span class="p">;</span>
+
+	<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Load</span><span class="p">(</span><span class="n">Scene</span> <span class="n">targetScene</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">Loader</span><span class="p">.</span><span class="n">targetScene</span> <span class="p">=</span> <span class="n">targetScene</span><span class="p">;</span>
+
+		<span class="n">SceneManager</span><span class="p">.</span><span class="nf">LoadScene</span><span class="p">(</span><span class="n">Scene</span><span class="p">.</span><span class="n">LoadingScene</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+
+	<span class="p">}</span>
+
+	<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">LoaderCallback</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">SceneManager</span><span class="p">.</span><span class="nf">LoadScene</span><span class="p">(</span><span class="n">targetScene</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+<div class="language-csharp highlighter-rouge"><div class="code-header">
+        <span data-label-text="C#"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">LoaderCallback</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+<span class="p">{</span>
+	<span class="k">private</span> <span class="kt">bool</span> <span class="n">isFirstUpdate</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+
+	<span class="k">private</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">isFirstUpdate</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">isFirstUpdate</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+
+			<span class="n">Loader</span><span class="p">.</span><span class="nf">LoaderCallback</span><span class="p">();</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h1 id="36">36</h1>
+<div class="language-csharp highlighter-rouge"><div class="code-header">
+        <span data-label-text="C#"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">AudioClip</span>
+<span class="n">AudioSource</span><span class="p">.</span><span class="nf">PlayClipAtPoint</span><span class="p">()</span>  
+</pre></td></tr></tbody></table></code></div></div>
+
+<h1 id="35">35</h1>
+<p>Audio Source<br />
+Audio Maxier</p>
+
+<h1 id="34">34</h1>
+<p>shift+space maximize screen<br />
+uv<br />
+UVs are two-dimensional texture coordinates that correspond with the vertex information for your geometry, connecting a surface mesh to texture application.</p>
+
+<h1 id="33">33</h1>
+<p>Anchor Presets</p>
+
+<h1 id="32">32</h1>
+<p><a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/">C# 编程指南</a></p>
+
+<h1 id="31">31</h1>
+<p><a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/events/how-to-implement-interface-events">如何实现接口事件（C# 编程指南）</a></p>
+
+<h1 id="30">30</h1>
+<p>C# 和 .NET 只支持单一继承。</p>
+
+<p>接口包含非抽象 class 或 struct 必须实现的一组相关功能的定义。 接口可以定义 static 方法，此类方法必须具有实现。 接口可为成员定义默认实现。 接口不能声明实例数据，如字段、自动实现的属性或类似属性的事件。</p>
+
+<p>GetComponent<interface></interface></p>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>hasProgress = hasProgressGameObject.GetComponent&lt;IHasProgress&gt;();
+if (hasProgress == null)
+{
+	Debug.LogError("Game Object" + hasProgressGameObject + " does not have a component that implements IHasProgress!");
+}
+</pre></td></tr></tbody></table></code></div></div>
+
+<h1 id="29">29</h1>
+<p>LookAt</p>
+<div class="language-csharp highlighter-rouge"><div class="code-header">
+        <span data-label-text="C#"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">transform</span><span class="p">.</span><span class="nf">LookAt</span><span class="p">(</span><span class="n">Camera</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">transform</span><span class="p">);</span>
+<span class="n">transform</span><span class="p">.</span><span class="n">forward</span> <span class="p">=</span> <span class="n">Camera</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">forward</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h1 id="28">28</h1>
 <p>Canvas<br />
 ProgressBar<br />
 FillAmount<br />
@@ -811,11 +1204,11 @@ transform.gameObject</p>
 </pre></td></tr></tbody></table></code></div></div>
 
 <h1 id="22">22</h1>
-<p>event(+= or -=)
-delegate(=)
-action(void)
-func(return)
-https://learn.microsoft.com/zh-cn/dotnet/csharp/distinguish-delegates-events</p>
+<p>event(+= or -=)<br />
+delegate(=)<br />
+action(void)<br />
+func(return)<br />
+<a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/distinguish-delegates-events">区别委托和事件</a></p>
 
 <h1 id="21">21</h1>
 <div class="language-csharp highlighter-rouge"><div class="code-header">
@@ -1092,7 +1485,6 @@ Import
 <h1 id="1">1</h1>
 <p>(Toolbar, Hierarchy, Game, Scene, Overlays, Inspector, Project, Status bar)[https://docs.unity3d.com/2021.3/Documentation/Manual/UsingTheEditor.html]</p>
 
-
 </div>
 
 <div class="post-tail-wrapper text-muted">
@@ -1146,7 +1538,7 @@ Import
     
       
       <a
-        href="https://twitter.com/intent/tweet?text=unity%20-%20Rainumdo's%20blog&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Funity%2F"
+        href="https://twitter.com/intent/tweet?text=unity%20-%20Rainumdo's%20blog&url=%2Fposts%2Funity%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Twitter"
@@ -1159,7 +1551,7 @@ Import
     
       
       <a
-        href="https://www.facebook.com/sharer/sharer.php?title=unity%20-%20Rainumdo's%20blog&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Funity%2F"
+        href="https://www.facebook.com/sharer/sharer.php?title=unity%20-%20Rainumdo's%20blog&u=%2Fposts%2Funity%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Facebook"
@@ -1172,7 +1564,7 @@ Import
     
       
       <a
-        href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Funity%2F&text=unity%20-%20Rainumdo's%20blog"
+        href="https://t.me/share/url?url=%2Fposts%2Funity%2F&text=unity%20-%20Rainumdo's%20blog"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Telegram"
@@ -1235,7 +1627,21 @@ Import
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/words/">words</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/unity/">unity</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/art/">art</a>
         </li>
       
         
@@ -1249,21 +1655,7 @@ Import
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/words/">words</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/posts/windows/">windows</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/jekyll/">jekyll</a>
         </li>
       
     </ul>
@@ -1402,11 +1794,58 @@ Import
         
         
 
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
 
 
   <div id="access-tags">
     <div class="panel-heading">Trending Tags</div>
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/art/">art</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/jekyll/">jekyll</a>
@@ -1465,6 +1904,18 @@ Import
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -1530,15 +1981,15 @@ Import
   
     
     
+      
+      
+        
+        
+        
+      
+    
   
     
-    
-      
-      
-        
-        
-        
-      
     
   
     
@@ -1567,6 +2018,52 @@ Import
       Further Reading
     </h3>
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        
+        
+        <div class="col">
+          <a href="/posts/art/" class="card post-preview h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class="small"
+  data-ts="1707905700"
+  data-df="ll"
+  
+>
+  Feb 14, 2024
+</em>
+
+              <h4 class="pt-0 my-2" data-toc-skip>art</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  53
+
+  Objects and sprites have clear outlines to stand out.
+  The colours of the background are softer to compliment the foreground.
+  The background isn’t in focus and appears more painterly.
+
+
+52...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
       
         
         
@@ -1672,69 +2169,6 @@ dir /b C:\Windows\servicing\Package...
           </a>
         </div>
       
-        
-        
-        <div class="col">
-          <a href="/posts/words/" class="card post-preview h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class="small"
-  data-ts="1693539360"
-  data-df="ll"
-  
->
-  Sep  1, 2023
-</em>
-
-              <h4 class="pt-0 my-2" data-toc-skip>words</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  melee
-| debute
-frustum
-wanky
-vignette
-acronyms
-|palette
-shader
-prefab
-gizmo
-||| orbit
-immerse
-bait
-semblance
-evanescent 
-wade
-| elude
-exquisite
-wrangle 
-abysmal 
-benevolent
-| blunt
-exalt
-sage
-|||||...
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      
     </div>
     <!-- .card-deck -->
   </div>
@@ -1757,12 +2191,13 @@ sage
   
 
   
-    <div
-      class="btn btn-outline-primary disabled"
+    <a
+      href="/posts/art/"
+      class="btn btn-outline-primary"
       prompt="Newer"
     >
-      <p>-</p>
-    </div>
+      <p>art</p>
+    </a>
   
 </div>
 
@@ -1912,11 +2347,58 @@ sage
         
         
 
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
 
 
   <div id="access-tags">
     <div class="panel-heading">Trending Tags</div>
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/art/">art</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/jekyll/">jekyll</a>

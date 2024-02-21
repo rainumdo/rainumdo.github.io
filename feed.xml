@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/</id>
+  <id>/</id>
   <title>Rainumdo's blog</title>
   <subtitle>rainumdo's blog</subtitle>
-  <updated>2024-01-24T10:43:23+08:00</updated>
+  <updated>2024-02-21T17:13:09+08:00</updated>
   <author>
     <name>your_full_name</name>
-    <uri>http://localhost:4000/</uri>
+    <uri>/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/"/>
+    href="/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
   <rights> © 2024 your_full_name </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -20,14 +20,59 @@
 
   
   <entry>
+    <title>art</title>
+    <link href="/posts/art/" rel="alternate" type="text/html" title="art" />
+    <published>2024-02-14T18:15:00+08:00</published>
+  
+    <updated>2024-02-19T16:36:36+08:00</updated>
+  
+    <id>/posts/art/</id>
+    <content src="/posts/art/" />
+    <author>
+      <name>rainumdo</name>
+    </author>
+
+  
+    
+    <category term="art" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      53
+
+  Objects and sprites have clear outlines to stand out.
+  The colours of the background are softer to compliment the foreground.
+  The background isn’t in focus and appears more painterly.
+
+
+52
+One way is to get rid of in-lines.
+
+51
+Drawing outlines can take a lot of precious space, so playing with dark and light tones instead might do the trick. Light is used to show important details, Dar...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>unity</title>
-    <link href="http://localhost:4000/posts/unity/" rel="alternate" type="text/html" title="unity" />
+    <link href="/posts/unity/" rel="alternate" type="text/html" title="unity" />
     <published>2023-11-24T17:42:00+08:00</published>
   
-    <updated>2024-01-23T23:44:20+08:00</updated>
+    <updated>2024-02-19T16:36:36+08:00</updated>
   
-    <id>http://localhost:4000/posts/unity/</id>
-    <content src="http://localhost:4000/posts/unity/" />
+    <id>/posts/unity/</id>
+    <content src="/posts/unity/" />
     <author>
       <name>rainumdo</name>
     </author>
@@ -46,30 +91,32 @@
 
 
 
-      28
-Canvas
-ProgressBar
-FillAmount
-Event -&amp;gt; Script
+      44
+IBeginDragHandler, IDragHandler, IEndDragHandler
+Layout Element
+IDropHandler
+IPointEnterHandler, IPointExitHandler
+Canvas Group
 
-27
-连击动画
-attack layer
-attack1.anim -&amp;gt; finishScript.cs -&amp;gt; OnStateExit()
-attack2.anim
-attack3.anim
-attack4.anim
-1-&amp;gt;2 bool
-2-&amp;gt;3 isTrigger 
-3-&amp;gt;4 isTrigger
+43
+public void Show(Action onCloseButton)
+{
+	this.onCloseButton = onCloseButton;
 
-26
-(Virtual)虚拟方法与(abstract)抽象方法的区别?
-虚拟方法和抽象方法都可以供派生类重写和都用override重写。那么它们之间有什么区别呢？
+	gameObject.SetActive(true);
 
-  抽象方法使用abstract关键字,虚拟方法使用virtual关键字
-  抽象方法是可以看成是没有实现体的虚拟方法
-  虚拟方法与多态性关系密切,虚拟方法为子类提供了重写该方法的选项允许...
+	soundEffectButton.Select();
+}
+
+optionsButton.onClick.AddListener(() =&amp;gt;
+{
+	Hide();
+	OptionsUI.Instance.Show(Show);
+});
+
+
+42
+playerInputActions.Player....
     </summary>
   
 
@@ -78,13 +125,13 @@ attack4.anim
   
   <entry>
     <title>jekyll</title>
-    <link href="http://localhost:4000/posts/jekyll/" rel="alternate" type="text/html" title="jekyll" />
+    <link href="/posts/jekyll/" rel="alternate" type="text/html" title="jekyll" />
     <published>2023-09-01T11:36:00+08:00</published>
   
     <updated>2023-09-01T14:03:16+08:00</updated>
   
-    <id>http://localhost:4000/posts/jekyll/</id>
-    <content src="http://localhost:4000/posts/jekyll/" />
+    <id>/posts/jekyll/</id>
+    <content src="/posts/jekyll/" />
     <author>
       <name>rainumdo</name>
     </author>
@@ -131,13 +178,13 @@ jekyll server
   
   <entry>
     <title>windows</title>
-    <link href="http://localhost:4000/posts/windows/" rel="alternate" type="text/html" title="windows" />
+    <link href="/posts/windows/" rel="alternate" type="text/html" title="windows" />
     <published>2023-09-01T11:36:00+08:00</published>
   
     <updated>2023-11-26T14:32:06+08:00</updated>
   
-    <id>http://localhost:4000/posts/windows/</id>
-    <content src="http://localhost:4000/posts/windows/" />
+    <id>/posts/windows/</id>
+    <content src="/posts/windows/" />
     <author>
       <name>rainumdo</name>
     </author>
@@ -185,13 +232,13 @@ for /f %%i...
   
   <entry>
     <title>words</title>
-    <link href="http://localhost:4000/posts/words/" rel="alternate" type="text/html" title="words" />
+    <link href="/posts/words/" rel="alternate" type="text/html" title="words" />
     <published>2023-09-01T11:36:00+08:00</published>
   
-    <updated>2024-01-11T20:55:48+08:00</updated>
+    <updated>2024-02-19T16:36:36+08:00</updated>
   
-    <id>http://localhost:4000/posts/words/</id>
-    <content src="http://localhost:4000/posts/words/" />
+    <id>/posts/words/</id>
+    <content src="/posts/words/" />
     <author>
       <name>rainumdo</name>
     </author>
@@ -210,108 +257,42 @@ for /f %%i...
 
 
 
-      melee
-| debute
-frustum
-wanky
-vignette
-acronyms
-|palette
-shader
-prefab
-gizmo
-||| orbit
-immerse
-bait
-semblance
-evanescent 
-wade
-| elude
-exquisite
-wrangle 
-abysmal 
-benevolent
-| blunt
-exalt
-sage
+      dither
+| saddle
+alas
+silhouette
+mitten
+||||| trivial
+torso
+misinterpret
+tint
+dull
+cyan
+crab
+||||| ramp	
+| concave
+|| convex
+cushion 
+couch
+icing
+contour
+| chisel 
+|||||| scenario
 |||||| plausible
-||| trick
-|| aforemention
-ubiquity
-impediment
-||| resurgence
-dismay
-| negligible
-shallow
-nontrivial 
-degradation
-misc
-blend
-| primitive
-saliency
-|| agnostic
+|||||| elaborate
+||||| tribute
+||||| tremendous
+||||| sparse
 ||||| remedy
-| astound
-||| dism...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>linux</title>
-    <link href="http://localhost:4000/posts/linux/" rel="alternate" type="text/html" title="linux" />
-    <published>2023-09-01T11:36:00+08:00</published>
-  
-    <updated>2024-01-21T15:32:43+08:00</updated>
-  
-    <id>http://localhost:4000/posts/linux/</id>
-    <content src="http://localhost:4000/posts/linux/" />
-    <author>
-      <name>rainumdo</name>
-    </author>
-
-  
-    
-    <category term="linux" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      82
-ssh: connect to host github.com port 22: Operation timed out
-vi ~/.ssh/config
-
-Host github.com
-    Hostname ssh.github.com
-    Port 443
-
-ssh -T git@github.com
-
-
-81
-aseprite.desktop shortcut
-$HOME/.local/share/applications/aseprite.desktop
-
-[Desktop Entry]
-Name=Aseprite
-Exec=/opt/aseprite/aseprite
-Terminal=false
-Icon=/opt/aseprite/data/icons/ase.ico
-Type=Application
-
-
-80
-split
-split a.zip a.z...
+||||| paradigm
+||||| impartial
+||||| diagonal
+||||| deficit
+||||| benchmark
+||||| analogy
+||||| aggregate
+|||| tweak
+|||| trial...
     </summary>
   
 
