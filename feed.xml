@@ -1,18 +1,18 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>/</id>
+  <id>http://localhost:4000/</id>
   <title>Rainumdo's blog</title>
   <subtitle>rainumdo's blog</subtitle>
-  <updated>2024-02-21T17:13:09+08:00</updated>
+  <updated>2024-02-25T20:28:02+08:00</updated>
   <author>
     <name>your_full_name</name>
-    <uri>/</uri>
+    <uri>http://localhost:4000/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="/"/>
-  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
   <rights> © 2024 your_full_name </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
@@ -20,14 +20,68 @@
 
   
   <entry>
+    <title>music</title>
+    <link href="http://localhost:4000/posts/music/" rel="alternate" type="text/html" title="music" />
+    <published>2024-02-22T00:00:00+08:00</published>
+  
+    <updated>2024-02-22T21:26:30+08:00</updated>
+  
+    <id>http://localhost:4000/posts/music/</id>
+    <content src="http://localhost:4000/posts/music/" />
+    <author>
+      <name>rainumdo</name>
+    </author>
+
+  
+    
+    <category term="music" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      6
+五度相生律又叫“三分损益律”，它是按纯五度的关系向上或向下推算的办法，来找出各个音级的精确高度。
+
+5
+8度 = 6个全音+2个半音
+
+4
+Do Re Mi (拇指定位)
+Fa So La Si (拇指定位)
+
+3
+https://www.musicca.com/
+
+2
+钢琴的琴键是由一组组的黑键和白键组成的。整个键盘上一共有88个键，其中52个白键，36个黑键。
+2个黑键对应着3个白键，接着是3个黑键对应着4个白键，如此重复着。
+
+1
+声音有高低、强弱、长短、音色等性质。
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>art</title>
-    <link href="/posts/art/" rel="alternate" type="text/html" title="art" />
+    <link href="http://localhost:4000/posts/art/" rel="alternate" type="text/html" title="art" />
     <published>2024-02-14T18:15:00+08:00</published>
   
-    <updated>2024-02-19T16:36:36+08:00</updated>
+    <updated>2024-02-23T19:00:44+08:00</updated>
   
-    <id>/posts/art/</id>
-    <content src="/posts/art/" />
+    <id>http://localhost:4000/posts/art/</id>
+    <content src="http://localhost:4000/posts/art/" />
     <author>
       <name>rainumdo</name>
     </author>
@@ -46,18 +100,23 @@
 
 
 
-      53
+      76
+The way your audience experiences your world is a pretty big deal.
 
-  Objects and sprites have clear outlines to stand out.
-  The colours of the background are softer to compliment the foreground.
-  The background isn’t in focus and appears more painterly.
+75
+The point here is to **deconstruct shapes** and help them guide you. You can use this for ANY PERSPECTIVE!
 
+74
+Remember to ask for feedback from others to avoid readability issues!
 
-52
-One way is to get rid of in-lines.
+73
+This example shows that the fences and trees are made of sprites set at a 45° angle.
 
-51
-Drawing outlines can take a lot of precious space, so playing with dark and light tones instead might do the trick. Light is used to show important details, Dar...
+72
+True perspective has the vanishing point.
+
+71
+Obl...
     </summary>
   
 
@@ -66,13 +125,13 @@ Drawing outlines can take a lot of precious space, so playing with dark and ligh
   
   <entry>
     <title>unity</title>
-    <link href="/posts/unity/" rel="alternate" type="text/html" title="unity" />
+    <link href="http://localhost:4000/posts/unity/" rel="alternate" type="text/html" title="unity" />
     <published>2023-11-24T17:42:00+08:00</published>
   
     <updated>2024-02-19T16:36:36+08:00</updated>
   
-    <id>/posts/unity/</id>
-    <content src="/posts/unity/" />
+    <id>http://localhost:4000/posts/unity/</id>
+    <content src="http://localhost:4000/posts/unity/" />
     <author>
       <name>rainumdo</name>
     </author>
@@ -125,13 +184,13 @@ playerInputActions.Player....
   
   <entry>
     <title>jekyll</title>
-    <link href="/posts/jekyll/" rel="alternate" type="text/html" title="jekyll" />
+    <link href="http://localhost:4000/posts/jekyll/" rel="alternate" type="text/html" title="jekyll" />
     <published>2023-09-01T11:36:00+08:00</published>
   
-    <updated>2023-09-01T14:03:16+08:00</updated>
+    <updated>2024-02-22T21:16:41+08:00</updated>
   
-    <id>/posts/jekyll/</id>
-    <content src="/posts/jekyll/" />
+    <id>http://localhost:4000/posts/jekyll/</id>
+    <content src="http://localhost:4000/posts/jekyll/" />
     <author>
       <name>rainumdo</name>
     </author>
@@ -150,7 +209,13 @@ playerInputActions.Player....
 
 
 
-      3
+      4
+update Gem for chirpy
+# https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/Gemfile
+bundle install
+
+
+3
 facicon
 Real Favicon Generator 
 
@@ -178,13 +243,13 @@ jekyll server
   
   <entry>
     <title>windows</title>
-    <link href="/posts/windows/" rel="alternate" type="text/html" title="windows" />
+    <link href="http://localhost:4000/posts/windows/" rel="alternate" type="text/html" title="windows" />
     <published>2023-09-01T11:36:00+08:00</published>
   
     <updated>2023-11-26T14:32:06+08:00</updated>
   
-    <id>/posts/windows/</id>
-    <content src="/posts/windows/" />
+    <id>http://localhost:4000/posts/windows/</id>
+    <content src="http://localhost:4000/posts/windows/" />
     <author>
       <name>rainumdo</name>
     </author>
@@ -224,75 +289,6 @@ dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensi
 dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &amp;gt;&amp;gt;List.txt
 
 for /f %%i...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>words</title>
-    <link href="/posts/words/" rel="alternate" type="text/html" title="words" />
-    <published>2023-09-01T11:36:00+08:00</published>
-  
-    <updated>2024-02-19T16:36:36+08:00</updated>
-  
-    <id>/posts/words/</id>
-    <content src="/posts/words/" />
-    <author>
-      <name>rainumdo</name>
-    </author>
-
-  
-    
-    <category term="words" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      dither
-| saddle
-alas
-silhouette
-mitten
-||||| trivial
-torso
-misinterpret
-tint
-dull
-cyan
-crab
-||||| ramp	
-| concave
-|| convex
-cushion 
-couch
-icing
-contour
-| chisel 
-|||||| scenario
-|||||| plausible
-|||||| elaborate
-||||| tribute
-||||| tremendous
-||||| sparse
-||||| remedy
-||||| paradigm
-||||| impartial
-||||| diagonal
-||||| deficit
-||||| benchmark
-||||| analogy
-||||| aggregate
-|||| tweak
-|||| trial...
     </summary>
   
 
