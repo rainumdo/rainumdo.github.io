@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Rainumdo's blog</title>
   <subtitle>rainumdo's blog</subtitle>
-  <updated>2024-02-25T20:28:02+08:00</updated>
+  <updated>2024-03-06T16:56:15+08:00</updated>
   <author>
     <name>your_full_name</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,47 @@
 
   
   <entry>
+    <title>comfyui</title>
+    <link href="http://localhost:4000/posts/comfyui/" rel="alternate" type="text/html" title="comfyui" />
+    <published>2024-03-06T16:55:00+08:00</published>
+  
+    <updated>2024-03-06T16:55:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/comfyui/</id>
+    <content src="http://localhost:4000/posts/comfyui/" />
+    <author>
+      <name>rainumdo</name>
+    </author>
+
+  
+    
+    <category term="ai" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>music</title>
     <link href="http://localhost:4000/posts/music/" rel="alternate" type="text/html" title="music" />
     <published>2024-02-22T00:00:00+08:00</published>
   
-    <updated>2024-02-22T21:26:30+08:00</updated>
+    <updated>2024-03-03T13:30:08+08:00</updated>
   
     <id>http://localhost:4000/posts/music/</id>
     <content src="http://localhost:4000/posts/music/" />
@@ -46,27 +82,32 @@
 
 
 
-      6
-五度相生律又叫“三分损益律”，它是按纯五度的关系向上或向下推算的办法，来找出各个音级的精确高度。
-
-5
-8度 = 6个全音+2个半音
-
-4
-Do Re Mi (拇指定位)
-Fa So La Si (拇指定位)
-
-3
-https://www.musicca.com/
-
-2
-钢琴的琴键是由一组组的黑键和白键组成的。整个键盘上一共有88个键，其中52个白键，36个黑键。
-2个黑键对应着3个白键，接着是3个黑键对应着4个白键，如此重复着。
-
-1
-声音有高低、强弱、长短、音色等性质。
+      14
 
 
+  
+    
+      全音符
+      “全音符”为没有符干和符尾的空心白色音全音符。是单纯音符里时值最长的音符。其他音符的时值都比它短，而且要以它为准。
+    
+    
+      二分音符
+      有符干的白色音符叫“二分音符”。它的二分音符时值只有全音符的一半长，即等于全音符二分之一的时值。
+    
+    
+      四分音符
+      有符干且符头为实心的音符叫“四分音四分音符”。等于全音符四分之一的时值。
+    
+    
+      八分音符
+      “八分音符”比四分音符多了一条尾巴，八分音符其时值是全音符的八分之一。
+    
+    
+      十六分音符
+      “十六分音符”有两条尾巴。它比八分音符时值要少一半。等于全音符十六分之一的时值。所以它比八分音符要快一倍的速度。
+    
+    
+      三十二分音符...
     </summary>
   
 
@@ -78,7 +119,7 @@ https://www.musicca.com/
     <link href="http://localhost:4000/posts/art/" rel="alternate" type="text/html" title="art" />
     <published>2024-02-14T18:15:00+08:00</published>
   
-    <updated>2024-02-23T19:00:44+08:00</updated>
+    <updated>2024-03-04T11:49:09+08:00</updated>
   
     <id>http://localhost:4000/posts/art/</id>
     <content src="http://localhost:4000/posts/art/" />
@@ -100,23 +141,26 @@ https://www.musicca.com/
 
 
 
-      76
-The way your audience experiences your world is a pretty big deal.
+      80
 
-75
-The point here is to **deconstruct shapes** and help them guide you. You can use this for ANY PERSPECTIVE!
+79
+绘画的九大基本法则
+1．压缩：扭曲物体，以产生其某部分比较接近你眼睛的错觉。
+2．位置：把物体置于画面较低的位置，以表示物体比较接近你的眼睛。
+3．尺寸：把物体画得大一些，以表示物体比较接近你的眼睛。
+4．重叠：把一个物体画在另一个物体的前面，以产生它比较接近你眼睛的错觉。
+5．阴影：把一个物体背着光源的部分画得深些，以产生深度的错觉。
+6．投影：把一个物体背着光源近处的地面画得深些，以产生深度的错觉。
+7．轮廓线：画出一个包住物体的曲线，给其体积感和深度感。
+8．水平线：画一条水平参考线，以区分画面中不同物体与你视线之间的距离。
+9．密度：把物体画得亮一些、细节少一些，以产生距离上的视错觉。
 
-74
-Remember to ask for feedback from others to avoid readability issues!
+78
+saturated -&amp;gt; fun, childish
+desaturated -&amp;gt; dramatic, serious
 
-73
-This example shows that the fences and trees are made of sprites set at a 45° angle.
-
-72
-True perspective has the vanishing point.
-
-71
-Obl...
+77
+omething strang...
     </summary>
   
 
@@ -128,7 +172,7 @@ Obl...
     <link href="http://localhost:4000/posts/unity/" rel="alternate" type="text/html" title="unity" />
     <published>2023-11-24T17:42:00+08:00</published>
   
-    <updated>2024-02-19T16:36:36+08:00</updated>
+    <updated>2024-03-05T23:52:59+08:00</updated>
   
     <id>http://localhost:4000/posts/unity/</id>
     <content src="http://localhost:4000/posts/unity/" />
@@ -150,7 +194,16 @@ Obl...
 
 
 
-      44
+      46
+Canvas Group -&amp;gt; Blocks Raycasts
+
+45
+EventTragger
+EventType
+UIE
+IXXXHandler
+
+44
 IBeginDragHandler, IDragHandler, IEndDragHandler
 Layout Element
 IDropHandler
@@ -167,15 +220,7 @@ public void Show(Action onCloseButton)
 	soundEffectButton.Select();
 }
 
-optionsButton.onClick.AddListener(() =&amp;gt;
-{
-	Hide();
-	OptionsUI.Instance.Show(Show);
-});
-
-
-42
-playerInputActions.Player....
+optionsButton.onClick.AddListener(() =&amp;...
     </summary>
   
 
@@ -235,60 +280,6 @@ jekyll server
 
 
 
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>windows</title>
-    <link href="http://localhost:4000/posts/windows/" rel="alternate" type="text/html" title="windows" />
-    <published>2023-09-01T11:36:00+08:00</published>
-  
-    <updated>2023-11-26T14:32:06+08:00</updated>
-  
-    <id>http://localhost:4000/posts/windows/</id>
-    <content src="http://localhost:4000/posts/windows/" />
-    <author>
-      <name>rainumdo</name>
-    </author>
-
-  
-    
-    <category term="windows" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      16
-vscodevim
-ctrl + shift + p
-keybindings.json
-  {
-    "key": "capslock",
-    "command": "extension.vim_escape"
-  }
-
-
-15
-add gpedit.msc
-@echo off
-
-pushd "%~dp0"
-
-dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &amp;gt;List.txt
-
-dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &amp;gt;&amp;gt;List.txt
-
-for /f %%i...
     </summary>
   
 
