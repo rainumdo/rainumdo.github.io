@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Rainumdo's blog</title>
   <subtitle>rainumdo's blog</subtitle>
-  <updated>2024-03-06T16:56:15+08:00</updated>
+  <updated>2024-03-16T23:21:56+08:00</updated>
   <author>
     <name>your_full_name</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/comfyui/" rel="alternate" type="text/html" title="comfyui" />
     <published>2024-03-06T16:55:00+08:00</published>
   
-    <updated>2024-03-06T16:55:00+08:00</updated>
+    <updated>2024-03-16T23:19:55+08:00</updated>
   
     <id>http://localhost:4000/posts/comfyui/</id>
     <content src="http://localhost:4000/posts/comfyui/" />
@@ -46,9 +46,21 @@
 
 
 
-      1
+      11
+2 Pass Txt2Img (Hires fix)
+VAE Decode: decode the LATENT where you need.
+Upscale Latent: hires fix with higher resolution.
+The second KSampler has more steps and lower denoise(0.5).
 
+10
+hugging-face models
+mirror
 
+9
+When sampling, the negative prompt is treated almost the same way as the positive prompt.
+
+8
+Negative prompts are used to tell Stable Diffusion what you don’t want in your image....
     </summary>
   
 
@@ -119,7 +131,7 @@
     <link href="http://localhost:4000/posts/art/" rel="alternate" type="text/html" title="art" />
     <published>2024-02-14T18:15:00+08:00</published>
   
-    <updated>2024-03-04T11:49:09+08:00</updated>
+    <updated>2024-03-14T18:34:37+08:00</updated>
   
     <id>http://localhost:4000/posts/art/</id>
     <content src="http://localhost:4000/posts/art/" />
@@ -141,26 +153,20 @@
 
 
 
-      80
+      116
+subpixel is also called 0.5 pixel technique
 
-79
-绘画的九大基本法则
-1．压缩：扭曲物体，以产生其某部分比较接近你眼睛的错觉。
-2．位置：把物体置于画面较低的位置，以表示物体比较接近你的眼睛。
-3．尺寸：把物体画得大一些，以表示物体比较接近你的眼睛。
-4．重叠：把一个物体画在另一个物体的前面，以产生它比较接近你眼睛的错觉。
-5．阴影：把一个物体背着光源的部分画得深些，以产生深度的错觉。
-6．投影：把一个物体背着光源近处的地面画得深些，以产生深度的错觉。
-7．轮廓线：画出一个包住物体的曲线，给其体积感和深度感。
-8．水平线：画一条水平参考线，以区分画面中不同物体与你视线之间的距离。
-9．密度：把物体画得亮一些、细节少一些，以产生距离上的视错觉。
+115
+However, there are often subtle movements with carefully placed AA, and THAT is where you’ll find subpixels.
 
-78
-saturated -&amp;gt; fun, childish
-desaturated -&amp;gt; dramatic, serious
+114
+The pixel shifting is offset and body parts follow an arc. This animation also eases in and out. It slows down at the keyframes.
 
-77
-omething strang...
+113
+less AA on the animation.
+
+112
+Usually you can move around full pixels (1px) in normal animation...
     </summary>
   
 

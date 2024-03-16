@@ -33,8 +33,8 @@
 <meta property="og:title" content="comfyui" />
 <meta name="author" content="rainumdo" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="1" />
-<meta property="og:description" content="1" />
+<meta name="description" content="11 2 Pass Txt2Img (Hires fix) VAE Decode: decode the LATENT where you need. Upscale Latent: hires fix with higher resolution. The second KSampler has more steps and lower denoise(0.5)." />
+<meta property="og:description" content="11 2 Pass Txt2Img (Hires fix) VAE Decode: decode the LATENT where you need. Upscale Latent: hires fix with higher resolution. The second KSampler has more steps and lower denoise(0.5)." />
 <link rel="canonical" href="http://localhost:4000/posts/comfyui/" />
 <meta property="og:url" content="http://localhost:4000/posts/comfyui/" />
 <meta property="og:site_name" content="Rainumdo’s blog" />
@@ -45,7 +45,7 @@
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="twitter:creator" content="@rainumdo" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"rainumdo"},"dateModified":"2024-03-06T16:55:00+08:00","datePublished":"2024-03-06T16:55:00+08:00","description":"1","headline":"comfyui","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/comfyui/"},"url":"http://localhost:4000/posts/comfyui/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"rainumdo"},"dateModified":"2024-03-16T23:19:55+08:00","datePublished":"2024-03-06T16:55:00+08:00","description":"11 2 Pass Txt2Img (Hires fix) VAE Decode: decode the LATENT where you need. Upscale Latent: hires fix with higher resolution. The second KSampler has more steps and lower denoise(0.5).","headline":"comfyui","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/comfyui/"},"url":"http://localhost:4000/posts/comfyui/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -603,6 +603,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1710602395"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Mar 16, 2024
+</time>
+
+        </span>
+      
 
       
 
@@ -644,7 +667,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1 words"
+  title="206 words"
 >
   <em>1 min</em> read</span>
 
@@ -655,7 +678,50 @@
   </header>
 
   <div class="content">
-    <h1 id="1">1</h1>
+    <h1 id="11">11</h1>
+<p>2 Pass Txt2Img (Hires fix)
+VAE Decode: decode the LATENT where you need.
+Upscale Latent: hires fix with higher resolution.
+The second KSampler has more steps and lower denoise(0.5).</p>
+
+<h1 id="10">10</h1>
+<p><a href="https://www.hugging-face.org/models/">hugging-face models</a>
+<a href="https://hf-mirror.com/models">mirror</a></p>
+
+<h1 id="9">9</h1>
+<p>When sampling, the negative prompt is treated almost the same way as the positive prompt.</p>
+
+<h1 id="8">8</h1>
+<p>Negative prompts are used to tell Stable Diffusion what you don’t want in your image.</p>
+
+<h1 id="7">7</h1>
+<p>Safety Filter is wasting precious vram and processing power while throw false positive.</p>
+
+<h1 id="6">6</h1>
+<p>Prompt Engineering
+(word: 1.1) is default
+not naked
+keep prompts simple</p>
+
+<h1 id="5">5</h1>
+<p>The VAE is used to translate an image from latent space to pixel space.
+Latent space is the format the main Stable Diffusion MODEL understand while pixel space is the format that your image viewer understands.</p>
+
+<h1 id="4">4</h1>
+<p>In stable diffusion the image is generated using what we refer to as a sampler.
+It also takes both the positive and negative prompts encoded by the CLIP model.
+The final input it takes is Latent Image.</p>
+
+<h1 id="3">3</h1>
+<p>The CLIP model connects to the CLIPTextEncode nodes.
+The CLIP is used in Stable Diffusion to encode the text to a format that the main MODEL can understand.</p>
+
+<h1 id="2">2</h1>
+<p>CLIP, the main MODEL, VAE<br />
+CheckpointLoaderSimple</p>
+
+<h1 id="1">1</h1>
+<p><a href="https://comfyanonymous.github.io/ComfyUI_examples/">ComfyUI Examples</a></p>
 
 
   </div>
@@ -790,7 +856,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/unity/">unity</a>
+          <a href="/posts/words/">words</a>
         </li>
       
         
@@ -804,14 +870,14 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/music/">music</a>
+          <a href="/posts/unity/">unity</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/words/">words</a>
+          <a href="/posts/music/">music</a>
         </li>
       
     </ul>
