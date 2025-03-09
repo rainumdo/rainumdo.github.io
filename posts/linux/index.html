@@ -25,7 +25,17 @@
   
   <meta name="theme-color" />
 
-  <meta name="description" content="90
+  <meta name="description" content="92
+add edge source
+echo &#39;deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft-edge.gpg] https://packages.microsoft.com/repos/edge stable main&#39; | sudo tee /etc/apt/sources.list.d/microsoft-edge.list
+
+curl -fSsL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-edge.gpg &gt; /dev/null
+91
+add unityhub source
+sudo sh -c &#39;echo &#34;deb https://hub.unity3d.com/linux/repos/deb stable main&#34; &gt; /etc/apt/sources.list.d/unityhub.list&#39;
+
+wget -qO - https://hub.unity3d.com/linux/keys/public | sudo tee /etc/apt/trusted.gpg.d/unityhub.asc
+90
 ubuntu chinese dirs to english dirs
 export LANG=en_US
 xdg-user-dirs-gtk-update
@@ -275,7 +285,17 @@ export all_proxy=&#34;socks5://allowlan:port&#34;
   <header class="mb-14">
     <h1 class="!my-0 pb-2.5">linux</h1><div class="text-xs antialiased opacity-60"><time>Sep 1, 2023</time></div></header>
 
-  <section><h1 id="90">90</h1>
+  <section><h1 id="92">92</h1>
+<p>add edge source</p>
+<pre tabindex="0"><code>echo &#39;deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft-edge.gpg] https://packages.microsoft.com/repos/edge stable main&#39; | sudo tee /etc/apt/sources.list.d/microsoft-edge.list
+
+curl -fSsL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-edge.gpg &gt; /dev/null
+</code></pre><h1 id="91">91</h1>
+<p>add unityhub source</p>
+<pre tabindex="0"><code>sudo sh -c &#39;echo &#34;deb https://hub.unity3d.com/linux/repos/deb stable main&#34; &gt; /etc/apt/sources.list.d/unityhub.list&#39;
+
+wget -qO - https://hub.unity3d.com/linux/keys/public | sudo tee /etc/apt/trusted.gpg.d/unityhub.asc
+</code></pre><h1 id="90">90</h1>
 <p>ubuntu chinese dirs to english dirs</p>
 <pre tabindex="0"><code>export LANG=en_US
 xdg-user-dirs-gtk-update
