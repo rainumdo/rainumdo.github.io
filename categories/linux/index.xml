@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linux on Rainumdo&#39;s blog</title>
+    <link>//localhost:1313/categories/linux/</link>
+    <description>Recent content in Linux on Rainumdo&#39;s blog</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>//localhost:1313/posts/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/linux/</guid>
+      <description>&lt;h1 id=&#34;89&#34;&gt;89&lt;/h1&gt;
+&lt;p&gt;git 初始化远端仓库&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init
+git add *
+git branch -M main
+git remote add origin git@xxx.git
+git push -u origin main # 设置本地origin的远端上游main
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;88&#34;&gt;88&lt;/h1&gt;
+&lt;p&gt;包含&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;dpkg -i --force-overwrite xxx.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;87&#34;&gt;87&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/aseprite/aseprite/blob/main/INSTALL.md#linux-details&#34;&gt;asperite build&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;86&#34;&gt;86&lt;/h1&gt;
+&lt;p&gt;relate local and remote branch&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch -b main
+git branch -u origin/remote_branch [local_branch]
+git branch -vv
+git pull rebase
+# or
+git branch --set-upstream-to orgin/remote_branch
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;85&#34;&gt;85&lt;/h1&gt;
+&lt;p&gt;git lfs&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install git-lfs
+git lfs install
+find ./ -size +100M 
+git lfs track &amp;#34;*.suffix&amp;#34;
+git add .gitattributes
+git add all
+git commit -m &amp;#34;&amp;#34;
+git push -u orgin main
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;84&#34;&gt;84&lt;/h1&gt;
+&lt;p&gt;update ubuntu version&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install update-manager-core
+sudo apt update &amp;amp;&amp;amp; sudo apt dist-upgrade
+sudo do-release-upgrade -d
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;83&#34;&gt;83&lt;/h1&gt;
+&lt;p&gt;safe-rm&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/safe-rm.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;82&#34;&gt;82&lt;/h1&gt;
+&lt;p&gt;ssh: connect to host github.com port 22: Operation timed out&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vi ~/.ssh/config
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Host github.com
+    Hostname ssh.github.com
+    Port 443
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ssh -T git@github.com
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;81&#34;&gt;81&lt;/h1&gt;
+&lt;p&gt;aseprite.desktop shortcut&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$HOME/.local/share/applications/aseprite.desktop
+
+[Desktop Entry]
+Name=Aseprite
+Exec=/opt/aseprite/aseprite
+Terminal=false
+Icon=/opt/aseprite/data/icons/ase.ico
+Type=Application
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;80&#34;&gt;80&lt;/h1&gt;
+&lt;p&gt;split&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;split a.zip a.zip -d -b 1G
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;79&#34;&gt;79&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/guns/xterm-color-table.vim&#34;&gt;xterm 256 colors&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;78&#34;&gt;78&lt;/h1&gt;
+&lt;p&gt;youcompleteme c#&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;dotnet new sln # for ysm detection
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;77&#34;&gt;77&lt;/h1&gt;
+&lt;p&gt;disable snap&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo systemctl disable snapd.service
+sudo systemctl disable snapd.socket
+sudo systemctl disable snapd.seeed.service
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;76&#34;&gt;76&lt;/h1&gt;
+&lt;p&gt;nvidia-dirver not found&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo vim /etc/modprobe.d/blacklist.conf
+# blacklist nouveau
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+sudo ubuntu-drivers devices
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;75&#34;&gt;75&lt;/h1&gt;
+&lt;p&gt;close the ubuntu update-notifier&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo chmod a-x /usr/bin/update-notifier
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;74&#34;&gt;74&lt;/h1&gt;
+&lt;p&gt;swap ecsape and cpas&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get install dconf-editor
+# /org/gnome/desktop/input-sources
+# xkb-optims
+# [&amp;#39;caps:swapescape&amp;#39;]
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;73&#34;&gt;73&lt;/h1&gt;
+&lt;p&gt;dircolors&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;dircolors -p &amp;gt; .dir_colors
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;72&#34;&gt;72&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/download/&#34;&gt;zotero&lt;/a&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;tar -xzvf Zotero-version_linux-x86_64.tar.bz2
+sudo mv zotero /opt/zotero
+sudo /opt/zotero/set_launcher_icon
+ln -s /opt/zotero/zotero.desktop ~/.local/share/applications/zotero.desktop
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;71&#34;&gt;71&lt;/h1&gt;
+&lt;p&gt;nvidia-smi to cool down&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;-lgc  --lock-gpu-clocks=    将指定的一对 &amp;lt;minGpuClock,maxGpuClock&amp;gt; 时钟
+							频率取值范围（例如 1500,1500），设置为需锁定
+							的 GPU 时钟频率的范围（以 MHz 为单位）。 
+							无论 GPU 上是否存在正在运行的应用程序，设置此项
+							将取代applications-clocks并生效。
+							输入也可以是一个单一的期望时钟值
+							（例如 &amp;lt;GpuClockValue&amp;gt;）。
+-rgc  --reset-gpu-clocks    重置 GPU 时钟频率到默认值
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;70&#34;&gt;70&lt;/h1&gt;
+&lt;p&gt;aptitude&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# 升级系统所有的软件包
+aptitude update
+# 将系统升级得到新的发行版
+aptitude dist-uprade
+# 安全升级系统的软件包
+aptitude safe-upgrade
+# 安装软件包
+aptitude install pkgname
+# 删除软件包保留配置 
+aptitude remove pkgname 
+# 删除软件包和配置 
+aptitude purge pkgname
+# 根据关键词搜索软件包
+aptitude search string
+# 查看软件包的详细信息
+aptitude show pkgname
+# 删除缓存目录中的软件包安装文件
+aptitude clean
+# 仅删除以卸载的软件包有关安装文件
+aptitude autoclean
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;69&#34;&gt;69&lt;/h1&gt;
+&lt;p&gt;aria2c
+errorCode=1 SSL/TLS handshake failure&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;aria2c url --check-certificate=false
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;68&#34;&gt;68&lt;/h1&gt;
+&lt;p&gt;update the remote list&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git branch -r
+git remote update origin --prune
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;67&#34;&gt;67&lt;/h1&gt;
+&lt;p&gt;wsl proxy&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;export all_proxy=&amp;#34;socks5://allowlan:port&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

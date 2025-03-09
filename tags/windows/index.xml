@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Windows on Rainumdo&#39;s blog</title>
+    <link>//localhost:1313/tags/windows/</link>
+    <description>Recent content in Windows on Rainumdo&#39;s blog</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows</title>
+      <link>//localhost:1313/posts/2021-09-26-windows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/2021-09-26-windows/</guid>
+      <description>&lt;h1 id=&#34;16&#34;&gt;16&lt;/h1&gt;
+&lt;p&gt;vscodevim
+ctrl + shift + p
+keybindings.json&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  {
+    &amp;#34;key&amp;#34;: &amp;#34;capslock&amp;#34;,
+    &amp;#34;command&amp;#34;: &amp;#34;extension.vim_escape&amp;#34;
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;15&#34;&gt;15&lt;/h1&gt;
+&lt;p&gt;add gpedit.msc&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@echo off
+
+pushd &amp;#34;%~dp0&amp;#34;
+
+dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &amp;gt;List.txt
+
+dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &amp;gt;&amp;gt;List.txt
+
+for /f %%i in (&amp;#39;findstr /i . List.txt 2^&amp;gt;nul&amp;#39;) do dism /online /norestart /add-package:&amp;#34;C:\Windows\servicing\Packages\%%i&amp;#34;
+
+pause
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;14&#34;&gt;14&lt;/h1&gt;
+&lt;p&gt;wsl export&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;wsl -l -v
+wsl --shutdown
+wsl --export Ubuntu-22.04 D:\Ubuntu-22.04.tar
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;13&#34;&gt;13&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec&#34;&gt;Keyboard shortcuts in Windows&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;12&#34;&gt;12&lt;/h1&gt;
+&lt;p&gt;windows services&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;11&#34;&gt;11&lt;/h1&gt;
+&lt;p&gt;windows driver manager
+&lt;a href=&#34;https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil&#34;&gt;PnPUtil&lt;/a&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pnputil /enum-drivers
+pnputil /add-driver x:\driver.inf
+pnputil /delete-driver oem0.inf /force
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;10&#34;&gt;10&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/zh-cn/software-download&#34;&gt;winows download&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

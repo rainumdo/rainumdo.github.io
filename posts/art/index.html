@@ -1,0 +1,702 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en-us"
+  dir="ltr"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>art-Rainumdo&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+
+  <meta name="description" content="150
+shadows bite each other.
+149
+shadow &#43; 3 colors (gradient by the difference of saturation and value) &#43; light source
+148
+modular tree
+4 color for leaves
+4 color for trunk
+
+filled circle
+add shadow
+add convex to represent scattered leaves
+resize basic filled circle as modular
+new brush with the different modular
+repeat
+trunk = 1 rectangle &#43; 2 triangle
+add shadow
+
+147
+Most importantly, have fun. Animating is hard work, but can feel so satisfying when you see things come to life!" />
+  <meta name="author" content="Rainumdo&#39;s blog" /><link rel="preload stylesheet" as="style" href="//localhost:1313/main.min.css" />
+
+  
+  <link rel="preload" as="image" href="//localhost:1313/theme.png" />
+
+  
+
+  
+
+  <script
+    defer
+    src="//localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+
+  
+  <link
+    rel="icon"
+    href="//localhost:1313/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="//localhost:1313/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.145.0">
+</head>
+<body class="text-black duration-200 ease-out dark:text-white"><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="//localhost:1313/"
+      >Rainumdo&#39;s blog</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none dark:bg-black"
+  >
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">art</h1><div class="text-xs antialiased opacity-60"><time>Feb 14, 2024</time></div></header>
+
+  <section><h1 id="150">150</h1>
+<p>shadows bite each other.</p>
+<h1 id="149">149</h1>
+<p>shadow + 3 colors (gradient by the difference of saturation and value) + light source</p>
+<h1 id="148">148</h1>
+<p>modular tree<br>
+4 color for leaves<br>
+4 color for trunk</p>
+<ol>
+<li>filled circle</li>
+<li>add shadow</li>
+<li>add convex to represent scattered leaves</li>
+<li>resize basic filled circle as modular</li>
+<li>new brush with the different modular</li>
+<li>repeat</li>
+<li>trunk = 1 rectangle + 2 triangle</li>
+<li>add shadow</li>
+</ol>
+<h1 id="147">147</h1>
+<p>Most importantly, have fun. Animating is hard work, but can feel so satisfying when you see things come to life!</p>
+<h1 id="146">146</h1>
+<p>Animating is a transferable skill.
+Animation is also an expansive subject.</p>
+<h1 id="145">145</h1>
+<p>Thecloserapieceoflandscapeis,the faster it moves.
+The further away it is, the slower it moves.
+Skies or very distant objects like the sun, moon, stars, and mountains rarely move.
+The landscape moves like in a car ride!</p>
+<h1 id="144">144</h1>
+<p>Movement should follow an Arc</p>
+<h1 id="143">143</h1>
+<p>The Onion skin shows you the previous and next frames. This helps you draw in-betweens - but with pixel art there’s a catch&hellip;
+You can find the button in most software.</p>
+<h1 id="142">142</h1>
+<p>Even with strict limitations you can get very expressive with looping animations!</p>
+<h1 id="141">141</h1>
+<p>The minimum amount of frames for a convincing loop a is 3 frames.</p>
+<h1 id="140">140</h1>
+<p>Line art
+line art -&gt; colours -&gt; shading -&gt; clean-up</p>
+<h1 id="139">139</h1>
+<p><a href="2Dwillneverdie.com">2Dwillneverdie.com</a></p>
+<h1 id="138">138</h1>
+<p>Start from Traditional</p>
+<ul>
+<li>First, drawing animation in higher definition.</li>
+<li>Then, shrinking the frames down to a pixel-friendly size.</li>
+<li>Finally, tracing or editing the frames of animation.</li>
+</ul>
+<h1 id="137">137</h1>
+<p>Try to figure out how to save yourself some time with some clever recycling.</p>
+<h1 id="136">136</h1>
+<p>Recycling is useful to keep a consistent style and for staying on model.
+Copying, Resizing, Sliding, Rotating, Cutting, Skewing</p>
+<h1 id="135">135</h1>
+<p>The Four Methods:</p>
+<ol>
+<li>Silhouette animation</li>
+<li>Recycling drawings</li>
+<li>Start from Traditional</li>
+<li>Simple Lineart</li>
+</ol>
+<p>Pose to Pose: planning your work with key frames, adding in-betweens to connect them.
+Straight Ahead: animating frames as you go, improvising your way through the timeline.
+Pose to Pose + Straight ahead: A mix of both methods.</p>
+<h1 id="134">134</h1>
+<p>Overlap: DRAGGING
+Follow-through: SETTLING</p>
+<h1 id="133">133</h1>
+<p>If you&rsquo;d like to animate 45° shapes with subpixels it&rsquo;s best not to have AA. It&rsquo;s much cleaner to have overlapping pixels.The frames by themselves won&rsquo;t have clean 45° shapes anymore, but the transition will end up smoother.</p>
+<h1 id="132">132</h1>
+<p>Always start with your leading action, and draw the following actions later.</p>
+<h1 id="131">131</h1>
+<p>Some parts of the body lead all the movement. As it moves, other segments will trail them. One parts leads, the other ones follow.</p>
+<h1 id="130">130</h1>
+<p>Sometimes it’s enough to have an overshoot that moves a body part by just 1 pixel.</p>
+<h1 id="129">129</h1>
+<p>To put it shortly: it’s acceleration &amp; deceleration. Speeding up and slowing down.</p>
+<h1 id="128">128</h1>
+<p>The movement most often goes in the OPPOSITE direction of where the main action is going.</p>
+<h1 id="127">127</h1>
+<p>If you squash something in height, you need to stretch it in width too. In short: conserve the volume.</p>
+<h1 id="126">126</h1>
+<p>In fact, the bouncing ball is one of the first lessons animators learn to get the hang of squash &amp; stretch techniques.</p>
+<h1 id="125">125</h1>
+<p>However, 2D animation is never this constant. Frames are on screen for different lengths of time. Animation mixes one’s, two’s and longer frames.</p>
+<h1 id="124">124</h1>
+<p>Good animation relies on readable key frames. Strong drawings are crucial.</p>
+<h1 id="123">123</h1>
+<p>Duplicate frames and shift pixels around. That’s subpixeling in a nutshell. It is the only technique for small-scale inbetweens. It’s possible to create subpixeling by just duplicating and shifting a single sprite.</p>
+<h1 id="122">122</h1>
+<p>Moreover,subpixeling is time-consuming.Don’t do it if you don’t needit.</p>
+<h1 id="121">121</h1>
+<p>A quick but unreliable way to generate subpixels :</p>
+<ol>
+<li>Reduce and lock the colours of the sprite</li>
+<li>Resize 200%, no blur (nearest neighbour)</li>
+<li>Select all, move the sprite by 1 pixel (horizontal or vertical)</li>
+<li>Resize 50%, so it goes back to size 1x, but this time with blur enabled.</li>
+</ol>
+<h1 id="120">120</h1>
+<p>Sometimes you can add pixels or remove pixels on round corners in order to make animations move even more.</p>
+<h1 id="119">119</h1>
+<p>Sometimes fully complete pixels travel across the sprite as if they’re swimming.</p>
+<h1 id="118">118</h1>
+<p>An easy way to keep things consistent is to: have multiple frames where the face transitions betweens 2 positions, but the head, body and everything around it pixel-shift.</p>
+<h1 id="117">117</h1>
+<p>The viewer usually focuses on the face or the eyes of a character at first glance. It’s best to avoid subpixeling the facial features.</p>
+<h1 id="116">116</h1>
+<p>subpixel is also called 0.5 pixel technique</p>
+<h1 id="115">115</h1>
+<p>However, there are often subtle movements with carefully placed AA, and THAT is where you’ll find subpixels.</p>
+<h1 id="114">114</h1>
+<p>The pixel shifting is offset and body parts follow an arc. This animation also eases in and out. It slows down at the keyframes.</p>
+<h1 id="113">113</h1>
+<p>less AA on the animation.</p>
+<h1 id="112">112</h1>
+<p>Usually you can move around full pixels (1px) in normal animations, no need for subpixels!</p>
+<h1 id="111">111</h1>
+<p>Remember that this subpixeling trick only works for drawings spaced closely together!</p>
+<h1 id="110">110</h1>
+<p>The direction of subpixeling follows the angle of the shape regardless of where the general animation is heading.<br>
+eg. : if the angle is horizontal = subpixeling is horizontal if the angle is vertical = subpixeling is vertical</p>
+<h1 id="109">109</h1>
+<p>Subpixeling animation requires you to duplicate a frame and edit it slightly. Flip back and forth between frames to check how pixels shift!</p>
+<h1 id="108">108</h1>
+<p>Aim for at least 2 to 3 pixels when popping shapes and lines</p>
+<h1 id="107">107</h1>
+<ol>
+<li>outline</li>
+<li>colours</li>
+<li>shadow</li>
+<li>line</li>
+</ol>
+<h1 id="106">106</h1>
+<p>When sprites will often be in dark environments, you might want to give them darker sel-out lines: shaded outlines with darker pixels of AA to blend the edges with the background colour.</p>
+<h1 id="105">105</h1>
+<p>Selective outline is more hierarchical.</p>
+<h1 id="104">104</h1>
+<p>Selective outline is only used on layers that have a transparent background.</p>
+<h1 id="103">103</h1>
+<p>Selective outlines make foreground objects blend nicer with their surroundings. When 1 layer slides over another, this carefully placed AA will make transitions smoother. Artists commonly abbreviate “selective outline” as “sel-out”.</p>
+<h1 id="102">102</h1>
+<p>Horizontal lines can appear thinner than vertical lines and vice versa.</p>
+<h1 id="101">101</h1>
+<p>Split pixels are pixels spread across 2 blocks.
+The complete pixel can’t exist like this, so its value is divided into 2 pixels that each are 50% of its brightness.</p>
+<h1 id="100">100</h1>
+<p>thin = light<br>
+thick = dark</p>
+<h1 id="99">99</h1>
+<p>Remember NOT to leave any light-coloured AA on the outline.</p>
+<h1 id="98">98</h1>
+<p>The amount of water in a cup = the brightness of the colour. Moving the pixel ½ px ahead, turns the next pixel darker or lighter.</p>
+<h1 id="97">97</h1>
+<p>Subpixeling is giving the illusion of something smaller than 1 pixel. Subpixel means “under a pixel” or “smaller than a pixel”.</p>
+<h1 id="95">95</h1>
+<p>素体</p>
+<h1 id="94">94</h1>
+<p>Don’t hesitate to improve your sprites, even when you think you’re done!</p>
+<h1 id="93">93</h1>
+<p>No matter which method you use, the process is usually:
+Flat colours -&gt; Shading -&gt; Details</p>
+<h1 id="92">92</h1>
+<p>Sharpness</p>
+<ol>
+<li>Play with more light &amp; shadows, don’t rely too much on line-art.</li>
+<li>Add more highlights</li>
+<li>Add darker lines to make things pop</li>
+</ol>
+<h1 id="91">91</h1>
+<p>However, clean-up is more often used for rotated sprites.</p>
+<h1 id="90">90</h1>
+<p>This is one of the best exercises to intuitively learn pixel art.</p>
+<h1 id="89">89</h1>
+<p>When you aren’t sure what looks better, create multiple versions and have other people vote on their favourite.
+If you’re alone, take a break and compare them with fresh eyes to pick one yourself.</p>
+<h1 id="88">88</h1>
+<p><a href="https://www.youtube.com/playlist?list=PLLmXZMqb_9sbNLM83NrM005vRQHw1yTKn">10 Minutes to Better Painting Series</a></p>
+<h1 id="87">87</h1>
+<p>certain pixel placement can convey light and shadow better than lines can.</p>
+<h1 id="86">86</h1>
+<p>When you make textures, cleaner shapes are more believable.<br>
+The PlayStation may have more advanced graphics, but when reduced to 5 unique colours, these rocks will STILL look more convincing.</p>
+<h1 id="85">85</h1>
+<p>&ldquo;lazy lines&rdquo;</p>
+<h1 id="84">84</h1>
+<p>Using different lighting makes the object appear more 3-D.</p>
+<h1 id="83">83</h1>
+<p>Remember that 1 pixel can make a difference.</p>
+<h1 id="82">82</h1>
+<p>Things to look out for when adjusting sprites:</p>
+<ul>
+<li>Silhouette</li>
+<li>Design</li>
+<li>Colours</li>
+<li>Pixel Shapes</li>
+<li>Lighting</li>
+<li>Readability</li>
+</ul>
+<h1 id="81">81</h1>
+<p>If you have trouble getting detail in your line-art, try using shapes instead of lines.</p>
+<h1 id="80">80</h1>
+<p>Lines • Colours • Finish<br>
+Use a very rough sketch, and then finish it in pixel art.</p>
+<h1 id="79">79</h1>
+<p>绘画的九大基本法则
+1．压缩：扭曲物体，以产生其某部分比较接近你眼睛的错觉。
+2．位置：把物体置于画面较低的位置，以表示物体比较接近你的眼睛。
+3．尺寸：把物体画得大一些，以表示物体比较接近你的眼睛。
+4．重叠：把一个物体画在另一个物体的前面，以产生它比较接近你眼睛的错觉。
+5．阴影：把一个物体背着光源的部分画得深些，以产生深度的错觉。
+6．投影：把一个物体背着光源近处的地面画得深些，以产生深度的错觉。
+7．轮廓线：画出一个包住物体的曲线，给其体积感和深度感。
+8．水平线：画一条水平参考线，以区分画面中不同物体与你视线之间的距离。
+9．密度：把物体画得亮一些、细节少一些，以产生距离上的视错觉。</p>
+<h1 id="78">78</h1>
+<p>saturated -&gt; fun, childish
+desaturated -&gt; dramatic, serious</p>
+<h1 id="77">77</h1>
+<p><a href="https://www.youtube.com/watch?v=gJ2HOj22gDo">omething strange you should know about color | QUICK ESSENTIALS</a>
+Hue -&gt; Saturation -&gt; Value</p>
+<h1 id="76">76</h1>
+<p>The way your audience experiences your world is a pretty big deal.</p>
+<h1 id="75">75</h1>
+<p>The point here is to <strong><strong>deconstruct shapes</strong></strong> and help them guide you. You can use this for ANY PERSPECTIVE!</p>
+<h1 id="74">74</h1>
+<p>Remember to ask for feedback from others to avoid readability issues!</p>
+<h1 id="73">73</h1>
+<p>This example shows that the fences and trees are made of sprites set at a 45° angle.</p>
+<h1 id="72">72</h1>
+<p>True perspective has the vanishing point.</p>
+<h1 id="71">71</h1>
+<p>Oblique
+Think “side-scrollers + 2 more planes”.<br>
+The front planes follow the orthographic rules of a 90° grid. The top and side follow 45° grid lines of 1x1 pixels (but sometimes you can have 2 x 2 lines or 3 x 3 lines).</p>
+<h1 id="70">70</h1>
+<p>45 dimetric works well if a map has high structures.
+The same techniques of isometric art apply, but instead of 30°, only 2 sides are 45°, so essentially your guidelines are series of single 1x1 pixels. The vertical axis is 90° but the other two are 45°.</p>
+<h1 id="69">69</h1>
+<p>Converting sprites to an isometric view.</p>
+<ol>
+<li>Have your side scrolling sprite ready (use lines to guide you if needed).</li>
+<li>Skew it by 30° (0.5) Adjust the sprite by moving parts around to add more depth.</li>
+<li>Clean up and fill in the gaps.</li>
+<li>Fix any remaining mistakes.</li>
+</ol>
+<h1 id="68">68</h1>
+<p>With just a simple cube, you build all sorts of objects!<br>
+A cylinder can be turned into a tree stump or a barrel.<br>
+A pyramid can be turned into a roof or a tent.<br>
+A cone can be turned into a tree or a tower.<br>
+A sphere can be turned into a mushroom or a bowl.</p>
+<h1 id="67">67</h1>
+<p>isometric<br>
+diamond-shaped at 30 angles
+uses stairs of 2 pixels (26.5 angles)</p>
+<h1 id="66">66</h1>
+<p>isometric = 120 + 120 + 120
+45 dimetric = 135 + 90 + 135 (clockwise)
+oblique = 90 + 125 + 135 (clockwise)</p>
+<h1 id="65">65</h1>
+<p>Plane, Axis, Vanishing point, Projection, Orthographic</p>
+<h1 id="64">64</h1>
+<p>Pointillism also requires small distinct dots to create an image. Traditional art isn’t limited to a grid, so this way of mixing colours is organic and free-form.</p>
+<h1 id="63">63</h1>
+<p>Don’t confuse textures with gradients!
+Gradients are the transition from light to dark. Textures are the feel of the material. Stylised dithering can be a combination or both, or just regular gradients. Textures don’t always need a gradient (from light to dark)! Of course, dithering can show texture, but only for patches, not as gradients.</p>
+<h1 id="62">62</h1>
+<p>Stylised dithering is a great way to get started and have fun with textures!</p>
+<h1 id="61">61</h1>
+<p>In most cases, random dithering isn’t recommended. Try to make patterns or tiles out of them.</p>
+<h1 id="60">60</h1>
+<p>Lines can be used as smears or blur with limited palettes. Lines work better for blur than checkerboards do. This only works for limited animation, NOT smooth animations.</p>
+<h1 id="59">59</h1>
+<p>When you have no colour limitations, you should use dithering with caution. It’s best to avoid it. Your goal is to have dithering seamlessly blend colours without noticing them.</p>
+<h1 id="58">58</h1>
+<table>
+  <thead>
+      <tr>
+          <th>TYPE</th>
+          <th>PROS</th>
+          <th>CONS</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>DITHERING</td>
+          <td>+ Good for limited colour<!-- raw HTML omitted --> + Skies or vast backgrounds</td>
+          <td>- Rough and gritty<!-- raw HTML omitted --> - Time-consuming<!-- raw HTML omitted --> - Unnecessary texture<!-- raw HTML omitted --> - Not suitable for spirtes<!-- raw HTML omitted --> - Hinders animation<!-- raw HTML omitted --> - Wobbling frames</td>
+      </tr>
+      <tr>
+          <td>SMOOTH SHADING</td>
+          <td>+ Small spirtes and tilesets<!-- raw HTML omitted --> + Readable spirtes<!-- raw HTML omitted --> + Better animation<!-- raw HTML omitted --> + Soft painted or cel-shaded feel</td>
+          <td>- May look flat<!-- raw HTML omitted --> - Doesn&rsquo;t do gradients well</td>
+      </tr>
+  </tbody>
+</table>
+<h1 id="57">57</h1>
+<p>When should I use dithering?</p>
+<ul>
+<li>Gradients that would otherwise use too many colours to do manually.</li>
+<li>Things that don’t animate. Seriously: do NOT animate dithering.</li>
+<li>Textures (page 125).</li>
+<li>Extreme colour limitations.</li>
+<li>Backgrounds: skies, space, vast areas that may otherwise look empty or flat.</li>
+</ul>
+<h1 id="56">56</h1>
+<p>study game art and learn from your favourites.</p>
+<h1 id="55">55</h1>
+<p>Too much dithering causes your pixel art to look ROUGH and GRAINY.<br>
+It gives pixel art an unnecessary gritty texture.<br>
+BUT Large cel-shaded gradients without dithering result in FLAT and STRIPED areas.</p>
+<h1 id="54">54</h1>
+<p>dithering is using patterns to mix colour.</p>
+<h1 id="53">53</h1>
+<ol>
+<li>Objects and sprites have clear outlines to stand out.</li>
+<li>The colours of the background are softer to compliment the foreground.</li>
+<li>The background isn’t in focus and appears more painterly.</li>
+</ol>
+<h1 id="52">52</h1>
+<p>One way is to get rid of in-lines.</p>
+<h1 id="51">51</h1>
+<p>Drawing outlines can take a lot of precious space, so playing with dark and light tones instead might do the trick. Light is used to show important details, Dark pixels fill the silhouette or they outlines different features.</p>
+<h1 id="50">50</h1>
+<p>Giving your characters a main and secondary colour, gives you nice side effects. Their design becomes more recognizable and more readable. Don’t include unnecessary details on your sprites. Break them down to 2 or 3 main colours like other recognizable characters.</p>
+<h1 id="49">49</h1>
+<p>Drawing a rough silhouette and filling it up with details is a good practice. Try not to overlay things. If that happens, use colour contrast to tell features apart.</p>
+<h1 id="48">48</h1>
+<p>world battle icons dialogue</p>
+<h1 id="47">47</h1>
+<p>Big heads have many advantages. They give room for emotions and expressions and clearly show who the character is. It’s a stylistic choice so it may not be suited for every situation. Heads are the main reference for human proportion and they easily vary!</p>
+<h1 id="46">46</h1>
+<p>People identify faces by looking for eyes. They are generally the first thing people notice.</p>
+<h1 id="45">45</h1>
+<p>If you’re using concept art, photo references or any sort of guiding, be ready to sacrifice unimportant details if necessary.</p>
+<h1 id="44">44</h1>
+<p>Don’t focus on getting every detail into your sprite . Find out what makes the character unique and represent the concept the best. You’ll often hear“less is more”, and it tends to be true.</p>
+<h1 id="43">43</h1>
+<p>Try to figure out the smallest part that needs to be visible.</p>
+<h1 id="42">42</h1>
+<p>One pixel might just change how people interpret it!</p>
+<h1 id="41">41</h1>
+<p>SMALLER sprites make it HARDER to convey things.</p>
+<h1 id="40">40</h1>
+<p>Guess you could call it Xtreme Hue-shifting. You can extend the palette further with dithering too. But be warned: excessive dithering can make a surface look textured or rough.</p>
+<h1 id="39">39</h1>
+<p>Re-use your colours to keep your palette small.</p>
+<p>Having different objects with the same colour touching directly will make them blend.</p>
+<h1 id="38">38</h1>
+<p>Note: You don’t have to limit your colours. It’s a personal choice.</p>
+<h1 id="37">37</h1>
+<p>I then use a sub colour to add extra features; usually a colour that contrasts a lot with the main colour. Contrast can be used to make a character stand out from the background. This is specifically aimed towards games. This isn’t an issue with a static illustration, though.</p>
+<p>Fish is mostly green. I use a yellow to highlight his mouth and fins to emphasize his fish-like appearance. The brighter yellow contrasts well with the green.</p>
+<h1 id="36">36</h1>
+<p>Using blues, purples and teals can give you the impression of a colder/sadder emotion, while reds, oranges and yellows can give a warmer/happier emotion!</p>
+<h1 id="35">35</h1>
+<p>When making colour ramps by the colour system (red, yellow, green&hellip;). I put dark colours and light colours together as much as possible. This is because it is easier to get an overall harmonised hue.</p>
+<h1 id="34">34</h1>
+<p>Give shadows a colour tint too. Whenever possible, compliment the shadow colour with the highlight.</p>
+<h1 id="33">33</h1>
+<p>Try avoiding pure blacks unless it’s truly necessary. You can use dark brown, deep purple, dark green or even dark grey instead!</p>
+<h1 id="32">32</h1>
+<p>Use greys to substitute colours.</p>
+<h1 id="31">31</h1>
+<p>Hue and saturation are ESSENTIAL to shading and anti-aliasing.</p>
+<h1 id="30">30</h1>
+<p>Yellow is the brightest colour of the rainbow. Purple is the darkest. This is why generally people often hue shift from yellow to purple.</p>
+<h1 id="29">29</h1>
+<p>Hue shifting</p>
+<h1 id="28">28</h1>
+<p>Hue Saturation Value</p>
+<h1 id="27">27</h1>
+<p>Conclusion of Anti-Aliasing</p>
+<ul>
+<li>Flat curves<br>
+longer steps = longer AA<br>
+longer steps = more shades of AA(more gradient colour)</li>
+<li>45% lines
+<ul>
+<li>Convex<br>
+The centre has light colours. The ends have dark colours.</li>
+<li>Concave<br>
+The centre has dark colours. The ends have light colours.</li>
+</ul>
+</li>
+<li>jagged lines<br>
+Fill in the biggest gaps.<br>
+Smaller gaps = lighter colour.</li>
+<li>line weight<br>
+AA with 1-2 colours<br>
+DARK = THICKER<br>
+LIGHT = THINNER</li>
+</ul>
+<h1 id="26">26</h1>
+<p>Banding is BAD. This happens when two rows of pixels perfectly hug each other.</p>
+<ul>
+<li>It makes your curves look blocky.</li>
+<li>It makes lines appear thicker than you originally wanted them to be.</li>
+<li>It blurs your outline too much.</li>
+<li>It follows the outline perfectly, resulting in pillowshading.
+&mdash; <em>pixel logic a guide to pixel art</em></li>
+</ul>
+<h1 id="25">25</h1>
+<p>AA with 1-2 colours</p>
+<h1 id="24">24</h1>
+<p>DARK = THICKER<br>
+LIGHT = THINNER
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="23">23</h1>
+<p>Jagged lines<br>
+Fill in the biggest gaps.<br>
+Smaller gaps = lighter colour.
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="22">22</h1>
+<ul>
+<li>Convex<br>
+The centre has light colours. The ends have dark colours.</li>
+<li>Concave<br>
+The centre has dark colours. The ends have light colours.</li>
+</ul>
+<p>&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="21">21</h1>
+<p>longer steps = more shades of AA
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="20">20</h1>
+<p>longer steps = longer AA
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="19">19</h1>
+<p>How many blocks do I add?<br>
+About half of the length of the line.
+Too little is better than too much.</p>
+<p>How many shades do I use?<br>
+One to start practicing. Two for smoother results. Three if you have enough colours and feel confident. Too much AA blurs the line between pixel art and vector art!</p>
+<p>&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="18">18</h1>
+<table>
+  <thead>
+      <tr>
+          <th>TYPE</th>
+          <th>PROS</th>
+          <th>CONS</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Anti-Aliasing</td>
+          <td>+ Smooth curves on small sprites <!-- raw HTML omitted --> + Necessary for large sprites <!-- raw HTML omitted --> + Sub-pixel animation</td>
+          <td>- Lots of works if overdone <!-- raw HTML omitted --> - Burs tiny sprites</td>
+      </tr>
+      <tr>
+          <td>Aliased</td>
+          <td>+ Small sprites are more readable <!-- raw HTML omitted --> + Limits your colours <!-- raw HTML omitted --> + Faster</td>
+          <td>- Creates jagged lineart <!-- raw HTML omitted --> - Sharp &amp; blocky</td>
+      </tr>
+  </tbody>
+</table>
+<p>&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="17">17</h1>
+<p>AA will bring out the colour in your piece, but heavy AA turns it blurry.
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="16">16</h1>
+<ul>
+<li>Clarity<br>
+Characters, faces and eyes usually draw people’s attention. It’s best to make them clear, recognizable and easy to read.</li>
+<li>Detail<br>
+This area contains a lot of small curves. Smaller curves are often more jagged. It requires more AA than bigger curves.</li>
+<li>High contrast<br>
+If you have 2 highly contrasting colours, try blending them using some intermediary pixels.</li>
+<li>Line weight<br>
+Anti-aliasing is used to add or remove some line weight. By adding AA, you can make things look thicker or thinner.
+&mdash; <em>pixel logic a guide to pixel art</em></li>
+</ul>
+<h1 id="15">15</h1>
+<p>Anti-Aliasing is used to smooth out those unavoidable jaggies.
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="14">14</h1>
+<p>Shaded outlines are outlines with shading! It’s the most common type of outline in pixel art, and works great with backgrounds.
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="13">13</h1>
+<p>Note: The outline is always a single, solid, colour.
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="12">12</h1>
+<p>The outline of a block will be the darkest shade of the inner block.
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="11">11</h1>
+<p>The outline is a major attribute that defines a sprite’s style.
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="10">10</h1>
+<p>Outlines</p>
+<ul>
+<li>on outline</li>
+<li>black inline</li>
+<li>black contour</li>
+<li>coloured outline</li>
+<li>shaded outline</li>
+<li>selective outline (mix)</li>
+</ul>
+<h1 id="9">9</h1>
+<p>Shadows also create “lines”.
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="8">8</h1>
+<p>Diagonal in pixel is the true line.</p>
+<h1 id="7">7</h1>
+<p>DON’T MIX STAIRCASES. If you have stairs of TWO-pixel steps, don’t include a ONE pixel step. Keep your staircase equal and avoid jaggies
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="6">6</h1>
+<p>Draw the line first and then chisel away parts you don&rsquo;t need.
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="5">5</h1>
+<p>Don’t surround a row of pixels with bigger ones.
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="4">4</h1>
+<p>Most pixel art has 1px line art.
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="3">3</h1>
+<p>Thin lines are better for small areas.
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="2">2</h1>
+<p>Keep the same line width throughout the whole sprite!
+&mdash; <em>pixel logic a guide to pixel art</em></p>
+<h1 id="1">1</h1>
+<p>Consistency is essential.
+&mdash; <em>pixel logic a  guide to pxiel art</em></p>
+</section>
+
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  ><a class="ltr:pr-3 rtl:pl-3" href="//localhost:1313/posts/music/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>music</span></a
+    ><a
+      class="justify-end pl-3 ltr:ml-auto rtl:mr-auto"
+      href="//localhost:1313/posts/unity/"
+      ><span>unity</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    ></nav></article></main><footer
+  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
+>
+  <div class="mr-auto">&copy;2025<a class="link" href="//localhost:1313/">Rainumdo&#39;s blog</a></div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+</body>
+</html>

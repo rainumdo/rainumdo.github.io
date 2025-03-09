@@ -1,0 +1,249 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en-us"
+  dir="ltr"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>comfyui-Rainumdo&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+
+  <meta name="description" content="19
+Upscale Model
+VAE Decode &#43; Upscale Image &#43; Load Upscale Model
+18
+workflows
+openart.ai
+17
+ComfyUI-Manager
+cd ComfyUI/custom_nodes
+git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+16
+prompthero
+15
+Lora
+CheckpointLoaderSimple &#43; Load Lora
+14
+ComfyUI docs
+13
+Inpainting
+MASK Image &#43; VAE Encode(for Inpainting)
+Load Image &#43; Pad Image for Outpainting &#43; VAE Encode
+sampler_name: uni_pc_bh2
+12
+Img2Img
+Load Image &#43; VAE Encode
+11
+2 Pass Txt2Img (Hires fix)
+Upscale Latent &#43; KSampler(Hires fix)
+VAE Decode: decode the LATENT where you need.
+Upscale Latent: hires fix with higher resolution.
+The second KSampler has more steps and lower denoise(0.5)." />
+  <meta name="author" content="Rainumdo&#39;s blog" /><link rel="preload stylesheet" as="style" href="//localhost:1313/main.min.css" />
+
+  
+  <link rel="preload" as="image" href="//localhost:1313/theme.png" />
+
+  
+
+  
+
+  <script
+    defer
+    src="//localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+
+  
+  <link
+    rel="icon"
+    href="//localhost:1313/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="//localhost:1313/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.145.0">
+</head>
+<body class="text-black duration-200 ease-out dark:text-white"><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="//localhost:1313/"
+      >Rainumdo&#39;s blog</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none dark:bg-black"
+  >
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">comfyui</h1><div class="text-xs antialiased opacity-60"><time>Mar 6, 2024</time></div></header>
+
+  <section><h1 id="19">19</h1>
+<p>Upscale Model<br>
+VAE Decode + Upscale Image + Load Upscale Model</p>
+<h1 id="18">18</h1>
+<p>workflows<br>
+<a href="https://openart.ai/workflows/home">openart.ai</a></p>
+<h1 id="17">17</h1>
+<p>ComfyUI-Manager</p>
+<pre tabindex="0"><code>cd ComfyUI/custom_nodes
+git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+</code></pre><h1 id="16">16</h1>
+<p><a href="https://prompthero.com/">prompthero</a></p>
+<h1 id="15">15</h1>
+<p>Lora
+CheckpointLoaderSimple + Load Lora</p>
+<h1 id="14">14</h1>
+<p><a href="https://blenderneko.github.io/ComfyUI-docs/">ComfyUI docs</a></p>
+<h1 id="13">13</h1>
+<p>Inpainting<br>
+MASK Image + VAE Encode(for Inpainting)<br>
+Load Image + Pad Image for Outpainting + VAE Encode</p>
+<p>sampler_name: uni_pc_bh2</p>
+<h1 id="12">12</h1>
+<p>Img2Img<br>
+Load Image + VAE Encode</p>
+<h1 id="11">11</h1>
+<p>2 Pass Txt2Img (Hires fix)<br>
+Upscale Latent + KSampler(Hires fix)
+VAE Decode: decode the LATENT where you need.<br>
+Upscale Latent: hires fix with higher resolution.<br>
+The second KSampler has more steps and lower denoise(0.5).</p>
+<h1 id="10">10</h1>
+<p><a href="https://www.hugging-face.org/models/">hugging-face models</a>
+<a href="https://hf-mirror.com/models">mirror</a>
+<a href="https://civitai.com/">civitai</a></p>
+<h1 id="9">9</h1>
+<p>When sampling, the negative prompt is treated almost the same way as the positive prompt.</p>
+<h1 id="8">8</h1>
+<p>Negative prompts are used to tell Stable Diffusion what you don&rsquo;t want in your image.</p>
+<h1 id="7">7</h1>
+<p>Safety Filter is wasting precious vram and processing power while throw false positive.</p>
+<h1 id="6">6</h1>
+<p>Prompt Engineering
+(word: 1.1) is default
+not naked
+keep prompts simple</p>
+<h1 id="5">5</h1>
+<p>The VAE is used to translate an image from latent space to pixel space.
+Latent space is the format the main Stable Diffusion MODEL understand while pixel space is the format that your image viewer understands.</p>
+<h1 id="4">4</h1>
+<p>In stable diffusion the image is generated using what we refer to as a sampler.
+It also takes both the positive and negative prompts encoded by the CLIP model.
+The final input it takes is Latent Image.</p>
+<h1 id="3">3</h1>
+<p>The CLIP model connects to the CLIPTextEncode nodes.
+The CLIP is used in Stable Diffusion to encode the text to a format that the main MODEL can understand.</p>
+<h1 id="2">2</h1>
+<p>CLIP, the main MODEL, VAE<br>
+CheckpointLoaderSimple</p>
+<h1 id="1">1</h1>
+<p><a href="https://comfyanonymous.github.io/ComfyUI_examples/">ComfyUI Examples</a></p>
+</section>
+
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  ><a class="ltr:pr-3 rtl:pl-3" href="//localhost:1313/posts/hugo/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>hugo</span></a
+    ><a
+      class="justify-end pl-3 ltr:ml-auto rtl:mr-auto"
+      href="//localhost:1313/posts/music/"
+      ><span>music</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    ></nav></article></main><footer
+  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
+>
+  <div class="mr-auto">&copy;2025<a class="link" href="//localhost:1313/">Rainumdo&#39;s blog</a></div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+</body>
+</html>

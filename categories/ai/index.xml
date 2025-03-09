@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ai on Rainumdo&#39;s blog</title>
+    <link>//localhost:1313/categories/ai/</link>
+    <description>Recent content in Ai on Rainumdo&#39;s blog</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>comfyui</title>
+      <link>//localhost:1313/posts/2024-03-06-comfyui/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/2024-03-06-comfyui/</guid>
+      <description>&lt;h1 id=&#34;19&#34;&gt;19&lt;/h1&gt;
+&lt;p&gt;Upscale Model&lt;br&gt;
+VAE Decode + Upscale Image + Load Upscale Model&lt;/p&gt;
+&lt;h1 id=&#34;18&#34;&gt;18&lt;/h1&gt;
+&lt;p&gt;workflows&lt;br&gt;
+&lt;a href=&#34;https://openart.ai/workflows/home&#34;&gt;openart.ai&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;17&#34;&gt;17&lt;/h1&gt;
+&lt;p&gt;ComfyUI-Manager&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd ComfyUI/custom_nodes
+git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;16&#34;&gt;16&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://prompthero.com/&#34;&gt;prompthero&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;15&#34;&gt;15&lt;/h1&gt;
+&lt;p&gt;Lora
+CheckpointLoaderSimple + Load Lora&lt;/p&gt;
+&lt;h1 id=&#34;14&#34;&gt;14&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://blenderneko.github.io/ComfyUI-docs/&#34;&gt;ComfyUI docs&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;13&#34;&gt;13&lt;/h1&gt;
+&lt;p&gt;Inpainting&lt;br&gt;
+MASK Image + VAE Encode(for Inpainting)&lt;br&gt;
+Load Image + Pad Image for Outpainting + VAE Encode&lt;/p&gt;
+&lt;p&gt;sampler_name: uni_pc_bh2&lt;/p&gt;
+&lt;h1 id=&#34;12&#34;&gt;12&lt;/h1&gt;
+&lt;p&gt;Img2Img&lt;br&gt;
+Load Image + VAE Encode&lt;/p&gt;
+&lt;h1 id=&#34;11&#34;&gt;11&lt;/h1&gt;
+&lt;p&gt;2 Pass Txt2Img (Hires fix)&lt;br&gt;
+Upscale Latent + KSampler(Hires fix)
+VAE Decode: decode the LATENT where you need.&lt;br&gt;
+Upscale Latent: hires fix with higher resolution.&lt;br&gt;
+The second KSampler has more steps and lower denoise(0.5).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

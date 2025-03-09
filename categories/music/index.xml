@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Music on Rainumdo&#39;s blog</title>
+    <link>//localhost:1313/categories/music/</link>
+    <description>Recent content in Music on Rainumdo&#39;s blog</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/categories/music/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>music</title>
+      <link>//localhost:1313/posts/2024-02-22-music/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/2024-02-22-music/</guid>
+      <description>&lt;h1 id=&#34;14&#34;&gt;14&lt;/h1&gt;
+&lt;p&gt;全音符 | “全音符”为没有符干和符尾的空心白色音全音符。&lt;!-- raw HTML omitted --&gt;是单纯音符里时值最长的音符。其他音符的时值都比它短，而且要以它为准。
+二分音符 | 有符干的白色音符叫“二分音符”。&lt;!-- raw HTML omitted --&gt;它的二分音符时值只有全音符的一半长，即等于全音符二分之一的时值。
+四分音符 | 有符干且符头为实心的音符叫“四分音四分音符”。&lt;!-- raw HTML omitted --&gt;等于全音符四分之一的时值。
+八分音符 | “八分音符”比四分音符多了一条尾巴，八分音符其时值是全音符的八分之一。
+十六分音符 | “十六分音符”有两条尾巴。它比八分音符时值要少一半。&lt;!-- raw HTML omitted --&gt;等于全音符十六分之一的时值。所以它比八分音符要快一倍的速度。
+三十二分音符 | 有着三条尾巴和实心符头的音符，叫“三十二分音符”。&lt;!-- raw HTML omitted --&gt;它比十六分音符时值少一半。等于全音符三十二分之一的时值。
+六十四分音符 |一个实心符头加上四条符尾的音符，叫作“六十四分音符”。&lt;!-- raw HTML omitted --&gt;音符的符尾越多，音符的时值越短。&lt;/p&gt;
+&lt;h1 id=&#34;13&#34;&gt;13&lt;/h1&gt;
+&lt;p&gt;时值就是在弹奏或演唱时每个音的发声或停顿的长短。时值是用“拍”来计算的，当我们问到音符或休止符的时值时，就是在问此音符或休止符唱奏或休止几拍。&lt;/p&gt;
+&lt;h1 id=&#34;12&#34;&gt;12&lt;/h1&gt;
+&lt;p&gt;音符由三个部分组成，即符头、符干和符尾。
+符头可分为实心符头与空心符头，空心符头的时值要比实心的长。
+连接符头的线叫作符干，符干后面可以加符尾（小尾巴），用来表示音符的时值。符尾越多表示时值越短，符尾越少表示时值越长。&lt;/p&gt;
+&lt;h1 id=&#34;11&#34;&gt;11&lt;/h1&gt;
+&lt;p&gt;高音普号 | 谱号写在五线谱的开头处，谱号从五线谱的第二线起笔。&lt;!-- raw HTML omitted --&gt;高音谱表上，第二线位置的音名为G，唱名为sol，故将其称为“G谱号”或“sol谱号”。
+低音普号 | 低音谱号实际上是高音谱号向低音的延伸和继续，同样写在开头处。&lt;!-- raw HTML omitted --&gt;低音谱号从五线谱的第四线起笔，而低音谱表第四线位置的音名是F，&lt;!-- raw HTML omitted --&gt;唱名是fa，故得名“F谱号”或“fa谱号”。
+中音普号 | 高、低音谱号的延伸和继续，谱号写在开头处。&lt;!-- raw HTML omitted --&gt;谱号的中心对准五线谱的哪条线，就确定哪条线为“C”音（唱成do），故名为“C谱号”。
+次中音普号 | 次中音谱号是把中央C记在第四线上。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

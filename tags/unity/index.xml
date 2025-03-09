@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Unity on Rainumdo&#39;s blog</title>
+    <link>//localhost:1313/tags/unity/</link>
+    <description>Recent content in Unity on Rainumdo&#39;s blog</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>unity</title>
+      <link>//localhost:1313/posts/2023-11-24-unity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/2023-11-24-unity/</guid>
+      <description>&lt;h1 id=&#34;61&#34;&gt;61&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;IEnumerable.Skip()
+IEnumerable.Take()
+IEnumerable.SkipWhile(element =&amp;gt; element &amp;lt; value)
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;60&#34;&gt;60&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;using System.Threading.Tasks;
+async
+await
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;59&#34;&gt;59&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/tokens/interpolated&#34;&gt;使用 $ 的字符串内插&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; name = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Mark&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; date = DateTime.Now;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Composite formatting:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Console.WriteLine(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, {0}! Today is {1}, it&amp;#39;s {2:HH:mm} now.&amp;#34;&lt;/span&gt;, name, date.DayOfWeek, date);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// String interpolation:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Console.WriteLine(&lt;span style=&#34;color:#e6db74&#34;&gt;$&amp;#34;Hello, {name}! Today is {date.DayOfWeek}, it&amp;#39;s {date:HH:mm} now.&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Both calls produce the same output that is similar to:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Hello, Mark! Today is Wednesday, it&amp;#39;s 19:40 now.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;58&#34;&gt;58&lt;/h1&gt;
+&lt;p&gt;EventHandler表示将用于处理不具有事件数据的事件的方法。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

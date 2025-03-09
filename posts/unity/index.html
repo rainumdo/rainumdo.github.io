@@ -1,0 +1,701 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en-us"
+  dir="ltr"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>unity-Rainumdo&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+
+  <meta name="description" content="61
+IEnumerable.Skip()
+IEnumerable.Take()
+IEnumerable.SkipWhile(element =&gt; element &lt; value)
+60
+using System.Threading.Tasks;
+async
+await
+59
+使用 $ 的字符串内插
+var name = &#34;Mark&#34;;
+var date = DateTime.Now;
+
+// Composite formatting:
+Console.WriteLine(&#34;Hello, {0}! Today is {1}, it&#39;s {2:HH:mm} now.&#34;, name, date.DayOfWeek, date);
+// String interpolation:
+Console.WriteLine($&#34;Hello, {name}! Today is {date.DayOfWeek}, it&#39;s {date:HH:mm} now.&#34;);
+// Both calls produce the same output that is similar to:
+// Hello, Mark! Today is Wednesday, it&#39;s 19:40 now.
+58
+EventHandler表示将用于处理不具有事件数据的事件的方法。" />
+  <meta name="author" content="Rainumdo&#39;s blog" /><link rel="preload stylesheet" as="style" href="//localhost:1313/main.min.css" />
+
+  
+  <link rel="preload" as="image" href="//localhost:1313/theme.png" />
+
+  
+
+  
+
+  <script
+    defer
+    src="//localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+
+  
+  <link
+    rel="icon"
+    href="//localhost:1313/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="//localhost:1313/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.145.0">
+</head>
+<body class="text-black duration-200 ease-out dark:text-white"><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="//localhost:1313/"
+      >Rainumdo&#39;s blog</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none dark:bg-black"
+  >
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">unity</h1><div class="text-xs antialiased opacity-60"><time>Nov 24, 2023</time></div></header>
+
+  <section><h1 id="61">61</h1>
+<pre tabindex="0"><code>IEnumerable.Skip()
+IEnumerable.Take()
+IEnumerable.SkipWhile(element =&gt; element &lt; value)
+</code></pre><h1 id="60">60</h1>
+<pre tabindex="0"><code>using System.Threading.Tasks;
+async
+await
+</code></pre><h1 id="59">59</h1>
+<p><a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/tokens/interpolated">使用 $ 的字符串内插</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> name = <span style="color:#e6db74">&#34;Mark&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> date = DateTime.Now;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Composite formatting:</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">&#34;Hello, {0}! Today is {1}, it&#39;s {2:HH:mm} now.&#34;</span>, name, date.DayOfWeek, date);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// String interpolation:</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Hello, {name}! Today is {date.DayOfWeek}, it&#39;s {date:HH:mm} now.&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Both calls produce the same output that is similar to:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Hello, Mark! Today is Wednesday, it&#39;s 19:40 now.</span>
+</span></span></code></pre></div><h1 id="58">58</h1>
+<p>EventHandler表示将用于处理不具有事件数据的事件的方法。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">delegate</span> <span style="color:#66d9ef">void</span> EventHandler(<span style="color:#66d9ef">object?</span> sender, EventArgs e);
+</span></span></code></pre></div><h1 id="57">57</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> UnityEngine;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> UnityEngine.Events;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Player</span> : MonoBehaviour
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//C# 委托/事件/Action</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">delegate</span> <span style="color:#66d9ef">void</span> HealthChanged();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> HealthChanged HealthChangedDelegate;         <span style="color:#75715e">//C# 委托</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Action HealthChangedAction;                  <span style="color:#75715e">//C# Action: 无参数无返回值的委托，相当于一个语法糖（定义无参数无返回值的委托时，如果懒的取名字就用它）。</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Func&lt;<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">string</span>&gt; HealthChangedFunc;         <span style="color:#75715e">//C# Func: 与 Action 类似，但是可以有返回值。</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">event</span> HealthChanged HealthChangedEvent;      <span style="color:#75715e">//C# 事件</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//public event EventHandler HealthChangedEvent;      //C# 事件</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//Unity 封装 事件/Action</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> UnityEvent HealthChangedUnityEvent;          <span style="color:#75715e">//Unity 封装事件（好处是脚本挂载到对象后可在 Inspector 面板添加处理函数）</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> UnityAction HealthChangedUnityAction;        <span style="color:#75715e">//Unity Action（定义和 C# Action 没有任何区别，但 UnityEvent 的 AddListener() 只接受该类型参数。大概是为了命名的统一性吧？）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Player()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//委托/事件/Action 初始化</span>
+</span></span><span style="display:flex;"><span>        HealthChangedDelegate = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>        HealthChangedAction = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>        HealthChangedEvent = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>        HealthChangedUnityAction = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>        HealthChangedUnityEvent = <span style="color:#66d9ef">new</span> UnityEvent();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//委托/事件/Action 订阅(绑定)</span>
+</span></span><span style="display:flex;"><span>        HealthChangedDelegate += OnHealthChanged;                           <span style="color:#75715e">//C# 委托/事件/Action 支持 +=/-= 操作符</span>
+</span></span><span style="display:flex;"><span>        HealthChangedAction += OnHealthChanged;                             <span style="color:#75715e">//可以直接用 +=/-= 来增加/移除处理函数</span>
+</span></span><span style="display:flex;"><span>        HealthChangedEvent += OnHealthChanged;        
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        HealthChangedUnityAction += OnHealthChanged;
+</span></span><span style="display:flex;"><span>        HealthChangedUnityEvent.AddListener(OnHealthChanged);             <span style="color:#75715e">//UnityEvent 不支持 +=/-= 操作符（改用 AddListener()函数）</span>
+</span></span><span style="display:flex;"><span>        HealthChangedUnityEvent.AddListener(HealthChangedUnityAction);      <span style="color:#75715e">//AddListener()函数参数既可以是处理函数，也可以是 UnityAction 实例</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//委托/事件触发(调用)</span>
+</span></span><span style="display:flex;"><span>        HealthChangedDelegate.Invoke();
+</span></span><span style="display:flex;"><span>        HealthChangedAction.Invoke();
+</span></span><span style="display:flex;"><span>        HealthChangedEvent.Invoke();
+</span></span><span style="display:flex;"><span>        HealthChangedUnityAction.Invoke();
+</span></span><span style="display:flex;"><span>        HealthChangedUnityEvent.Invoke();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> OnHealthChanged()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//...</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="56">56</h1>
+<p><a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/readonly">readonly</a></p>
+<h1 id="55">55</h1>
+<p>Object reference not set to an instance of an object<br>
+未绑定对象</p>
+<h1 id="54">54</h1>
+<p>[RuntimeInitalizeOnLoadMethod]</p>
+<h1 id="53">53</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Resources.LoadAdd&lt;&gt;();
+</span></span></code></pre></div><h1 id="52">52</h1>
+<p>提供支持某些查询的类和接口，这些查询使用语言集成查询 (LINQ)。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Linq;
+</span></span><span style="display:flex;"><span>List.Max(a =&gt; a.xx)
+</span></span></code></pre></div><h1 id="51">51</h1>
+<p>sealed<br>
+应用于某个类时，sealed 修饰符可阻止其他类继承自该类。</p>
+<h1 id="50">50</h1>
+<p>Image<br>
+Image Type -&gt; Simple<br>
+Use Sprite Mesh<br>
+Rreserve Aspect<br>
+Raycast Target = False</p>
+<h1 id="49">49</h1>
+<p><a href="https://docs.unity.cn/cn/2023.2/Manual/script-AspectRatioFitter.html">Aspect Ratio Filter</a></p>
+<h1 id="48">48</h1>
+<p>Slice Sprite<br>
+Texture Type = Sprite (2D and UI)<br>
+Sprite Model = Multiple<br>
+Sprite Editor</p>
+<h1 id="47">47</h1>
+<p><a href="https://dotween.demigiant.com/documentation.php">DoTween</a><br>
+Perference<br>
+Setting Locatoin = DoTween &gt; Resources<br>
+Recycle Tween = True<br>
+AutoPlay = None<br>
+Ease = In Our Sine<br>
+AutoKill = True</p>
+<h1 id="46">46</h1>
+<p>Canvas Group -&gt; Blocks Raycasts</p>
+<h1 id="45">45</h1>
+<p>EventTragger
+<a href="https://docs.unity3d.com/ScriptReference/EventType.html">EventType</a><br>
+<a href="https://docs.unity3d.com/Manual/UIE-Events-Reference.html">UIE</a><br>
+IXXXHandler</p>
+<h1 id="44">44</h1>
+<p>IBeginDragHandler, IDragHandler, IEndDragHandler<br>
+Layout Element<br>
+IDropHandler<br>
+IPointEnterHandler, IPointExitHandler<br>
+Canvas Group</p>
+<h1 id="43">43</h1>
+<pre tabindex="0"><code>public void Show(Action onCloseButton)
+{
+	this.onCloseButton = onCloseButton;
+
+	gameObject.SetActive(true);
+
+	soundEffectButton.Select();
+}
+
+optionsButton.onClick.AddListener(() =&gt;
+{
+	Hide();
+	OptionsUI.Instance.Show(Show);
+});
+</code></pre><h1 id="42">42</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>playerInputActions.Player.Interact.bindings[<span style="color:#ae81ff">0</span>].ToString();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Rebinding(Binding binding, Action onActionRebound)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	playerInputActions.Player.Disable();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	InputAction inputAction;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> bindingIndex;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">switch</span> (binding)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> Binding.Move_Up:
+</span></span><span style="display:flex;"><span>			inputAction = playerInputActions.Player.Move;
+</span></span><span style="display:flex;"><span>			bindingIndex = <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> Binding.Move_Down:
+</span></span><span style="display:flex;"><span>			inputAction = playerInputActions.Player.Move;
+</span></span><span style="display:flex;"><span>			bindingIndex = <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> Binding.Move_Left:
+</span></span><span style="display:flex;"><span>			inputAction = playerInputActions.Player.Move;
+</span></span><span style="display:flex;"><span>			bindingIndex = <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> Binding.Move_Right:
+</span></span><span style="display:flex;"><span>			inputAction = playerInputActions.Player.Move;
+</span></span><span style="display:flex;"><span>			bindingIndex = <span style="color:#ae81ff">4</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> Binding.Interact:
+</span></span><span style="display:flex;"><span>			inputAction = playerInputActions.Player.Interact;
+</span></span><span style="display:flex;"><span>			bindingIndex = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> Binding.InteractAlt:
+</span></span><span style="display:flex;"><span>			inputAction = playerInputActions.Player.InteractAlternate;
+</span></span><span style="display:flex;"><span>			bindingIndex = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> Binding.Pause:
+</span></span><span style="display:flex;"><span>			inputAction = playerInputActions.Player.Pause;
+</span></span><span style="display:flex;"><span>			bindingIndex = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	inputAction.PerformInteractiveRebinding(bindingIndex)
+</span></span><span style="display:flex;"><span>		.WithControlsExcluding(<span style="color:#e6db74">&#34;Mouse&#34;</span>)
+</span></span><span style="display:flex;"><span>		.OnComplete(callback =&gt;
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			callback.Dispose();
+</span></span><span style="display:flex;"><span>			playerInputActions.Player.Enable();
+</span></span><span style="display:flex;"><span>			onActionRebound();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			PlayerPrefs.SetString(PLAYER_PREFS_BINDINDS, playerInputActions.SaveBindingOverridesAsJson());
+</span></span><span style="display:flex;"><span>			PlayerPrefs.Save();
+</span></span><span style="display:flex;"><span>		})
+</span></span><span style="display:flex;"><span>	.Start();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="41">41</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>PlayerPrefs.SetFloat(PLAYER_PREFS_MUSIC_VOLUME, volume);
+</span></span><span style="display:flex;"><span>PlayerPrefs.Save();
+</span></span><span style="display:flex;"><span>PlayerPrefs.DeleteAll();
+</span></span></code></pre></div><h1 id="40">40</h1>
+<ul>
+<li>Action是无返回值的泛型委托。</li>
+<li>Action 表示无参，无返回值的委托</li>
+<li>Action&lt;int,string,bool&gt; 表示有传入参数int,string,bool无返回值的委托</li>
+<li>Action&lt;int,int,int,int&gt; 表示有传入4个int型参数，无返回值的委托</li>
+<li>Action至少0个参数，至多16个参数，无返回值。</li>
+</ul>
+<h1 id="39">39</h1>
+<p><a href="https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html">UnityEvent</a></p>
+<pre tabindex="0"><code>using UnityEngine;
+using UnityEngine.Events;
+using System.Collections;
+
+public class ExampleClass : MonoBehaviour
+{
+    UnityEvent m_MyEvent;
+
+    void Start()
+    {
+        if (m_MyEvent == null)
+            m_MyEvent = new UnityEvent();
+
+        m_MyEvent.AddListener(Ping);
+    }
+
+    void Update()
+    {
+        if (Input.anyKeyDown &amp;&amp; m_MyEvent != null)
+        {
+            m_MyEvent.Invoke();
+        }
+    }
+
+    void Ping()
+    {
+        Debug.Log(&#34;Ping&#34;);
+    }
+}
+</code></pre><h1 id="38">38</h1>
+<pre tabindex="0"><code>Time.scaleTime = 0f;
+OnAnyCut.GetInvocationList().Length
+</code></pre><h1 id="37">37</h1>
+<p>File -&gt; Building Settings<br>
+static Loader and LoaderCallback</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Loader</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> Scene
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		MainMenuScene,
+</span></span><span style="display:flex;"><span>		GameScene,
+</span></span><span style="display:flex;"><span>		LoadingScene
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Scene targetScene;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Load(Scene targetScene)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		Loader.targetScene = targetScene;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		SceneManager.LoadScene(Scene.LoadingScene.ToString());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> LoaderCallback()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		SceneManager.LoadScene(targetScene.ToString());
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LoaderCallback</span> : MonoBehaviour
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">bool</span> isFirstUpdate = <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Update()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (isFirstUpdate)
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			isFirstUpdate = <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			Loader.LoaderCallback();
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="36">36</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>AudioClip
+</span></span><span style="display:flex;"><span>AudioSource.PlayClipAtPoint()  
+</span></span></code></pre></div><h1 id="35">35</h1>
+<p>Audio Source<br>
+Audio Maxier</p>
+<h1 id="34">34</h1>
+<p>shift+space maximize screen<br>
+uv<br>
+UVs are two-dimensional texture coordinates that correspond with the vertex information for your geometry, connecting a surface mesh to texture application.</p>
+<h1 id="33">33</h1>
+<p>Anchor Presets</p>
+<h1 id="32">32</h1>
+<p><a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/">C# 编程指南</a></p>
+<h1 id="31">31</h1>
+<p><a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/events/how-to-implement-interface-events">如何实现接口事件（C# 编程指南）</a></p>
+<h1 id="30">30</h1>
+<p>C# 和 .NET 只支持单一继承。</p>
+<p>接口包含非抽象 class 或 struct 必须实现的一组相关功能的定义。 接口可以定义 static 方法，此类方法必须具有实现。 接口可为成员定义默认实现。 接口不能声明实例数据，如字段、自动实现的属性或类似属性的事件。</p>
+<p>GetComponent<!-- raw HTML omitted --></p>
+<pre tabindex="0"><code>hasProgress = hasProgressGameObject.GetComponent&lt;IHasProgress&gt;();
+if (hasProgress == null)
+{
+	Debug.LogError(&#34;Game Object&#34; + hasProgressGameObject + &#34; does not have a component that implements IHasProgress!&#34;);
+}
+</code></pre><h1 id="29">29</h1>
+<p>LookAt</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>transform.LookAt(Camera.main.transform);
+</span></span><span style="display:flex;"><span>transform.forward = Camera.main.transform.forward;
+</span></span></code></pre></div><h1 id="28">28</h1>
+<p>Canvas<br>
+ProgressBar<br>
+FillAmount<br>
+Event -&gt; Script</p>
+<h1 id="27">27</h1>
+<p>连击动画<br>
+attack layer<br>
+attack1.anim -&gt; finishScript.cs -&gt; OnStateExit()<br>
+attack2.anim<br>
+attack3.anim<br>
+attack4.anim<br>
+1-&gt;2 bool<br>
+2-&gt;3 isTrigger<br>
+3-&gt;4 isTrigger</p>
+<h1 id="26">26</h1>
+<p>(Virtual)虚拟方法与(abstract)抽象方法的区别?
+虚拟方法和抽象方法都可以供派生类重写和都用override重写。那么它们之间有什么区别呢？</p>
+<ol>
+<li>抽象方法使用abstract关键字,虚拟方法使用virtual关键字</li>
+<li>抽象方法是可以看成是没有实现体的虚拟方法</li>
+<li>虚拟方法与多态性关系密切,虚拟方法为子类提供了重写该方法的选项允许子类完全或部分重写该类的方法，必须写方法体。
+抽象方法只是一个定义，没有提供实现部分，也就是没有{}，也不要在里面写内容，需要在子类中实现,抽象方法是一种强制子类重写的方法，否则子类将不能被实例化。</li>
+<li>抽象方法必须在派生类中重写，这一点跟接口类似，虚拟方法不必。</li>
+<li>抽象方法不能声明方法体，而虚拟方法可以。</li>
+<li>抽象类不能被实例化（不可以new），只能实例化实现了全部抽象方法的派生类；而包含虚方法的类可以实例化。</li>
+<li>虚拟方法是指能被重载覆盖的方法,而抽象方法是虚拟方法中的特例,指完全没有具体实现的虚拟方法.</li>
+<li>如果类中包含抽象方法，那么类就必须定义为抽象类，不论是否还包含其它一般方法</li>
+<li>抽象方法是必须被派生类覆写的方法,调用虚拟方法，运行时将确定调用对象是什么类的实例，并调用适当的覆写的方法</li>
+<li>一个虚拟方法的实现可以由派生类取代。取代所继承的虚拟方法的实现的过程称为重写该方法；在一个虚拟方法调用中，该调用所涉及的那个实例的运行时类型确定了要被调用的究竟是该方法的哪一个实现。</li>
+<li>抽象方法是需要子类去实现的.虚方法,是已经实现了,子类可以去覆盖,也可以不覆盖取决于需求.</li>
+</ol>
+<h1 id="25">25</h1>
+<p>Scriptable Object<br>
+gameObject.transform<br>
+transform.gameObject</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#a6e22e">[CreateAssetMenu()]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KitchenObjectSO</span> : ScriptableObject 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> Transform prefab;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> Sprite sprite;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> objectName;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KitchenObject</span> : MonoBehaviour
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">	[SerializeField]</span> <span style="color:#66d9ef">private</span> KitchenObjectSO kitchenObjectSO;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> KitchenObjectSO GetKitchenObjectSO ()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> kitchenObjectSO;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="24">24</h1>
+<p>localPosition</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Transform tomatoTransform = Instantiate(tomatoPrefab, counterTopPoint);
+</span></span><span style="display:flex;"><span>tomatoTransform.localPosition = Vector3.zero;
+</span></span></code></pre></div><h1 id="23">23</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Player instance;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Player Instance {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">get</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> instance;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">set</span> {
+</span></span><span style="display:flex;"><span>		instance = <span style="color:#66d9ef">value</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Player Instance { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span></code></pre></div><h1 id="22">22</h1>
+<p>event(+= or -=)<br>
+delegate(=)<br>
+action(void)<br>
+func(return)<br>
+<a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/distinguish-delegates-events">区别委托和事件</a></p>
+<h1 id="21">21</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// GameInput (publisher)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">event</span> EventHandler OnInteractAction;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>playerInputActions.Player.Interact.performed += Interact_performed;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj){
+</span></span><span style="display:flex;"><span>	OnInteractAction?.Invoke(<span style="color:#66d9ef">this</span>, EventArgs.Empty);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Player (subscriber)</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">[SerializeField]</span> <span style="color:#66d9ef">private</span> GameInput gameInput;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gameInput.OnInteractAction += GameInput_OnInteractAction;
+</span></span></code></pre></div><h1 id="20">20</h1>
+<pre tabindex="0"><code>raycastHit.transform.TryGetComponent(out ClearCounter clearCounter)
+</code></pre><h1 id="19">19</h1>
+<p>view tool</p>
+<pre tabindex="0"><code>left mouse: pan
+middle mouse: zoom
+right mouse: orbit 
+alt: fps
+</code></pre><h1 id="18">18</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Physics.Raycast(transform.position, moveDir, playerSize);
+</span></span><span style="display:flex;"><span>Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight , playerRaduis, moveDir);
+</span></span></code></pre></div><h1 id="17">17</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>transform.position += moveDir * Time.deltaTime * moveSpeed;
+</span></span></code></pre></div><h1 id="16">16</h1>
+<ol>
+<li>Package Manager -&gt; Input Sytem</li>
+<li>Edit -&gt; Project Setting -&gt; Player -&gt; Other Setting -&gt; Active Input Handling -&gt; Both</li>
+<li>Project -&gt; Input Action</li>
+<li>Action Maps -&gt; Player -&gt; Actions Move -&gt; Action Type: Value &amp;Control Type: Vector2</li>
+<li>Add UP/Down/Left/Right Composite -&gt; add listend key -&gt; Save Assert</li>
+<li>PlayerInputActions -&gt; Generate C# Class</li>
+</ol>
+<pre tabindex="0"><code>PlayerInputActions.scheme.binding.ReadValue&lt;Vector2&gt;();
+</code></pre><h1 id="15">15</h1>
+<p>cinemachine
+Virtual Camera
+Follow
+Look At
+noise
+Body -&gt; bind mode -&gt; world space</p>
+<h1 id="14">14</h1>
+<p>Slerp 线性插值
+Lerp 球形插值</p>
+<h1 id="13">13</h1>
+<p>yield</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> numbers = ProduceEvenNumbers(<span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">&#34;Caller: about to iterate.&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">int</span> i <span style="color:#66d9ef">in</span> numbers)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">$&#34;Caller: {i}&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>IEnumerable&lt;<span style="color:#66d9ef">int</span>&gt; ProduceEvenNumbers(<span style="color:#66d9ef">int</span> upto)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">&#34;Iterator: start.&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt;= upto; i += <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#e6db74">$&#34;Iterator: about to yield {i}&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> i;
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#e6db74">$&#34;Iterator: yielded {i}&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">&#34;Iterator: end.&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Caller: about to iterate.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Iterator: start.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Iterator: about to yield 0</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Caller: 0</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Iterator: yielded 0</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Iterator: about to yield 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Caller: 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Iterator: yielded 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Iterator: about to yield 4</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Caller: 4</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Iterator: yielded 4</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Iterator: end.</span>
+</span></span></code></pre></div><p>如前面的示例所示，当开始对迭代器的结果进行迭代时，迭代器会一直执行，直到到达第一个 yield return 语句为止。 然后，迭代器的执行会暂停，调用方会获得第一个迭代值并处理该值。 在后续的每次迭代中，迭代器的执行都会在导致上一次挂起的 yield return 语句之后恢复，并继续执行，直到到达下一个 yield return 语句为止。 当控件到达迭代器或 yield break 语句的末尾时，迭代完成。</p>
+<h1 id="12">12</h1>
+<p>Coroutine</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator Fade()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Color c = renderer.material.color;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">float</span> alpha = <span style="color:#ae81ff">1f</span>; alpha &gt;= <span style="color:#ae81ff">0</span>; alpha -= <span style="color:#ae81ff">0.1f</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        c.a = alpha;
+</span></span><span style="display:flex;"><span>        renderer.material.color = c;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>; <span style="color:#75715e">// back to unity after a frame</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="11">11</h1>
+<p>Timd.deltaTime
+The interval in seconds from the last frame to the current one.</p>
+<h1 id="10">10</h1>
+<p>provent linecast hit own boxCollider.</p>
+<pre tabindex="0"><code>boxCollider.enabled = false;
+Physics.Linecast(start, end, blockingLayer);
+boxCollider.enabled = true;
+</code></pre><h1 id="9">9</h1>
+<p>StartCorotine</p>
+<h1 id="8">8</h1>
+<p>Perference -&gt; External Tools -&gt; Regenerate project files</p>
+<h1 id="7">7</h1>
+<p>.sln include project
+.csproj include dll</p>
+<h1 id="6">6</h1>
+<p><a href="https://docs.unity.cn/2023.2/Documentation/ScriptReference/GameObject.html">GameObject</a>
+Base class for all entities in Unity Scenes.</p>
+<h1 id="5">5</h1>
+<p>C# GC
+<a href="https://learn.microsoft.com/zh-cn/dotnet/standard/garbage-collection/">https://learn.microsoft.com/zh-cn/dotnet/standard/garbage-collection/</a></p>
+<h1 id="4">4</h1>
+<p>Singleton Pattern</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span>:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> B single;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> B getSingle(){
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(single == <span style="color:#66d9ef">null</span>){
+</span></span><span style="display:flex;"><span>			single = <span style="color:#66d9ef">new</span> B();
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> single;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><h1 id="3">3</h1>
+<p><a href="https://docs.unity.cn/2023.2/Documentation/ScriptReference/Object.html">Ojbect</a></p>
+<p>Any public variable you make that derives from Object gets shown in the inspector as a drop target, allowing you to set the value from the GUI.</p>
+<h1 id="2">2</h1>
+<p>import assert from store</p>
+<pre tabindex="0"><code>Toolbar
+PackageManager
+Packages: My Asserts
+Download
+Import
+</code></pre><h1 id="1">1</h1>
+<p>(Toolbar, Hierarchy, Game, Scene, Overlays, Inspector, Project, Status bar)[https://docs.unity3d.com/2021.3/Documentation/Manual/UsingTheEditor.html]</p>
+</section>
+
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  ><a class="ltr:pr-3 rtl:pl-3" href="//localhost:1313/posts/art/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>art</span></a
+    ><a
+      class="justify-end pl-3 ltr:ml-auto rtl:mr-auto"
+      href="//localhost:1313/posts/jekyll/"
+      ><span>jekyll</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    ></nav></article></main><footer
+  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
+>
+  <div class="mr-auto">&copy;2025<a class="link" href="//localhost:1313/">Rainumdo&#39;s blog</a></div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+</body>
+</html>

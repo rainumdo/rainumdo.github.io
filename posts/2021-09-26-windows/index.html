@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>windows | Rainumdo&#39;s blog</title>
+<meta name="keywords" content="windows">
+<meta name="description" content="16
+vscodevim
+ctrl &#43; shift &#43; p
+keybindings.json
+  {
+    &#34;key&#34;: &#34;capslock&#34;,
+    &#34;command&#34;: &#34;extension.vim_escape&#34;
+  }
+15
+add gpedit.msc
+@echo off
+
+pushd &#34;%~dp0&#34;
+
+dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txt
+
+dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txt
+
+for /f %%i in (&#39;findstr /i . List.txt 2^&gt;nul&#39;) do dism /online /norestart /add-package:&#34;C:\Windows\servicing\Packages\%%i&#34;
+
+pause
+14
+wsl export
+wsl -l -v
+wsl --shutdown
+wsl --export Ubuntu-22.04 D:\Ubuntu-22.04.tar
+13
+Keyboard shortcuts in Windows
+12
+windows services
+计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services
+11
+windows driver manager
+PnPUtil
+pnputil /enum-drivers
+pnputil /add-driver x:\driver.inf
+pnputil /delete-driver oem0.inf /force
+10
+winows download">
+<meta name="author" content="rainumdo">
+<link rel="canonical" href="//localhost:1313/posts/2021-09-26-windows/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="//localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="//localhost:1313/posts/2021-09-26-windows/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="//localhost:1313/" accesskey="h" title="Rainumdo&#39;s blog (Alt + H)">Rainumdo&#39;s blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      windows
+    </h1>
+    <div class="post-meta">rainumdo
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="16">16<a hidden class="anchor" aria-hidden="true" href="#16">#</a></h1>
+<p>vscodevim
+ctrl + shift + p
+keybindings.json</p>
+<pre tabindex="0"><code>  {
+    &#34;key&#34;: &#34;capslock&#34;,
+    &#34;command&#34;: &#34;extension.vim_escape&#34;
+  }
+</code></pre><h1 id="15">15<a hidden class="anchor" aria-hidden="true" href="#15">#</a></h1>
+<p>add gpedit.msc</p>
+<pre tabindex="0"><code>@echo off
+
+pushd &#34;%~dp0&#34;
+
+dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txt
+
+dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txt
+
+for /f %%i in (&#39;findstr /i . List.txt 2^&gt;nul&#39;) do dism /online /norestart /add-package:&#34;C:\Windows\servicing\Packages\%%i&#34;
+
+pause
+</code></pre><h1 id="14">14<a hidden class="anchor" aria-hidden="true" href="#14">#</a></h1>
+<p>wsl export</p>
+<pre tabindex="0"><code>wsl -l -v
+wsl --shutdown
+wsl --export Ubuntu-22.04 D:\Ubuntu-22.04.tar
+</code></pre><h1 id="13">13<a hidden class="anchor" aria-hidden="true" href="#13">#</a></h1>
+<p><a href="https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec">Keyboard shortcuts in Windows</a></p>
+<h1 id="12">12<a hidden class="anchor" aria-hidden="true" href="#12">#</a></h1>
+<p>windows services</p>
+<pre tabindex="0"><code>计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services
+</code></pre><h1 id="11">11<a hidden class="anchor" aria-hidden="true" href="#11">#</a></h1>
+<p>windows driver manager
+<a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil">PnPUtil</a></p>
+<pre tabindex="0"><code>pnputil /enum-drivers
+pnputil /add-driver x:\driver.inf
+pnputil /delete-driver oem0.inf /force
+</code></pre><h1 id="10">10<a hidden class="anchor" aria-hidden="true" href="#10">#</a></h1>
+<p><a href="https://www.microsoft.com/zh-cn/software-download">winows download</a></p>
+<h1 id="9">9<a hidden class="anchor" aria-hidden="true" href="#9">#</a></h1>
+<p><a href="https://www.catalog.update.microsoft.com/home.aspx">windows update catalog</a></p>
+<h1 id="8">8<a hidden class="anchor" aria-hidden="true" href="#8">#</a></h1>
+<p>recovery the BCD(boot configure data)</p>
+<pre tabindex="0"><code>becedit /enum #list the item 
+
+bootrec /scanos
+bootrec /fixmbr
+bootrec /fixboot
+bootrec /rebuildbcd
+</code></pre><p>if bootrec /fixboot is denied, do not bootrec /rebuildbcd</p>
+<pre tabindex="0"><code>bootsect /nt60 sys /mbr 
+</code></pre><p>and then create the new bcd file:</p>
+<pre tabindex="0"><code>bcdboot c:\windows /s c: 
+</code></pre><p>check the bcd:</p>
+<pre tabindex="0"><code>bcdboot c:\windows /v
+bcdedit /enum 
+</code></pre><h1 id="7">7<a hidden class="anchor" aria-hidden="true" href="#7">#</a></h1>
+<p>edit the right-mouse new content</p>
+<pre tabindex="0"><code>1. run regedit
+2. HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Discardable\PostSetup\ShellNew\Classes
+3. edit the classes 
+</code></pre><h1 id="6">6<a hidden class="anchor" aria-hidden="true" href="#6">#</a></h1>
+<p>reset netwowrk</p>
+<pre tabindex="0"><code>ipconfig /release
+ipconfig /renew
+ipconfig /flushdns
+</code></pre><h1 id="5">5<a hidden class="anchor" aria-hidden="true" href="#5">#</a></h1>
+<p>enable virtual machine for win</p>
+<pre tabindex="0"><code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</code></pre><h1 id="4">4<a hidden class="anchor" aria-hidden="true" href="#4">#</a></h1>
+<p>install Hyper-V</p>
+<pre tabindex="0"><code>pushd &#34;%~dp0&#34;
+dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt
+for /f %%i in (&#39;findstr /i . hyper-v.txt 2^&gt;nul&#39;) do dism /online /norestart /add-package:&#34;%SystemRoot%\servicing\Packages\%%i&#34;
+del hyper-v.txt
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
+</code></pre><h1 id="3">3<a hidden class="anchor" aria-hidden="true" href="#3">#</a></h1>
+<p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install">update wsl1 to wsl2</a></p>
+<pre tabindex="0"><code>wsl -l -v
+wsl --set-version
+</code></pre><h1 id="2">2<a hidden class="anchor" aria-hidden="true" href="#2">#</a></h1>
+<p>assign ip address</p>
+<pre tabindex="0"><code>ifconfig \release
+ifconfig \renew
+</code></pre><h1 id="1">1<a hidden class="anchor" aria-hidden="true" href="#1">#</a></h1>
+<p>repair system file</p>
+<pre tabindex="0"><code>DISM /Online /Clean-image /RestoreHealth
+</code></pre>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="//localhost:1313/tags/windows/">Windows</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="//localhost:1313/">Rainumdo&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
