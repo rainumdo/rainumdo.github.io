@@ -1,4 +1,17 @@
 
+
+
+
+
+# 95
+docsify
+```
+npm i docsify-cli -g
+mkdir docs
+docsify init docs
+docsify serve docs
+```
+
 # 94
 download and overwrite
 ```
