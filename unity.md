@@ -1,4 +1,12 @@
 
+
+# 62
+unity旋转物体
+
+```csharp
+transform.rotation = Quaternion.Euler(new Vector3());
+```
+
 # 61
 ```
 IEnumerable.Skip()
