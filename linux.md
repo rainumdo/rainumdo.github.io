@@ -1,11 +1,9 @@
 
-
-
-
-
 # 95
+
 docsify
-```
+
+```shell
 npm i docsify-cli -g
 mkdir docs
 docsify init docs
@@ -13,37 +11,47 @@ docsify serve docs
 ```
 
 # 94
+
 download and overwrite
-```
+
+```shell
 https://github.com/OmniSharp/omnisharp-roslyn/releases
 /home/rainumdo/.config/coc/extensions/node_modules/coc-omnisharp
 ```
 
 # 93
+
 edit ~/.npmrc
-```
+
+```shell
 coc.nvim:registry=https://registry.npmmirror.com
 ```
 
 # 92
+
 add edge source
-```
+
+```shell
 echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft-edge.gpg] https://packages.microsoft.com/repos/edge stable main' | sudo tee /etc/apt/sources.list.d/microsoft-edge.list
 
 curl -fSsL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-edge.gpg > /dev/null
 ```
 
 # 91
+
 add unityhub source
-```
+
+```shell
 sudo sh -c 'echo "deb https://hub.unity3d.com/linux/repos/deb stable main" > /etc/apt/sources.list.d/unityhub.list'
 
 wget -qO - https://hub.unity3d.com/linux/keys/public | sudo tee /etc/apt/trusted.gpg.d/unityhub.asc
 ```
 
 # 90
+
 ubuntu chinese dirs to english dirs
-```
+
+```shell
 export LANG=en_US
 xdg-user-dirs-gtk-update
 
@@ -55,8 +63,10 @@ xdg-user-dirs-gtk-update
 ```
 
 # 89
+
 git 初始化远端仓库
-```
+
+```shell
 git init
 git add *
 git branch -M main
@@ -65,17 +75,22 @@ git push -u origin main # 设置本地origin的远端上游main
 ```
 
 # 88
+
 包含
-```
+
+```shell
 dpkg -i --force-overwrite xxx.deb
 ```
 
 # 87
+
 [asperite build](https://github.com/aseprite/aseprite/blob/main/INSTALL.md#linux-details)
 
 # 86
+
 relate local and remote branch
-```
+
+```shell
 git branch -b main
 git branch -u origin/remote_branch [local_branch]
 git branch -vv
@@ -85,8 +100,10 @@ git branch --set-upstream-to orgin/remote_branch
 ```
 
 # 85
+
 git lfs
-```
+
+```shell
 sudo apt install git-lfs
 git lfs install
 find ./ -size +100M 
@@ -761,10 +778,10 @@ bash demo.sh > demo.log 2>&1
 # 2. 2>&1 表示将标准错误输出(stderr)重定向到文件描述符1指定位置。
 ```
 
-# 10 
+# 10
 /var/log/messages — 包括整体系统信息，其中也包含系统启动期间的日志。此外，mail，cron，daemon，kern和auth等内容也记录在var/log/messages日志中。
 
-# 9 
+# 9
 linux log
 
 | log | doc |
@@ -779,7 +796,7 @@ bash 运算符
 | 运算符 | 说明 | 举例 |
 | ------ | ---- | ---- |
 | !	| 非运算符，表达式为true返回false，否则返回true | [!false]返回true |
-| -o | 或运算符，有一个表达式为true则返回true | [$a -lt -o $b -gt 100] 返回true | 
+| -o | 或运算符，有一个表达式为true则返回true | [$a -lt -o $b -gt 100] 返回true |
 | -a | 与运算符，两个表达式都为true则返回true | [$a -lt -a $b -gt 100] 返回false |
 
 # 7 
@@ -790,6 +807,7 @@ nohup /root/runoob.sh &
 ```
 
 # 6 
+
 | 命令 | 查看方式 |
 | ---- | -------- |
 |cat | 由第一行开始显示文件所有内容 |
@@ -800,6 +818,7 @@ nohup /root/runoob.sh &
 |tail | 显示一个文件的后几行 |
 
 # 5 
+
 硬链接&软连接2.0
 **什么是连接?**
 链接操作实际上是给系统中已有的某个文件指定另外一个可以用于访问它的名称。对于这个新的文件名，我们可以为之指定不同的访问权限，可以控制对信息的共享和安全的问题。如果连接指向目录，用户就可以利用该链接直接进入链接的目录而不用打一大堆的路径名。而且即使我们删除这个链接也不会破坏原来的目录。
@@ -808,7 +827,8 @@ nohup /root/runoob.sh &
 **软连接**
 软连接，其实就是新建一个文件，这个文件就是专门用来指向别的文件(和windows下的快捷方式的那个文件有很近的意思)。软连接产生的是一个新文件，但这个文件的作用就是专门指向某个文件的，删除了这个软连接文件，那就等于不需要这个链接，和原来的存在实体原文件没有任何关系，但删除原来的文件，则相应的软连接不可用(cat那个软连接文件，则提示“没有该文件或目录”)。
 
-# 4 
+# 4
+
 linux 目录
 
 | 目录       |    内容      |
@@ -829,18 +849,23 @@ linux 目录
 |	/tmp  | Temporary， 临时文件目录|
 
 # 3
+
 压缩
-```
+
+```shell
 tar -czvf output.zip input
 ```
+
 解压
-```
+
+```shell
 tar -xzvf input.zip  output
 ```
 
 # 2
+
 linux 启动过程
-1. Power-up/Reset 
+1. Power-up/Reset  
 2. System startup  
 	- BIOS/BootMonitor/EFI
 3. Stage 1 bootloader  
@@ -852,10 +877,12 @@ linux 启动过程
 7. Operation
 
 # 1
-查找当前目录一个月(30天)以前大于100M的日志文件(.log)并删除 
-```
+
+查找当前目录一个月(30天)以前大于100M的日志文件(.log)并删除
+
+```shell
 find . -name "*.log" -mtime +30 -type f -size +100M | xargs rm -rf 
-```
+
 find 查找 
 - . 在当前目录查找
 - -mtime 指定修改时间以天为单位 
@@ -865,5 +892,4 @@ find 查找
 -size 指定文件大小 
 	+xx 修改时间大于xx 
 	-xx 修改时间小于xx 
-
-
+```
