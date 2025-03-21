@@ -1,3 +1,9 @@
+
+# 151
+
+horizontal color is amount
+vertical color is light
+
 # 150
 shadows bite each other.
 

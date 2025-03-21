@@ -1,6 +1,7 @@
 * [Home](/)
 * [art](art.md)
 * [comfyui](comfyui.md)
+* [gimp](gimp.md)
 * [hugo](hugo.md)
 * [jekyll](jekyll.md)
 * [linux](linux.md)
