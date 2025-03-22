@@ -1,5 +1,6 @@
 * [Home](/)
 * [art](art.md)
+* [blender](blender.md)
 * [comfyui](comfyui.md)
 * [gimp](gimp.md)
 * [hugo](hugo.md)

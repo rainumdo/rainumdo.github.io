@@ -1,4 +1,8 @@
 
+# 3
+
+fit image in window(ctrl + shift + j)
+
 # 2
 
 export gif
