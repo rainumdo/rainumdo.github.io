@@ -1,6 +1,7 @@
 # words
 
 ```
+||| hierarchy
 | tilt
 ||| symmetry
 | deflate
@@ -303,7 +304,6 @@ contour
 || hypothesis
 || hollow
 || hinder
-|| hierarchy
 || heuristic
 || grand
 || fuel

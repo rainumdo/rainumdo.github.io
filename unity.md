@@ -1,5 +1,19 @@
 
 
+# 63
+copy object hierarchy path
+```csharp
+public class TestGetPath: Editor
+{
+    [MenuItem("GameObject/GetPath", false, 11)]
+    public static void CopyHierarchyPath(){
+        GameObject go = Selection.activeGameObject;
+        string path = SearchUtils.GetObjectPath(go);
+        GUIUtily.systemCopyBuffer = path;
+    }
+}
+```
+
 # 62
 unity旋转物体
 
