@@ -1,3 +1,36 @@
+# 12
+
+Get Extensions
+Bool Tool(ctrl + shift + b)
+
+# 11
+
+连接定点线(j)
+删除连线(ctrl + x) 不使用delete
+
+# 10
+
+
+knife(k)
+手工切割
+
+# 9
+
+loop cut(ctrl + r)
+
+# 8
+
+bevel(b) 倒角
+
+# 7
+
+Inset face(I)
+
+# 6
+
+Extrude Region(E)  
+extrude along normals
+
 # 5
 
 modeling
@@ -16,7 +49,7 @@ tab 进入编辑模式(点1 边2 面3)
 设置游标 shift + 右键  
 旋转 r + xyz  
 自由选择 rr  
-缩放 s + xyz  
+缩放 s + (s)xyz  
 缩放罩体  
 复制 shift + d  
 变换  
