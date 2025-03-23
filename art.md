@@ -1,4 +1,7 @@
 
+# 152
+起草 -> 勾线 -> 上色
+
 # 151
 
 horizontal color is amount
