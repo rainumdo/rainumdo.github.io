@@ -1,3 +1,42 @@
+# 20
+
+make rope
+
+1. add curve
+2. data -> geometry -> depth
+3. object -> convert -> mesh
+
+# 19
+视图菜单(~)
+
+# 18
+
+缩放时按0
+
+# 17
+
+独立显示选择模型(/)
+
+# 16
+
+分离模型 ctrl + p
+合并模型 ctrl + j
+
+# 15
+
+opteration + direction
+
+# 14
+
+viewpoint shading(z)
+1. wireframe display(shift + z)
+2. Material display
+3. Rendered dispaly
+
+# 13
+
+merge (ctrl + j)
+
 # 12
 
 Get Extensions
