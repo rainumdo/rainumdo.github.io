@@ -1,3 +1,27 @@
+# 24
+
+切换模式(ctrl + tab)
+
+# 23
+
+快速切换视图(alt + 中键)
+
+# 22
+
+环形选择alt
+
+# 22
+
+Modifiers
+1. Add modifier
+2. Generate Boolean
+3. Apply
+
+
+# 21
+
+delete(x)
+
 # 20
 
 make rope
@@ -19,8 +43,8 @@ make rope
 
 # 16
 
-分离模型 ctrl + p
-合并模型 ctrl + j
+分离模型(p)
+合并模型(j)
 
 # 15
 
