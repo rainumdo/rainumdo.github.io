@@ -1,4 +1,12 @@
 
+# 5
+
+Path Tool(B)
+
+# 4
+
+gimp -> 编辑 -> 勾画选区
+
 # 3
 
 fit image in window(ctrl + shift + j)

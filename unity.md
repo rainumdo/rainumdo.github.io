@@ -1,6 +1,50 @@
+# 65
+
+vertical layout group  
+control child size + child force expand  
+
 # 64
 
 [EditorGUILayout](https://docs.unity.cn/cn/560/ScriptReference/EditorGUILayout.html)
+```csharp
+using UnityEditor;
+using UnityEngine;
+
+public class TestEditor : EditorWindow
+{
+    private static TestEditor window;
+
+    static Object objectField;
+    static float value = 0f;
+
+    [MenuItem("MyWindows/TestEditor")]
+    public static void OpenWindow()
+    {
+        window = GetWindow<TestEditor>(false, "title", true);
+        window.Show();
+    }
+
+    private void OnGUI()
+    {
+        EditorGUILayout.BeginVertical();
+
+        if (GUILayout.Button("button1"))
+        {
+            Debug.Log("button1 click");
+        }
+
+        GUILayout.Space(20);
+
+        GUILayout.Label("label:");
+
+        objectField = EditorGUILayout.ObjectField(objectField, typeof(GameObject), true);
+
+        value = EditorGUILayout.Slider(value, -1, 1);
+
+        GUILayout.EndVertical();
+    }
+}
+```
 
 # 63
 copy object hierarchy path
