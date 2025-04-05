@@ -1,7 +1,28 @@
+# 36
+
+右键 set origin 
+
+# 35
+
+L 选择相邻元素
+
 # 34
 
-轴向方向
+轴向方向(Transform Orientation)  
+- Global
+- Local
+- Normals
+- Gimbal
+- View
+- Cursor
+- Parent
 
+轴向位置(Transform Pivot Point)  
+- Bounding
+- 3D Cursor
+- Individual Origins
+- Median Point
+- Active Element
 
 # 33
 
