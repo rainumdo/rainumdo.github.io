@@ -1,3 +1,9 @@
+# 66
+
+export fxb  
+1. Window -> Package Manager  
+2. FBX Exporter -> Install  
+
 # 65
 
 vertical layout group  
