@@ -1,3 +1,7 @@
+# 5
+
+[godot-rust](https://colinwttt.github.io/godot-rust-book-chinese/index.html)
+
 # 4
 
 [Rust 程序语言设计](https://www.rustwiki.org.cn/zh-CN/book/title-page.html)

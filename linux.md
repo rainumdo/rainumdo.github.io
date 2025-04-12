@@ -1,4 +1,9 @@
+# 98
+
+`<leader>sk`, search for keymaps in nvim
+
 # 97
+
 add ppa and rm ppa
 
 ```
@@ -133,7 +138,9 @@ git push -u orgin main
 ```
 
 # 84
+
 update ubuntu version
+
 ```
 sudo apt install update-manager-core
 sudo apt update && sudo apt dist-upgrade
@@ -141,27 +148,35 @@ sudo do-release-upgrade -d
 ```
 
 # 83
+
 safe-rm
+
 ```
 /etc/safe-rm.conf
 ```
 
 # 82
+
 ssh: connect to host github.com port 22: Operation timed out
+
 ```
 vi ~/.ssh/config
 ```
+
 ```
 Host github.com
     Hostname ssh.github.com
     Port 443
 ```
+
 ```
 ssh -T git@github.com
 ```
 
 # 81
+
 aseprite.desktop shortcut
+
 ```
 $HOME/.local/share/applications/aseprite.desktop
 
@@ -174,22 +189,29 @@ Type=Application
 ```
 
 # 80
+
 split
+
 ```
 split a.zip a.zip -d -b 1G
 ```
 
 # 79
+
 [xterm 256 colors](https://github.com/guns/xterm-color-table.vim)
 
 # 78
+
 youcompleteme c#
+
 ```
 dotnet new sln # for ysm detection
 ```
 
 # 77
+
 disable snap
+
 ```
 sudo systemctl disable snapd.service
 sudo systemctl disable snapd.socket
@@ -197,7 +219,9 @@ sudo systemctl disable snapd.seeed.service
 ```
 
 # 76
+
 nvidia-dirver not found
+
 ```
 sudo vim /etc/modprobe.d/blacklist.conf
 # blacklist nouveau
@@ -207,13 +231,17 @@ sudo ubuntu-drivers devices
 ```
 
 # 75
+
 close the ubuntu update-notifier
+
 ```
 sudo chmod a-x /usr/bin/update-notifier
 ```
 
 # 74
+
 swap ecsape and cpas
+
 ```
 sudo apt-get install dconf-editor
 # /org/gnome/desktop/input-sources
@@ -222,13 +250,17 @@ sudo apt-get install dconf-editor
 ```
 
 # 73
+
 dircolors
+
 ```
 dircolors -p > .dir_colors
 ```
 
 # 72
+
 [zotero](https://www.zotero.org/download/)
+
 ```
 tar -xzvf Zotero-version_linux-x86_64.tar.bz2
 sudo mv zotero /opt/zotero
@@ -237,20 +269,24 @@ ln -s /opt/zotero/zotero.desktop ~/.local/share/applications/zotero.desktop
 ```
 
 # 71
+
 nvidia-smi to cool down
+
 ```
 -lgc  --lock-gpu-clocks=    将指定的一对 <minGpuClock,maxGpuClock> 时钟
-							频率取值范围（例如 1500,1500），设置为需锁定
-							的 GPU 时钟频率的范围（以 MHz 为单位）。 
-							无论 GPU 上是否存在正在运行的应用程序，设置此项
-							将取代applications-clocks并生效。
-							输入也可以是一个单一的期望时钟值
-							（例如 <GpuClockValue>）。
+       频率取值范围（例如 1500,1500），设置为需锁定
+       的 GPU 时钟频率的范围（以 MHz 为单位）。 
+       无论 GPU 上是否存在正在运行的应用程序，设置此项
+       将取代applications-clocks并生效。
+       输入也可以是一个单一的期望时钟值
+       （例如 <GpuClockValue>）。
 -rgc  --reset-gpu-clocks    重置 GPU 时钟频率到默认值
 ```
 
 # 70
+
 aptitude
+
 ```
 # 升级系统所有的软件包
 aptitude update
@@ -274,30 +310,37 @@ aptitude clean
 aptitude autoclean
 ```
 
-
 # 69
+
 aria2c
 errorCode=1 SSL/TLS handshake failure
+
 ```
 aria2c url --check-certificate=false
 ```
 
 # 68
+
 update the remote list
+
 ```
 git branch -r
 git remote update origin --prune
 ```
 
 # 67
+
 wsl proxy
+
 ```
 export all_proxy="socks5://allowlan:port"
 ```
 <!--more-->
 
 # 66
+
 texlive
+
 ```
 wget https://mirrors.huaweicloud.com/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz
 tar -xzf install-tl-unx.tar.gz
@@ -308,7 +351,9 @@ tex --version
 ```
 
 # 65
+
 apt-fast
+
 ```
 sudo add-apt-repository ppa:apt-fast/stable
 sudo apt-get update
@@ -316,19 +361,25 @@ sudo apt-get -y install apt-fast
 ```
 
 # 64
+
 md5 check
+
 ```
 md5sum -c md5file.txt
 ```
 
 # 63
+
 unzip multiple zip files
+
 ```
 unzip '*.zip'
 ```
 
 # 62
+
 graphviz
+
 ```
 sudo apt install graphviz
 echo "digraph G {Hello->World}" | dot -Tpng > hello.png
@@ -337,7 +388,9 @@ vim hello.gv.txt
 ```
 
 # 61
+
 clone a directory from a repository using svn
+
 ```
 # raw url https://github.com/google-research/google-research/tree/master/tiny_video_nets 
 # replace tree/master with trunk
@@ -345,18 +398,21 @@ sudo apt-get install subversion
 svn checkout https://github.com/google-research/google-research/trunk/tiny_video_nets
 ```
 
-
 # 60
+
 ubuntu remove xxx.deb(dpkg -i)
+
 ```
 sudo dpkg -l
 apt purge xxx
-# apt remove	会删除软件包而保留软件的配置文件
-# apt purge	会同时清除软件包和软件的配置文件
+# apt remove 会删除软件包而保留软件的配置文件
+# apt purge 会同时清除软件包和软件的配置文件
 ```
 
 # 59
+
 clash
+
 ```
 # wget from github
 # download your config.yaml and Country.mmdb into ~/.config/clash
@@ -366,60 +422,77 @@ chmod +x clash
 ```
 
 # 58
+
 apt del PUBKEY
+
 ```
 sudo apt-key del "xxxx  ... xxxx"
 sudo apt-key del <last 8 characters>
 ```
 
 # 57
+
 apt NO\_PUBKEY
+
 ```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F60F4B3D7FA2AF80
 ```
- 
+
 # 56
+
 disable updates
+
 ```
 # set 0
 sudo vim /etc/apt/apt.conf.d/10periodic
 sudo vim /etc/apt/apt.conf.d/20auto-upgrades
 ```
 
-
 # 55
+
 login the container
+
 ```
 docker run -it --privileged=true ubuntu /sbin/init  
 ```
 
 # 54
+
 docker commit log
+
 ```
 docker history image
 ```
 
 # 53
+
 journalctl
+
 ```
 journalctl -u jupyterhub.service
 ```
 
 # 52
+
 grep -e and grep -E
+
 ```
 -e<范本样式> --regexp=<范本样式>   # 指定字符串作为查找文件内容的范本样式。
 -E --extended-regexp             # 将范本样式为延伸的普通表示法来使用，意味着使用能使用扩展正则表达式。
 ```
 
 # 51
+
 watch
+
 ```
 watch -n 1 -d netstat -ant
 ```
 
 # 50
+
 ps table header
+
 ```
 man ps
 /STANDARD FORMAT SPECIFIERS
@@ -429,9 +502,10 @@ ps -eo pid,user,stat,command
 -o format/output
 ```
 
-
 # 49
+
 ssh -fNL 8889:localhost:8888 remote-server-alias
+
 ```
 -f: fork background
 -N: not execute remote command
@@ -439,14 +513,18 @@ ssh -fNL 8889:localhost:8888 remote-server-alias
 ```
 
 # 48
+
 github mirror
+
 ```
 raw.githubusercontent.com -> raw.fastgit.org
 github.com -> hub.fastgit.org
 ```
 
 # 47
+
 cuda and cudnn
+
 ```
 1. download and install the cuda.
 2. download and decompress cudnn. 
@@ -454,27 +532,35 @@ cuda and cudnn
 ```
 
 # 46
+
 ccmake
+
 ```
 sudo apt-get install cmake-curses-gui
 # generate then confirm
 ```
 
 # 45
+
 show the information of graphics
+
 ```
 lshw -c video
 ```
 
 # 44
+
 nporc
+
 ```
 # Print the number of processing units available to the current process,which may be less than the number of online processors.
 nporc
 ```
 
 # 43
+
 xrandr
+
 ```
 xrandr
 xrandr --output screen0 --auto
@@ -485,7 +571,9 @@ xrandr --output HDMI2 --primary
 ```
 
 # 42
+
 xserver VcXsrv
+
 ```
 sudo apt install x11-apps -y && xeyes
 export display=ip:port1.port2
@@ -493,20 +581,26 @@ export DISPLAY=:0.0
 ```
 
 # 41
+
 lsblk
+
 ```
 get the information of disk
 name, uuid, size, type, mount
 ```
 
 # 40
+
 testdisk
+
 ```
 Partition scanner and disk recovery tool, and PhotoRec file recovery tool
 ```
 
 # 39
+
 install the package for debain
+
 ```
 dpkg -l
 dpkg -i package.deb
@@ -514,18 +608,19 @@ dpkg -r package
 ```
 
 # 38
+
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 sudo apt install docker-ce
 docker pull image_url
 docker run -itd \
-	-v localhost:container 
-	--name container_name
-	--net=net_name
-	--privileged=true
-	--restart=always
-	image_name
+ -v localhost:container 
+ --name container_name
+ --net=net_name
+ --privileged=true
+ --restart=always
+ image_name
 docker container ls
 docker container stop/kill/restart/attach contain_id
 docker image ls
@@ -533,7 +628,9 @@ docker rmi image_name
 ```
 
 # 37
+
 xargs -n 1
+
 ```
 ls | xargs -n 1 echo
 # dir1 
@@ -543,21 +640,27 @@ ls | xargs echo
 ```
 
 # 36
+
 update nodejs
+
 ```
 npm install n -g
 n stable
 ```
 
 # 35
+
 zsh-autosuggestions
+
 ```
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # plugins=(zsh-autosuggestions) 
 ```
 
 # 34
+
 jupyterhub.service
+
 ```
 [Unit]
 Description=Jupyterhub
@@ -573,8 +676,10 @@ RestartSec=3
 WantedBy=multi-user.target
 ```
 
-# 33 
+# 33
+
 change mode
+
 ```
 chmod ugoa+-rwx file
 u: user
@@ -586,20 +691,26 @@ x: execute
 ```
 <!--more-->
 
-# 32 
+# 32
+
 list installed unit files
+
 ```
 sudo systemctl list-unit-files
 ```
 
-# 31 
+# 31
+
 display the tree of processes
+
 ```
 pstree 
 ```
 
-# 30 
-linux boot process 
+# 30
+
+linux boot process
+
 1. BIOS(Basic Input/Output System)
 2. MBR(Master Boot Record)
 3. GRUB(Grand Unified Bootloader)
@@ -607,25 +718,32 @@ linux boot process
 5. Init
 6. Runlevel
 
-# 29 
+# 29
+
 add/del a software source
+
 ```
 add-apt-repository <sourceline>
 apt-key list
 apt-key del uid
 ```
 
-# 28 
+# 28
+
 top
+
 ```
 VIRT - everything in-use and/or reserved
 RES  - anything occupy physical memory 
 SHR  - subset of RES
 ```
 
-# 27 
+# 27
+
 write a service
+
 1. vim /etc/systemd/system/jupyter.service
+
 ```
 [Unit]
 Desciption=jupyter
@@ -638,7 +756,9 @@ RestartSec=10
 [Install]
 WantedBy=muti-user.target
 ```
+
 2. add service to system
+
 ```
 # reload service
 sudo systemctl daemon-reload
@@ -650,20 +770,25 @@ sudo systemctl status jupyter.service
 sudo systemctl enable jupyter.service
 ```
 
-# 26 
+# 26
+
 nohup
+
 ```
 # run the jupyter-notebook background and redirect the error
 nohup jupyter-notebook > jupyter.log 2>&1 &
 ```
 <!--more-->
 
-# 25 
+# 25
+
 mount -a
 mount the filesystem in the /etc/fstab
 
-# 24 
+# 24
+
 use /etc/fstab to auto mount your disk
+
 ```
 fdisk -l # find which dick you want to mount
 vim /etc/fstab
@@ -673,8 +798,10 @@ vim /etc/fstab
 # 0(pass): Enable verifying the sector during startup
 ```
 
-# 23 
+# 23
+
 service
+
 ```
 service --statuse-all
 service [service name] start
@@ -682,8 +809,10 @@ service [service name] stop
 service [service name] status 
 ```
 
-# 22 
+# 22
+
 ssh server
+
 ```
 sudo apt install openssh-server openssh-client
 vim /etc/ssh/ssh_config
@@ -694,36 +823,46 @@ service sshd restart
 sudo systemctl enable ssh 
 ```
 
-# 21 
+# 21
+
 ubuntu install pip
+
 ```
 sudo add-apt-repository universe
 sudo apt install python3-pip
 ```
 
-# 20 
+# 20
+
 ubuntu system info
+
 ```
 uname  -r && cat /etc/*release
 ```
 
-# 19 
+# 19
+
 add linux user
+
 ```
 useradd -m <username>
 passwd <username>
 vim /etc/sudoers
 ```
 
-# 18 
+# 18
+
 awk [选项参数] 'script' var=value file(s)
+
 ```
 # 每行按空格或TAB分割，输出文本中的1、4项
 awk '{print $1,$4}' log.txt
 ```
 
-# 17 
+# 17
+
 ssh
+
 ```
 # generate the ssh-key
 ssh-keygen -t rsa -C "your_email@example.com"
@@ -731,8 +870,8 @@ ssh-keygen -t rsa -C "your_email@example.com"
 ssh -Tv git@github.com
 ```
 
+# 16
 
-# 16 
 ```
 # git 查看remote
 git remote -v
@@ -740,15 +879,19 @@ git remote -v
 git remote set-url origin xxx.git
 ```
 
-# 15 
+# 15
+
 git 统计author代码数
+
 ```
 git log --format='%an' | sort | uniq -c | sort -r
 ```
 <!--more-->
 
-# 14 
+# 14
+
 同步一个fork
+
 ```
 # 查看远程状态
 git remote -v
@@ -766,14 +909,18 @@ git push origin master
 ```
 <!--more-->
 
-# 13 
+# 13
+
 alias
+
 ```
 alias hexocld='hexo cl && hexo d'
 ```
 
-# 12 
+# 12
+
 archlinux 安装大致思路
+
 ```
 # 分区
 fdisk
@@ -785,8 +932,10 @@ grub
 # 设置时间、时区、语言、网络
 ```
 
-# 11 
+# 11
+
 将脚本demo.sh的标准输出和标准错误输出重定向至文件demo.log
+
 ```
 bash demo.sh &> demo.log
 # 将标准输出(stdout)和标准错误输出(stderr)重定向至指定文件中
@@ -797,9 +946,11 @@ bash demo.sh > demo.log 2>&1
 ```
 
 # 10
+
 /var/log/messages — 包括整体系统信息，其中也包含系统启动期间的日志。此外，mail，cron，daemon，kern和auth等内容也记录在var/log/messages日志中。
 
 # 9
+
 linux log
 
 | log | doc |
@@ -808,23 +959,26 @@ linux log
 | /var/log/wtmp | 永久记录所有用户的登录、注销信息，同时记录系统的启动、重启、关机事件。同样，这个文件也是二进制文件，不能使用vi查看，而要使用last 命令查看 |
 | var/log/utmp | 记录当前已经登录的用户信息。这个文件会随着用户的登录和注销而不断变化，只记录当前登录用户的信息。同样，这个文件不能使用vi查看，而要使用w,who,users命令查看 |
 
-# 8 
+# 8
+
 bash 运算符
 
 | 运算符 | 说明 | 举例 |
 | ------ | ---- | ---- |
-| !	| 非运算符，表达式为true返回false，否则返回true | [!false]返回true |
+| ! | 非运算符，表达式为true返回false，否则返回true | [!false]返回true |
 | -o | 或运算符，有一个表达式为true则返回true | [$a -lt -o $b -gt 100] 返回true |
 | -a | 与运算符，两个表达式都为true则返回true | [$a -lt -a $b -gt 100] 返回false |
 
-# 7 
+# 7
+
 nohup(no hang up),用于系统后台不断地运行命令，退出终端不会影响程序运行。
 在后台执行root目录下的runoob.sh
+
 ```
 nohup /root/runoob.sh &
 ```
 
-# 6 
+# 6
 
 | 命令 | 查看方式 |
 | ---- | -------- |
@@ -835,7 +989,7 @@ nohup /root/runoob.sh &
 |head | 显示一个文件的前几行 |
 |tail | 显示一个文件的后几行 |
 
-# 5 
+# 5
 
 硬链接&软连接2.0
 **什么是连接?**
@@ -851,20 +1005,20 @@ linux 目录
 
 | 目录       |    内容      |
 | ------- |-------------|
-|	/bin  | Binaries,系统可执行文件目录|
-|	/boot | Boot,启动文件目录|
-|	/dev  | Device,外部设备目录|
-|	/etc  | Etcetera,系统配置文件目录|
-|	/home | Home, 用户主目录|
-|	/lib  | Libaray,系统的库文件|
-|	/media| Media,系统自动识别的一些设备，如U盘、光驱 |
-|	/mnt  | Mount,用户挂载临时文件目录 |
-|	/opt  | Optional, 第三方软件目录|
-|	/proc | Processes, 存储当前内核运行的一系列特殊文件,虚拟目录 |
-|	/root | Root, 系统管理员目录|
-|	/sbin | Superuser Binaries, 系统管理员可执行程序目录 |
-|	/srv  | Services, 存放服务启动后需要提取的数据 |
-|	/tmp  | Temporary， 临时文件目录|
+| /bin  | Binaries,系统可执行文件目录|
+| /boot | Boot,启动文件目录|
+| /dev  | Device,外部设备目录|
+| /etc  | Etcetera,系统配置文件目录|
+| /home | Home, 用户主目录|
+| /lib  | Libaray,系统的库文件|
+| /media| Media,系统自动识别的一些设备，如U盘、光驱 |
+| /mnt  | Mount,用户挂载临时文件目录 |
+| /opt  | Optional, 第三方软件目录|
+| /proc | Processes, 存储当前内核运行的一系列特殊文件,虚拟目录 |
+| /root | Root, 系统管理员目录|
+| /sbin | Superuser Binaries, 系统管理员可执行程序目录 |
+| /srv  | Services, 存放服务启动后需要提取的数据 |
+| /tmp  | Temporary， 临时文件目录|
 
 # 3
 
@@ -883,15 +1037,22 @@ tar -xzvf input.zip  output
 # 2
 
 linux 启动过程
+
 1. Power-up/Reset  
 2. System startup  
-	- BIOS/BootMonitor/EFI
+
+- BIOS/BootMonitor/EFI
+
 3. Stage 1 bootloader  
-	- Master Boot Record
-4. Stage 2 bootloader 
-	- LILO, GRUB, etc
-5. Kernel & Linux 
-6. Init & User-space 
+
+- Master Boot Record
+
+4. Stage 2 bootloader
+
+- LILO, GRUB, etc
+
+5. Kernel & Linux
+6. Init & User-space
 7. Operation
 
 # 1
@@ -904,10 +1065,10 @@ find . -name "*.log" -mtime +30 -type f -size +100M | xargs rm -rf
 find 查找 
 - . 在当前目录查找
 - -mtime 指定修改时间以天为单位 
-	+xx 修改时间大于xx 
-	-xx 修改时间小于xx 
+ +xx 修改时间大于xx 
+ -xx 修改时间小于xx 
 -type 指定文件类型 
 -size 指定文件大小 
-	+xx 修改时间大于xx 
-	-xx 修改时间小于xx 
+ +xx 修改时间大于xx 
+ -xx 修改时间小于xx 
 ```
