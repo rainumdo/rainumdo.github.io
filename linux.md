@@ -1,3 +1,12 @@
+# 97
+add ppa and rm ppa
+
+```
+sudo add-apt-repository ppa:user/ppa_name
+ls /etc/apt/sources.list.d
+sudo rm -i /etc/apt/sources.list.d/ppa_name.list
+```
+
 # 96
 
 obs-studio
