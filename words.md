@@ -1,6 +1,7 @@
 # words
 
 ```
+overrated
 ||| hierarchy
 | tilt
 ||| symmetry
@@ -89,7 +90,7 @@ critique
 |||||| tweak
 | barrel
 | tangent
-|||||| ramp	
+|||||| ramp 
 eyedropper
 lasso
 roundabout
@@ -227,7 +228,7 @@ contour
 || vicious
 || venue
 || vanilla
-|| ultimate	
+|| ultimate 
 || transaction
 || tournament
 || thermal
@@ -609,7 +610,7 @@ contour
 | disturb
 | distort
 | distaste
-| disregard	
+| disregard 
 | disinfectant
 | disentangle
 | discrimination
@@ -714,7 +715,7 @@ contour
 | arguably
 | arguably
 | appraise
-| apparel	
+| apparel 
 | appalling
 | antonymy
 | anticipate
@@ -1518,7 +1519,7 @@ prehistoric
 pregnancy
 prefab
 precondition
-precise	
+precise 
 precipitation
 precede
 preced
@@ -2455,7 +2456,7 @@ electrician
 elated
 elab
 eject
-eitquette	
+eitquette 
 einsum
 egotism
 effluent
@@ -2556,7 +2557,7 @@ discern
 disastrous
 disaster
 disambiguation
-disambiguate	
+disambiguate 
 dirichlet
 directive
 diplomatic
