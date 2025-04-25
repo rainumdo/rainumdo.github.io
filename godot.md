@@ -1,3 +1,15 @@
+# 8
+
+RW(mut)O
+
+# 7
+
+可变性和别名不可同时存在(Rust Avoids Simultaneous Aliasing and Mutation)
+
+# 6
+
+引用是没有所有权的指针
+
 # 5
 
 [godot-rust](https://colinwttt.github.io/godot-rust-book-chinese/index.html)

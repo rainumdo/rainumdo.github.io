@@ -1,6 +1,18 @@
+# 67
+
+[obi rope](https://obi.virtualmethodstudio.com/)  
+
+1. create 3d object > obi > obi rope
+2. editor curve
+3. add control point/ obi handle
+4. Mesh Renderer
+5. Obi Rope > initalize
+6. Distence Constraint Parameters / Bending Constraint Parameters
+
 # 66
 
 export fxb  
+
 1. Window -> Package Manager  
 2. FBX Exporter -> Install  
 
@@ -12,6 +24,7 @@ control child size + child force expand
 # 64
 
 [EditorGUILayout](https://docs.unity.cn/cn/560/ScriptReference/EditorGUILayout.html)
+
 ```csharp
 using UnityEditor;
 using UnityEngine;
@@ -53,7 +66,9 @@ public class TestEditor : EditorWindow
 ```
 
 # 63
+
 copy object hierarchy path
+
 ```csharp
 public class TestGetPath: Editor
 {
@@ -67,6 +82,7 @@ public class TestGetPath: Editor
 ```
 
 # 62
+
 unity旋转物体
 
 ```csharp
@@ -74,6 +90,7 @@ transform.rotation = Quaternion.Euler(new Vector3());
 ```
 
 # 61
+
 ```
 IEnumerable.Skip()
 IEnumerable.Take()
@@ -81,6 +98,7 @@ IEnumerable.SkipWhile(element => element < value)
 ```
 
 # 60
+
 ```
 using System.Threading.Tasks;
 async
@@ -88,7 +106,9 @@ await
 ```
 
 # 59
+
 [使用 $ 的字符串内插](https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/tokens/interpolated)
+
 ```csharp
 var name = "Mark";
 var date = DateTime.Now;
@@ -102,12 +122,15 @@ Console.WriteLine($"Hello, {name}! Today is {date.DayOfWeek}, it's {date:HH:mm} 
 ```
 
 # 58
+
 EventHandler表示将用于处理不具有事件数据的事件的方法。
+
 ```csharp
 public delegate void EventHandler(object? sender, EventArgs e);
 ```
 
 # 57
+
 ```csharp
 using System;
 using UnityEngine;
@@ -161,32 +184,40 @@ public class Player : MonoBehaviour
 ```
 
 # 56
+
 [readonly](https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/readonly)
- 
+
 # 55
+
 Object reference not set to an instance of an object  
 未绑定对象
 
 # 54
+
 [RuntimeInitalizeOnLoadMethod]
 
 # 53
+
 ```csharp
 Resources.LoadAdd<>();
 ```
 
 # 52
+
 提供支持某些查询的类和接口，这些查询使用语言集成查询 (LINQ)。
+
 ```csharp
 using System.Linq;
 List.Max(a => a.xx)
 ```
 
 # 51
+
 sealed  
 应用于某个类时，sealed 修饰符可阻止其他类继承自该类。
 
 # 50
+
 Image  
 Image Type -> Simple  
 Use Sprite Mesh  
@@ -194,15 +225,18 @@ Rreserve Aspect
 Raycast Target = False  
 
 # 49
+
 [Aspect Ratio Filter](https://docs.unity.cn/cn/2023.2/Manual/script-AspectRatioFitter.html)
 
 # 48
+
 Slice Sprite  
 Texture Type = Sprite (2D and UI)  
 Sprite Model = Multiple  
 Sprite Editor  
 
 # 47
+
 [DoTween](https://dotween.demigiant.com/documentation.php)  
 Perference  
 Setting Locatoin = DoTween > Resources  
@@ -211,17 +245,19 @@ AutoPlay = None
 Ease = In Our Sine  
 AutoKill = True  
 
-
 # 46
+
 Canvas Group -> Blocks Raycasts
 
 # 45
+
 EventTragger
 [EventType](https://docs.unity3d.com/ScriptReference/EventType.html)  
 [UIE](https://docs.unity3d.com/Manual/UIE-Events-Reference.html)  
 IXXXHandler
 
 # 44
+
 IBeginDragHandler, IDragHandler, IEndDragHandler  
 Layout Element  
 IDropHandler  
@@ -229,83 +265,86 @@ IPointEnterHandler, IPointExitHandler
 Canvas Group
 
 # 43
+
 ```
 public void Show(Action onCloseButton)
 {
-	this.onCloseButton = onCloseButton;
+ this.onCloseButton = onCloseButton;
 
-	gameObject.SetActive(true);
+ gameObject.SetActive(true);
 
-	soundEffectButton.Select();
+ soundEffectButton.Select();
 }
 
 optionsButton.onClick.AddListener(() =>
 {
-	Hide();
-	OptionsUI.Instance.Show(Show);
+ Hide();
+ OptionsUI.Instance.Show(Show);
 });
 ```
 
 # 42
+
 ```csharp
 playerInputActions.Player.Interact.bindings[0].ToString();
 
 public void Rebinding(Binding binding, Action onActionRebound)
 {
-	playerInputActions.Player.Disable();
+ playerInputActions.Player.Disable();
 
-	InputAction inputAction;
-	int bindingIndex;
+ InputAction inputAction;
+ int bindingIndex;
 
-	switch (binding)
-	{
-		default:
-		case Binding.Move_Up:
-			inputAction = playerInputActions.Player.Move;
-			bindingIndex = 1;
-			break;
-		case Binding.Move_Down:
-			inputAction = playerInputActions.Player.Move;
-			bindingIndex = 2;
-			break;
-		case Binding.Move_Left:
-			inputAction = playerInputActions.Player.Move;
-			bindingIndex = 3;
-			break;
-		case Binding.Move_Right:
-			inputAction = playerInputActions.Player.Move;
-			bindingIndex = 4;
-			break;
-		case Binding.Interact:
-			inputAction = playerInputActions.Player.Interact;
-			bindingIndex = 0;
-			break;
-		case Binding.InteractAlt:
-			inputAction = playerInputActions.Player.InteractAlternate;
-			bindingIndex = 0;
-			break;
-		case Binding.Pause:
-			inputAction = playerInputActions.Player.Pause;
-			bindingIndex = 0;
-			break;
-	}
+ switch (binding)
+ {
+  default:
+  case Binding.Move_Up:
+   inputAction = playerInputActions.Player.Move;
+   bindingIndex = 1;
+   break;
+  case Binding.Move_Down:
+   inputAction = playerInputActions.Player.Move;
+   bindingIndex = 2;
+   break;
+  case Binding.Move_Left:
+   inputAction = playerInputActions.Player.Move;
+   bindingIndex = 3;
+   break;
+  case Binding.Move_Right:
+   inputAction = playerInputActions.Player.Move;
+   bindingIndex = 4;
+   break;
+  case Binding.Interact:
+   inputAction = playerInputActions.Player.Interact;
+   bindingIndex = 0;
+   break;
+  case Binding.InteractAlt:
+   inputAction = playerInputActions.Player.InteractAlternate;
+   bindingIndex = 0;
+   break;
+  case Binding.Pause:
+   inputAction = playerInputActions.Player.Pause;
+   bindingIndex = 0;
+   break;
+ }
 
-	inputAction.PerformInteractiveRebinding(bindingIndex)
-		.WithControlsExcluding("Mouse")
-		.OnComplete(callback =>
-		{
-			callback.Dispose();
-			playerInputActions.Player.Enable();
-			onActionRebound();
+ inputAction.PerformInteractiveRebinding(bindingIndex)
+  .WithControlsExcluding("Mouse")
+  .OnComplete(callback =>
+  {
+   callback.Dispose();
+   playerInputActions.Player.Enable();
+   onActionRebound();
 
-			PlayerPrefs.SetString(PLAYER_PREFS_BINDINDS, playerInputActions.SaveBindingOverridesAsJson());
-			PlayerPrefs.Save();
-		})
-	.Start();
+   PlayerPrefs.SetString(PLAYER_PREFS_BINDINDS, playerInputActions.SaveBindingOverridesAsJson());
+   PlayerPrefs.Save();
+  })
+ .Start();
 }
 ```
 
 # 41
+
 ```csharp
 PlayerPrefs.SetFloat(PLAYER_PREFS_MUSIC_VOLUME, volume);
 PlayerPrefs.Save();
@@ -313,6 +352,7 @@ PlayerPrefs.DeleteAll();
 ```
 
 # 40
+
 - Action是无返回值的泛型委托。
 - Action 表示无参，无返回值的委托
 - Action<int,string,bool> 表示有传入参数int,string,bool无返回值的委托
@@ -320,7 +360,9 @@ PlayerPrefs.DeleteAll();
 - Action至少0个参数，至多16个参数，无返回值。
 
 # 39
+
 [UnityEvent](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
+
 ```
 using UnityEngine;
 using UnityEngine.Events;
@@ -354,110 +396,126 @@ public class ExampleClass : MonoBehaviour
 ```
 
 # 38
+
 ```
 Time.scaleTime = 0f;
 OnAnyCut.GetInvocationList().Length
 ```
 
 # 37
+
 File -> Building Settings  
 static Loader and LoaderCallback
+
 ```csharp
 public static class Loader
 {
 
-	public enum Scene
-	{
-		MainMenuScene,
-		GameScene,
-		LoadingScene
-	}
+ public enum Scene
+ {
+  MainMenuScene,
+  GameScene,
+  LoadingScene
+ }
 
-	private static Scene targetScene;
+ private static Scene targetScene;
 
-	public static void Load(Scene targetScene)
-	{
-		Loader.targetScene = targetScene;
+ public static void Load(Scene targetScene)
+ {
+  Loader.targetScene = targetScene;
 
-		SceneManager.LoadScene(Scene.LoadingScene.ToString());
+  SceneManager.LoadScene(Scene.LoadingScene.ToString());
 
-	}
+ }
 
-	public static void LoaderCallback()
-	{
-		SceneManager.LoadScene(targetScene.ToString());
-	}
+ public static void LoaderCallback()
+ {
+  SceneManager.LoadScene(targetScene.ToString());
+ }
 }
 ```
+
 ```csharp
 public class LoaderCallback : MonoBehaviour
 {
-	private bool isFirstUpdate = true;
+ private bool isFirstUpdate = true;
 
-	private void Update()
-	{
-		if (isFirstUpdate)
-		{
-			isFirstUpdate = false;
+ private void Update()
+ {
+  if (isFirstUpdate)
+  {
+   isFirstUpdate = false;
 
-			Loader.LoaderCallback();
-		}
-	}
+   Loader.LoaderCallback();
+  }
+ }
 }
 ```
 
 # 36
+
 ```csharp
 AudioClip
 AudioSource.PlayClipAtPoint()  
 ```
 
 # 35
+
 Audio Source  
 Audio Maxier  
 
 # 34
+
 shift+space maximize screen  
 uv  
 UVs are two-dimensional texture coordinates that correspond with the vertex information for your geometry, connecting a surface mesh to texture application.
 
 # 33
+
 Anchor Presets
 
 # 32
+
 [C# 编程指南](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/)
 
 # 31
+
 [如何实现接口事件（C# 编程指南）](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/events/how-to-implement-interface-events)
 
 # 30
+
 C# 和 .NET 只支持单一继承。  
 
 接口包含非抽象 class 或 struct 必须实现的一组相关功能的定义。 接口可以定义 static 方法，此类方法必须具有实现。 接口可为成员定义默认实现。 接口不能声明实例数据，如字段、自动实现的属性或类似属性的事件。
 
 GetComponent<interface>  
+
 ```
 hasProgress = hasProgressGameObject.GetComponent<IHasProgress>();
 if (hasProgress == null)
 {
-	Debug.LogError("Game Object" + hasProgressGameObject + " does not have a component that implements IHasProgress!");
+ Debug.LogError("Game Object" + hasProgressGameObject + " does not have a component that implements IHasProgress!");
 }
 ```
 
 # 29
+
 LookAt
+
 ```csharp
 transform.LookAt(Camera.main.transform);
 transform.forward = Camera.main.transform.forward;
 ```
 
 # 28
+
 Canvas  
 ProgressBar  
 FillAmount  
 Event -> Script  
 
 # 27
+
 连击动画  
 attack layer  
 attack1.anim -> finishScript.cs -> OnStateExit()  
@@ -465,12 +523,14 @@ attack2.anim
 attack3.anim  
 attack4.anim  
 1->2 bool  
-2->3 isTrigger   
+2->3 isTrigger
 3->4 isTrigger  
 
 # 26
+
 (Virtual)虚拟方法与(abstract)抽象方法的区别?
 虚拟方法和抽象方法都可以供派生类重写和都用override重写。那么它们之间有什么区别呢？
+
 1. 抽象方法使用abstract关键字,虚拟方法使用virtual关键字
 2. 抽象方法是可以看成是没有实现体的虚拟方法
 3. 虚拟方法与多态性关系密切,虚拟方法为子类提供了重写该方法的选项允许子类完全或部分重写该类的方法，必须写方法体。
@@ -485,60 +545,66 @@ attack4.anim
 11. 抽象方法是需要子类去实现的.虚方法,是已经实现了,子类可以去覆盖,也可以不覆盖取决于需求.
 
 # 25
+
 Scriptable Object  
 gameObject.transform  
 transform.gameObject  
+
 ```csharp
 [CreateAssetMenu()]
 public class KitchenObjectSO : ScriptableObject 
 {
-	public Transform prefab;
-	public Sprite sprite;
-	public string objectName;
+ public Transform prefab;
+ public Sprite sprite;
+ public string objectName;
 }
 
 public class KitchenObject : MonoBehaviour
 {
-	[SerializeField] private KitchenObjectSO kitchenObjectSO;
+ [SerializeField] private KitchenObjectSO kitchenObjectSO;
 
-	public KitchenObjectSO GetKitchenObjectSO ()
-	{
-		return kitchenObjectSO;
-	}
+ public KitchenObjectSO GetKitchenObjectSO ()
+ {
+  return kitchenObjectSO;
+ }
 }
 ```
 
 # 24
+
 localPosition
+
 ```csharp
 Transform tomatoTransform = Instantiate(tomatoPrefab, counterTopPoint);
 tomatoTransform.localPosition = Vector3.zero;
 ```
 
 # 23
+
 ```csharp
 private static Player instance;
 public static Player Instance {
-	get {
-		return instance;
-	}
-	set {
-		instance = value
-	}
+ get {
+  return instance;
+ }
+ set {
+  instance = value
+ }
 }
 
 public static Player Instance { get; set; }
 ```
 
 # 22
+
 event(+= or -=)  
 delegate(=)  
 action(void)  
 func(return)  
 [区别委托和事件](https://learn.microsoft.com/zh-cn/dotnet/csharp/distinguish-delegates-events)
 
-
 # 21
+
 ```csharp
 // GameInput (publisher)
 public event EventHandler OnInteractAction;
@@ -546,7 +612,7 @@ public event EventHandler OnInteractAction;
 playerInputActions.Player.Interact.performed += Interact_performed;
 
 private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj){
-	OnInteractAction?.Invoke(this, EventArgs.Empty);
+ OnInteractAction?.Invoke(this, EventArgs.Empty);
 }
 
 // Player (subscriber)
@@ -556,12 +622,15 @@ gameInput.OnInteractAction += GameInput_OnInteractAction;
 ```
 
 # 20
+
 ```
 raycastHit.transform.TryGetComponent(out ClearCounter clearCounter)
 ```
 
 # 19
+
 view tool
+
 ```
 left mouse: pan
 middle mouse: zoom
@@ -570,28 +639,33 @@ alt: fps
 ```
 
 # 18
+
 ```csharp
 Physics.Raycast(transform.position, moveDir, playerSize);
 Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight , playerRaduis, moveDir);
 ```
 
 # 17
+
 ```csharp
 transform.position += moveDir * Time.deltaTime * moveSpeed;
 ```
 
 # 16
+
 1. Package Manager -> Input Sytem
 2. Edit -> Project Setting -> Player -> Other Setting -> Active Input Handling -> Both
 3. Project -> Input Action
 4. Action Maps -> Player -> Actions Move -> Action Type: Value &Control Type: Vector2
 5. Add UP/Down/Left/Right Composite -> add listend key -> Save Assert
 6. PlayerInputActions -> Generate C# Class
+
 ```
 PlayerInputActions.scheme.binding.ReadValue<Vector2>();
 ```
 
 # 15
+
 cinemachine
 Virtual Camera
 Follow
@@ -599,13 +673,15 @@ Look At
 noise
 Body -> bind mode -> world space
 
-
 # 14
+
 Slerp 线性插值
 Lerp 球形插值
 
 # 13
+
 yield
+
 ```csharp
 var numbers = ProduceEvenNumbers(5);
 Console.WriteLine("Caller: about to iterate.");
@@ -639,10 +715,13 @@ IEnumerable<int> ProduceEvenNumbers(int upto)
 // Iterator: yielded 4
 // Iterator: end.
 ```
+
 如前面的示例所示，当开始对迭代器的结果进行迭代时，迭代器会一直执行，直到到达第一个 yield return 语句为止。 然后，迭代器的执行会暂停，调用方会获得第一个迭代值并处理该值。 在后续的每次迭代中，迭代器的执行都会在导致上一次挂起的 yield return 语句之后恢复，并继续执行，直到到达下一个 yield return 语句为止。 当控件到达迭代器或 yield break 语句的末尾时，迭代完成。
 
 # 12
+
 Coroutine
+
 ```csharp
 IEnumerator Fade()
 {
@@ -657,11 +736,14 @@ IEnumerator Fade()
 ```
 
 # 11
-Timd.deltaTime 
+
+Timd.deltaTime
 The interval in seconds from the last frame to the current one.
 
 # 10
+
 provent linecast hit own boxCollider.
+
 ```
 boxCollider.enabled = false;
 Physics.Linecast(start, end, blockingLayer);
@@ -669,47 +751,55 @@ boxCollider.enabled = true;
 ```
 
 # 9
+
 StartCorotine
 
 # 8
+
 Perference -> External Tools -> Regenerate project files
 
 # 7
+
 .sln include project
 .csproj include dll
 
 # 6
+
 [GameObject](https://docs.unity.cn/2023.2/Documentation/ScriptReference/GameObject.html)
 Base class for all entities in Unity Scenes.
 
-
 # 5
+
 C# GC
-https://learn.microsoft.com/zh-cn/dotnet/standard/garbage-collection/
+<https://learn.microsoft.com/zh-cn/dotnet/standard/garbage-collection/>
 
 # 4
+
 Singleton Pattern
+
 ```csharp
 class A:
-	public static B single;
-	public static B getSingle(){
-		if(single == null){
-			single = new B();
-		}
-		else{
-			return single;
-		}
-	}
+ public static B single;
+ public static B getSingle(){
+  if(single == null){
+   single = new B();
+  }
+  else{
+   return single;
+  }
+ }
 ```
 
-
 # 3
+
 [Ojbect](https://docs.unity.cn/2023.2/Documentation/ScriptReference/Object.html)
 
 Any public variable you make that derives from Object gets shown in the inspector as a drop target, allowing you to set the value from the GUI.
 
 # 2
+
 import assert from store
+
 ```
 Toolbar
 PackageManager
@@ -719,4 +809,5 @@ Import
 ```
 
 # 1
-(Toolbar, Hierarchy, Game, Scene, Overlays, Inspector, Project, Status bar)[https://docs.unity3d.com/2021.3/Documentation/Manual/UsingTheEditor.html]
+
+[Toolbar, Hierarchy, Game, Scene, Overlays, Inspector, Project, Status bar](https://docs.unity3d.com/2021.3/Documentation/Manual/UsingTheEditor.html)

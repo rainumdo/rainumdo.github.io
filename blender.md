@@ -1,6 +1,16 @@
+# 38
+
+alt + g (重置位移)  
+alt + r (重置旋转)  
+alt + s (重置缩放)  
+
+# 37
+
+切换模式 ctrl+tab
+
 # 36
 
-右键 set origin 
+右键 set origin
 
 # 35
 
@@ -9,6 +19,7 @@ L 选择相邻元素
 # 34
 
 轴向方向(Transform Orientation)  
+
 - Global
 - Local
 - Normals
@@ -18,6 +29,7 @@ L 选择相邻元素
 - Parent
 
 轴向位置(Transform Pivot Point)  
+
 - Bounding
 - 3D Cursor
 - Individual Origins
@@ -53,11 +65,9 @@ ctrl + a (可以选清空缩放数据)
 
 边模式 透视 桥接 = 挖洞
 
-
 # 28
 
 断开定点(V)
-
 
 # 27
 
@@ -88,10 +98,10 @@ File -> Default -> Load Factory Setting
 # 22
 
 Modifiers
+
 1. Add modifier
 2. Generate Boolean
 3. Apply
-
 
 # 21
 
@@ -106,6 +116,7 @@ make rope
 3. object -> convert -> mesh
 
 # 19
+
 视图菜单(~)
 
 # 18
@@ -128,6 +139,7 @@ opteration + direction
 # 14
 
 viewpoint shading(z)
+
 1. wireframe display(shift + z)
 2. Material display
 3. Rendered dispaly
@@ -147,7 +159,6 @@ Bool Tool(ctrl + shift + b)
 删除连线(ctrl + x) 不使用delete
 
 # 10
-
 
 knife(k)
 手工切割
@@ -222,12 +233,10 @@ Alt + Ctrl + Q(三视图)
 2. modeling 建模 编辑模型
 3. Sculpting 雕刻 模型雕刻 ZB
 4. UV Editing 模型UV展开 贴图
-5. Texture Paint 着色 材质编辑器 
+5. Texture Paint 着色 材质编辑器
 6. Shading
 7. Animation 动画
 8. Rendering 渲染 cg渲染 3D转2D
 9. Compositing 合成 图片后期处理
 10. Geometry Node 几何节点 参数化建模
 11. Scripting Python脚本
-
-
