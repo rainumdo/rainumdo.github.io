@@ -1,3 +1,17 @@
+# 99
+
+bluetooth
+
+```
+scan on
+devices
+pair <DEVICE_MAC_ADDRESS>
+connect <DEVICE_MAC_ADDRESS>
+trust <DEVICE_MAC_ADDRESS>
+
+sudo rfcomm connect hci0 98:D3:02:96:9A:BB
+```
+
 # 98
 
 `<leader>sk`, search for keymaps in nvim
