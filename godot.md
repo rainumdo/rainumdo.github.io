@@ -1,4 +1,19 @@
-# 42
+# 13
+
+```
+my-cool-project
+├── godot
+│   ├── project.godot
+│   └── my-extension.gdextension
+└── rust
+    ├── Cargo.toml
+    ├── src
+    └── target
+        └── debug
+            └── (lib)?my_extension.(so|dll|dylib)
+```
+
+# 12
 
 权限在引用生命周期结束时被返回
 
@@ -9,18 +24,18 @@ let z = *y; // x(r,w,o)
 x += z; // x(r,w,o) z(r)
 ```
 
-# 41
+# 11
 
 可变引用可以降级为只读引用
 
-# 40
+# 10
 
 可变引用提供对数据“唯一”且"非拥有"访问  
 不移动数据的情况下，可访问  
 可变引用 &mut  
 相当于常量指针 cosnt * 不移动 可以修改
 
-# 39
+# 9
 
 ```rust
 let mut v: Vec<i32> = vec![1,2,3]; //v(R,W,O)
@@ -29,7 +44,7 @@ v.push(r); //error v is borrowed by num
 println!("Third element is {*num}"); // immutable borrow
 ```
 
-# 38
+# 8
 
 RW(mut)O
 
