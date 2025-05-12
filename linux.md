@@ -1,3 +1,10 @@
+# 100
+
+```
+git checkout master 
+git checkout commit  file/dir
+```
+
 # 99
 
 bluetooth

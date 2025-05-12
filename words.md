@@ -1,6 +1,8 @@
 # words
 
 ```
+
+|| primitive
 baffle
 screw
 | derive
@@ -468,7 +470,6 @@ contour
 | proof
 | prominence
 | priority
-| primitive
 | presence
 | precedent
 | prayer
