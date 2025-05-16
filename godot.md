@@ -1,6 +1,6 @@
 # 17
 
-**#!\[outer_attribute\]** applies to the item immediately following it. Some examples of items are: a function, a module declaration, a constant, a structure, an enum.
+`#!\[outer_attribute\]` applies to the item immediately following it. Some examples of items are: a function, a module declaration, a constant, a structure, an enum.
 
 ```rust
 #[derive(Debug)]
@@ -10,7 +10,7 @@ struct Rectangle {
 }
 ```
 
-**#!\[inner_attribute\]** applies to the enclosing item (typically a module or a crate). In other words, this attribute is interpreted as applying to the entire scope in which it's placed.
+`#![inner_attribute]` applies to the enclosing item (typically a module or a crate). In other words, this attribute is interpreted as applying to the entire scope in which it's placed.
 
 ```rust
 #![allow(unused_variables)]
