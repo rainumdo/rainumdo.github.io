@@ -1,3 +1,9 @@
+# 40
+
+Data -> ShapeKeys  
+Basis  
+Key1  
+
 # 39
 
 subdivide(w)
