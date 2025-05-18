@@ -1,3 +1,16 @@
+# 21
+
+Option 代表可能为空可能有值的一种类型，本质上是一个枚举，有两种分别是 Some 和 None。Some 代表有值，None 则类似于 null，代表无值。
+
+# 20
+
+不可变引用可以重新分配，但是不能修改引用的值  
+可变引用可以修改引用的值，但不能重新分配
+
+# 19
+
+When doing assignments (let x = y) or passing function arguments by value (foo(x)), the ownership of the resources is transferred. In Rust-speak, this is known as a move. After moving resources, the previous owner can no longer be used. This avoids creating dangling pointers.
+
 # 18
 
 [steamdb](https://steamdb.info)
