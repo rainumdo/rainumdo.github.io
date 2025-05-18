@@ -1,3 +1,20 @@
+# 103
+
+```
+vi /var/log/apt/history.log
+apt list --installed
+```
+
+# 102
+
+```
+$ qemu-img create -f qcow2 win10.img 40G
+$ du -sh win10.img 
+196K    win10.img
+$ qemu-system-x86_64 -enable-kvm -m 4G -smp 2 -boot order=cd -hda win10.img -cdrom Windows.iso
+qemu-system-x86_64 -enable-kvm -m 4G -smp 2 -boot order=cd -hda win10.img -net nic,model=pcnet -net user
+```
+
 # 101
 
 install vim clip provider
