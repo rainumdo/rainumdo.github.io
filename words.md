@@ -1,6 +1,9 @@
 # words
 
 ```
+swirling
+elided
+overwhelm
 accomplish
 iltinerary
 || primitive
