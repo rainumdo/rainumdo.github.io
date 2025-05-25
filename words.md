@@ -1,6 +1,7 @@
 # words
 
 ```
+| allure
 swirling
 elided
 overwhelm
@@ -3137,7 +3138,6 @@ altru
 altrous
 alternatively
 alphabetical
-allure
 allot
 allocate
 alliance
