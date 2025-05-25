@@ -18,8 +18,8 @@ qemu-system-x86_64 -enable-kvm -m 4G -smp 2 -boot order=cd -hda win10.img -net n
 
 qemu-system-x86_64 \
     -enable-kvm \
-    -m 4G \
-    -smp 2 \
+    -m 6G \
+    -smp 6 \
     -boot order=cd \
     -hda win10.img \
     -device intel-hda \
