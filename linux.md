@@ -16,10 +16,14 @@ du -sh win10.img
 qemu-system-x86_64 -enable-kvm -m 4G -smp 2 -boot order=cd -hda win10.img -cdrom Windows.iso
 qemu-system-x86_64 -enable-kvm -m 4G -smp 2 -boot order=cd -hda win10.img -net nic,model=pcnet -net user
 
--device AC97,id=sound0,bus=pci.0,addr=0x6
--device AC97,id=sound0,bus=pci.0,audiodev=pa1
--device AC97,id=sound0,bus=pci.0,addr=0x1,audiodev=pa1
--device intel-hda -device hda-output,audiodev=pa1
+qemu-system-x86_64 \
+    -enable-kvm \
+    -m 4G \
+    -smp 2 \
+    -boot order=cd \
+    -hda win10.img \
+    -device intel-hda \
+    -device hda-micro
 ```
 
 # 101
