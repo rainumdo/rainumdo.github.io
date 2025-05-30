@@ -1,3 +1,7 @@
+# 18
+
+[win guest clipboard sharing](https://www.spice-space.org/download.html)
+
 # 17
 
 设置 -> 语言 -> 语言选项：(中文) -> 微软拼音 -> 常规 -> 兼容性(开)
