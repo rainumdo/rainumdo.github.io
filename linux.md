@@ -1,3 +1,8 @@
+# 104
+
+打开方式的目录
+`/usr/share/applications/`
+
 # 103
 
 ```
