@@ -1,3 +1,7 @@
+# 157
+
+草图->底色->混色->细节->明暗
+
 # 156
 
 The circles represent joints
