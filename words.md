@@ -1,6 +1,9 @@
 # words
 
 ```
+| proportion
+violation
+bound
 imitate
 infringe
 | heroine
@@ -1483,7 +1486,6 @@ prosecutor
 prosaic
 propriety
 proposition
-proportion
 propel
 propagation
 propagate

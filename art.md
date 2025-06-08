@@ -1,3 +1,22 @@
+# 156
+
+The circles represent joints
+
+1. Give shape to the overall body.
+2. At the same time, roughly give shape to the joints
+
+# 155
+
+The area from the neck to the waist is equal to about 1.5 heads.  
+The entire body is equal to about 6.5 heads.  
+The torso is 1.75 heads.  
+The arm and hand is equal three heads.  
+Leg equal three heads.
+
+# 154
+
+Make the length of human hands and heads the same size.
+
 # 153
 
 1. 3D art, blender
