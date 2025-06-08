@@ -1,3 +1,11 @@
+# 69
+
+sky box
+
+1. Window -> Rendering -> Lighting Settings
+2. Scene
+4. Skybox Material
+
 # 68
 
 meshrender + meshfilter

@@ -1,3 +1,7 @@
+# 22
+
+[Leaving Rust gamedev after 3 years](https://loglog.games/blog/leaving-rust-gamedev/)
+
 # 21
 
 Option 代表可能为空可能有值的一种类型，本质上是一个枚举，有两种分别是 Some 和 None。Some 代表有值，None 则类似于 null，代表无值。
