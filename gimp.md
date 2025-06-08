@@ -1,4 +1,9 @@
 
+# 7
+
+`paths-stroke-last-values`
+`select-stroke-last-values`
+
 # 6
 
 [Gradient](https://docs.gimp.org/2.10/en/gimp-tool-gradient.html)
