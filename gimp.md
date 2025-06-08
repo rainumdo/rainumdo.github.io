@@ -1,7 +1,7 @@
 
 # 7
 
-`paths-stroke-last-values`
+`paths-stroke-last-values`  
 `select-stroke-last-values`
 
 # 6
