@@ -1,6 +1,9 @@
 # words
 
 ```
+imitate
+infringe
+| heroine
 | allure
 swirling
 elided
@@ -2160,7 +2163,6 @@ high-end
 hierarchical
 hiatus
 hesitating
-heroine
 hermetic
 herein
 herald
