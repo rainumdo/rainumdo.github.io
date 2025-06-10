@@ -1,3 +1,13 @@
+# 105
+
+zotero
+
+```
+wget -qO- https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh | sudo bash
+sudo apt update
+sudo apt install zotero
+```
+
 # 104
 
 打开方式的目录
