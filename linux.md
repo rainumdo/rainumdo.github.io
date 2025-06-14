@@ -1,3 +1,7 @@
+# 107
+
+font dir `~/.local/share/fonts/`
+
 # 106
 
 [PPA](https://launchpad.net/ubuntu/+ppas)
@@ -27,7 +31,7 @@ apt list --installed
 # 102
 
 ```
-qemu-img create -f qcow2 win10.img 40G
+qemu-img create -f qcow2 win10.img 64G
 
 du -sh win10.img 
 196K    win10.img
