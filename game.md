@@ -1,5 +1,9 @@
 # 23
 
+[Making a Flappy Bird Game with Bevy & Rust in under 10 Minutes](https://www.youtube.com/watch?v=_C28kqin94c&ab_channel=BipedPotato)
+
+# 23
+
 [Unofficial Bevy Cheat Book](https://bevy-cheatbook.github.io/introduction.html)
 
 # 22
@@ -98,7 +102,7 @@ x += z; // x(r,w,o) z(r)
 
 # 10
 
-可变引用提供对数据“唯一”且"非拥有"访问  
+可变引用提供对数据“唯一”且""访问  
 不移动数据的情况下，可访问  
 可变引用 &mut  
 相当于常量指针 cosnt * 不移动 可以修改
