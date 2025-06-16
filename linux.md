@@ -1,3 +1,34 @@
+# 108
+
+fla
+
+```
+sudo apt install flatpak
+
+sudo apt install gnome-software-plugin-flatpak
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# export XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:/home/hopkit/.local/share/flatpak/exports/share"
+
+flatpak remote-modify flathub --url=https://mirrors.ustc.edu.cn/flathub
+
+flatpak remote-modify flathub --url=https://dl.flathub.org/repo
+
+flatpak list
+
+flatpak update
+
+flatpak install org.gimp.GIMP
+
+flatpak uninstall org.gimp.GIMP
+
+flatpak uninstall org.gimp.GIMP --delete-data
+
+
+
+```
+
 # 107
 
 font dir `~/.local/share/fonts/`
