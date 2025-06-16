@@ -1,6 +1,7 @@
 # words
 
 ```
+ellipse
 | proportion
 violation
 bound

@@ -1,3 +1,13 @@
+# 9
+
+- Rotate `Shift + R`
+- Scale `Shift + S`
+- Shear `Shift + H`
+- Flip `Shift + F`
+- Perspective `Shift + P`
+- 3D Transform `Shift + W`
+- Handle Transform `Shift + L`
+
 # 8
 
 Link to brush default
