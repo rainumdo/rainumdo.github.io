@@ -7,8 +7,9 @@ Drawing Heads
 3. cheeks(upper concave and lower convex)
 4. nose
 5. eyes
-7. ears
-6. mouth
+6. ears
+7. mouth
+8. hair
 
 # 158
 
