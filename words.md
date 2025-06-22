@@ -1,6 +1,8 @@
 # words
 
 ```
+skull
+| cheek
 ||| convex
 || concave
 ellipse
@@ -124,7 +126,6 @@ juxtaposing
 linocut
 clump
 collar
-cheek
 stance
 | protagonist
 cramp
