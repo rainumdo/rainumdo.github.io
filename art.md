@@ -1,3 +1,22 @@
+# 159
+
+Drawing Heads
+
+1. cross hair
+2. skull
+3. cheeks(upper concave and lower convex)
+4. nose
+5. eyes
+7. ears
+6. mouth
+
+# 158
+
+Sketch Joints and Full Bodies  
+
+1. Give shape to overall body.
+2. At the same time, roughly give shape to the joints.
+
 # 157
 
 草图->底色->混色->细节->明暗

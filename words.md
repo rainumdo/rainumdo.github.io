@@ -1,6 +1,8 @@
 # words
 
 ```
+||| convex
+|| concave
 ellipse
 | proportion
 violation
@@ -153,8 +155,6 @@ tint
 dull
 cyan
 crab
-| concave
-|| convex
 cushion 
 couch
 icing
