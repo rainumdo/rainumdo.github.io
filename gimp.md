@@ -4,6 +4,7 @@ Path Tool
 
 1. middle(1/2): symmetric
 2. both ends(<1/3)：s-curve
+3. \[1/3, 1/2\]: concave/convex
 
 # 9
 
