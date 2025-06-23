@@ -1,3 +1,14 @@
+# 26
+
+Blocking waiting for file lock on package cache
+
+```
+rm -rf ~/.cargo/.package-cache
+
+lsof | grep .package-cache
+kill -9 <PID>
+```
+
 # 25
 
 [Hexagonal Grids](https://www.redblobgames.com/grids/hexagons/)
