@@ -1,3 +1,7 @@
+# 25
+
+[Hexagonal Grids](https://www.redblobgames.com/grids/hexagons/)
+
 # 24
 
 [Installing Linux dependencies](https://github.com/bevyengine/bevy/blob/main/docs/linux_dependencies.md)

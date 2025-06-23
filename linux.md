@@ -1,6 +1,14 @@
+# 109
+
+log of file modification
+
+```
+git log -p filename
+```
+
 # 108
 
-fla
+flatpak
 
 ```
 sudo apt install flatpak
