@@ -1,3 +1,14 @@
+# 27
+
+```
+fn fill_vec(mut vec: Vec<i32>)
+vec本身可变
+
+fn fill_vec(vec: &mut Vec<i32>)
+vec绑定内容可变
+
+```
+
 # 26
 
 Blocking waiting for file lock on package cache
