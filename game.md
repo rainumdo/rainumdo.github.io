@@ -1,3 +1,9 @@
+# 28
+
+```
+cargo build --timings
+```
+
 # 27
 
 ```
