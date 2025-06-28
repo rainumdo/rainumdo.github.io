@@ -1,3 +1,15 @@
+# 42
+
+`shift + space` Toolbar
+
+# 41
+
+`v` 分离顶点  
+`D + xyz` 复制  
+`ctrl + b` 倒角  
+`A` 全选  
+`R` 重复之前的操作  
+
 # 40
 
 Data -> ShapeKeys  
