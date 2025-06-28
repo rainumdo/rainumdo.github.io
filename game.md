@@ -2,6 +2,7 @@
 
 ```
 cargo build --timings
+cargo tree -e feature -i <crate>
 ```
 
 # 27
