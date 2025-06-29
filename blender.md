@@ -1,3 +1,21 @@
+# 45
+
+`ctrl + b` 横向复制线  
+Modifiers -> Generate -> Array 多个复制
+
+# 45
+
+Edit->Preferences->Save & Load -> Save Versions = 0
+
+# 44
+
+`shift + space + 9` Add Cube
+
+# 43
+
+`alt + n` Normals -> flip face
+`shift +n` Recalculate Normals
+
 # 42
 
 `shift + space` Toolbar
