@@ -1,3 +1,14 @@
+# 29
+
+win install rust with china mirror
+
+```
+$ENV:RUSTUP_DIST_SERVER='https://mirrors.ustc.edu.cn/rust-static' 
+$ENV:RUSTUP_UPDATE_ROOT='https://mirrors.ustc.edu.cn/rust-static/rustup'
+
+.\rustup-init.exe
+```
+
 # 28
 
 ```
