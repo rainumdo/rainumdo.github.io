@@ -1,3 +1,13 @@
+# 47
+
+`decimate modifier` reduce faces
+`mirror modifier`
+
+# 46
+
+`h` hide
+`alt + h` unhide
+
 # 45
 
 `ctrl + b` 横向复制线  
