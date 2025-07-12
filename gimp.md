@@ -1,3 +1,9 @@
+# 11
+
+1. Rectangle Selection`R`
+2. Select Cut Float `shift + ctrl + L`
+3. Move`M`
+
 # 10
 
 Path Tool

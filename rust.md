@@ -1,3 +1,7 @@
+# 31
+
+[Blockchain in Rust](https://www.youtube.com/playlist?list=PLwnSaD6BDfXL0RiKT_5nOIdxTxZWpPtAv)
+
 # 30
 
 - `a : &T`: 引用不可变，且引用指向的内容不可修改。
