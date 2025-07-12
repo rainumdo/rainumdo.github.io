@@ -7,7 +7,7 @@
 * [jekyll](jekyll.md)
 * [linux](linux.md)
 * [music](music.md)
-* [rust](rust.md)
+* [game](game.md)
 * [unity](unity.md)
 * [windows](windows.md)
 * [words](words.md)
