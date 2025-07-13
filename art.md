@@ -1,3 +1,11 @@
+# 163
+
+- 2-Frame: not fancy but better than nothing most suitable for small sprites
+- 4-Frame: extra movement adds more life but can become noisy if the spirte is too small
+- 6-Frame: adding movement to the arms enhances the overall fluidity of the motion
+- 8-Frame: animating hair or flowing accessories adds more interest and energy
+- 8-Frame: not all idle cycles need to be bouncy and movement that adds life is fine
+
 # 162
 
 印象派风景画常用配色  
