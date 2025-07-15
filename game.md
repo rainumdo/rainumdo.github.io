@@ -1,3 +1,8 @@
+
+# 32
+
+[rustlings](https://rustlings.rust-lang.org/)
+
 # 31
 
 [Blockchain in Rust](https://www.youtube.com/playlist?list=PLwnSaD6BDfXL0RiKT_5nOIdxTxZWpPtAv)
