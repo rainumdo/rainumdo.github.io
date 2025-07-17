@@ -1,6 +1,8 @@
 # words
 
 ```
+| stitch
+grease
 bookshelf
 skull
 | cheek
@@ -1112,7 +1114,6 @@ strait
 stomach
 stoke
 stoic
-stitch
 stinky
 stink
 stingy
