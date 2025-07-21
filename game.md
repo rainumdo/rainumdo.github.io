@@ -1,4 +1,8 @@
 
+# 33
+
+The `+` operator can concatenate a `String` with `&str`
+
 # 32
 
 [rustlings](https://rustlings.rust-lang.org/)
