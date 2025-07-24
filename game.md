@@ -110,7 +110,7 @@ When doing assignments (let x = y) or passing function arguments by value (foo(x
 
 # 17
 
-`#!\[outer_attribute\]` applies to the item immediately following it. Some examples of items are: a function, a module declaration, a constant, a structure, an enum.
+`#![outer_attribute]` applies to the item immediately following it. Some examples of items are: a function, a module declaration, a constant, a structure, an enum.
 
 ```rust
 #[derive(Debug)]
