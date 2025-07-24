@@ -1,4 +1,17 @@
 
+# 36
+
+unit struct is just a tag.  
+
+# 35
+
+parameters of function is also declaration.  
+[mut](https://doc.rust-lang.org/std/keyword.mut.html)
+
+# 34
+
+deref coercion
+
 # 33
 
 The `+` operator can concatenate a `String` with `&str`
