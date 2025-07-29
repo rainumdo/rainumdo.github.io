@@ -1,6 +1,22 @@
 # words
 
 ```
+immersed
+ostensibly
+| guilt
+relay
+ebb
+piece
+futility
+friction
+boilerplate
+digress
+jank
+treadmill
+hedonic
+ascetic
+|| extrinsic
+stick
 | stitch
 grease
 bookshelf
@@ -597,7 +613,6 @@ contour
 | ferry
 | fend
 | factorization
-| extrinsic
 | extol
 | extinction
 | expenditure
@@ -2208,7 +2223,6 @@ haggard
 guru
 gull
 guilty
-guilt
 guild
 guardrail
 guardian
