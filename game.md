@@ -1,6 +1,6 @@
 # 37
 
-[Simple Bevy Tutorial](https://github.com/fogarecious/bevy_tutorial)
+`MeshPickingPlugin`, `observe`
 
 # 36
 
