@@ -1,3 +1,26 @@
+# 39
+
+tests with panic
+
+```
+#[should_panic = "Rectangle width and height must be positive"]
+```
+
+# 38
+
+generics and traits
+
+```
+impl<T: std::fmt::Display> ReportCard<T> {
+    fn print(&self) -> String {
+        format!(
+            "{} ({}) - achieved a grade of {}",
+            &self.student_name, &self.student_age, &self.grade,
+        )
+    }
+}
+```
+
 # 37
 
 `MeshPickingPlugin`, `observe`
