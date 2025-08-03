@@ -1,3 +1,18 @@
+# 41
+
+[bevy](https://docs.rs/bevy/latest/bevy/index.html)
+
+# 40
+
+trigger
+
+```
+fn attack_hits(trigger: Trigger<Attack>, name: Query<&Name>) {
+    if let Ok(name) = name.get(trigger.target()) {
+        info!("Attack hit {}", name);
+    }
+```
+
 # 39
 
 tests with panic
