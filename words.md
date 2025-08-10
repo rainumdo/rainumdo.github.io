@@ -1,6 +1,8 @@
 # words
 
 ```
+| implicitly
+||||| explicitly
 gruesome
 traversal
 enoki
@@ -206,7 +208,6 @@ contour
 |||| legitimate
 |||| infrastructure
 |||| fiscal
-|||| explicitly
 |||| ensemble
 |||| empirical
 |||| discrete
@@ -2107,7 +2108,6 @@ imprisoned
 impressive
 impoverish
 imply
-implicitly
 implicit
 implicative
 implication

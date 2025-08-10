@@ -1,6 +1,20 @@
+# 42
+
+When Ownership Moves (Transfers)
+
+1. Assignment: `let x = y;` (where y is non-Copy type)
+2. Function calls: Passing non-Copy values to functions
+3. Returns: Returning values from functions
+4. Collections: Inserting/removing from `Vec`, `HashMap`, etc.
+5. Structs/Enums: Assigning to fields or variants
+6. Pattern matching: Destructuring with `let` or `match`
+7. Closures: Using move keyword or capturing values
+8. Operators: Some overloaded operators (like `+` for Strings)
+9. Loops: Using `into_iter()` explicitly or implicitly
+
 # 41
 
-[bevy](https://docs.rs/bevy/latest/bevy/index.html)
+[docs.rs](https://docs.rs)
 
 # 40
 
