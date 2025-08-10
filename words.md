@@ -1,6 +1,8 @@
 # words
 
 ```
+gruesome
+traversal
 enoki
 heisenberg
 immersed
