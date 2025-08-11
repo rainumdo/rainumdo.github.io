@@ -1,3 +1,11 @@
+# 44
+
+Each bundle represents a static set of `Component` types. Currently, bundles can only contain one of each `Component`, and will panic once initialized if this is not met.
+
+# 43
+
+Handles act as abstract "references" to assets, whose data are stored in the `Assets<A>` resources, avoiding the need to store multiple copies of the same data.
+
 # 42
 
 When Ownership Moves (Transfers)
