@@ -1,3 +1,8 @@
+# 45
+
+[Option](https://doc.rust-lang.org/std/option/) => Some, None  
+[Result](https://doc.rust-lang.org/std/result/index.html) => Ok, Err -> if/while let
+
 # 44
 
 Each bundle represents a static set of `Component` types. Currently, bundles can only contain one of each `Component`, and will panic once initialized if this is not met.
