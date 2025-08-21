@@ -1,3 +1,11 @@
+# 47
+
+[bevy io for wgsl](https://github.com/bevyengine/bevy/blob/main/crates/bevy_pbr/src/render/mesh.wgsl)
+
+# 46
+
+[Shadertoy](https://www.shadertoy.com/)
+
 # 45
 
 [Option](https://doc.rust-lang.org/std/option/) => Some, None  
