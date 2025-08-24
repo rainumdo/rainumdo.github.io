@@ -1,3 +1,7 @@
+# 48
+
+[WebGPU Live Demo Editor](https://www.wgsl.dev/editor)
+
 # 47
 
 [bevy io for wgsl](https://github.com/bevyengine/bevy/blob/main/crates/bevy_pbr/src/render/mesh.wgsl)
