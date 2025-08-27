@@ -1,3 +1,15 @@
+# 19
+
+```
+Get-ChildItem env: // 查看所有环境变量
+$env:JAVA_HOME // 查看单个环境变量
+$env:PATH // 查看所有PATH, 紧凑拼接展示
+$env:PATH -split ';' // 查看所有PATH, 一行一个
+
+$env:RUSTUP_DIST_SERVER="https://mirrors.aliyun.com/rustup"
+$env:RUSTUP_UPDATE_ROOT="https://mirrors.aliyun.com/rustup"
+```
+
 # 18
 
 [win guest clipboard sharing](https://www.spice-space.org/download.html)
