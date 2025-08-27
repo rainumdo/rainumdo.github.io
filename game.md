@@ -1,3 +1,11 @@
+# 49
+
+error: Unknown binary 'rust-analyzer' in official toolchain 'stable-x86_64-unknown-linux-gnu'.
+
+```
+rustup component add rust-analyzer
+```
+
 # 48
 
 [WebGPU Live Demo Editor](https://www.wgsl.dev/editor)

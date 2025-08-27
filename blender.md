@@ -1,3 +1,7 @@
+# 49
+
+render -> film -> Transparent
+
 # 48
 
 [2D Blender Grease Pencil Basics: Start Animating In 10 Minutes](https://www.youtube.com/watch?v=ZkqZRe9IXQ8&ab_channel=MicahBuzanANIMATION)
