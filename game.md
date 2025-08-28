@@ -1,3 +1,34 @@
+# 50
+
+ListNode
+
+```
+#[derive(Debug)]
+pub struct ListNode {
+    pub val: i32,
+    pub next: Option<Box<ListNode>>,
+}
+impl ListNode {
+    pub fn new(val: i32) -> Self {
+        ListNode { val, next: None }
+    }
+}
+
+pub fn main() {
+    let mut node3 = ListNode::new(3);
+    node3.next = None;
+    let mut node2 = ListNode::new(2);
+    node2.next = Some(Box::new(node3));
+    let mut node1 = ListNode::new(1);
+    node1.next = Some(Box::new(node2));
+    let mut cur = Some(Box::new(node1));
+    while let Some(n) = cur {
+        println!("{:?}", &n);
+        cur = n.next;
+    }
+}
+```
+
 # 49
 
 error: Unknown binary 'rust-analyzer' in official toolchain 'stable-x86_64-unknown-linux-gnu'.
