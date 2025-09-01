@@ -1,3 +1,7 @@
+# 50
+
+sculpt mode -> grap
+
 # 49
 
 render -> film -> Transparent

@@ -1,6 +1,7 @@
 # words
 
 ```
+|| tangent
 |||||| tweak
 |||||| scenario
 |||||| ramp 
@@ -276,7 +277,6 @@
 | territory
 | tentacle
 | temporal
-| tangent
 | syntax
 | synonymy
 | syndrome
