@@ -1,6 +1,7 @@
 # words
 
 ```
+|| monk
 || tangent
 |||||| tweak
 |||||| scenario
@@ -400,7 +401,6 @@
 | motor
 | mortality
 | morbid
-| monk
 | momentum
 | molecular
 | miscellaneous
