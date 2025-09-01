@@ -1,3 +1,37 @@
+# 52
+
+```
+App::new()
+    .add_plugins(
+        DefaultPlugins.set(WindowPlugin {
+            primary_window: Some(Window {
+                title: "I am a window!".into(),
+                name: Some("bevy.app".into()),
+                resolution: (500., 300.).into(),
+                present_mode: bevy::window::PresentMode::AutoVsync,
+                fit_canvas_to_parent: true,
+                window_theme: Some(WindowTheme::Dark),
+                enabled_buttons: EnabledButtons {
+                    maximize: false,
+                    ..default()
+                },
+                // visible: false,
+                ..default()
+            }),
+            ..default()
+        })
+    );
+```
+
+# 51
+
+replace .0
+
+```
+#[derive(Component, Dered, DerefMut)]
+struct AnimationTimer(Timer);
+```
+
 # 50
 
 ListNode
