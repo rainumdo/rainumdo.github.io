@@ -1,3 +1,8 @@
+# 53
+
+- A type is `Send` if it is safe to send it to another thread.
+- A type is `Sync` if it is safe to share between threads (T is Sync if and only if &T is Send).
+
 # 52
 
 ```
