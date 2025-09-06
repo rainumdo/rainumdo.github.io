@@ -1,3 +1,19 @@
+# 55
+
+smooth follow
+
+```
+following.translation.smooth_nudge(&target.translation, decay_rate, delta_time);
+```
+
+# 54
+
+despawn
+
+```
+commands.entity(trigger.target()).despawn() // also despawn the observer
+```
+
 # 53
 
 - A type is `Send` if it is safe to send it to another thread.
