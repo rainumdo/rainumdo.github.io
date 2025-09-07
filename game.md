@@ -1,3 +1,16 @@
+# 56
+
+```
+Node{
+    pub align_items: AlignItems, // single line, vertical
+    pub justify_items: JustifyItems, // single line, horizontal
+    pub align_self: AlignSelf, // work on child
+    pub justify_self: JustifySelf, // work on child
+    pub align_content: AlignContent, // mult line, vertical
+    pub justify_content: JustifyContent, // mult line, horizontal
+}
+```
+
 # 55
 
 smooth follow
