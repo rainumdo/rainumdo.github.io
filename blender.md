@@ -1,3 +1,15 @@
+# 53
+
+Shift+D duplicate frame
+
+# 52
+
+material properties works with stroke
+
+# 51
+
+object mode -> add grease pencil
+
 # 50
 
 sculpt mode -> grap
