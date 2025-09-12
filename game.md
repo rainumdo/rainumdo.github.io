@@ -1,6 +1,12 @@
 # 56
 
 ```
+#![allow(clippy::collapsible_if)]
+```
+
+# 56
+
+```
 Node{
     pub align_items: AlignItems, // single line, vertical
     pub justify_items: JustifyItems, // single line, horizontal
