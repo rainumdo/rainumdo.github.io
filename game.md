@@ -1,3 +1,40 @@
+# 58
+
+-> impl Bundle
+
+```
+fn create_button() -> impl Bundle {
+    (
+        Button,
+        Node {
+            width: Val::Px(150.0),
+            height: Val::Px(65.0),
+            border: UiRect::all(Val::Px(5.0)),
+            // horizontally center child text
+            justify_content: JustifyContent::Center,
+            // vertically center child text
+            align_items: AlignItems::Center,
+            ..default()
+        },
+        BorderColor(Color::BLACK),
+        BorderRadius::MAX,
+        BackgroundColor(Color::srgb(0.15, 0.15, 0.15)),
+    )
+}
+```
+
+# 57
+
+Button has Interaction.
+
+```
+/// Marker struct for buttons
+6#[derive(Component, Debug, Default, Clone, Copy, PartialEq, Eq, Reflect)]
+7#[reflect(Component, Default, Debug, PartialEq, Clone)]
+8#[require(Node, FocusPolicy::Block, Interaction)]
+9pub struct Button;
+```
+
 # 56
 
 ```
