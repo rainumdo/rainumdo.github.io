@@ -1,3 +1,14 @@
+# 59
+
+Text has Node
+
+```
+#[derive(Component, Debug, Default, Clone, Deref, DerefMut, Reflect, PartialEq)]
+#[reflect(Component, Default, Debug, PartialEq, Clone)]
+#[require(Node, TextLayout, TextFont, TextColor, TextNodeFlags, ContentSize)]
+pub struct Text(pub String);
+```
+
 # 58
 
 -> impl Bundle

@@ -1,10 +1,29 @@
+# 166
+
+从侧面观察,眼眶呈三角形,眼球部分凸出,只能看到半个面。
+
+# 165
+
+从3/4侧面角度观察,眼睛产生了近大远小的透视变化,瞳孔和虹膜的形状由圆形变成了椭圆形。
+
+# 164
+
+正面眼睛的画法
+
+1. 先绘制出上眼睑、下眼睑、眼球和眉毛的轮廓。
+2. 加深上眼睑的宽度、使其于下眼睑有明显区别。
+3. 绘制出双眼皮和睫毛，睫毛要简化处理。
+4. 绘制出瞳孔、高光和虹膜上阴影形状。
+5. 为瞳孔和虹膜上的阴影上色。留白的局部为高光。
+6. 为虹膜上色，完成绘制。
+
 # 163
 
 - 2-Frame: not fancy but better than nothing most suitable for small sprites
 - 4-Frame: extra movement adds more life but can become noisy if the spirte is too small
 - 6-Frame: adding movement to the arms enhances the overall fluidity of the motion
 - 8-Frame: animating hair or flowing accessories adds more interest and energy
-- 8-Frame: not all idle cycles need to be bouncy and movement that adds life is fine
+- 8-Frame
 
 # 162
 
