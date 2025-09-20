@@ -1,3 +1,13 @@
+# 55
+
+eyes
+
+1. upper eyelid with eyelashes, filled curves
+2. lower eyelid with eyelashes, filled curves
+3. iris and pupil, circle, iris 3/5, pupil 1/3
+4. eyebrow, 2 and 3
+5. light spot, 1 big and 2 small
+
 # 54
 
 draw brow with just filled two curves with any stroke
