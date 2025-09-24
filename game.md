@@ -1,3 +1,27 @@
+# 61
+
+FileDragAndDrop
+
+```
+fn file_drag_and_drop_systems(mut event_reader: EventReader<FileDragAndDrop>) {
+    for event in event_reader.read() {
+        let file_path = match event {
+            FileDragAndDrop::HoveredFile { window, path_buf } => Some(path_buf),
+            FileDragAndDrop::DroppedFile { window, path_buf } => Some(path_buf),
+            FileDragAndDrop::HoveredFileCanceled { window } => None,
+        };
+
+        if let Some(path) = file_path {
+            dbg!(path);
+        }
+    }
+}
+```
+
+# 60
+
+[bevy game development](https://taintedcoders.com/)
+
 # 59
 
 Text has Node
