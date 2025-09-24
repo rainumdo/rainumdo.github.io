@@ -1,3 +1,25 @@
+# 62
+
+`EventReader<KeyboardInput>` and `Res<ButtonInput<KeyCode>>`
+
+```
+/// Track keyboard inputs — useful for debugging or keybinding tools
+fn log_keyboard_input(mut keyboard_events: EventReader<KeyboardInput>) {
+    for event in keyboard_events.read() {
+        println!(
+            "Key pressed: {:?}, logical key: {:?}",
+            event.key_code, event.logical_key
+        );
+    }
+}
+// or
+fn jump_input_system(input: Res<ButtonInput<KeyCode>>) {
+    if input.just_pressed(KeyCode::Space) {
+        info!("Jump!");
+    }
+}
+```
+
 # 61
 
 FileDragAndDrop
