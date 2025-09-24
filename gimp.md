@@ -1,3 +1,10 @@
+# 13
+
+color to transparent
+
+1. layer -> transparency -> add alpha channel
+2. layer -> transparency -> color to alpha
+
 # 12
 
 Colors -> Colors Balance
