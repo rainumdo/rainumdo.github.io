@@ -3,6 +3,7 @@
 * [blender](blender.md)
 * [comfyui](comfyui.md)
 * [gimp](gimp.md)
+* [krpano](/krpano.md)
 * [hugo](hugo.md)
 * [jekyll](jekyll.md)
 * [linux](linux.md)
