@@ -1,3 +1,48 @@
+# 63
+
+Assets, Resource Usage
+
+```
+// assets.rs
+#[derive(Debug, Resource)]
+pub struct AudioAssets {
+    pub laser_trigger: Handle<AudioSource>,
+    pub ship_explosion: Handle<AudioSource>,
+    pub ship_contact: Handle<AudioSource>,
+    pub asteroid_explosion: Handle<AudioSource>,
+}
+
+pub struct AssetsPlugin;
+
+impl Plugin for AssetsPlugin {
+    fn build(&self, app: &mut App) {
+        app.add_systems(OnEnter(AppState::Setup), setup);
+    }
+}
+
+fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
+    commands.insert_resource(AudioAssets {
+        laser_trigger: asset_server.load("sfx_laser1.ogg"),
+        ship_explosion: asset_server.load("Explosion_ship.ogg"),
+        ship_contact: asset_server.load("Explosion.ogg"),
+        asteroid_explosion: asset_server.load("Explosion.ogg"),
+    });
+}
+```
+
+```
+
+// explosion.rs
+fn catch_explosion_event(
+    mut commands: Commands,
+    mut event_reader: EventReader<SpawnExplosionEvent>,
+    handles: Res<SpriteAssets>,
+    audios: Res<AudioAssets>,
+) {
+    auidos.ship_explosion.clone()
+}
+```
+
 # 62
 
 `EventReader<KeyboardInput>` and `Res<ButtonInput<KeyCode>>`
