@@ -21,12 +21,21 @@ impl Plugin for AssetsPlugin {
 }
 
 fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
+}
+
+fn setup(
+    mut commands: Commands,
+    asset_server: ResMut<AssetServer>,
+    mut state: ResMut<NextState<GameState>>,
+) {
     commands.insert_resource(AudioAssets {
         laser_trigger: asset_server.load("sfx_laser1.ogg"),
         ship_explosion: asset_server.load("Explosion_ship.ogg"),
         ship_contact: asset_server.load("Explosion.ogg"),
         asteroid_explosion: asset_server.load("Explosion.ogg"),
     });
+
+    state.set(GameState::Menu);
 }
 ```
 
