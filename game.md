@@ -1,3 +1,16 @@
+# 64
+
+Events vs Messages
+
+In previous versions of Bevy, the Event trait was used for both "observable events" (handled with Observer) and "buffered events" (handled with EventReader). This made some sense, as both concepts could be considered "events" in their own right. But they are also fundamentally very different things functionally (see this PR description for full rationale).
+
+In Bevy 0.17, Event is now exclusively the name/trait for the concept of something that is "triggered" and "observed". Message is the name / trait for something that is "buffered": it is "written" via a MessageWriter and "read" via a MessageReader.
+
+It is still possible to support both contexts by implementing both traits, but we expect that to be significantly less common than just choosing one.
+
+```
+```
+
 # 63
 
 Assets, Resource Usage
