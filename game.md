@@ -1,3 +1,52 @@
+
+# 65
+
+`cargo add avian2d`
+
+```
+use avian2d::{PhysicsPlugins, math::Vector, prelude::*};
+use bevy::prelude::*;
+
+pub fn main() {
+    App::new()
+        .add_plugins(DefaultPlugins)
+        .add_plugins(PhysicsPlugins)
+        .add_plugins(PhysicsDebugPlugin)
+        .insert_resource(Gravity(Vector::NEG_Y * 9.81 * 100.))
+        .add_systems(Startup, setup)
+        .add_systems(Update, log_envets)
+        .run();
+}
+
+fn setup(mut commands: Commands) {
+    // floor
+    commands.spawn((
+        RigidBody::Static,
+        Collider::rectangle(500., 50.),
+        Transform::from_xyz(0., -200., 0.),
+    ));
+
+    // ball
+    commands.spawn((
+        RigidBody::Dynamic,
+        Collider::circle(100.),
+        Transform::from_xyz(0., 200., 0.),
+        CollisionEventsEnabled,
+    ));
+
+    commands.spawn(Camera2d);
+}
+
+fn log_envets(mut started: MessageReader<CollisionStart>, mut ended: MessageReader<CollisionEnd>) {
+    for event in started.read() {
+        println!("CollisionStart: {event:?}");
+    }
+    for event in ended.read() {
+        println!("CollisionEnd: {event:?}");
+    }
+}
+```
+
 # 64
 
 Events vs Messages
