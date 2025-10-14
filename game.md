@@ -10,7 +10,7 @@ use bevy::prelude::*;
 pub fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
-        .add_plugins(PhysicsPlugins)
+        .add_plugins(PhysicsPlugins::default())
         .add_plugins(PhysicsDebugPlugin)
         .insert_resource(Gravity(Vector::NEG_Y * 9.81 * 100.))
         .add_systems(Startup, setup)
@@ -57,9 +57,6 @@ In Bevy 0.17, Event is now exclusively the name/trait for the concept of somethi
 
 It is still possible to support both contexts by implementing both traits, but we expect that to be significantly less common than just choosing one.
 
-```
-```
-
 # 63
 
 Assets, Resource Usage
@@ -102,7 +99,6 @@ fn setup(
 ```
 
 ```
-
 // explosion.rs
 fn catch_explosion_event(
     mut commands: Commands,
