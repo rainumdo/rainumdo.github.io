@@ -1,3 +1,10 @@
+# 67
+
+[shadplay](https://github.com/alphastrata/shadplay/)
+
+# 66
+
+[WGSL Function Reference](https://webgpufundamentals.org/webgpu/lessons/webgpu-wgsl-function-reference.html)
 
 # 65
 
