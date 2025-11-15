@@ -1,3 +1,21 @@
+# 59
+
+edit mode -> grease pencil -> interpolate sequence
+
+# 58
+
+modifier -> deform -> noise
+
+# 57
+
+shadow
+
+layer -> masks -> opacity
+
+# 56
+
+[Crash Course: 2D Grease Pencil Animation in Blender](https://www.youtube.com/watch?v=sA1aeen8UP4)
+
 # 55
 
 eyes
