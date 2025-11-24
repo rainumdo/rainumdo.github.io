@@ -1,3 +1,7 @@
+# 199
+
+walk = contact + down + passing + up
+
 # 198
 
 动画设计的原理
