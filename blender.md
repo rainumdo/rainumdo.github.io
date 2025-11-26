@@ -1,3 +1,7 @@
+# 60
+
+view->view regions->render region
+
 # 59
 
 edit mode -> grease pencil -> interpolate sequence
