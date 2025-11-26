@@ -1,3 +1,7 @@
+# 201
+
+To simplify matters a correct perspective framework should first be drawn, then the details constructed over this form.
+
 # 200
 
 Advanced Animation: Learn How to Draw Animated Cartoons
