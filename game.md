@@ -12,7 +12,7 @@ pub fn main() {
         .add_plugins(EguiPlugin::default())
         .add_plugins(WorldInspectorPlugin::default())
         .add_systems(Startup, setup)
-        .add_systems(PreUpdate, add_animation_graph)
+        .add_systems(First, add_animation_graph)
         .add_systems(Update, toggle_animation)
         .run();
 }
