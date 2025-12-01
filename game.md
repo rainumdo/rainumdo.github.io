@@ -1,3 +1,7 @@
+# 69
+
+[sketchfab](https://sketchfab.com)
+
 # 68
 
 法线贴图的本质  
