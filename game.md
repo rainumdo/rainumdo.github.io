@@ -1,5 +1,97 @@
 # 69
 
+3D Animation
+
+```rust
+use bevy::{light::CascadeShadowConfigBuilder, prelude::*};
+use bevy_inspector_egui::{bevy_egui::EguiPlugin, quick::WorldInspectorPlugin};
+
+pub fn main() {
+    App::new()
+        .add_plugins(DefaultPlugins)
+        .add_plugins(EguiPlugin::default())
+        .add_plugins(WorldInspectorPlugin::default())
+        .add_systems(Startup, setup)
+        .add_systems(PreUpdate, add_animation_graph)
+        .add_systems(Update, toggle_animation)
+        .run();
+}
+
+const GLTF_PATH: &str = "gltf/violet_dimension_breaker_aov.glb";
+
+fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
+    commands.spawn((
+        Camera3d::default(),
+        Transform::from_xyz(0.0, 0.0, 10.).looking_at(Vec3::ZERO, Vec3::Y),
+    ));
+
+    commands.spawn((
+        DirectionalLight {
+            shadows_enabled: true,
+            ..default()
+        },
+        CascadeShadowConfigBuilder {
+            num_cascades: 1,
+            maximum_distance: 1.6,
+            ..default()
+        }
+        .build(),
+    ));
+
+    let (graph, nodes) = AnimationGraph::from_clips([
+        asset_server.load(GltfAssetLabel::Animation(0).from_asset(GLTF_PATH)),
+        asset_server.load(GltfAssetLabel::Animation(1).from_asset(GLTF_PATH)),
+    ]);
+
+    commands.insert_resource(Animations {
+        graph_handle: asset_server.add(graph),
+        nodes,
+    });
+
+    commands.spawn((
+        SceneRoot(asset_server.load(GltfAssetLabel::Scene(0).from_asset(GLTF_PATH))),
+        Transform::from_xyz(0., -2.5, 0.),
+    ));
+}
+
+#[derive(Resource)]
+struct Animations {
+    graph_handle: Handle<AnimationGraph>,
+    nodes: Vec<AnimationNodeIndex>,
+}
+
+fn add_animation_graph(
+    mut commands: Commands,
+    entities: Query<Entity, With<AnimationPlayer>>,
+    animations: Res<Animations>,
+) {
+    for entity in entities {
+        commands
+            .entity(entity)
+            .insert(AnimationGraphHandle(animations.graph_handle.clone()));
+    }
+}
+
+fn toggle_animation(
+    keyboard: Res<ButtonInput<KeyCode>>,
+    players: Query<&mut AnimationPlayer>,
+    animations: Res<Animations>,
+) {
+    for mut player in players {
+        if keyboard.just_pressed(KeyCode::Digit1) {
+            player.stop_all();
+            player.play(animations.nodes[0]);
+        } else if keyboard.just_pressed(KeyCode::Digit2) {
+            player.stop_all();
+            player.play(animations.nodes[1]);
+        }
+    }
+}
+
+```
+
+# 69
+
 [sketchfab](https://sketchfab.com)
 
 # 68
