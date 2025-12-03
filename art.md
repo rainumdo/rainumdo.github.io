@@ -1,3 +1,12 @@
+# 204
+
+1. Draw in "Line of Action" to establish general stance of figure.
+2. Rounded masses for head and body are put in.
+3. perspective lines around these masses are put in to establish front, side tilt etc. of body and head.
+4. Now arms, legs and eyes are constructed or "anchored on" in their definite position to perspective lines.
+5. Details are now fitted in or hinged into their position.
+6. Character is cleaned up around these construction lines.
+
 # 203
 
 perspective 3/4 face eyes
