@@ -1,3 +1,30 @@
+# 71
+
+1. window.cursor_position
+2. camera.viewport_to_world_2d
+
+```
+fn draw_cursor(
+    camera_query: Single<(&Camera, &GlobalTransform)>,
+    window: Single<&Window>,
+    mut gizmos: Gizmos,
+) {
+    let (camera, camera_transform) = *camera_query;
+
+    if let Some(cursor_position) = window.cursor_position()
+        // Calculate a world position based on the cursor's position.
+        && let Ok(world_pos) = camera.viewport_to_world_2d(camera_transform, cursor_position)
+        // To test Camera::world_to_viewport, convert result back to viewport space and then back to world space.
+        && let Ok(viewport_check) = camera.world_to_viewport(camera_transform, world_pos.extend(0.0))
+        && let Ok(world_check) = camera.viewport_to_world_2d(camera_transform, viewport_check.xy())
+    {
+        gizmos.circle_2d(world_pos, 10., WHITE);
+        // Should be the same as world_pos
+        gizmos.circle_2d(world_check, 8., RED);
+    }
+}
+```
+
 # 70
 
 1. init_resource
