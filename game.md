@@ -1,3 +1,92 @@
+# 70
+
+1. init_resource
+2. from_world
+
+```
+use bevy::prelude::*;
+use bevy_ecs_tilemap::prelude::*;
+use rand::{rng, seq::IndexedRandom};
+
+pub fn main() {
+    App::new()
+        .add_plugins(DefaultPlugins)
+        .add_plugins(TilemapPlugin)
+        .init_resource::<TileHandleIos>()
+        .add_systems(Startup, spawn_tilemap)
+        .run();
+}
+
+fn spawn_tilemap(mut commands: Commands, tile_handle: Res<TileHandleIos>) {
+    commands.spawn(Camera2d);
+
+    let map_size = TilemapSize {
+        x: MAP_SIDE_LENGTH_X,
+        y: MAP_SIDE_LENGTH_Y,
+    };
+
+    let mut tile_storage = TileStorage::empty(map_size);
+    let tilemap_entity = commands.spawn_empty().id();
+    let tilemap_id = TilemapId(tilemap_entity);
+
+    fill_tilemap(
+        TileTextureIndex(0),
+        map_size,
+        tilemap_id,
+        &mut commands,
+        &mut tile_storage,
+    );
+
+    let mut rng = rng();
+    let colors: Vec<Color> = vec![
+        color("FFBE0B"),
+        color("FB5607"),
+        color("FF006E"),
+        color("8338EC"),
+        color("3A86FF"),
+    ];
+    for tile_id in tile_storage.iter().flatten() {
+        commands
+            .entity(*tile_id)
+            .insert(TileColor(*colors.choose(&mut rng).unwrap()));
+    }
+
+    let tile_size = TILE_SIZE_ISO;
+    let grid_size = GRID_SIZE_ISO;
+    let map_type = TilemapType::Isometric(IsoCoordSystem::Diamond);
+
+    commands.entity(tilemap_entity).insert(TilemapBundle {
+        grid_size,
+        size: map_size,
+        storage: tile_storage,
+        texture: TilemapTexture::Single(tile_handle.clone()),
+        tile_size,
+        map_type,
+        anchor: TilemapAnchor::Center,
+        ..Default::default()
+    });
+}
+
+#[derive(Deref, Resource)]
+struct TileHandleIos(Handle<Image>);
+
+impl FromWorld for TileHandleIos {
+    fn from_world(world: &mut World) -> Self {
+        let asset_server = world.resource::<AssetServer>();
+        Self(asset_server.load("bevy_ecs_tilemap/bw-tile-iso.png"))
+    }
+}
+
+const MAP_SIDE_LENGTH_X: u32 = 10;
+const MAP_SIDE_LENGTH_Y: u32 = 10;
+const TILE_SIZE_ISO: TilemapTileSize = TilemapTileSize { x: 100.0, y: 50.0 };
+const GRID_SIZE_ISO: TilemapGridSize = TilemapGridSize { x: 100.0, y: 50.0 };
+
+fn color(s: &str) -> Color {
+    Srgba::hex(s).expect("hex color").into()
+}
+```
+
 # 69
 
 3D Animation
