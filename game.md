@@ -1,3 +1,12 @@
+# 72
+
+[align_content](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-content)  
+[align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-items)  
+[justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/justify-content)  
+[justify-items](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/justify-items)  
+content: multiple line as a whole  
+items: flexbox => cross axis, gridbox => block axis  
+
 # 71
 
 1. window.cursor_position
