@@ -1,3 +1,9 @@
+# 61
+
+1. Physics -> Fluid -> Type: Flow -> Flow Type: Liquid -> Flow Behavior: Geometry
+2. Physics -> Fluid -> Type: Domain -> Resolution Divisions: 64
+   Mesh -> Type: All -> Bake All
+
 # 60
 
 view->view regions->render region
