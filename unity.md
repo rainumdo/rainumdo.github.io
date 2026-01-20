@@ -1,3 +1,10 @@
+# 70
+
+PlayableDirector
+
+1. Window -> Squencing -> Timeline
+2. Animation Track -> Add From Animation Clip
+
 # 69
 
 sky box
