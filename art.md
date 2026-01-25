@@ -1,3 +1,14 @@
+# 205
+
+animation
+
+1. speed
+2. spacing & acceleration
+3. squash & stretch
+4. anticipation
+5. overshoot
+6. arcs
+
 # 204
 
 1. Draw in "Line of Action" to establish general stance of figure.
