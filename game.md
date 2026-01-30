@@ -1,3 +1,76 @@
+# 76
+
+Asset Loading Demo
+
+```rust
+#[derive(Resource, Asset, Clone, Reflect)]
+#[reflect(Resource)]
+struct ActorAssets {
+    // This #[dependency] attribute marks the field as a dependency of the Asset.
+    // This means that it will not finish loading until the labeled asset is also loaded.
+    #[dependency]
+    player: Handle<Image>,
+    #[dependency]
+    enemies: Vec<Handle<Image>>,
+}
+
+impl FromWorld for ActorAssets {
+    fn from_world(world: &mut World) -> Self {
+        let assets = world.resource::<AssetServer>();
+        Self {
+            player: assets.load("images/player.png"),
+            enemies: vec![
+                assets.load("images/enemy1.png"),
+                assets.load("images/enemy2.png"),
+                assets.load("images/enemy3.png"),
+            ],
+        }
+    }
+}
+```
+
+# 75
+
+Bundle Function Demo
+
+```rust
+pub fn monster(health: u32, transform: Transform) -> impl Bundle {
+    (
+        Name::new("Monster"),
+        Health::new(health),
+        transform,
+        // other components
+    )
+}
+
+```
+
+# 74
+
+State Demo
+
+```rust
+// victory.rs
+pub(super) fn plugin(app: &mut App) {
+    app.add_systems(OnEnter(Screen::Victory), spawn_victory_screen);
+    app.add_systems(OnExit(Screen::Victory), reset_highscore);
+}
+
+fn spawn_victory_screen(mut commands: Commands) {
+    commands.spawn((
+        widget::ui_root("Victory Screen"),
+        DespawnOnExit(Screen::Victory),
+        children![
+            // UI elements.
+        ],
+    ));
+}
+
+fn reset_highscore(mut highscore: ResMut<Highscore>) {
+    *highscore = default();
+}
+```
+
 # 73
 
 - AudioSource: data
@@ -18,7 +91,7 @@ items: flexbox => cross axis, gridbox => block axis
 1. window.cursor_position
 2. camera.viewport_to_world_2d
 
-```
+```rust
 fn draw_cursor(
     camera_query: Single<(&Camera, &GlobalTransform)>,
     window: Single<&Window>,
