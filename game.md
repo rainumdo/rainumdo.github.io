@@ -1,4 +1,4 @@
-# 76
+# 79
 
 Audio
 
@@ -12,7 +12,7 @@ pub fn sound_effect(handle: Handle<AudioSource>) -> impl Bundle {
 }
 ```
 
-# 76
+# 78
 
 Asset Loading Demo
 
@@ -43,7 +43,7 @@ impl FromWorld for ActorAssets {
 }
 ```
 
-# 75
+# 77
 
 Bundle Function Demo
 
@@ -59,7 +59,7 @@ pub fn monster(health: u32, transform: Transform) -> impl Bundle {
 
 ```
 
-# 74
+# 76
 
 State Demo
 
@@ -85,13 +85,13 @@ fn reset_highscore(mut highscore: ResMut<Highscore>) {
 }
 ```
 
-# 73
+# 75
 
 - AudioSource: data
 - AudioPlayer: stream
 - AudioSink: receiver
 
-# 72
+# 74
 
 [align_content](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-content)  
 [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-items)  
@@ -100,7 +100,7 @@ fn reset_highscore(mut highscore: ResMut<Highscore>) {
 content: multiple line as a whole  
 items: flexbox => cross axis, gridbox => block axis  
 
-# 71
+# 73
 
 1. window.cursor_position
 2. camera.viewport_to_world_2d
@@ -127,7 +127,7 @@ fn draw_cursor(
 }
 ```
 
-# 70
+# 72
 
 1. init_resource
 2. from_world
@@ -216,7 +216,7 @@ fn color(s: &str) -> Color {
 }
 ```
 
-# 69
+# 71
 
 3D Animation
 
@@ -308,11 +308,11 @@ fn toggle_animation(
 
 ```
 
-# 69
+# 70
 
 [sketchfab](https://sketchfab.com)
 
-# 68
+# 69
 
 法线贴图的本质  
 法线贴图是一张存储「法线向量」的纹理图像，其像素颜色值对应三维法线向量的分量（通常映射到 [0, 1] 范围）：  
@@ -336,15 +336,15 @@ B = (0.9 + 1) / 2 = 0.95（对应蓝色分量为 0.95）
 
 因此，该法线在纹理中显示为 (0.6, 0.35, 0.95) 的颜色（偏蓝绿色，因为 B 通道值较高，说明法线接近垂直表面）。
 
-# 67
+# 68
 
 [shadplay](https://github.com/alphastrata/shadplay/)
 
-# 66
+# 67
 
 [WGSL Function Reference](https://webgpufundamentals.org/webgpu/lessons/webgpu-wgsl-function-reference.html)
 
-# 65
+# 66
 
 `cargo add avian2d`
 
@@ -392,7 +392,7 @@ fn log_envets(mut started: MessageReader<CollisionStart>, mut ended: MessageRead
 }
 ```
 
-# 64
+# 65
 
 Events vs Messages
 
@@ -402,7 +402,7 @@ In Bevy 0.17, Event is now exclusively the name/trait for the concept of somethi
 
 It is still possible to support both contexts by implementing both traits, but we expect that to be significantly less common than just choosing one.
 
-# 63
+# 64
 
 Assets, Resource Usage
 
@@ -455,7 +455,7 @@ fn catch_explosion_event(
 }
 ```
 
-# 62
+# 63
 
 `EventReader<KeyboardInput>` and `Res<ButtonInput<KeyCode>>`
 
@@ -477,7 +477,7 @@ fn jump_input_system(input: Res<ButtonInput<KeyCode>>) {
 }
 ```
 
-# 61
+# 62
 
 FileDragAndDrop
 
@@ -497,11 +497,11 @@ fn file_drag_and_drop_systems(mut event_reader: EventReader<FileDragAndDrop>) {
 }
 ```
 
-# 60
+# 61
 
 [bevy game development](https://taintedcoders.com/)
 
-# 59
+# 60
 
 Text has Node
 
@@ -512,7 +512,7 @@ Text has Node
 pub struct Text(pub String);
 ```
 
-# 58
+# 59
 
 -> impl Bundle
 
@@ -537,7 +537,7 @@ fn create_button() -> impl Bundle {
 }
 ```
 
-# 57
+# 58
 
 Button has Interaction.
 
@@ -549,7 +549,7 @@ Button has Interaction.
 9pub struct Button;
 ```
 
-# 56
+# 57
 
 ```
 #![allow(clippy::collapsible_if)]
