@@ -1,5 +1,19 @@
 # 76
 
+Audio
+
+```rust
+#[derive(Component, Reflect, Default)]
+#[reflect(Component)]
+pub struct SoundEffect;
+
+pub fn sound_effect(handle: Handle<AudioSource>) -> impl Bundle {
+    (AudioPlayer(handle), PlaybackSettings::DESPAWN, SoundEffect)
+}
+```
+
+# 76
+
 Asset Loading Demo
 
 ```rust
