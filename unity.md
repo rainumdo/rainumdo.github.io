@@ -1,3 +1,10 @@
+# 71
+
+Render to texture
+
+1. Assets —> Create -> Rendering -> Render Texture
+2. GameObject -> Camera -> Render Texture
+
 # 70
 
 PlayableDirector
