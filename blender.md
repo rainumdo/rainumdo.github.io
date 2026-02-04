@@ -1,3 +1,11 @@
+# 63
+
+Draw Mode -> Advanced -> angle:45, factor 0.5
+
+# 62
+
+Render -> Film -> Transparent
+
 # 61
 
 1. Physics -> Fluid -> Type: Flow -> Flow Type: Liquid -> Flow Behavior: Geometry
