@@ -1,6 +1,6 @@
 # 63
 
-Draw Mode -> Advanced -> angle:45, factor 0.5
+Draw Mode -> Advanced -> angle:60, factor 0.3
 
 # 62
 
