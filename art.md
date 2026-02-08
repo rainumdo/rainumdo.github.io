@@ -1,3 +1,16 @@
+# 206
+
+The walk
+
+1. left foot contacts the ground.
+2. sinks into recoil position.
+3. right foot lifts starts coming thru for step.
+4. high point in step, right foot raised.
+5. right leg stiffens into contact positions.
+6. recoil position legs bend.
+7. rabbit up as left leg lifts.
+8. high position NO.1 follows this.
+
 # 205
 
 animation
