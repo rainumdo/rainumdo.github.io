@@ -1,3 +1,8 @@
+
+# 210
+
+[51 great animation exercises](https://www.animatorisland.com/51-great-animation-exercises-to-master/)
+
 # 209
 
 [Animation for Anyone](https://www.youtube.com/playlist?list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV)

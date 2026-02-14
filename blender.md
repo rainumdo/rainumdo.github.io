@@ -1,3 +1,12 @@
+# 64
+
+generic layers
+
+1. lines
+2. highlight
+3. shadow
+4. base color
+
 # 63
 
 Draw Mode -> Advanced -> angle:60, factor 0.3
