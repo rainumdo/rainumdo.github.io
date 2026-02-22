@@ -181,7 +181,7 @@ coc.nvim:registry=https://registry.npmmirror.com
 
 # 92
 
-add edge source
+[add edge source](https://www.ubuntuupdates.org/ppa/microsoft_edge)
 
 ```shell
 echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft-edge.gpg] https://packages.microsoft.com/repos/edge stable main' | sudo tee /etc/apt/sources.list.d/microsoft-edge.list
