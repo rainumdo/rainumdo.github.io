@@ -1,6 +1,8 @@
 # words
 
 ```
+| obsolete
+deprecated
 schedule
 captivating
 lollapalooza
@@ -1654,7 +1656,6 @@ occlusion
 obviate
 obstruct
 obstacle
-obsolete
 obscene
 oblivious
 oblique
