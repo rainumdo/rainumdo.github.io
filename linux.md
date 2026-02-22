@@ -1,3 +1,12 @@
+# 110
+
+W: <https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu/dists/jammy/InRelease>: 密钥存储在过时的 trusted.gpg 密钥环中（/etc/apt/trusted.gpg），请参见 apt-key(8) 的 DEPRECATION 一节以了解详情。
+
+```
+cd /etc/apt/
+sudo cp trusted.gpg trusted.gpg.d
+```
+
 # 109
 
 log of file modification
