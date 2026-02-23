@@ -1,3 +1,20 @@
+# 218
+
+[The BEST way to learn FX Animation?](https://www.youtube.com/watch?v=VjAbB9492VA&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=8&pp=iAQB)
+
+# 217
+
+[Animation School? Keeping motivated? Your questions answered!](https://www.youtube.com/watch?v=L75tfRpisaU&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=7&pp=iAQB)
+
+# 216
+
+[4 New Ways to Practice Animation!](https://www.youtube.com/watch?v=_hYtN46s-Lk&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=6&pp=iAQB)
+
+1. Magic Dot
+2. Jelly Jump
+3. the switch
+4. the morph
+
 # 215
 
 [How to Keyframe Like a Pro! (Animation process for any software)](https://www.youtube.com/watch?v=E-sF_1FgpJw&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=5&pp=iAQB)
