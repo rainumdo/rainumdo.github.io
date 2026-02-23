@@ -1,3 +1,11 @@
+# 65
+
+fill unclosed
+
+1. Advanced -> Extend
+2. Click the area you want to be filled
+3. using Wheel to change the length of the strokes
+
 # 64
 
 generic layers
