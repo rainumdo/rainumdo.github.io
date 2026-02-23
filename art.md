@@ -1,3 +1,28 @@
+# 213
+
+[The Secret Science of Spacing in Animation](https://www.youtube.com/watch?v=F4_wbj2Sw2Y&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=3&pp=iAQB)
+speeding up -> constant -> slowing down
+
+# 212
+
+[The Three Biggest Ideas in Animation](https://www.youtube.com/watch?v=tX8jAmcrJgk&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=2&pp=iAQB)
+
+1. timing (how long something takes to happen)
+2. spacing (the relationship between the still images over time, basically, it's the space between the frames.)
+3. posing (posing is what our animation looks like when we press the pause button)
+
+1 second = 24 frames
+
+# 211
+
+[Animation Basics in 14 Minutes (6 Big ideas for beginners)](https://www.youtube.com/watch?v=pF--YKCCUMw&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=1&pp=iAQB)
+
+1. speed
+2. spacing & acceleration
+3. squash & stretch
+4. anticipation
+5. overshoot
+6. arcs
 
 # 210
 
