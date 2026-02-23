@@ -1,3 +1,21 @@
+# 215
+
+[How to Keyframe Like a Pro! (Animation process for any software)](https://www.youtube.com/watch?v=E-sF_1FgpJw&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=5&pp=iAQB)
+workflow
+
+1. storytelling poses
+2. extremes: anticipation, overshoot
+3. breakdowns
+4. timing
+5. inbetweens
+
+# 214
+
+[Should you PLAN your animation?](https://www.youtube.com/watch?v=ABCUjauQBI4&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=4&pp=iAQB)
+
+1. straight ahead (effect animation, hair , clothes)
+2. key framing(3d animation)
+
 # 213
 
 [The Secret Science of Spacing in Animation](https://www.youtube.com/watch?v=F4_wbj2Sw2Y&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=3&pp=iAQB)
