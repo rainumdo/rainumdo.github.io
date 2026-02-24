@@ -4,6 +4,7 @@ Render to texture
 
 1. Assets —> Create -> Rendering -> Render Texture
 2. GameObject -> Camera -> Render Texture
+3. Or Material -> Shader: Unlit/Texture
 
 # 70
 
