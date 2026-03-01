@@ -1,6 +1,6 @@
 # 66
 
-2D Animation -> Draw Mode -> Stroke -> Stabilize Stroke: Radius 100px, Factor 0.75
+2D Animation -> Draw Mode -> Stroke -> Stabilize Stroke: Radius 50px, Factor 0.75
 
 # 65
 
