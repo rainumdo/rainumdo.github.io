@@ -1,3 +1,7 @@
+# 66
+
+2D Animation -> Draw Mode -> Stroke -> Stabilize Stroke: Radius 10px, Factor 0.75
+
 # 65
 
 fill unclosed
