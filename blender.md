@@ -1,3 +1,7 @@
+# 67
+
+Sequencer -> Add -> Effect Strip -> Speed Control: Multiply
+
 # 66
 
 2D Animation -> Draw Mode -> Stroke -> Stabilize Stroke: Radius 50px, Factor 0.75
