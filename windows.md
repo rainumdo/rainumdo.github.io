@@ -1,3 +1,9 @@
+# 20
+
+```
+tskill {<processID> | <processname>} [/server:<servername>] [/id:<sessionID> | /a] [/v]
+```
+
 # 19
 
 ```
