@@ -1,3 +1,7 @@
+# 68
+
+上色再分层
+
 # 67
 
 Sequencer -> Add -> Effect Strip -> Speed Control: Multiply
