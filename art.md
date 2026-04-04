@@ -1,3 +1,7 @@
+# 226
+
+《Creating Stylized Characters》- 3dtotalPublishing
+
 # 225
 
 平涂：像动画片截图，色块干净硬边。  

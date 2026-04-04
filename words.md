@@ -1,6 +1,9 @@
 # words
 
 ```
+| doodle
+snazzy
+freelancing
 | obsolete
 deprecated
 schedule
@@ -1098,7 +1101,6 @@ sought
 sore
 soprano
 sophisticated
-sophisticate 
 soph
 sonnet
 somewhat
@@ -2508,7 +2510,6 @@ dormant
 dorm
 dophin
 dope
-doodle
 donut
 dominance
 dole
