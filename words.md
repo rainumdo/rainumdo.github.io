@@ -1,6 +1,26 @@
 # words
 
 ```
+hip
+waist
+angular
+archetypal
+skeleton
+| versatility
+| anatomy
+intrigue
+||||||| scenario
+thumbnails
+acquaint
+fondly
+intriguing
+| costume
+distinctive
+exaggeration
+|| crowd
+plot
+sidekick
+villain
 | doodle
 snazzy
 freelancing
@@ -12,7 +32,6 @@ lollapalooza
 || monk
 || tangent
 |||||| tweak
-|||||| scenario
 |||||| ramp 
 |||||| plausible
 |||||| elaborate
@@ -557,7 +576,6 @@ lollapalooza
 | curb
 | culprit
 | crush
-| crowd
 | crouch
 | crisp
 | crescent
@@ -732,7 +750,6 @@ vibratory
 vibration
 vibe
 vert
-versatility
 versatile
 versa
 vernacular
@@ -2727,7 +2744,6 @@ countermeasure
 cough
 couch
 cotton
-costume
 cosmonaut
 cosine
 corroborate
@@ -3147,7 +3163,6 @@ anime
 anecdote
 anecdotal
 androgynous
-anatomy
 anaphora
 analytical
 analogously

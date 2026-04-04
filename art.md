@@ -1,3 +1,7 @@
+# 227
+
+For example, in a classic comic-book style, anatomy is more realistic and defined, but in the field of animation, characters are heavily simplify in greater stylization.
+
 # 226
 
 《Creating Stylized Characters》- 3dtotalPublishing
