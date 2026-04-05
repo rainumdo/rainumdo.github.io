@@ -1,3 +1,17 @@
+# 230
+
+For example, a circle doesn't have any edges, so a round character will look softer and kinder.
+A triangle has sharp edges, and will come across as dynamic or even dangerous.
+A square comes across as solid and compact, so is often used for character that are physically strong.
+
+# 229
+
+Contrast is key to creating more visual appeal.
+
+# 228
+
+You can separate the body into six basic parts, as highlighted in the figures below：the chest, pelvis, shoulders, legs, arms and head.
+
 # 227
 
 For example, in a classic comic-book style, anatomy is more realistic and defined, but in the field of animation, characters are heavily simplify in greater stylization.

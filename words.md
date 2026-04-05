@@ -1,6 +1,26 @@
 # words
 
 ```
+budget
+neat
+severe
+| comical
+elbow
+| torso
+|||| silhouette
+manageable
+belly
+| emphasize
+ribcage
+| spine
+||| obscure
+pelvis
+| sketch
+collarbone
+bony
+| exaggeration
+| tangible
+landmarks
 hip
 waist
 angular
@@ -16,7 +36,6 @@ fondly
 intriguing
 | costume
 distinctive
-exaggeration
 || crowd
 plot
 sidekick
@@ -76,7 +95,6 @@ lollapalooza
 ||| surpass
 ||| substantial
 ||| spam
-||| silhouette
 ||| sentiment
 ||| retrieve
 ||| resurgence
@@ -183,7 +201,6 @@ lollapalooza
 || orthonormal
 || orthogonal
 || opaque
-|| obscure
 || nuance
 || morph
 || moderate
@@ -885,7 +902,6 @@ tower
 towel
 tout
 tortilla
-torso
 torrential
 torn
 topsoil
@@ -941,7 +957,6 @@ tariff
 tap
 tantrum
 tangle
-tangible
 tandem
 tamper
 tally
@@ -1088,7 +1103,6 @@ sponsor
 splint
 spleen
 spir
-spine
 spill
 spiking
 spikes
@@ -1153,7 +1167,6 @@ slam
 slab
 skyrocket
 skull
-sketch
 skeptical
 skeptic
 siren
@@ -2452,7 +2465,6 @@ encrust
 enact
 empower
 employing
-emphasize
 emphasis
 empathy
 emit
@@ -2865,7 +2877,6 @@ comparative
 compact
 commute
 commemorate
-comical
 comet 
 colour
 colossal
