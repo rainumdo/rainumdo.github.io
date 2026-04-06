@@ -1,3 +1,19 @@
+# 233
+
+The first step is establishing the line of action to which you can then add contrasting and exaggerated shapes, to help you generate the gesture. This is so you have a clear understanding of the character and their attitude from the beginning.
+
+The second step is to identify the six key body parts on top of the gesture, often starting with the core forms of the torso, pelvis, and head, to make sure the anatomy will be fleshed out appropriately for the pose. This is where you can start to push and further exaggerate the character's underlying shapes to create a Stylised shape language.
+
+The third step is to finalize your character on top of the gesture and building blocks, refining their costume and surface details.
+
+# 232
+
+The line of action will always be curved in a direction, depending on what you are trying to portray; this is often an S- or C-shaped curve derived from the natural flow the spine, and can vary from strong to subtle in the extremity of its curves.
+
+# 231
+
+A mistake a lot of beginners make is leaving the line of action vertically straight, resulting in a rigid torso and stiff pose.
+
 # 230
 
 For example, a circle doesn't have any edges, so a round character will look softer and kinder.

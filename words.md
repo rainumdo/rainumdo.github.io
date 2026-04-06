@@ -1,13 +1,22 @@
 # words
 
 ```
+| tackle
+appropriate
+| rubber
+organic
+|||| silhouette
+stiff
+rigid
+|| portray
+unison
+verbally
 budget
 neat
 severe
 | comical
 elbow
 | torso
-|||| silhouette
 manageable
 belly
 | emphasize
@@ -407,7 +416,6 @@ lollapalooza
 | precedent
 | prayer
 | pose
-| portray
 | polysemy
 | plight
 | plead
@@ -965,7 +973,6 @@ tailor
 tactical 
 tactical
 tactic
-tackle
 tabulate
 tabular
 systematic
@@ -1282,7 +1289,6 @@ rubric
 rubies
 rubella
 rubble
-rubber
 routine
 roundabout
 rough
