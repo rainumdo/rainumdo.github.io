@@ -1,3 +1,11 @@
+# 235
+
+The important part is to not just draw what you see, but to capture the entire subject as one single entity.
+
+# 234
+
+It is preferable to draw gestures using reference, because drawing from life will always create a better result and there is much to learn from it.
+
 # 233
 
 The first step is establishing the line of action to which you can then add contrasting and exaggerated shapes, to help you generate the gesture. This is so you have a clear understanding of the character and their attitude from the beginning.

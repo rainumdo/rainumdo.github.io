@@ -1,6 +1,8 @@
 # words
 
 ```
+condense
+bouquet
 | tackle
 appropriate
 | rubber
