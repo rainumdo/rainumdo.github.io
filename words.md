@@ -1,6 +1,31 @@
 # words
 
 ```
+sinister
+silly
+clench
+chatty
+villain
+proximity
+trapezoid
+| jaw
+bulkiness
+choppy
+scrawny
+goofiness
+| caricature
+cuddly
+suspense
+|| perceive 
+bulky
+rugged
+skeletal
+||| prominent
+sculpt
+stool
+tugging
+puff
+| insecure
 condense
 bouquet
 | tackle
@@ -195,7 +220,6 @@ lollapalooza
 || provision
 || prompt
 || promotion
-|| prominent
 || prolong
 || procurement
 || primitive
@@ -432,7 +456,6 @@ lollapalooza
 | perturbation
 | perimeter
 | perceptron
-| perceive 
 | pedestrian
 | pathogen
 | parliament
@@ -2035,7 +2058,6 @@ inspire
 inspiration
 insomnia
 insightful
-insecure
 insect
 inoculation
 innocuous

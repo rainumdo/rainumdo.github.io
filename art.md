@@ -1,3 +1,47 @@
+# 238
+
+1. HAPPY
+    - Comers of mouth go up
+    - Cheeks go up
+    - Eyes narrow
+    - Wrinkles can form around the eye
+    - Tears can form
+2. SAD
+    - Corners of mouth go down
+    - Inner corners of eyebrows go up
+    - Brow can wrinkle
+    - Tears can form
+    - Head can point downwards
+3. DISGUSTED
+    - Upper lip goes up
+    - Nose wrinkle
+    - Brow goes down
+    - Eyes narrow
+    - Head can lean away
+4. SURPRISE
+    - Mouth opens
+    - Eyebrows go up
+    - Eyes widen
+5. ANGRY
+    - Mouth narrow
+    - Lips can press together; or in pure rage a character could be yelling
+    - Eyebrows go down and pull together
+    - Eyebrows narrow
+6. AFRAID
+    - Mouth opens
+    - Corners of mouth go down slightly and stretch outwards
+    - Eyebrows go up and pull together
+    - Upper eyelids go up
+    - Forehead can wrinkle
+
+# 237
+
+The primary features used to create an expression could be broken down into two parts: the eye area and the mouth area. The eye area includes the eyes, eyebrows, and the areas around them; the latter includes the mouth and lips. Other features such cheeks, nose, and forehead could be considered secondary, as they react to the way the primary features move on the face.
+
+# 236
+
+The small gray thumbnail shapes in this section show the underlying geometric shape of each face, with red lines indicating how the eyes, nose and mouth are proportioned within it.
+
 # 235
 
 The important part is to not just draw what you see, but to capture the entire subject as one single entity.
