@@ -1,3 +1,23 @@
+
+# 241
+
+[Animator’s Magic Trick](https://www.youtube.com/watch?v=82tbHo7Ww_0&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=11)
+
+# 240
+
+[Learn the BIG idea beneath the animation fundamentals](https://www.youtube.com/watch?v=3RCYmeV3zP4&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=10)
+weight
+
+- still frames
+- spacing
+
+# 239
+
+[Add POWER to your animation with 2 simple ideas.](https://www.youtube.com/watch?v=8q7-OIIpfC0&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=9)
+
+- anticipation
+- overshoot
+
 # 238
 
 1. HAPPY
@@ -123,6 +143,7 @@ For example, in a classic comic-book style, anatomy is more realistic and define
 # 218
 
 [The BEST way to learn FX Animation?](https://www.youtube.com/watch?v=VjAbB9492VA&list=PLqKRc0Oi7q20wxXVUNiS15S2MvtSqOtLV&index=8&pp=iAQB)
+slime and using dots
 
 # 217
 
