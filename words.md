@@ -1,6 +1,20 @@
 # words
 
 ```
+| elated
+| humble
+snarl
+awe
+gloomy
+sullen
+| grimace
+sulky
+nostril
+messily
+| startle
+dismay
+pupil
+sleek
 dynamism
 sinister
 silly
@@ -1116,7 +1130,6 @@ statistician
 stated
 stashed
 starve
-startle
 starkly
 stark
 staple
@@ -2155,7 +2168,6 @@ hurdle
 humdrum
 humbly
 humbler
-humble
 hue
 hound
 hostile
@@ -2519,7 +2531,6 @@ elided
 elevate
 elegance
 electrician
-elated
 elab
 eject
 eitquette 
