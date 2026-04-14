@@ -1,6 +1,35 @@
 # words
 
 ```
+assassin
+evoke
+falconer
+mana
+tunic
+authentic
+dwarf
+decorative
+regal
+mouve
+zesty
+|| allure
+tranquil
+aloof
+solitary
+| cryptic
+innovative
+spontaneity
+| versatile
+upbeat
+||| vibrant
+juxtapositions
+monochromatic
+gamut
+||| intuitively
+fabric
+observant
+chroma
+| elevate
 | elated
 | humble
 snarl
@@ -197,7 +226,6 @@ lollapalooza
 ||| altruistic
 || woe
 || vicious
-|| vibrant
 || venue
 || vanilla
 || ultimate 
@@ -266,7 +294,6 @@ lollapalooza
 || jury
 || joint
 || irritate
-|| intuitively
 || intuition
 || interpolation
 || interpolate 
@@ -726,7 +753,6 @@ lollapalooza
 | anthology
 | antecedent
 | analogous
-| allure
 | allude
 | allocation
 | alleviate
@@ -815,7 +841,6 @@ vibratory
 vibration
 vibe
 vert
-versatile
 versa
 vernacular
 verge
@@ -2528,7 +2553,6 @@ ellipsis
 ellipse
 eligibility
 elided
-elevate
 elegance
 electrician
 elab
@@ -2761,7 +2785,6 @@ cull
 culinary
 crystal
 cryptography
-cryptic
 crux
 crunch
 crude

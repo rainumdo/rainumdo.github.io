@@ -1,3 +1,18 @@
+# 244
+
+[The Dimensions of Colour, modern colour theory.](http://www.huevaluechroma.com/)
+
+# 243
+
+- Complementary colors
+- Analogous colors
+- Split-complementary colors
+- Triadic colors
+- gamut masking
+
+# 242
+
+The color wheel is a great tool for visualizing color and deciding on different arrangements of colors.
 
 # 241
 
