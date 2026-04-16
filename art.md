@@ -1,3 +1,44 @@
+# 252
+
+Too much detail will just confuse the design, especially for an organic, animalistic creature like this one.
+
+# 251
+
+I explore most of the ideas i had at the research stage,translating them into the character's design.
+
+# 250
+
+His posture and movements will also depend on his body shape and physique.
+
+# 249
+
+keep it fluid
+
+# 248
+
+Some find that the silhouette are the best way to work out shapes, while others use sketchy outlines.
+
+# 247
+
+The stylization process
+
+1. the idea
+2. research
+3. thumbnails
+4. basic shapes
+5. adding details
+6. expressions & posing
+7. values & colors
+8. final design
+
+# 246
+
+When you stylize a character, what you are really doing is determining which elements of that character to exaggerate.
+
+# 245
+
+Every aspect of a design begins with knowing the purpose of the design; it makes each step from that point forward more clear and focused.
+
 # 244
 
 [The Dimensions of Colour, modern colour theory.](http://www.huevaluechroma.com/)

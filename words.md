@@ -1,6 +1,76 @@
 # words
 
 ```
+mutate
+camouflaged
+| monochromatic
+|| crouch
+|| spike
+predator
+| tap
+|| agile
+menace
+crusty
+pangolin
+squat
+| crustacean
+| lizard
+quadruped
+sly
+mishap
+| donut
+fluff
+|| stitch
+clumsily
+innate
+|||| obscure
+trench
+| futuristic
+mascot
+| bump
+faint
+harsh
+| stunt
+squashy
+gill
+axolotl
+||| hint
+| vulnerable
+beetle
+hark
+||| resemble
+outlandish
+triadic
+tonal
+| inquisitive
+| mimic
+amicable
+holographic
+orbs
+| thrive
+edgy
+endear
+bulbous
+| horn
+emote
+primate
+antagonistic
+bipedal
+stout
+||| akin
+paunchy
+rendition
+cliche
+portrayal
+ethnicity
+innumerable
+equate
+|||| notion
+jolly
+| sidekick
+iconic
+|| incorporate
+| acquaint
 assassin
 evoke
 falconer
@@ -23,7 +93,6 @@ spontaneity
 upbeat
 ||| vibrant
 juxtapositions
-monochromatic
 gamut
 ||| intuitively
 fabric
@@ -93,7 +162,6 @@ belly
 | emphasize
 ribcage
 | spine
-||| obscure
 pelvis
 | sketch
 collarbone
@@ -111,14 +179,12 @@ skeleton
 intrigue
 ||||||| scenario
 thumbnails
-acquaint
 fondly
 intriguing
 | costume
 distinctive
 || crowd
 plot
-sidekick
 villain
 | doodle
 snazzy
@@ -187,7 +253,6 @@ lollapalooza
 ||| preliminary
 ||| plural
 ||| orbit
-||| notion
 ||| notation
 ||| monitor
 ||| mitigate
@@ -255,7 +320,6 @@ lollapalooza
 || sake
 || rigorous
 || resumption
-|| resemble
 || repository
 || regime
 || redundant
@@ -355,7 +419,6 @@ lollapalooza
 || ambivalent
 || allegation
 || albeit
-|| akin
 || agnostic
 || aforemention
 || aesthetic
@@ -413,7 +476,6 @@ lollapalooza
 | stride
 | streak
 | strain
-| stitch
 | stir
 | stimuli
 | stifle
@@ -425,7 +487,6 @@ lollapalooza
 | stagnant 
 | squash
 | spouse
-| spike
 | spectacular
 | sophistication
 | sober
@@ -559,7 +620,6 @@ lollapalooza
 | inductive
 | indispensable
 | indicator
-| incorporate
 | inaugural
 | impulsive
 | implicitly
@@ -668,7 +728,6 @@ lollapalooza
 | curb
 | culprit
 | crush
-| crouch
 | crisp
 | crescent
 | craft
@@ -815,7 +874,6 @@ wane
 wander
 waistcoat
 wade
-vulnerable
 voxel
 vowel
 vowel
@@ -997,7 +1055,6 @@ tide
 tickle
 tickey
 thron
-thrive
 thread
 thorniest
 thincrust
@@ -1027,7 +1084,6 @@ tease
 taxonomy
 taxes
 tariff
-tap
 tantrum
 tangle
 tandem
@@ -1105,7 +1161,6 @@ submerge
 subject
 subject
 sturdy
-stunt
 stump
 stuffed
 stuck
@@ -1866,7 +1921,6 @@ minus
 minority
 minima
 mindset
-mimic
 military
 mile
 midst
@@ -2198,7 +2252,6 @@ hound
 hostile
 hostage
 horrifies
-horn
 horizontal
 horizon
 hooray
@@ -2218,8 +2271,6 @@ holiness
 hoard
 hitherto
 histogram
-hint
-hint
 hinge
 hinge
 hindered
@@ -2605,7 +2656,6 @@ dormant
 dorm
 dophin
 dope
-donut
 dominance
 dole
 dodge
@@ -3057,7 +3107,6 @@ buoy
 bundle
 bunch
 bumper
-bump
 bully
 bullish
 bulging
@@ -3275,7 +3324,6 @@ ail
 aholic
 agreeableness
 agonizing
-agile
 aggressively
 aggressive
 aggregation
