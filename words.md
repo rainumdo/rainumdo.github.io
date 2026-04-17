@@ -1,6 +1,39 @@
 # words
 
 ```
+| eccentric
+| spectacle
+| garment
+| reminiscent
+flicked
+mone
+| collar
+gravitas
+stockier
+| belly
+stuffiness
+ascat
+| sullen
+||| intrigue
+focal
+| scruffy
+slender
+| satchel
+unkempt
+loid
+| wardrobe
+| liberty
+|| twist
+bristly
+bristle
+pucker
+irritable
+mug
+sleeve
+oval
+stocky
+| trouser
+grumpy
 mutate
 camouflaged
 | monochromatic
@@ -104,7 +137,6 @@ chroma
 snarl
 awe
 gloomy
-sullen
 | grimace
 sulky
 nostril
@@ -176,7 +208,6 @@ archetypal
 skeleton
 | versatility
 | anatomy
-intrigue
 ||||||| scenario
 thumbnails
 fondly
@@ -606,7 +637,6 @@ lollapalooza
 | ironic
 | inventory
 | intuitive
-| intriguing
 | intractable
 | intersperse
 | instinct
@@ -868,7 +898,6 @@ wary
 warmup
 warehouse
 ware
-wardrobe
 wanky
 wane 
 wander
@@ -966,8 +995,6 @@ typesetting
 tycoon
 two-for-one
 twister
-twist
-twist
 twig
 tweet
 tween
@@ -983,7 +1010,6 @@ trumpeted
 trumpet
 truer
 truant
-trouser
 troubleshooting
 tropical
 tropic
@@ -1237,7 +1263,6 @@ spencer
 spectrum
 spectator
 spectate
-spectacle
 spearhead
 spear
 spawn
@@ -1471,7 +1496,6 @@ renaissance
 remuneration
 removal
 remnant
-reminiscent
 remedies
 remedial
 remainder
@@ -2034,7 +2058,6 @@ limb
 likelihood
 lightweight
 lift
-liberty
 liberation
 liberate
 liaison
@@ -2390,7 +2413,6 @@ gelatin
 gauge
 gaudy
 garnered
-garment
 gargle
 garbed
 galvanize
@@ -2616,7 +2638,6 @@ eerily
 edible
 edge
 economical
-eccentric
 ebb
 eavesdrop
 ease
@@ -2999,7 +3020,6 @@ colorectal
 colon
 collude
 collision
-collar
 collaborator
 collaboration
 coherent
@@ -3177,7 +3197,6 @@ benevolent
 benevolence
 beneath
 belonging
-belly
 beleaguered
 belching
 behold

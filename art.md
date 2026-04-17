@@ -1,3 +1,11 @@
+# 254
+
+I have make sure to leave his trousers and shoes plainer and less detailed than his shirt, to avoid distracting from the overall design.
+
+# 253
+
+When presenting a character in a pose it can be helpful to add a supporting character to further demonstrate the important aspects of their personality.
+
 # 252
 
 Too much detail will just confuse the design, especially for an organic, animalistic creature like this one.
