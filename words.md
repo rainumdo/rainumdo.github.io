@@ -1,13 +1,33 @@
 # words
 
 ```
+curly
+| snarl
+mischievous
+lanky
+prehensile
+demeanor
+spiky
+brawny
+| dwarf
+| paunchy
+| unkempt
+| fabric
+garish
+flap
+|| collar
+| brute
+headgear
+vintage
+retro
+|| futuristic
+| sleek
 | eccentric
 | spectacle
 | garment
-| reminiscent
+|| reminiscent
 flicked
 mone
-| collar
 gravitas
 stockier
 | belly
@@ -19,7 +39,6 @@ focal
 | scruffy
 slender
 | satchel
-unkempt
 loid
 | wardrobe
 | liberty
@@ -58,7 +77,6 @@ clumsily
 innate
 |||| obscure
 trench
-| futuristic
 mascot
 | bump
 faint
@@ -91,7 +109,6 @@ antagonistic
 bipedal
 stout
 ||| akin
-paunchy
 rendition
 cliche
 portrayal
@@ -110,7 +127,6 @@ falconer
 mana
 tunic
 authentic
-dwarf
 decorative
 regal
 mouve
@@ -128,13 +144,11 @@ upbeat
 juxtapositions
 gamut
 ||| intuitively
-fabric
 observant
 chroma
 | elevate
 | elated
 | humble
-snarl
 awe
 gloomy
 | grimace
@@ -144,7 +158,6 @@ messily
 | startle
 dismay
 pupil
-sleek
 dynamism
 sinister
 silly
@@ -3134,7 +3147,6 @@ budget
 buddha
 buck
 buck
-brute
 brutalizing
 brutal
 browner

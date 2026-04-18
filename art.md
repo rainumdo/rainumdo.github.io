@@ -1,3 +1,11 @@
+# 256
+
+It's important to add asymmetry to expressions to make them more exciting believable.
+
+# 255
+
+Flipping the sketch allow me to check my design choices with fresh eyes.
+
 # 254
 
 I have make sure to leave his trousers and shoes plainer and less detailed than his shirt, to avoid distracting from the overall design.
