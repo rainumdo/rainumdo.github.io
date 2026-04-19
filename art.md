@@ -1,3 +1,15 @@
+# 259
+
+I add some decorative lines that help to describe the volumes of the body.
+
+# 258
+
+three main color for costume except white and black.
+
+# 257
+
+Posing the character will help me to understanding the volumes and movement of the design.
+
 # 256
 
 It's important to add asymmetry to expressions to make them more exciting believable.

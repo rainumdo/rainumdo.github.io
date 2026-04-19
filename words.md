@@ -1,6 +1,22 @@
 # words
 
 ```
+| feline
+hunch
+|| savage
+rhomboidal
+oim
+terrain
+| fierce
+| pretense
+|| dignify
+| motif
+demons
+samurai
+| coherence
+mace
+| aloof
+medieval
 curly
 | snarl
 mischievous
@@ -133,7 +149,6 @@ mouve
 zesty
 || allure
 tranquil
-aloof
 solitary
 | cryptic
 innovative
@@ -550,7 +565,6 @@ lollapalooza
 | sculpture
 | scrub
 | scarce
-| savagely
 | saturation
 | saddle
 | sabotage
@@ -743,7 +757,6 @@ lollapalooza
 | dimension
 | dilute
 | diligent
-| dignify
 | diabete
 | devil
 | deviation
@@ -1641,7 +1654,6 @@ pricing
 priciest
 prey
 prevalence
-pretense
 presume
 pressence
 press
@@ -1919,7 +1931,6 @@ mourn
 mounting
 mount
 motivate
-motif
 mortgage
 morphology
 morphological
@@ -2498,7 +2509,6 @@ financial
 fin
 filament
 figurine
-fierce
 fidget
 fidelity
 fickle
@@ -2508,7 +2518,6 @@ ferocious
 ferment
 feminism
 felt
-feline
 feedforward
 federation
 feature
@@ -3036,7 +3045,6 @@ collision
 collaborator
 collaboration
 coherent
-coherence
 coffin
 coefficient
 coefficient
