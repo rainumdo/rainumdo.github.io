@@ -1,3 +1,7 @@
+# 260
+
+As I watch pirate movies as part of my costume research, I make pages of these quick sketches as note for costume ideas.
+
 # 259
 
 I add some decorative lines that help to describe the volumes of the body.

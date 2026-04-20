@@ -1,13 +1,56 @@
 # words
 
 ```
-| feline
+ostentatious
+| wary
+|| unkempt
+|| scruffy
+|| plight
+ornate
+heirloom
+| phantom
+|| striking
+malevolent
+snub
+nebulous
+||| lure
+rum
+ornament
+spooky
+spectral
+| antagonistic
+| loot
+tabby
+slouchy
+clout
+peril
+trinket
+swashbuckling
+assertive
+swagger
+stouter
+gruff
+| gravitas
+| sly
+imbue
+puffy
+| authentic
+selfies
+scrappy
+threadbare
+|| fierce
+versa
+|| vice
+muzzle
+bandana
+|| feline
+| tailor
+cabin
 hunch
 || savage
 rhomboidal
 oim
 terrain
-| fierce
 | pretense
 || dignify
 | motif
@@ -27,7 +70,6 @@ spiky
 brawny
 | dwarf
 | paunchy
-| unkempt
 | fabric
 garish
 flap
@@ -44,7 +86,6 @@ retro
 || reminiscent
 flicked
 mone
-gravitas
 stockier
 | belly
 stuffiness
@@ -52,7 +93,6 @@ ascat
 | sullen
 ||| intrigue
 focal
-| scruffy
 slender
 | satchel
 loid
@@ -84,7 +124,6 @@ squat
 | crustacean
 | lizard
 quadruped
-sly
 mishap
 | donut
 fluff
@@ -121,7 +160,6 @@ bulbous
 | horn
 emote
 primate
-antagonistic
 bipedal
 stout
 ||| akin
@@ -142,7 +180,6 @@ evoke
 falconer
 mana
 tunic
-authentic
 decorative
 regal
 mouve
@@ -410,7 +447,6 @@ lollapalooza
 || metaphor
 || mayor
 || mandatory
-|| lure
 || leverage
 || latency
 || lash
@@ -493,7 +529,6 @@ lollapalooza
 | virtuous
 | violate
 | vicinity
-| vice
 | veteran
 | vessel
 | verdict
@@ -604,7 +639,6 @@ lollapalooza
 | prayer
 | pose
 | polysemy
-| plight
 | plead
 | plateaus
 | plain
@@ -920,7 +954,6 @@ wavy
 watertight
 watershed
 wasp
-wary
 warmup
 warehouse
 ware
@@ -1141,8 +1174,6 @@ tangle
 tandem
 tamper
 tally
-tailored
-tailor
 tactical 
 tactical
 tactic
@@ -1218,8 +1249,6 @@ stuffed
 stuck
 strive
 stripe
-strikingly
-striking
 strike
 stricken
 stretch
@@ -1736,7 +1765,6 @@ phoneme
 pharmacy
 pharmacist
 pharmac
-phantom
 petroleum
 petition
 pet
@@ -2050,7 +2078,6 @@ lurk
 ludicrous
 loungewear
 lounge
-loot
 loophole
 loom
 longevity
