@@ -1,6 +1,23 @@
 # words
 
 ```
+|| arrogant
+| clumsy
+mutant
+| feral
+| cliche
+fragile
+sneer
+lavish
+|| gear
+| regal
+|| rebel
+| lanky
+|| hunch
+jag
+talon
+| melee
+| villain
 ostentatious
 | wary
 || unkempt
@@ -46,7 +63,6 @@ bandana
 || feline
 | tailor
 cabin
-hunch
 || savage
 rhomboidal
 oim
@@ -63,7 +79,6 @@ medieval
 curly
 | snarl
 mischievous
-lanky
 prehensile
 demeanor
 spiky
@@ -164,7 +179,6 @@ bipedal
 stout
 ||| akin
 rendition
-cliche
 portrayal
 ethnicity
 innumerable
@@ -181,7 +195,6 @@ falconer
 mana
 tunic
 decorative
-regal
 mouve
 zesty
 || allure
@@ -735,7 +748,6 @@ lollapalooza
 | glutinous
 | gigantic
 | genre
-| gear
 | gadget
 | funnel
 | fraught
@@ -890,7 +902,6 @@ lollapalooza
 | asymptotic 
 | astound
 | assault
-| arrogant
 | arguably
 | arguably
 | appraise
@@ -977,7 +988,6 @@ virtually
 virile
 violation
 violate
-villain
 vignette
 vigilant
 viewership
@@ -1593,7 +1603,6 @@ receptive
 receipt
 rebuke
 rebirth
-rebellion
 reassemble
 realm
 realm
@@ -2027,7 +2036,6 @@ meme
 melody
 melodious
 mellifluous
-melee
 meld
 melanin
 megalith
@@ -3083,7 +3091,6 @@ clutter
 clutch
 cluster
 cluster
-clumsy
 clump
 clueless
 cloak

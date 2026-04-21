@@ -1,3 +1,7 @@
+# 261
+
+Nonetheless, I study how our armor is built, as this will give me a foundation from which I can start to think outside the box.
+
 # 260
 
 As I watch pirate movies as part of my costume research, I make pages of these quick sketches as note for costume ideas.
