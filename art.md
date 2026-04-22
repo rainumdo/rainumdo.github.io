@@ -1,3 +1,13 @@
+# 263
+
+REMEMBER PERSONALITY  
+
+Don't get lost in just making a character look cool. Think of their innermost personality; give them a reason to exist and equip them with feelings and emotions. If you are struggling to find or convey a character's personality, try adding a little companion, sidekick or environmental elements, which will help to dictate how the character acts.
+
+# 262
+
+Adding texture to her hair also makes the design feel more organic, creating contrast with the very clean shapes and colors elsewhere.
+
 # 261
 
 Nonetheless, I study how our armor is built, as this will give me a foundation from which I can start to think outside the box.

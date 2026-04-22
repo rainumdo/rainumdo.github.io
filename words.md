@@ -1,6 +1,10 @@
 # words
 
 ```
+metropolis
+campus
+crucifix
+gothic
 || arrogant
 | clumsy
 mutant
@@ -2011,7 +2015,6 @@ mile
 midst
 mezzo
 metropolitan
-metropolis
 metrics
 metre
 methodical
