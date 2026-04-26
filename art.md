@@ -1,3 +1,48 @@
+
+# 274
+
+Avoiding symmetry by using straight vs. curved lines really helps with that. See the examples in the image. This is actually something you see in in real life as well. For example, your arm has a hard and straight side and a side which is soft and more curved.These strong contrasts will make your characters feel more dynamic and organic.
+
+# 273
+
+Watch out for tangents. One of the most commonly mistakes you see and something that is very easy to fix. A tangents is a line touching  another line or multiple lines, without intersection. You can fix a tangent by simply moving it up or down a bit so there is some more space between the lines.
+
+# 272
+
+When drawing your characters, it’s important to draw full shapes. What I mean by that is that if you are drawing a character, you’re drawing a lot of circles and other shapes, when drawing a shape don’t just draw the visible part but also the part that you won’t see in the final image.
+
+# 271
+
+Avoid symmetry, even when you are drawing a frontal view. Using symmetry makes your characters look like dolls and very stiff. Using a simple action line can make all the difference.
+
+# 270
+
+When I start drawing a character I ask myself what is the story behind this pose.
+
+# 269
+
+not flat and more shape
+
+# 268
+
+The head is usually not completely straight, it can have a direction and curve.
+
+# 267
+
+《How to Draw Characters》by Mitch Leeuwe
+
+# 266
+
+For a cartoony style, I'm avoiding too parallel lines.
+
+# 265
+
+Fill a sheet of paper with a bunch of cubes and cylinders from different angles. Now, try to make presents out of them by following the steps of the gift. You can use the examples I added on this page too. It will train you in that sense for 3D that will help you draw all kinds of objects.
+
+# 264
+
+《How to draw Props》-- Mitch Leeuwe
+
 # 263
 
 REMEMBER PERSONALITY  
