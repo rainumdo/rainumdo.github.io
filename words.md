@@ -1,6 +1,7 @@
 # words
 
 ```
+| stick
 | stiff
 tissue
 | iconic
@@ -1291,7 +1292,6 @@ stigma
 stifled
 stiffness
 sticky
-stick
 stern
 steppe
 stencil

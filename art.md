@@ -1,3 +1,14 @@
+# 276
+
+Mixing small, medium and big works very well.
+
+# 275
+
+using everyday objects to design your own characters.  
+
+1. pick a random object
+2. break it down in basic shapes
+3. draw on top of it.
 
 # 274
 
