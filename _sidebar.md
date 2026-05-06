@@ -2,6 +2,7 @@
 * [art](art.md)
 * [blender](blender.md)
 * [comfyui](comfyui.md)
+* [dioxus](dioxus.md)
 * [gimp](gimp.md)
 * [krpano](/krpano.md)
 * [hugo](hugo.md)
