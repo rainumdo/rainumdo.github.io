@@ -1,3 +1,7 @@
+# 70
+
+Data -> Add Extra -> Auto Lock Inactive Layers
+
 # 69
 
 Action Editor
