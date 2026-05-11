@@ -1,4 +1,259 @@
+
+# 9
+
+`use_navigator`
+
+```rust
+use dioxus::prelude::*;
+
+#[derive(Clone, Routable)]
+enum Route {
+    #[route("/")]
+    Index {},
+    #[route("/:id")]
+    Dynamic { id: usize },
+}
+
+#[component]
+pub fn App() -> Element {
+    rsx! {
+        Router::<Route> {}
+    }
+}
+
+#[component]
+fn Index() -> Element {
+    let navigator = use_navigator();
+
+    rsx! {
+        button {
+            onclick: move |_| { navigator.push(Route::Dynamic { id: 1234 }); },
+            "Go to /1234"
+        }
+    }
+}
+
+#[component]
+fn Dynamic(id: usize) -> Element {
+    rsx! {
+        p {
+            "Current ID: {id}"
+        }
+    }
+}
+```
+
+# 8
+
+`use_route`
+
+```rust
+use dioxus::prelude::*;
+
+#[derive(Clone, Routable)]
+enum Route {
+    #[route("/")]
+    Index {},
+}
+
+#[component]
+pub fn App() -> Element {
+    rsx! {
+        h1 { "App" }
+        Router::<Route> {}
+    }
+}
+
+#[component]
+fn Index() -> Element {
+    let path: Route = use_route();
+    rsx! {
+        h2 { "Current Path" }
+        p { "{path}" }
+    }
+}
+```
+
+# 7
+
+`use_memo`
+
+```rust
+use dioxus::prelude::*;
+
+#[component]
+pub fn App() -> Element {
+    let mut count = use_signal(|| 0);
+    // the double memo will always be equal to two times the value of count, even after count changes
+    let double = use_memo(move || count * 2);
+
+    rsx! {
+        p{"{double}"}
+
+        button {
+            // When count changes, the memo will rerun and double will be updated
+            // memos rerun any time you write to a signal they read. They will only rerun values/component that depend on them if the value of the memo changes
+            onclick: move |_| count += 1,
+            "Increment"
+        }
+    }
+}
+```
+
+# 6
+
+`use_resource`
+
+```rust
+use dioxus::prelude::*;
+
+async fn get_weather(location: &WeatherLocation) -> Result<String, String> {
+    Ok("Sunny".to_string())
+    // Err("404".to_string())
+}
+
+#[component]
+pub fn App() -> Element {
+    let country = use_signal(|| WeatherLocation {
+        city: "Berlin".to_string(),
+        country: "Germany".to_string(),
+        coordinates: (52.5244, 13.4105),
+    });
+
+    // Because the resource's future subscribes to `country` by reading it (`country.read()`),
+    // every time `country` changes the resource's future will run again and thus provide a new value.
+    let current_weather = use_resource(move || async move { get_weather(&country()).await });
+
+    rsx! {
+        // the value of the resource can be polled to
+        // conditionally render elements based off if it's future
+        // finished (Some(Ok(_)), errored Some(Err(_)),
+        // or is still running (None)
+        match &*current_weather.read_unchecked() {
+            Some(Ok(weather)) => rsx! { WeatherElement { weather } },
+            Some(Err(e)) => rsx! { p { "Loading weather failed, {e}" } },
+            None =>  rsx! { p { "Loading..." } }
+        }
+    }
+}
+
+#[derive(Clone)]
+struct WeatherLocation {
+    city: String,
+    country: String,
+    coordinates: (f64, f64),
+}
+
+#[component]
+fn WeatherElement(weather: String) -> Element {
+    rsx! { p { "The weather is {weather}" } }
+}
+```
+
+# 5
+
+`use_context_provider`
+
+```rust
+use dioxus::prelude::*;
+
+#[derive(Clone)]
+struct ThemeState {
+    is_dark: bool,
+}
+
+#[component]
+pub fn App() -> Element {
+    let mut theme = use_signal(|| ThemeState { is_dark: false });
+
+    use_context_provider(|| theme);
+
+    rsx! {
+        Child {  }
+    }
+}
+
+#[component]
+fn Child() -> Element {
+    let mut theme = use_context::<Signal<ThemeState>>();
+    rsx! {
+        p { "theme:" {if theme().is_dark { "dark" } else { "light" }} }
+        button {
+            onclick: move |_| theme.write().is_dark = !theme().is_dark,
+            "switch"
+        }
+    }
+}
+```
+
+# 4
+
+`use_effect`
+
+```rust
+use dioxus::{logger::tracing, prelude::*};
+
+#[component]
+pub fn App() -> Element {
+    let mut input_val = use_signal(|| String::new());
+
+    use_effect(move || {
+        tracing::debug!("输入框内容：{}", input_val());
+    });
+
+    rsx! {
+        input {
+            value: "{input_val}",
+            oninput: move |e| input_val.set(e.value()),
+            placeholder: "随便输点什么"
+        }
+    }
+}
+```
+
+# 3
+
+`use_signal`
+
+```rust
+use dioxus::prelude::*;
+
+#[component]
+pub fn App() -> Element {
+    let mut count = use_signal(|| 0);
+
+    rsx! {
+        div {
+            padding: "20px",
+
+            h1 {"count:{count}"}
+            button {
+                onclick: move |_| count+=1, "+1"
+            }
+            button {
+                onclick: move |_| count-=1, "-1"
+            }
+        }
+    }
+}
+```
+
 # 2
+
+`use_hook`
+
+```rust
+use dioxus::prelude::*;
+
+#[component]
+pub fn App() -> Element {
+    let count = use_hook(|| "dioxus");
+
+    rsx! {
+        div { {count} }
+    }
+}
+```
 
 # 1
 

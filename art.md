@@ -1,5 +1,9 @@
 # 276
 
+[line of action](https://line-of-action.com/)
+
+# 276
+
 Mixing small, medium and big works very well.
 
 # 275
