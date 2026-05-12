@@ -1,3 +1,13 @@
+# 12
+
+| 写法|作用|匹配示例|类型|
+| --- | --- | --- | --- |
+| /:id|单段捕获|/user/123|String / u32|
+|/:id?|可选单段|/blog/blog/5|Option<T>|
+|/:..paths| 全路径捕获| /a/b/c| Vec<String> |
+|/:.._ |匿名全捕获| 所有路径| 无参数 |
+|/files/:..p| 前缀 + 全捕获 |/files/x/y/z |Vec<String>|
+
 # 11
 
 `Link`
