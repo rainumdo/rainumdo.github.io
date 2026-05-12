@@ -1,3 +1,14 @@
+# 10
+
+```
+let mut password = use_signal(|| String::new());
+...
+oninput: move |e| password.set(e.value()),
+```
+
+# 10
+
+[Rust 宏语法规定：( ) [ ] { } 三种括号完全等价](https://rustwiki.org/zh-CN/reference/macros.html)
 
 # 9
 
