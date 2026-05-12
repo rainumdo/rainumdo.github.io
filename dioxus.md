@@ -1,9 +1,36 @@
-# 10
+# 11
+
+`Link`
 
 ```
-let mut password = use_signal(|| String::new());
-...
-oninput: move |e| password.set(e.value()),
+#[derive(Clone, Routable)]
+enum Route {
+    #[route("/")]
+    Index {},
+}
+
+#[component]
+fn App() -> Element {
+    rsx! {
+        Router::<Route> {}
+    }
+}
+
+#[component]
+fn Index() -> Element {
+    rsx! {
+        Link {
+            active_class: "active",
+            class: "link_class",
+            id: "link_id",
+            new_tab: true,
+            rel: "link_rel",
+            to: Route::Index {},
+
+            "A fully configured link"
+        }
+    }
+}
 ```
 
 # 10
@@ -199,7 +226,7 @@ fn Child() -> Element {
 
 # 4
 
-`use_effect`
+`use_effect` and `oninput`
 
 ```rust
 use dioxus::{logger::tracing, prelude::*};
