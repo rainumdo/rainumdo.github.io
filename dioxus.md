@@ -1,3 +1,70 @@
+# 16
+
+`ErrorBoundary`
+
+```
+use dioxus::prelude::*;
+
+fn App() -> Element {
+    let mut multiplier = use_signal(|| String::from("2"));
+    rsx! {
+        input {
+            r#type: "text",
+            value: multiplier,
+            oninput: move |e| multiplier.set(e.value())
+        }
+        ErrorBoundary {
+            handle_error: |errors: ErrorContext| {
+                rsx! {
+                    div {
+                        "Oops, we encountered an error. Please report {errors:?} to the developer of this application"
+                    }
+                }
+            },
+            Counter {
+                multiplier
+            }
+        }
+    }
+}
+
+#[component]
+fn Counter(multiplier: ReadSignal<String>) -> Element {
+    let multiplier_parsed = multiplier().parse::<usize>()?;
+    let mut count = use_signal(|| multiplier_parsed);
+    rsx! {
+        button {
+            onclick: move |_| {
+                let multiplier_parsed = multiplier().parse::<usize>()?;
+                *count.write() *= multiplier_parsed;
+                Ok(())
+            },
+            "{count}x{multiplier}"
+        }
+    }
+}
+```
+
+# 15
+
+```
+document::Link { rel: "icon", herf: asset!("xxx")}
+
+document::Title { "xxx app"}
+```
+
+# 14
+
+`wasm_bindgen` import and call javascript functions
+
+# 13
+
+browser log
+
+```
+web-sys::console::log_1("web browser log print");
+```
+
 # 12
 
 | 写法|作用|匹配示例|类型|
