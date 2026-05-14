@@ -1,3 +1,21 @@
+# 18
+
+`dioxus motion`
+
+# 17
+
+`stop_propagation`
+
+```
+rsx! {
+    button {
+        onclick: move |evt: Event<MouseData>| {
+            evt.stop_propagation();
+        }
+    }
+};
+```
+
 # 16
 
 `ErrorBoundary`
