@@ -1,6 +1,7 @@
 # words
 
 ```
+| asterisk
 corainder
 | stick
 | stiff
@@ -3314,7 +3315,6 @@ atmosphere
 asynchronous
 asymmetric
 astray
-asterisk
 associate
 assess
 assemble
