@@ -1,6 +1,6 @@
 # 18
 
-`serve_dioxus_application` dioxus and axum router
+Integrate Dioxus and Axum Router `serve_dioxus_application`
 
 ```rust
 // dx server --platform server
@@ -8,7 +8,6 @@
 use dioxus::prelude::*;
 use dioxus_server::{DioxusRouterExt, ServeConfig};
 use crate::dioxus_server::axum;
-
 
 #[tokio::main]
 pub async fn main() {
