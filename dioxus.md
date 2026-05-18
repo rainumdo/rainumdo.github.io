@@ -1,5 +1,35 @@
 # 18
 
+`serve_dioxus_application` dioxus and axum router
+
+```rust
+// dx server --platform server
+
+use dioxus::prelude::*;
+use dioxus_server::{DioxusRouterExt, ServeConfig};
+use crate::dioxus_server::axum;
+
+
+#[tokio::main]
+pub async fn main() {
+    let addr = dioxus::cli_config::fullstack_address_or_localhost();
+    let router = axum::Router::new()
+        // Server side render the application, serve static assets, and register server functions
+        .serve_dioxus_application(ServeConfig::new(), app);
+    let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
+    axum::serve(listener, router).await.unwrap();
+}
+
+fn app() -> Element {
+    rsx! { "Hello World" }
+}
+```
+
+```
+```
+
+# 18
+
 `dioxus motion`
 
 # 17
