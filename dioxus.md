@@ -1,5 +1,186 @@
-# 18
+# 24
 
+```
+fn main() {
+    #[cfg(feature = "web")]
+    LaunchBuilder::web().launch(App);
+
+    #[cfg(feature = "server")]
+    tokio::runtime::Runtime::new().unwrap().block_on(async {
+        lunch_server(App).await;
+    });
+}
+```
+
+# 23
+
+`axum_session_auth`
+
+```
+#[cfg(feature = "server")]
+pub fn auth_session_config() -> AuthConfig<i64> {
+    AuthConfig::<i64>::default().with_anonymous_user_id(Some(1))
+}
+
+#[derive(Clone)]
+pub struct User {
+    pub id: i64,
+    pub anonymous: bool,
+    pub username: String,
+}
+
+#[cfg(feature = "server")]
+#[async_trait]
+impl Authentication<User, i64, SqlitePool> for User {
+    async fn load_user(userid: i64, pool: Option<&SqlitePool>) -> Result<User, anyhow::Error> {
+        if userid == 1 {
+            Ok(User {
+                id: userid,
+                anonymous: true,
+                username: String::from("guest"),
+            })
+        } else {
+            let user: UserSql = sqlx::query_as("SELECT * FROM users WHERE id = ?1")
+                .bind(&userid)
+                .fetch_one(pool.unwrap())
+                .await
+                .unwrap();
+            Ok(User {
+                id: userid,
+                anonymous: false,
+                username: user.username,
+            })
+        }
+    }
+
+    fn is_active(&self) -> bool {
+        !self.anonymous
+    }
+
+    fn is_anonymous(&self) -> bool {
+        self.anonymous
+    }
+
+    fn is_authenticated(&self) -> bool {
+        !self.anonymous
+    }
+}
+
+#[cfg(feature = "server")]
+type AuthSessionExtract = AuthSession<User, i64, SessionSqlitePool, SqlitePool>;
+
+#[cfg(feature = "server")]
+pub async fn get_auth_session() -> Result<AuthSessionExtract, ServerFnError> {
+    extract::<AuthSessionExtract, _>()
+        .await
+        .map_err(|_| ServerFnError::new("Auth session not Found!"))
+}
+```
+
+# 22
+
+`axum_session`
+
+```
+
+# [cfg(feature = "server")]
+pub async fn session() -> SessionStore<SessionSqlitePool> {
+    let pool = get_db().await;
+    let config = SessionConfig::new()
+        .with_table_name("session_table")
+        .with_key(Key::generate());
+
+    SessionStore::<SessionSqlitePool>::new(Some(pool.clone().into()), config)
+        .await
+        .unwrap()
+}
+
+```
+
+# 21
+
+db.rs
+
+```
+
+# [cfg(feature = "server")]
+static DB: OnceCell<Pool<Sqlite>> = OnceCell::const_new();
+
+# [cfg(feature = "server")]
+async fn db() -> Pool<Sqlite> {
+    let pool = SqlitePool::connect("sqlite://db.sqlite").await.unwrap();
+
+    sqlx::query(
+        r#"
+        CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        username TEXT,
+        password TEXT
+        )
+        "#,
+    )
+    .execute(&pool)
+    .await
+    .unwrap();
+
+    let rows: Vec<UserSql> = sqlx::query_as("SELECT * FROM users WHERE id = ?1")
+        .bind(&1)
+        .fetch_all(&pool)
+        .await
+        .unwrap();
+
+    if rows.len() == 0 {
+        sqlx::query("INSERT INTO users (username, password) VALUES (?1, ?2)")
+            .bind(&"guest")
+            .bind(&"guest")
+            .execute(&pool)
+            .await
+            .unwrap();
+    }
+
+    pool
+}
+
+# [cfg(feature = "server")]
+pub async fn get_db() -> &'static Pool<Sqlite> {
+    DB.get_or_init(db).await
+}
+```
+
+# 20
+
+`router`
+
+```
+#[cfg(feature = "server")]
+use axum::Router;
+use dioxus::{
+    core::Element,
+    server::{DioxusRouterExt, ServeConfig},
+};
+
+# [cfg(feature = "server")]
+pub fn router(
+    app: fn() -> Element,
+    session_store: SessionStore<SessionSqlitePool>,
+    pool: Pool<Sqlite>,
+    auth_config: AuthConfig<i64>,
+) -> Router {
+    let cfg = ServeConfig::new();
+
+    Router::new()
+        .serve_dioxus_application(cfg, app)
+        .layer(
+            AuthSessionLayer::<User, i64, SessionSqlitePool, SqlitePool>::new(Some(pool))
+                .with_config(auth_config),
+        )
+        .layer(SessionLayer::new(session_store))
+}
+```
+
+# 19
+
+`server`
 Integrate Dioxus and Axum Router `serve_dioxus_application`
 
 ```rust
@@ -22,9 +203,6 @@ pub async fn main() {
 fn app() -> Element {
     rsx! { "Hello World" }
 }
-```
-
-```
 ```
 
 # 18
