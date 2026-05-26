@@ -1,3 +1,7 @@
+# 71
+
+[Rig MagicaVoxel Characters in Blender](https://www.youtube.com/watch?v=bkn_uA2_qbc)
+
 # 70
 
 Data -> Add Extra -> Auto Lock Inactive Layers
