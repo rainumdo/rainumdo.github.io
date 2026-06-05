@@ -1,3 +1,7 @@
+# 72
+
+`l` edit mode, select all linked vertices/edges/faces
+
 # 71
 
 [Rig MagicaVoxel Characters in Blender](https://www.youtube.com/watch?v=bkn_uA2_qbc)
@@ -9,7 +13,7 @@
 5. edit mode, transform, item roll set 0
 6. select bone, bone to rename bone, body, head, arm, leg, foot, select all bone, right click, Names, Auto-Name Left/Right
 7. select all bone, right click, Symmetrize
-8. select object and bone, armature deform(ctrl-p)
+8. select object and bone, armature deform(ctrl-p), empty with groups
 9. select object, edit mode, vertex groups, assign
 10. weight painting
 
