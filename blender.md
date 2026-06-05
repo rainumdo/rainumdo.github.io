@@ -2,6 +2,17 @@
 
 [Rig MagicaVoxel Characters in Blender](https://www.youtube.com/watch?v=bkn_uA2_qbc)
 
+1. select all(a) and  merge by distense(m)
+2. select two points of foot, and cursor to select(shift-s)
+3. object mode, set origin to cursor, then set cursor back to world orign(shift-s)
+4. object mode, add armature, data, viewport display, select all show, duplicate bone(shift-d)
+5. edit mode, transform, item roll set 0
+6. select bone, bone to rename bone, body, head, arm, leg, foot, select all bone, right click, Names, Auto-Name Left/Right
+7. select all bone, right click, Symmetrize
+8. select object and bone, armature deform(ctrl-p)
+9. select object, edit mode, vertex groups, assign
+10. weight painting
+
 # 70
 
 Data -> Add Extra -> Auto Lock Inactive Layers
