@@ -1,3 +1,7 @@
+# 73
+
+[Simple Character Walk Cycle](https://www.youtube.com/watch?v=txS-qHPB-b0)
+
 # 72
 
 `l` edit mode, select all linked vertices/edges/faces
