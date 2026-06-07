@@ -2,6 +2,12 @@
 
 [Simple Character Walk Cycle](https://www.youtube.com/watch?v=txS-qHPB-b0)
 
+1. contact
+2. down
+3. pass pos
+4. up
+5. contact
+
 # 72
 
 `l` edit mode, select all linked vertices/edges/faces
