@@ -1,3 +1,44 @@
+# 81
+
+`TextUIWriter`
+
+```
+    // Text [TextSpan, TextSpan]
+    commands.spawn((
+        Text::default(),
+        Node {
+            position_type: PositionType::Absolute,
+            top: px(12),
+            left: px(12),
+            ..default()
+        },
+        children![
+            TextSpan::new("Ambient light is on\n"),
+            TextSpan(format!("Aperture: f/{:.0}\n", parameters.aperture_f_stops,)),
+            TextSpan(format!(
+                "Shutter speed: 1/{:.0}s\n",
+                1.0 / parameters.shutter_speed_s
+            )),
+            TextSpan(format!(
+                "Sensitivity: ISO {:.0}\n",
+                parameters.sensitivity_iso
+            )),
+            TextSpan::new("\n\n"),
+            TextSpan::new("Controls\n"),
+            TextSpan::new("---------------\n"),
+            TextSpan::new("Arrow keys - Move objects\n"),
+            TextSpan::new("Space - Toggle ambient light\n"),
+            TextSpan::new("1/2 - Decrease/Increase aperture\n"),
+            TextSpan::new("3/4 - Decrease/Increase shutter speed\n"),
+            TextSpan::new("5/6 - Decrease/Increase sensitivity\n"),
+            TextSpan::new("R - Reset exposure"),
+        ],
+    ));
+
+    // mut writer: TextUiWriter,
+    *writer.text(entity, 1) = format!("Ambient light is {ambient_light_state_text}\n");
+```
+
 # 80
 
 Physically-Based Rendering
