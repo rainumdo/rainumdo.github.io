@@ -1,3 +1,7 @@
+# 82
+
+[AssetRipper](https://github.com/AssetRipper/AssetRipper)
+
 # 81
 
 `TextUIWriter`
