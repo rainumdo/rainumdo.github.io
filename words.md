@@ -1,6 +1,8 @@
 # words
 
 ```
+gloom
+shroom
 dysphoria
 | asterisk
 corainder
