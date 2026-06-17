@@ -1,3 +1,7 @@
+# 75
+
+Shading -> World -> Color
+
 # 74
 
 Add Modifier, Generate, Remesh, Blocks
