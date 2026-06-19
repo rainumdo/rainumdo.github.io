@@ -1,3 +1,10 @@
+# 83
+
+`Resource` A type that can be inserted into a World as a singleton.
+
+`Assets` Declares that this type is an asset, which can be loaded and managed by the `AssetServer` and stored in `Assets` collections.
+Generally, assets are large, complex, and/or expensive to load from disk, and are often authored by artists or designers.
+
 # 82
 
 [AssetRipper](https://github.com/AssetRipper/AssetRipper)
