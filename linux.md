@@ -1,3 +1,12 @@
+
+# 111
+
+ffmpeg delogo
+
+```
+ffmpeg -i input.mp4 -filter_complex "[0:v]delogo=x=758:y=19:w=190:h=54" -c:a copy output.mp4
+```
+
 # 110
 
 W: <https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu/dists/jammy/InRelease>: 密钥存储在过时的 trusted.gpg 密钥环中（/etc/apt/trusted.gpg），请参见 apt-key(8) 的 DEPRECATION 一节以了解详情。
