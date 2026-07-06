@@ -1,6 +1,13 @@
 # words
 
 ```
+daunt
+||| intricate
+hourglass
+heroic
+sole
+| elbow
+nip
 raffle
 gloom
 shroom
@@ -281,7 +288,6 @@ budget
 neat
 severe
 | comical
-elbow
 | torso
 manageable
 belly
@@ -2204,8 +2210,6 @@ invariance
 invaluable
 inundate
 intrinsically
-intricate 
-intricate
 intolerably
 intimately
 intimacy

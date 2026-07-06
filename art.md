@@ -1,4 +1,8 @@
+# 294
+
 # 293
+
+circles for joints, cylinders for limbs.
 
 # 292
 
