@@ -1,6 +1,8 @@
 # words
 
 ```
+dude
+salvage
 daunt
 ||| intricate
 hourglass

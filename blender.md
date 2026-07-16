@@ -1,3 +1,7 @@
+# 76
+
+`shift-~` Fly/Walk Navigation
+
 # 75
 
 Shading -> World -> Color
