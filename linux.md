@@ -1,4 +1,10 @@
 
+# 112
+
+```
+sudo apt autoremove --dry-run
+```
+
 # 111
 
 ffmpeg delogo
@@ -895,7 +901,7 @@ RestartSec=10
 WantedBy=muti-user.target
 ```
 
-2. add service to system
+1. add service to system
 
 ```
 # reload service
@@ -1120,12 +1126,12 @@ nohup /root/runoob.sh &
 
 | 命令 | 查看方式 |
 | ---- | -------- |
-|cat | 由第一行开始显示文件所有内容 |
-|tac | 从最后一行开始显示文件所有内容 |
-|more | 一页一页的显示文件内容，只能向后翻页 |
-|less | 也是一页一页的显示文件内容，但是可以通过键盘上的PageDown、PageUp控制向后向前翻页，可以光标移动|
-|head | 显示一个文件的前几行 |
-|tail | 显示一个文件的后几行 |
+| cat | 由第一行开始显示文件所有内容 |
+| tac | 从最后一行开始显示文件所有内容 |
+| more | 一页一页的显示文件内容，只能向后翻页 |
+| less | 也是一页一页的显示文件内容，但是可以通过键盘上的PageDown、PageUp控制向后向前翻页，可以光标移动 |
+| head | 显示一个文件的前几行 |
+| tail | 显示一个文件的后几行 |
 
 # 5
 
@@ -1141,22 +1147,22 @@ nohup /root/runoob.sh &
 
 linux 目录
 
-| 目录       |    内容      |
-| ------- |-------------|
-| /bin  | Binaries,系统可执行文件目录|
-| /boot | Boot,启动文件目录|
-| /dev  | Device,外部设备目录|
-| /etc  | Etcetera,系统配置文件目录|
-| /home | Home, 用户主目录|
-| /lib  | Libaray,系统的库文件|
-| /media| Media,系统自动识别的一些设备，如U盘、光驱 |
-| /mnt  | Mount,用户挂载临时文件目录 |
-| /opt  | Optional, 第三方软件目录|
+| 目录 | 内容 |
+| ------- | ------------- |
+| /bin | Binaries,系统可执行文件目录 |
+| /boot | Boot,启动文件目录 |
+| /dev | Device,外部设备目录 |
+| /etc | Etcetera,系统配置文件目录 |
+| /home | Home, 用户主目录 |
+| /lib | Libaray,系统的库文件 |
+| /media | Media,系统自动识别的一些设备，如U盘、光驱 |
+| /mnt | Mount,用户挂载临时文件目录 |
+| /opt | Optional, 第三方软件目录 |
 | /proc | Processes, 存储当前内核运行的一系列特殊文件,虚拟目录 |
-| /root | Root, 系统管理员目录|
+| /root | Root, 系统管理员目录 |
 | /sbin | Superuser Binaries, 系统管理员可执行程序目录 |
-| /srv  | Services, 存放服务启动后需要提取的数据 |
-| /tmp  | Temporary， 临时文件目录|
+| /srv | Services, 存放服务启动后需要提取的数据 |
+| /tmp | Temporary， 临时文件目录 |
 
 # 3
 
@@ -1181,17 +1187,17 @@ linux 启动过程
 
 - BIOS/BootMonitor/EFI
 
-3. Stage 1 bootloader  
+1. Stage 1 bootloader  
 
 - Master Boot Record
 
-4. Stage 2 bootloader
+1. Stage 2 bootloader
 
 - LILO, GRUB, etc
 
-5. Kernel & Linux
-6. Init & User-space
-7. Operation
+1. Kernel & Linux
+2. Init & User-space
+3. Operation
 
 # 1
 
