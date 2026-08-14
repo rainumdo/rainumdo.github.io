@@ -1,3 +1,9 @@
+# 25
+
+signal.clone()
+
+Clone the inner value and return it. If the value has been dropped, this will panic.
+
 # 24
 
 ```
