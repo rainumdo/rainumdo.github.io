@@ -1,6 +1,6 @@
 # 25
 
-signal.clone()
+signal.cloned()
 
 Clone the inner value and return it. If the value has been dropped, this will panic.
 
