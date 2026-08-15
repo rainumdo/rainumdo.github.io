@@ -171,7 +171,7 @@ sudo apt install obs-studio
 docsify
 
 ```shell
-npm i docsify-cli -g
+npm install docsify-cli -g --ignore-scripts
 mkdir docs
 docsify init docs
 docsify serve docs
