@@ -1,6 +1,8 @@
 # words
 
 ```
+| staple
+broth
 concurrently
 | breeze
 dude
@@ -1327,7 +1329,6 @@ stashed
 starve
 starkly
 stark
-staple
 stance
 stammer
 stamina
