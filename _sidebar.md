@@ -10,6 +10,7 @@
 * [linux](linux.md)
 * [music](music.md)
 * [game](game.md)
+* [solidity](/solidity.md)
 * [unity](unity.md)
 * [windows](windows.md)
 * [words](words.md)
