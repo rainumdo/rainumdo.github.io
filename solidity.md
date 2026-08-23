@@ -1,3 +1,27 @@
+# 6
+
+# 5
+
+- msg
+  - msg.sender
+  - msg.value
+  - msg.data
+  - msg.sig
+- tx
+  - tx.origin
+  - tx.gasprice
+- block
+  - block.number
+  - block.timestamp
+  - block.coinbase
+  - block.gaslimit
+  - block.basefee
+  - block.chainid
+
+# 4
+
+[etherscan](etherscan.io)
+
 # 3
 
 [Solidity 0.8](https://www.youtube.com/playlist?list=PLO5VPQH6OWdVQwpQfw9rZ67O6Pjfo6q-p)
