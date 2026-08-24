@@ -1,6 +1,7 @@
 # words
 
 ```
+entree
 | staple
 broth
 concurrently
