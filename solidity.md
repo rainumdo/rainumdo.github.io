@@ -1,5 +1,18 @@
 # 6
 
+create contract form memory
+
+```
+assembly{
+    // create(v, p, n)
+    // v = amout of ETH to send
+    // p = pointer in memory to start of code
+    // n = size of code
+
+    addr := create(callvalue(), add(_code, 0x20), mload(_code))
+}
+```
+
 # 5
 
 - msg
