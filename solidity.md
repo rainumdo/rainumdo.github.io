@@ -1,3 +1,7 @@
+# 7
+
+`string`、`bytes`、数组、结构体这类**引用类型**，外部函数参数必须显式指定数据位置：`memory` / `calldata`，不能省略。
+
 # 6
 
 create contract form memory
