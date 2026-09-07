@@ -1,3 +1,32 @@
+
+# 9
+
+- assert(bool condition): abort execution and revert state changes if condition is false (use for internal error)
+- require(bool condition): abort execution and revert state changes if condition is false (use for malformed input or error in external component)
+- require(bool condition, string memory message): abort execution and revert state changes if condition is false (use for malformed input or error in external component). Also provide error message.
+- revert(): abort execution and revert state changes
+- revert(string memory message): abort execution and revert state changes providing an explanatory string
+
+# 8
+
+```
+fallback execute when
+    - function doesn't exit
+    - directly send ETH
+
+fallback() or receive()?
+
+    Ether is sent to contract
+                |
+        is msg.data empty?
+               / \
+receive() exist?   fallback()
+        / \
+      yes  no
+      /     \
+receive()   fallback()
+```
+
 # 7
 
 `string`、`bytes`、数组、结构体这类**引用类型**，外部函数参数必须显式指定数据位置：`memory` / `calldata`，不能省略。
