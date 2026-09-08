@@ -1,6 +1,7 @@
 # words
 
 ```
+deposite
 entree
 | staple
 broth

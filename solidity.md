@@ -1,4 +1,15 @@
 
+# 10
+
+ERC20(Ethereum Request for Comments)
+
+- totalSupply()
+- balanceOf(addr)
+- transfer(to, amount)
+- allowance(owner, spender)
+- approve(spender, amount)
+- transferFrom(from, to, amount)
+
 # 9
 
 - assert(bool condition): abort execution and revert state changes if condition is false (use for internal error)
