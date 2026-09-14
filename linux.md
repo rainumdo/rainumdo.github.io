@@ -1,4 +1,13 @@
 
+# 113
+
+input emoji
+
+```
+ibus-setup
+<super> + ; + <super> + <space>
+```
+
 # 112
 
 ```
