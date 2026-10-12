@@ -1,6 +1,7 @@
 # words
 
 ```
+chibi
 auction
 deposite
 entree
