@@ -1,3 +1,9 @@
+# 301
+
+# 300
+
+[FiryTwigs Animation Tutorials](https://www.youtube.com/playlist?list=PLdebq68B7nvLzEuCAU3QHMWyGm6LU6Ob-)
+
 # 299
 
 作为优秀的设计,都可以在对齐的对象间画出“对齐线”,即使这些设计总体表现 为汇集了大量奇特的内容,甚至动感十足,这种“对齐线”也很明确。
